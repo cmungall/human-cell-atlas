@@ -1,0 +1,228 @@
+name: Microscopy_ontology
+id: https://example.org/Microscopy-ontology
+imports:
+- linkml:types
+prefixes:
+  Microscopy_ontology: https://example.org/Microscopy-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Microscopy_ontology
+enums:
+  MicroscopyOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:hcao
+        source_nodes:
+        - FBbi:00000241
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:fbbi
+        source_nodes:
+        - FBbi:00000241
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    permissible_values:
+      FBbi:00000365:
+        text: FBbi:00000365
+        description: FLIP
+        meaning: FBbi:00000365
+      FBbi:00000245:
+        text: FBbi:00000245
+        description: differential interference contrast microscopy
+        meaning: FBbi:00000245
+      FBbi:00000259:
+        text: FBbi:00000259
+        description: atomic force microscopy
+        meaning: FBbi:00000259
+      FBbi:00000251:
+        text: FBbi:00000251
+        description: confocal microscopy
+        meaning: FBbi:00000251
+      FBbi:00000381:
+        text: FBbi:00000381
+        description: EELS imaging
+        meaning: FBbi:00000381
+      FBbi:00000255:
+        text: FBbi:00000255
+        description: multi-photon microscopy
+        meaning: FBbi:00000255
+      FBbi:00000616:
+        text: FBbi:00000616
+        description: evanescent wave scattering
+        meaning: FBbi:00000616
+      FBbi:00000344:
+        text: FBbi:00000344
+        description: scanning probe microscopy
+        meaning: FBbi:00000344
+      FBbi:00000380:
+        text: FBbi:00000380
+        description: scanning-transmission electron microscopy
+        meaning: FBbi:00000380
+      FBbi:00000243:
+        text: FBbi:00000243
+        description: bright-field microscopy
+        meaning: FBbi:00000243
+      FBbi:00000348:
+        text: FBbi:00000348
+        description: nearfield scanning optical microscopy (ANSOM)
+        meaning: FBbi:00000348
+      FBbi:00000371:
+        text: FBbi:00000371
+        description: OCT
+        meaning: FBbi:00000371
+      FBbi:00000623:
+        text: FBbi:00000623
+        description: intermediate voltage electron microacopy (IVEM)
+        meaning: FBbi:00000623
+      FBbi:00000349:
+        text: FBbi:00000349
+        description: ANSOM
+        meaning: FBbi:00000349
+      FBbi:00000252:
+        text: FBbi:00000252
+        description: single-spot confocal microscopy
+        meaning: FBbi:00000252
+      FBbi:00000260:
+        text: FBbi:00000260
+        description: X-ray microscopy
+        meaning: FBbi:00000260
+      FBbi:00000366:
+        text: FBbi:00000366
+        description: FRAP
+        meaning: FBbi:00000366
+      FBbi:00000370:
+        text: FBbi:00000370
+        description: CARS
+        meaning: FBbi:00000370
+      FBbi:00050000:
+        text: FBbi:00050000
+        description: focussed ion beam scanning electron microscopy (FIB-SEM)
+        meaning: FBbi:00050000
+      FBbi:00000248:
+        text: FBbi:00000248
+        description: polarization microscopy
+        meaning: FBbi:00000248
+      FBbi:00000603:
+        text: FBbi:00000603
+        description: fluorescence polarization microscopy
+        meaning: FBbi:00000603
+      FBbi:00000372:
+        text: FBbi:00000372
+        description: secondary_electron imaging
+        meaning: FBbi:00000372
+      FBbi:00000382:
+        text: FBbi:00000382
+        description: EDAX imaging
+        meaning: FBbi:00000382
+      FBbi:00000368:
+        text: FBbi:00000368
+        description: FLIM
+        meaning: FBbi:00000368
+      FBbi:00000351:
+        text: FBbi:00000351
+        description: orientation-independent polarization microscopy
+        meaning: FBbi:00000351
+      FBbi:00000258:
+        text: FBbi:00000258
+        description: transmission electron microscopy (TEM)
+        meaning: FBbi:00000258
+      FBbi:00000393:
+        text: FBbi:00000393
+        description: array-scan confocal microscopy
+        meaning: FBbi:00000393
+      FBbi:00000253:
+        text: FBbi:00000253
+        description: spinning disk confocal microscopy
+        meaning: FBbi:00000253
+      FBbi:00000622:
+        text: FBbi:00000622
+        description: high-voltage electron microscopy (HVEM)
+        meaning: FBbi:00000622
+      FBbi:00000254:
+        text: FBbi:00000254
+        description: two-photon laser scanning microscopy
+        meaning: FBbi:00000254
+      FBbi:00000345:
+        text: FBbi:00000345
+        description: light microscopy
+        meaning: FBbi:00000345
+      FBbi:00000244:
+        text: FBbi:00000244
+        description: dark-field microscopy
+        meaning: FBbi:00000244
+      FBbi:00000369:
+        text: FBbi:00000369
+        description: SPIM
+        meaning: FBbi:00000369
+      FBbi:00000585:
+        text: FBbi:00000585
+        description: serial block face SEM (SBFSEM)
+        meaning: FBbi:00000585
+      FBbi:00000256:
+        text: FBbi:00000256
+        description: electron microscopy
+        meaning: FBbi:00000256
+      FBbi:00000392:
+        text: FBbi:00000392
+        description: slit-scan confocal microscopy
+        meaning: FBbi:00000392
+      FBbi:00000373:
+        text: FBbi:00000373
+        description: back-scattered_electron imaging
+        meaning: FBbi:00000373
+      FBbi:00000249:
+        text: FBbi:00000249
+        description: time lapse microscopy
+        meaning: FBbi:00000249
+      FBbi:00000617:
+        text: FBbi:00000617
+        description: evanescent wave microscopy
+        meaning: FBbi:00000617
+      FBbi:00000343:
+        text: FBbi:00000343
+        description: microscopy with lenses
+        meaning: FBbi:00000343
+      FBbi:00000246:
+        text: FBbi:00000246
+        description: fluorescence microscopy
+        meaning: FBbi:00000246
+      FBbi:00000367:
+        text: FBbi:00000367
+        description: FRET
+        meaning: FBbi:00000367
+      FBbi:00000257:
+        text: FBbi:00000257
+        description: scanning electron microscopy (SEM)
+        meaning: FBbi:00000257
+      FBbi:00000247:
+        text: FBbi:00000247
+        description: phase contrast microscopy
+        meaning: FBbi:00000247
+      FBbi:00000347:
+        text: FBbi:00000347
+        description: scanning tunneling microscopy
+        meaning: FBbi:00000347
+classes:
+  MicroscopyOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: Version number in major.minor.patch format.
+      text:
+        description: The name of the type of microscopy used in an imaging experiment.
+        title: Microscopy
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Microscopy ontology ID
+        range: MicroscopyOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Microscopy ontology label

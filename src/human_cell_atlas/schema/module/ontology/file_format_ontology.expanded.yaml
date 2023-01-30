@@ -1,0 +1,39 @@
+name: File_format_ontology
+id: https://example.org/File-format-ontology
+imports:
+- linkml:types
+prefixes:
+  File_format_ontology: https://example.org/File-format-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: File_format_ontology
+enums:
+  FileFormatOntology_ontology_options:
+    reachable_from:
+      source_ontology: obo:edam
+      source_nodes:
+      - format:1915
+      relationship_types:
+      - rdfs:subClassOf
+      is_direct: false
+      include_self: false
+    permissible_values: {}
+classes:
+  FileFormatOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of the file format.
+        title: File format
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: File format ontology ID
+        range: FileFormatOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: File format ontology label

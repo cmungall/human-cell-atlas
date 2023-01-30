@@ -1,0 +1,28 @@
+name: Project_core
+id: https://example.org/Project-core
+imports:
+- linkml:types
+prefixes:
+  Project_core: https://example.org/Project-core
+  linkml: https://w3id.org/linkml/
+default_prefix: Project_core
+classes:
+  ProjectCore:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      project_short_name:
+        description: A short name for the project.
+        title: Project label
+        required: true
+      project_title:
+        description: An official title for the project.
+        title: Project title
+        required: true
+      project_description:
+        description: A longer description of the project which includes research goals
+          and experimental approach.
+        title: Project description
+        required: true

@@ -1,0 +1,3215 @@
+name: Target_pathway_ontology
+id: https://example.org/Target-pathway-ontology
+imports:
+- linkml:types
+prefixes:
+  Target_pathway_ontology: https://example.org/Target-pathway-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Target_pathway_ontology
+enums:
+  TargetPathwayOntology_ontology_options:
+    reachable_from:
+      source_ontology: obo:hcao
+      source_nodes:
+      - GO:0050789
+      relationship_types:
+      - rdfs:subClassOf
+      is_direct: false
+      include_self: false
+    permissible_values:
+      GO:2001200:
+        text: GO:2001200
+        description: positive regulation of dendritic cell differentiation
+        meaning: GO:2001200
+      GO:1904172:
+        text: GO:1904172
+        description: positive regulation of bleb assembly
+        meaning: GO:1904172
+      GO:0045835:
+        text: GO:0045835
+        description: negative regulation of meiotic nuclear division
+        meaning: GO:0045835
+      GO:0090025:
+        text: GO:0090025
+        description: regulation of monocyte chemotaxis
+        meaning: GO:0090025
+      GO:0060456:
+        text: GO:0060456
+        description: positive regulation of digestive system process
+        meaning: GO:0060456
+      GO:0002652:
+        text: GO:0002652
+        description: regulation of tolerance induction dependent upon immune response
+        meaning: GO:0002652
+      GO:0002583:
+        text: GO:0002583
+        description: regulation of antigen processing and presentation of peptide
+          antigen
+        meaning: GO:0002583
+      GO:0062012:
+        text: GO:0062012
+        description: regulation of small molecule metabolic process
+        meaning: GO:0062012
+      GO:0032386:
+        text: GO:0032386
+        description: regulation of intracellular transport
+        meaning: GO:0032386
+      GO:1905516:
+        text: GO:1905516
+        description: positive regulation of fertilization
+        meaning: GO:1905516
+      GO:0048519:
+        text: GO:0048519
+        description: negative regulation of biological process
+        meaning: GO:0048519
+      GO:0032229:
+        text: GO:0032229
+        description: negative regulation of synaptic transmission, GABAergic
+        meaning: GO:0032229
+      GO:1903828:
+        text: GO:1903828
+        description: negative regulation of cellular protein localization
+        meaning: GO:1903828
+      GO:0051984:
+        text: GO:0051984
+        description: positive regulation of chromosome segregation
+        meaning: GO:0051984
+      GO:0045089:
+        text: GO:0045089
+        description: positive regulation of innate immune response
+        meaning: GO:0045089
+      GO:0003330:
+        text: GO:0003330
+        description: regulation of extracellular matrix constituent secretion
+        meaning: GO:0003330
+      GO:0051495:
+        text: GO:0051495
+        description: positive regulation of cytoskeleton organization
+        meaning: GO:0051495
+      GO:0001910:
+        text: GO:0001910
+        description: regulation of leukocyte mediated cytotoxicity
+        meaning: GO:0001910
+      GO:0045780:
+        text: GO:0045780
+        description: positive regulation of bone resorption
+        meaning: GO:0045780
+      GO:0090024:
+        text: GO:0090024
+        description: negative regulation of neutrophil chemotaxis
+        meaning: GO:0090024
+      GO:0051172:
+        text: GO:0051172
+        description: negative regulation of nitrogen compound metabolic process
+        meaning: GO:0051172
+      GO:0002822:
+        text: GO:0002822
+        description: regulation of adaptive immune response based on somatic recombination
+          of immune receptors built from immunoglobulin superfamily domains
+        meaning: GO:0002822
+      GO:0045939:
+        text: GO:0045939
+        description: negative regulation of steroid metabolic process
+        meaning: GO:0045939
+      GO:0050433:
+        text: GO:0050433
+        description: regulation of catecholamine secretion
+        meaning: GO:0050433
+      GO:0048584:
+        text: GO:0048584
+        description: positive regulation of response to stimulus
+        meaning: GO:0048584
+      GO:0051967:
+        text: GO:0051967
+        description: negative regulation of synaptic transmission, glutamatergic
+        meaning: GO:0051967
+      GO:0071675:
+        text: GO:0071675
+        description: regulation of mononuclear cell migration
+        meaning: GO:0071675
+      GO:0043901:
+        text: GO:0043901
+        description: negative regulation of multi-organism process
+        meaning: GO:0043901
+      GO:0043382:
+        text: GO:0043382
+        description: positive regulation of memory T cell differentiation
+        meaning: GO:0043382
+      GO:0044089:
+        text: GO:0044089
+        description: positive regulation of cellular component biogenesis
+        meaning: GO:0044089
+      GO:0032370:
+        text: GO:0032370
+        description: positive regulation of lipid transport
+        meaning: GO:0032370
+      GO:0014054:
+        text: GO:0014054
+        description: positive regulation of gamma-aminobutyric acid secretion
+        meaning: GO:0014054
+      GO:0014064:
+        text: GO:0014064
+        description: positive regulation of serotonin secretion
+        meaning: GO:0014064
+      GO:0051971:
+        text: GO:0051971
+        description: positive regulation of transmission of nerve impulse
+        meaning: GO:0051971
+      GO:0002582:
+        text: GO:0002582
+        description: positive regulation of antigen processing and presentation of
+          peptide or polysaccharide antigen via MHC class II
+        meaning: GO:0002582
+      GO:1900115:
+        text: GO:1900115
+        description: extracellular regulation of signal transduction
+        meaning: GO:1900115
+      GO:0043271:
+        text: GO:0043271
+        description: negative regulation of ion transport
+        meaning: GO:0043271
+      GO:1905213:
+        text: GO:1905213
+        description: negative regulation of mitotic chromosome condensation
+        meaning: GO:1905213
+      GO:0060123:
+        text: GO:0060123
+        description: regulation of growth hormone secretion
+        meaning: GO:0060123
+      GO:0014060:
+        text: GO:0014060
+        description: regulation of epinephrine secretion
+        meaning: GO:0014060
+      GO:0070859:
+        text: GO:0070859
+        description: positive regulation of bile acid biosynthetic process
+        meaning: GO:0070859
+      GO:0002684:
+        text: GO:0002684
+        description: positive regulation of immune system process
+        meaning: GO:0002684
+      GO:0002683:
+        text: GO:0002683
+        description: negative regulation of immune system process
+        meaning: GO:0002683
+      GO:1903353:
+        text: GO:1903353
+        description: regulation of nucleus organization
+        meaning: GO:1903353
+      GO:0031343:
+        text: GO:0031343
+        description: positive regulation of cell killing
+        meaning: GO:0031343
+      GO:1905953:
+        text: GO:1905953
+        description: negative regulation of lipid localization
+        meaning: GO:1905953
+      GO:0042483:
+        text: GO:0042483
+        description: negative regulation of odontogenesis
+        meaning: GO:0042483
+      GO:1902019:
+        text: GO:1902019
+        description: regulation of cilium-dependent cell motility
+        meaning: GO:1902019
+      GO:1902532:
+        text: GO:1902532
+        description: negative regulation of intracellular signal transduction
+        meaning: GO:1902532
+      GO:1900133:
+        text: GO:1900133
+        description: regulation of renin secretion into blood stream
+        meaning: GO:1900133
+      GO:0032103:
+        text: GO:0032103
+        description: positive regulation of response to external stimulus
+        meaning: GO:0032103
+      GO:0002579:
+        text: GO:0002579
+        description: positive regulation of antigen processing and presentation
+        meaning: GO:0002579
+      GO:0032353:
+        text: GO:0032353
+        description: negative regulation of hormone biosynthetic process
+        meaning: GO:0032353
+      GO:0034107:
+        text: GO:0034107
+        description: negative regulation of erythrocyte clearance
+        meaning: GO:0034107
+      GO:0045647:
+        text: GO:0045647
+        description: negative regulation of erythrocyte differentiation
+        meaning: GO:0045647
+      GO:0045646:
+        text: GO:0045646
+        description: regulation of erythrocyte differentiation
+        meaning: GO:0045646
+      GO:0031342:
+        text: GO:0031342
+        description: negative regulation of cell killing
+        meaning: GO:0031342
+      GO:0033602:
+        text: GO:0033602
+        description: negative regulation of dopamine secretion
+        meaning: GO:0033602
+      GO:1903564:
+        text: GO:1903564
+        description: regulation of protein localization to cilium
+        meaning: GO:1903564
+      GO:0034105:
+        text: GO:0034105
+        description: positive regulation of tissue remodeling
+        meaning: GO:0034105
+      GO:0022408:
+        text: GO:0022408
+        description: negative regulation of cell-cell adhesion
+        meaning: GO:0022408
+      GO:0003332:
+        text: GO:0003332
+        description: negative regulation of extracellular matrix constituent secretion
+        meaning: GO:0003332
+      GO:1902117:
+        text: GO:1902117
+        description: positive regulation of organelle assembly
+        meaning: GO:1902117
+      GO:0051270:
+        text: GO:0051270
+        description: regulation of cellular component movement
+        meaning: GO:0051270
+      GO:1904747:
+        text: GO:1904747
+        description: positive regulation of apoptotic process involved in development
+        meaning: GO:1904747
+      GO:2000146:
+        text: GO:2000146
+        description: negative regulation of cell motility
+        meaning: GO:2000146
+      GO:0002920:
+        text: GO:0002920
+        description: regulation of humoral immune response
+        meaning: GO:0002920
+      GO:0045619:
+        text: GO:0045619
+        description: regulation of lymphocyte differentiation
+        meaning: GO:0045619
+      GO:0034249:
+        text: GO:0034249
+        description: negative regulation of cellular amide metabolic process
+        meaning: GO:0034249
+      GO:0045700:
+        text: GO:0045700
+        description: regulation of spermatid nuclear differentiation
+        meaning: GO:0045700
+      GO:1905941:
+        text: GO:1905941
+        description: positive regulation of gonad development
+        meaning: GO:1905941
+      GO:0098815:
+        text: GO:0098815
+        description: modulation of excitatory postsynaptic potential
+        meaning: GO:0098815
+      GO:0001911:
+        text: GO:0001911
+        description: negative regulation of leukocyte mediated cytotoxicity
+        meaning: GO:0001911
+      GO:0002638:
+        text: GO:0002638
+        description: negative regulation of immunoglobulin production
+        meaning: GO:0002638
+      GO:1904409:
+        text: GO:1904409
+        description: regulation of secretory granule organization
+        meaning: GO:1904409
+      GO:2000613:
+        text: GO:2000613
+        description: negative regulation of thyroid-stimulating hormone secretion
+        meaning: GO:2000613
+      GO:0050810:
+        text: GO:0050810
+        description: regulation of steroid biosynthetic process
+        meaning: GO:0050810
+      GO:2000832:
+        text: GO:2000832
+        description: negative regulation of steroid hormone secretion
+        meaning: GO:2000832
+      GO:0045596:
+        text: GO:0045596
+        description: negative regulation of cell differentiation
+        meaning: GO:0045596
+      GO:0002785:
+        text: GO:0002785
+        description: negative regulation of antimicrobial peptide production
+        meaning: GO:0002785
+      GO:1900016:
+        text: GO:1900016
+        description: negative regulation of cytokine production involved in inflammatory
+          response
+        meaning: GO:1900016
+      GO:0030852:
+        text: GO:0030852
+        description: regulation of granulocyte differentiation
+        meaning: GO:0030852
+      GO:0033048:
+        text: GO:0033048
+        description: negative regulation of mitotic sister chromatid segregation
+        meaning: GO:0033048
+      GO:0045657:
+        text: GO:0045657
+        description: positive regulation of monocyte differentiation
+        meaning: GO:0045657
+      GO:0051985:
+        text: GO:0051985
+        description: negative regulation of chromosome segregation
+        meaning: GO:0051985
+      GO:0046885:
+        text: GO:0046885
+        description: regulation of hormone biosynthetic process
+        meaning: GO:0046885
+      GO:0010647:
+        text: GO:0010647
+        description: positive regulation of cell communication
+        meaning: GO:0010647
+      GO:0043067:
+        text: GO:0043067
+        description: regulation of programmed cell death
+        meaning: GO:0043067
+      GO:0031347:
+        text: GO:0031347
+        description: regulation of defense response
+        meaning: GO:0031347
+      GO:0001914:
+        text: GO:0001914
+        description: regulation of T cell mediated cytotoxicity
+        meaning: GO:0001914
+      GO:0071677:
+        text: GO:0071677
+        description: positive regulation of mononuclear cell migration
+        meaning: GO:0071677
+      GO:0070858:
+        text: GO:0070858
+        description: negative regulation of bile acid biosynthetic process
+        meaning: GO:0070858
+      GO:0071624:
+        text: GO:0071624
+        description: positive regulation of granulocyte chemotaxis
+        meaning: GO:0071624
+      GO:0002631:
+        text: GO:0002631
+        description: regulation of granuloma formation
+        meaning: GO:0002631
+      GO:0030194:
+        text: GO:0030194
+        description: positive regulation of blood coagulation
+        meaning: GO:0030194
+      GO:0051051:
+        text: GO:0051051
+        description: negative regulation of transport
+        meaning: GO:0051051
+      GO:0010557:
+        text: GO:0010557
+        description: positive regulation of macromolecule biosynthetic process
+        meaning: GO:0010557
+      GO:0002633:
+        text: GO:0002633
+        description: positive regulation of granuloma formation
+        meaning: GO:0002633
+      GO:0014050:
+        text: GO:0014050
+        description: negative regulation of glutamate secretion
+        meaning: GO:0014050
+      GO:0051781:
+        text: GO:0051781
+        description: positive regulation of cell division
+        meaning: GO:0051781
+      GO:0032350:
+        text: GO:0032350
+        description: regulation of hormone metabolic process
+        meaning: GO:0032350
+      GO:1904410:
+        text: GO:1904410
+        description: negative regulation of secretory granule organization
+        meaning: GO:1904410
+      GO:0045577:
+        text: GO:0045577
+        description: regulation of B cell differentiation
+        meaning: GO:0045577
+      GO:1905954:
+        text: GO:1905954
+        description: positive regulation of lipid localization
+        meaning: GO:1905954
+      GO:0014058:
+        text: GO:0014058
+        description: negative regulation of acetylcholine secretion, neurotransmission
+        meaning: GO:0014058
+      GO:0002760:
+        text: GO:0002760
+        description: positive regulation of antimicrobial humoral response
+        meaning: GO:0002760
+      GO:2000027:
+        text: GO:2000027
+        description: regulation of animal organ morphogenesis
+        meaning: GO:2000027
+      GO:0032689:
+        text: GO:0032689
+        description: negative regulation of interferon-gamma production
+        meaning: GO:0032689
+      GO:0044057:
+        text: GO:0044057
+        description: regulation of system process
+        meaning: GO:0044057
+      GO:0060284:
+        text: GO:0060284
+        description: regulation of cell development
+        meaning: GO:0060284
+      GO:1900134:
+        text: GO:1900134
+        description: negative regulation of renin secretion into blood stream
+        meaning: GO:1900134
+      GO:0043269:
+        text: GO:0043269
+        description: regulation of ion transport
+        meaning: GO:0043269
+      GO:0090087:
+        text: GO:0090087
+        description: regulation of peptide transport
+        meaning: GO:0090087
+      GO:1903039:
+        text: GO:1903039
+        description: positive regulation of leukocyte cell-cell adhesion
+        meaning: GO:1903039
+      GO:0060375:
+        text: GO:0060375
+        description: regulation of mast cell differentiation
+        meaning: GO:0060375
+      GO:0090274:
+        text: GO:0090274
+        description: positive regulation of somatostatin secretion
+        meaning: GO:0090274
+      GO:0051446:
+        text: GO:0051446
+        description: positive regulation of meiotic cell cycle
+        meaning: GO:0051446
+      GO:1900117:
+        text: GO:1900117
+        description: regulation of execution phase of apoptosis
+        meaning: GO:1900117
+      GO:1902623:
+        text: GO:1902623
+        description: negative regulation of neutrophil migration
+        meaning: GO:1902623
+      GO:0019218:
+        text: GO:0019218
+        description: regulation of steroid metabolic process
+        meaning: GO:0019218
+      GO:0050867:
+        text: GO:0050867
+        description: positive regulation of cell activation
+        meaning: GO:0050867
+      GO:0002225:
+        text: GO:0002225
+        description: positive regulation of antimicrobial peptide production
+        meaning: GO:0002225
+      GO:2000855:
+        text: GO:2000855
+        description: regulation of mineralocorticoid secretion
+        meaning: GO:2000855
+      GO:0042981:
+        text: GO:0042981
+        description: regulation of apoptotic process
+        meaning: GO:0042981
+      GO:0051128:
+        text: GO:0051128
+        description: regulation of cellular component organization
+        meaning: GO:0051128
+      GO:0120034:
+        text: GO:0120034
+        description: positive regulation of plasma membrane bounded cell projection
+          assembly
+        meaning: GO:0120034
+      GO:0002699:
+        text: GO:0002699
+        description: positive regulation of immune effector process
+        meaning: GO:0002699
+      GO:0051046:
+        text: GO:0051046
+        description: regulation of secretion
+        meaning: GO:0051046
+      GO:0010565:
+        text: GO:0010565
+        description: regulation of cellular ketone metabolic process
+        meaning: GO:0010565
+      GO:0045643:
+        text: GO:0045643
+        description: regulation of eosinophil differentiation
+        meaning: GO:0045643
+      GO:0050818:
+        text: GO:0050818
+        description: regulation of coagulation
+        meaning: GO:0050818
+      GO:0010700:
+        text: GO:0010700
+        description: negative regulation of norepinephrine secretion
+        meaning: GO:0010700
+      GO:1904171:
+        text: GO:1904171
+        description: negative regulation of bleb assembly
+        meaning: GO:1904171
+      GO:1902093:
+        text: GO:1902093
+        description: positive regulation of flagellated sperm motility
+        meaning: GO:1902093
+      GO:2000857:
+        text: GO:2000857
+        description: positive regulation of mineralocorticoid secretion
+        meaning: GO:2000857
+      GO:0030335:
+        text: GO:0030335
+        description: positive regulation of cell migration
+        meaning: GO:0030335
+      GO:0051129:
+        text: GO:0051129
+        description: negative regulation of cellular component organization
+        meaning: GO:0051129
+      GO:0045829:
+        text: GO:0045829
+        description: negative regulation of isotype switching
+        meaning: GO:0045829
+      GO:0051957:
+        text: GO:0051957
+        description: positive regulation of amino acid transport
+        meaning: GO:0051957
+      GO:0002653:
+        text: GO:0002653
+        description: negative regulation of tolerance induction dependent upon immune
+          response
+        meaning: GO:0002653
+      GO:2000870:
+        text: GO:2000870
+        description: regulation of progesterone secretion
+        meaning: GO:2000870
+      GO:1902115:
+        text: GO:1902115
+        description: regulation of organelle assembly
+        meaning: GO:1902115
+      GO:1903942:
+        text: GO:1903942
+        description: positive regulation of respiratory gaseous exchange
+        meaning: GO:1903942
+      GO:0120189:
+        text: GO:0120189
+        description: positive regulation of bile acid secretion
+        meaning: GO:0120189
+      GO:0046928:
+        text: GO:0046928
+        description: regulation of neurotransmitter secretion
+        meaning: GO:0046928
+      GO:0045671:
+        text: GO:0045671
+        description: negative regulation of osteoclast differentiation
+        meaning: GO:0045671
+      GO:0002705:
+        text: GO:0002705
+        description: positive regulation of leukocyte mediated immunity
+        meaning: GO:0002705
+      GO:0002793:
+        text: GO:0002793
+        description: positive regulation of peptide secretion
+        meaning: GO:0002793
+      GO:0002762:
+        text: GO:0002762
+        description: negative regulation of myeloid leukocyte differentiation
+        meaning: GO:0002762
+      GO:0031324:
+        text: GO:0031324
+        description: negative regulation of cellular metabolic process
+        meaning: GO:0031324
+      GO:0033044:
+        text: GO:0033044
+        description: regulation of chromosome organization
+        meaning: GO:0033044
+      GO:1903941:
+        text: GO:1903941
+        description: negative regulation of respiratory gaseous exchange
+        meaning: GO:1903941
+      GO:1901317:
+        text: GO:1901317
+        description: regulation of flagellated sperm motility
+        meaning: GO:1901317
+      GO:2000147:
+        text: GO:2000147
+        description: positive regulation of cell motility
+        meaning: GO:2000147
+      GO:0032414:
+        text: GO:0032414
+        description: positive regulation of ion transmembrane transporter activity
+        meaning: GO:0032414
+      GO:0031646:
+        text: GO:0031646
+        description: positive regulation of nervous system process
+        meaning: GO:0031646
+      GO:0051302:
+        text: GO:0051302
+        description: regulation of cell division
+        meaning: GO:0051302
+      GO:0010646:
+        text: GO:0010646
+        description: regulation of cell communication
+        meaning: GO:0010646
+      GO:0045641:
+        text: GO:0045641
+        description: negative regulation of basophil differentiation
+        meaning: GO:0045641
+      GO:1902338:
+        text: GO:1902338
+        description: negative regulation of apoptotic process involved in morphogenesis
+        meaning: GO:1902338
+      GO:0045934:
+        text: GO:0045934
+        description: negative regulation of nucleobase-containing compound metabolic
+          process
+        meaning: GO:0045934
+      GO:0032368:
+        text: GO:0032368
+        description: regulation of lipid transport
+        meaning: GO:0032368
+      GO:0034763:
+        text: GO:0034763
+        description: negative regulation of transmembrane transport
+        meaning: GO:0034763
+      GO:0062033:
+        text: GO:0062033
+        description: positive regulation of mitotic sister chromatid segregation
+        meaning: GO:0062033
+      GO:1900119:
+        text: GO:1900119
+        description: positive regulation of execution phase of apoptosis
+        meaning: GO:1900119
+      GO:0044058:
+        text: GO:0044058
+        description: regulation of digestive system process
+        meaning: GO:0044058
+      GO:0120190:
+        text: GO:0120190
+        description: negative regulation of bile acid secretion
+        meaning: GO:0120190
+      GO:0045822:
+        text: GO:0045822
+        description: negative regulation of heart contraction
+        meaning: GO:0045822
+      GO:0051239:
+        text: GO:0051239
+        description: regulation of multicellular organismal process
+        meaning: GO:0051239
+      GO:0031327:
+        text: GO:0031327
+        description: negative regulation of cellular biosynthetic process
+        meaning: GO:0031327
+      GO:2000844:
+        text: GO:2000844
+        description: negative regulation of testosterone secretion
+        meaning: GO:2000844
+      GO:0050804:
+        text: GO:0050804
+        description: modulation of chemical synaptic transmission
+        meaning: GO:0050804
+      GO:0002577:
+        text: GO:0002577
+        description: regulation of antigen processing and presentation
+        meaning: GO:0002577
+      GO:0046883:
+        text: GO:0046883
+        description: regulation of hormone secretion
+        meaning: GO:0046883
+      GO:0048583:
+        text: GO:0048583
+        description: regulation of response to stimulus
+        meaning: GO:0048583
+      GO:0007166:
+        text: GO:0007166
+        description: cell surface receptor signaling pathway
+        meaning: GO:0007166
+      GO:0097151:
+        text: GO:0097151
+        description: positive regulation of inhibitory postsynaptic potential
+        meaning: GO:0097151
+      GO:0046886:
+        text: GO:0046886
+        description: positive regulation of hormone biosynthetic process
+        meaning: GO:0046886
+      GO:0002819:
+        text: GO:0002819
+        description: regulation of adaptive immune response
+        meaning: GO:0002819
+      GO:0090022:
+        text: GO:0090022
+        description: regulation of neutrophil chemotaxis
+        meaning: GO:0090022
+      GO:0051250:
+        text: GO:0051250
+        description: negative regulation of lymphocyte activation
+        meaning: GO:0051250
+      GO:2001198:
+        text: GO:2001198
+        description: regulation of dendritic cell differentiation
+        meaning: GO:2001198
+      GO:0032224:
+        text: GO:0032224
+        description: positive regulation of synaptic transmission, cholinergic
+        meaning: GO:0032224
+      GO:0051175:
+        text: GO:0051175
+        description: negative regulation of sulfur metabolic process
+        meaning: GO:0051175
+      GO:0045786:
+        text: GO:0045786
+        description: negative regulation of cell cycle
+        meaning: GO:0045786
+      GO:0002763:
+        text: GO:0002763
+        description: positive regulation of myeloid leukocyte differentiation
+        meaning: GO:0002763
+      GO:2000196:
+        text: GO:2000196
+        description: positive regulation of female gonad development
+        meaning: GO:2000196
+      GO:0045932:
+        text: GO:0045932
+        description: negative regulation of muscle contraction
+        meaning: GO:0045932
+      GO:0051052:
+        text: GO:0051052
+        description: regulation of DNA metabolic process
+        meaning: GO:0051052
+      GO:2000241:
+        text: GO:2000241
+        description: regulation of reproductive process
+        meaning: GO:2000241
+      GO:0050708:
+        text: GO:0050708
+        description: regulation of protein secretion
+        meaning: GO:0050708
+      GO:0051249:
+        text: GO:0051249
+        description: regulation of lymphocyte activation
+        meaning: GO:0051249
+      GO:0002588:
+        text: GO:0002588
+        description: positive regulation of antigen processing and presentation of
+          peptide antigen via MHC class II
+        meaning: GO:0002588
+      GO:0002831:
+        text: GO:0002831
+        description: regulation of response to biotic stimulus
+        meaning: GO:0002831
+      GO:0010720:
+        text: GO:0010720
+        description: positive regulation of cell development
+        meaning: GO:0010720
+      GO:0070092:
+        text: GO:0070092
+        description: regulation of glucagon secretion
+        meaning: GO:0070092
+      GO:0032890:
+        text: GO:0032890
+        description: regulation of organic acid transport
+        meaning: GO:0032890
+      GO:0090276:
+        text: GO:0090276
+        description: regulation of peptide hormone secretion
+        meaning: GO:0090276
+      GO:1903054:
+        text: GO:1903054
+        description: negative regulation of extracellular matrix organization
+        meaning: GO:1903054
+      GO:0002821:
+        text: GO:0002821
+        description: positive regulation of adaptive immune response
+        meaning: GO:0002821
+      GO:0002711:
+        text: GO:0002711
+        description: positive regulation of T cell mediated immunity
+        meaning: GO:0002711
+      GO:1904950:
+        text: GO:1904950
+        description: negative regulation of establishment of protein localization
+        meaning: GO:1904950
+      GO:0010628:
+        text: GO:0010628
+        description: positive regulation of gene expression
+        meaning: GO:0010628
+      GO:0051460:
+        text: GO:0051460
+        description: negative regulation of corticotropin secretion
+        meaning: GO:0051460
+      GO:2000856:
+        text: GO:2000856
+        description: negative regulation of mineralocorticoid secretion
+        meaning: GO:2000856
+      GO:0046890:
+        text: GO:0046890
+        description: regulation of lipid biosynthetic process
+        meaning: GO:0046890
+      GO:1904363:
+        text: GO:1904363
+        description: negative regulation of calcitonin secretion
+        meaning: GO:1904363
+      GO:0050727:
+        text: GO:0050727
+        description: regulation of inflammatory response
+        meaning: GO:0050727
+      GO:0110110:
+        text: GO:0110110
+        description: positive regulation of animal organ morphogenesis
+        meaning: GO:0110110
+      GO:0045833:
+        text: GO:0045833
+        description: negative regulation of lipid metabolic process
+        meaning: GO:0045833
+      GO:2000242:
+        text: GO:2000242
+        description: negative regulation of reproductive process
+        meaning: GO:2000242
+      GO:0045191:
+        text: GO:0045191
+        description: regulation of isotype switching
+        meaning: GO:0045191
+      GO:1904676:
+        text: GO:1904676
+        description: negative regulation of somatic stem cell division
+        meaning: GO:1904676
+      GO:0071676:
+        text: GO:0071676
+        description: negative regulation of mononuclear cell migration
+        meaning: GO:0071676
+      GO:0002702:
+        text: GO:0002702
+        description: positive regulation of production of molecular mediator of immune
+          response
+        meaning: GO:0002702
+      GO:0002698:
+        text: GO:0002698
+        description: negative regulation of immune effector process
+        meaning: GO:0002698
+      GO:0002689:
+        text: GO:0002689
+        description: negative regulation of leukocyte chemotaxis
+        meaning: GO:0002689
+      GO:0006940:
+        text: GO:0006940
+        description: regulation of smooth muscle contraction
+        meaning: GO:0006940
+      GO:0002832:
+        text: GO:0002832
+        description: negative regulation of response to biotic stimulus
+        meaning: GO:0002832
+      GO:0045823:
+        text: GO:0045823
+        description: positive regulation of heart contraction
+        meaning: GO:0045823
+      GO:0014056:
+        text: GO:0014056
+        description: regulation of acetylcholine secretion, neurotransmission
+        meaning: GO:0014056
+      GO:0045933:
+        text: GO:0045933
+        description: positive regulation of muscle contraction
+        meaning: GO:0045933
+      GO:0002710:
+        text: GO:0002710
+        description: negative regulation of T cell mediated immunity
+        meaning: GO:0002710
+      GO:0031344:
+        text: GO:0031344
+        description: regulation of cell projection organization
+        meaning: GO:0031344
+      GO:0045642:
+        text: GO:0045642
+        description: positive regulation of basophil differentiation
+        meaning: GO:0045642
+      GO:0014057:
+        text: GO:0014057
+        description: positive regulation of acetylcholine secretion, neurotransmission
+        meaning: GO:0014057
+      GO:0043068:
+        text: GO:0043068
+        description: positive regulation of programmed cell death
+        meaning: GO:0043068
+      GO:0008285:
+        text: GO:0008285
+        description: negative regulation of cell population proliferation
+        meaning: GO:0008285
+      GO:0014048:
+        text: GO:0014048
+        description: regulation of glutamate secretion
+        meaning: GO:0014048
+      GO:1902107:
+        text: GO:1902107
+        description: positive regulation of leukocyte differentiation
+        meaning: GO:1902107
+      GO:0050776:
+        text: GO:0050776
+        description: regulation of immune response
+        meaning: GO:0050776
+      GO:0014059:
+        text: GO:0014059
+        description: regulation of dopamine secretion
+        meaning: GO:0014059
+      GO:0045834:
+        text: GO:0045834
+        description: positive regulation of lipid metabolic process
+        meaning: GO:0045834
+      GO:0045986:
+        text: GO:0045986
+        description: negative regulation of smooth muscle contraction
+        meaning: GO:0045986
+      GO:0051461:
+        text: GO:0051461
+        description: positive regulation of corticotropin secretion
+        meaning: GO:0051461
+      GO:0030195:
+        text: GO:0030195
+        description: negative regulation of blood coagulation
+        meaning: GO:0030195
+      GO:0051970:
+        text: GO:0051970
+        description: negative regulation of transmission of nerve impulse
+        meaning: GO:0051970
+      GO:0042487:
+        text: GO:0042487
+        description: regulation of odontogenesis of dentin-containing tooth
+        meaning: GO:0042487
+      GO:0002703:
+        text: GO:0002703
+        description: regulation of leukocyte mediated immunity
+        meaning: GO:0002703
+      GO:1902020:
+        text: GO:1902020
+        description: negative regulation of cilium-dependent cell motility
+        meaning: GO:1902020
+      GO:0045653:
+        text: GO:0045653
+        description: negative regulation of megakaryocyte differentiation
+        meaning: GO:0045653
+      GO:0034106:
+        text: GO:0034106
+        description: regulation of erythrocyte clearance
+        meaning: GO:0034106
+      GO:0040020:
+        text: GO:0040020
+        description: regulation of meiotic nuclear division
+        meaning: GO:0040020
+      GO:1903827:
+        text: GO:1903827
+        description: regulation of cellular protein localization
+        meaning: GO:1903827
+      GO:1902105:
+        text: GO:1902105
+        description: regulation of leukocyte differentiation
+        meaning: GO:1902105
+      GO:0032812:
+        text: GO:0032812
+        description: positive regulation of epinephrine secretion
+        meaning: GO:0032812
+      GO:0050765:
+        text: GO:0050765
+        description: negative regulation of phagocytosis
+        meaning: GO:0050765
+      GO:0033603:
+        text: GO:0033603
+        description: positive regulation of dopamine secretion
+        meaning: GO:0033603
+      GO:0090316:
+        text: GO:0090316
+        description: positive regulation of intracellular protein transport
+        meaning: GO:0090316
+      GO:0046851:
+        text: GO:0046851
+        description: negative regulation of bone remodeling
+        meaning: GO:0046851
+      GO:0030854:
+        text: GO:0030854
+        description: positive regulation of granulocyte differentiation
+        meaning: GO:0030854
+      GO:0031645:
+        text: GO:0031645
+        description: negative regulation of nervous system process
+        meaning: GO:0031645
+      GO:0002584:
+        text: GO:0002584
+        description: negative regulation of antigen processing and presentation of
+          peptide antigen
+        meaning: GO:0002584
+      GO:0051053:
+        text: GO:0051053
+        description: negative regulation of DNA metabolic process
+        meaning: GO:0051053
+      GO:0051272:
+        text: GO:0051272
+        description: positive regulation of cellular component movement
+        meaning: GO:0051272
+      GO:0050805:
+        text: GO:0050805
+        description: negative regulation of synaptic transmission
+        meaning: GO:0050805
+      GO:0120032:
+        text: GO:0120032
+        description: regulation of plasma membrane bounded cell projection assembly
+        meaning: GO:0120032
+      GO:1903792:
+        text: GO:1903792
+        description: negative regulation of anion transport
+        meaning: GO:1903792
+      GO:2000834:
+        text: GO:2000834
+        description: regulation of androgen secretion
+        meaning: GO:2000834
+      GO:0031345:
+        text: GO:0031345
+        description: negative regulation of cell projection organization
+        meaning: GO:0031345
+      GO:0060784:
+        text: GO:0060784
+        description: regulation of cell proliferation involved in tissue homeostasis
+        meaning: GO:0060784
+      GO:0051173:
+        text: GO:0051173
+        description: positive regulation of nitrogen compound metabolic process
+        meaning: GO:0051173
+      GO:0050864:
+        text: GO:0050864
+        description: regulation of B cell activation
+        meaning: GO:0050864
+      GO:0033684:
+        text: GO:0033684
+        description: regulation of luteinizing hormone secretion
+        meaning: GO:0033684
+      GO:0080134:
+        text: GO:0080134
+        description: regulation of response to stress
+        meaning: GO:0080134
+      GO:0051271:
+        text: GO:0051271
+        description: negative regulation of cellular component movement
+        meaning: GO:0051271
+      GO:0002643:
+        text: GO:0002643
+        description: regulation of tolerance induction
+        meaning: GO:0002643
+      GO:0032351:
+        text: GO:0032351
+        description: negative regulation of hormone metabolic process
+        meaning: GO:0032351
+      GO:0001915:
+        text: GO:0001915
+        description: negative regulation of T cell mediated cytotoxicity
+        meaning: GO:0001915
+      GO:1905821:
+        text: GO:1905821
+        description: positive regulation of chromosome condensation
+        meaning: GO:1905821
+      GO:0032811:
+        text: GO:0032811
+        description: negative regulation of epinephrine secretion
+        meaning: GO:0032811
+      GO:0014049:
+        text: GO:0014049
+        description: positive regulation of glutamate secretion
+        meaning: GO:0014049
+      GO:0060632:
+        text: GO:0060632
+        description: regulation of microtubule-based movement
+        meaning: GO:0060632
+      GO:1903296:
+        text: GO:1903296
+        description: positive regulation of glutamate secretion, neurotransmission
+        meaning: GO:1903296
+      GO:0060467:
+        text: GO:0060467
+        description: negative regulation of fertilization
+        meaning: GO:0060467
+      GO:0046929:
+        text: GO:0046929
+        description: negative regulation of neurotransmitter secretion
+        meaning: GO:0046929
+      GO:0042482:
+        text: GO:0042482
+        description: positive regulation of odontogenesis
+        meaning: GO:0042482
+      GO:0001956:
+        text: GO:0001956
+        description: positive regulation of neurotransmitter secretion
+        meaning: GO:0001956
+      GO:0045702:
+        text: GO:0045702
+        description: positive regulation of spermatid nuclear differentiation
+        meaning: GO:0045702
+      GO:0048209:
+        text: GO:0048209
+        description: regulation of vesicle targeting, to, from or within Golgi
+        meaning: GO:0048209
+      GO:0051782:
+        text: GO:0051782
+        description: negative regulation of cell division
+        meaning: GO:0051782
+      GO:0044060:
+        text: GO:0044060
+        description: regulation of endocrine process
+        meaning: GO:0044060
+      GO:0003331:
+        text: GO:0003331
+        description: positive regulation of extracellular matrix constituent secretion
+        meaning: GO:0003331
+      GO:0014052:
+        text: GO:0014052
+        description: regulation of gamma-aminobutyric acid secretion
+        meaning: GO:0014052
+      GO:0045637:
+        text: GO:0045637
+        description: regulation of myeloid cell differentiation
+        meaning: GO:0045637
+      GO:0002637:
+        text: GO:0002637
+        description: regulation of immunoglobulin production
+        meaning: GO:0002637
+      GO:0034766:
+        text: GO:0034766
+        description: negative regulation of ion transmembrane transport
+        meaning: GO:0034766
+      GO:0032024:
+        text: GO:0032024
+        description: positive regulation of insulin secretion
+        meaning: GO:0032024
+      GO:0040017:
+        text: GO:0040017
+        description: positive regulation of locomotion
+        meaning: GO:0040017
+      GO:0045650:
+        text: GO:0045650
+        description: negative regulation of macrophage differentiation
+        meaning: GO:0045650
+      GO:0010629:
+        text: GO:0010629
+        description: negative regulation of gene expression
+        meaning: GO:0010629
+      GO:0034104:
+        text: GO:0034104
+        description: negative regulation of tissue remodeling
+        meaning: GO:0034104
+      GO:0031326:
+        text: GO:0031326
+        description: regulation of cellular biosynthetic process
+        meaning: GO:0031326
+      GO:0032230:
+        text: GO:0032230
+        description: positive regulation of synaptic transmission, GABAergic
+        meaning: GO:0032230
+      GO:1903036:
+        text: GO:1903036
+        description: positive regulation of response to wounding
+        meaning: GO:1903036
+      GO:0042762:
+        text: GO:0042762
+        description: regulation of sulfur metabolic process
+        meaning: GO:0042762
+      GO:0010556:
+        text: GO:0010556
+        description: regulation of macromolecule biosynthetic process
+        meaning: GO:0010556
+      GO:0090023:
+        text: GO:0090023
+        description: positive regulation of neutrophil chemotaxis
+        meaning: GO:0090023
+      GO:0051241:
+        text: GO:0051241
+        description: negative regulation of multicellular organismal process
+        meaning: GO:0051241
+      GO:0010468:
+        text: GO:0010468
+        description: regulation of gene expression
+        meaning: GO:0010468
+      GO:0010648:
+        text: GO:0010648
+        description: negative regulation of cell communication
+        meaning: GO:0010648
+      GO:0045656:
+        text: GO:0045656
+        description: negative regulation of monocyte differentiation
+        meaning: GO:0045656
+      GO:0010948:
+        text: GO:0010948
+        description: negative regulation of cell cycle process
+        meaning: GO:0010948
+      GO:0032411:
+        text: GO:0032411
+        description: positive regulation of transporter activity
+        meaning: GO:0032411
+      GO:0051726:
+        text: GO:0051726
+        description: regulation of cell cycle
+        meaning: GO:0051726
+      GO:0050766:
+        text: GO:0050766
+        description: positive regulation of phagocytosis
+        meaning: GO:0050766
+      GO:0002719:
+        text: GO:0002719
+        description: negative regulation of cytokine production involved in immune
+          response
+        meaning: GO:0002719
+      GO:0033047:
+        text: GO:0033047
+        description: regulation of mitotic sister chromatid segregation
+        meaning: GO:0033047
+      GO:2001252:
+        text: GO:2001252
+        description: positive regulation of chromosome organization
+        meaning: GO:2001252
+      GO:0045578:
+        text: GO:0045578
+        description: negative regulation of B cell differentiation
+        meaning: GO:0045578
+      GO:0010894:
+        text: GO:0010894
+        description: negative regulation of steroid biosynthetic process
+        meaning: GO:0010894
+      GO:1902017:
+        text: GO:1902017
+        description: regulation of cilium assembly
+        meaning: GO:1902017
+      GO:1905940:
+        text: GO:1905940
+        description: negative regulation of gonad development
+        meaning: GO:1905940
+      GO:0051171:
+        text: GO:0051171
+        description: regulation of nitrogen compound metabolic process
+        meaning: GO:0051171
+      GO:1902721:
+        text: GO:1902721
+        description: negative regulation of prolactin secretion
+        meaning: GO:1902721
+      GO:0051956:
+        text: GO:0051956
+        description: negative regulation of amino acid transport
+        meaning: GO:0051956
+      GO:0002688:
+        text: GO:0002688
+        description: regulation of leukocyte chemotaxis
+        meaning: GO:0002688
+      GO:0002586:
+        text: GO:0002586
+        description: regulation of antigen processing and presentation of peptide
+          antigen via MHC class II
+        meaning: GO:0002586
+      GO:2000194:
+        text: GO:2000194
+        description: regulation of female gonad development
+        meaning: GO:2000194
+      GO:0061041:
+        text: GO:0061041
+        description: regulation of wound healing
+        meaning: GO:0061041
+      GO:0032222:
+        text: GO:0032222
+        description: regulation of synaptic transmission, cholinergic
+        meaning: GO:0032222
+      GO:0002761:
+        text: GO:0002761
+        description: regulation of myeloid leukocyte differentiation
+        meaning: GO:0002761
+      GO:0045824:
+        text: GO:0045824
+        description: negative regulation of innate immune response
+        meaning: GO:0045824
+      GO:0030336:
+        text: GO:0030336
+        description: negative regulation of cell migration
+        meaning: GO:0030336
+      GO:0106014:
+        text: GO:0106014
+        description: regulation of inflammatory response to wounding
+        meaning: GO:0106014
+      GO:0060491:
+        text: GO:0060491
+        description: regulation of cell projection assembly
+        meaning: GO:0060491
+      GO:0032277:
+        text: GO:0032277
+        description: negative regulation of gonadotropin secretion
+        meaning: GO:0032277
+      GO:0002644:
+        text: GO:0002644
+        description: negative regulation of tolerance induction
+        meaning: GO:0002644
+      GO:0002707:
+        text: GO:0002707
+        description: negative regulation of lymphocyte mediated immunity
+        meaning: GO:0002707
+      GO:0045787:
+        text: GO:0045787
+        description: positive regulation of cell cycle
+        meaning: GO:0045787
+      GO:0051590:
+        text: GO:0051590
+        description: positive regulation of neurotransmitter transport
+        meaning: GO:0051590
+      GO:0045644:
+        text: GO:0045644
+        description: negative regulation of eosinophil differentiation
+        meaning: GO:0045644
+      GO:1904411:
+        text: GO:1904411
+        description: positive regulation of secretory granule organization
+        meaning: GO:1904411
+      GO:0031323:
+        text: GO:0031323
+        description: regulation of cellular metabolic process
+        meaning: GO:0031323
+      GO:0002718:
+        text: GO:0002718
+        description: regulation of cytokine production involved in immune response
+        meaning: GO:0002718
+      GO:0002676:
+        text: GO:0002676
+        description: regulation of chronic inflammatory response
+        meaning: GO:0002676
+      GO:0030887:
+        text: GO:0030887
+        description: positive regulation of myeloid dendritic cell activation
+        meaning: GO:0030887
+      GO:0002791:
+        text: GO:0002791
+        description: regulation of peptide secretion
+        meaning: GO:0002791
+      GO:0042488:
+        text: GO:0042488
+        description: positive regulation of odontogenesis of dentin-containing tooth
+        meaning: GO:0042488
+      GO:2000831:
+        text: GO:2000831
+        description: regulation of steroid hormone secretion
+        meaning: GO:2000831
+      GO:0023051:
+        text: GO:0023051
+        description: regulation of signaling
+        meaning: GO:0023051
+      GO:0051931:
+        text: GO:0051931
+        description: regulation of sensory perception
+        meaning: GO:0051931
+      GO:0002580:
+        text: GO:0002580
+        description: regulation of antigen processing and presentation of peptide
+          or polysaccharide antigen via MHC class II
+        meaning: GO:0002580
+      GO:0002632:
+        text: GO:0002632
+        description: negative regulation of granuloma formation
+        meaning: GO:0002632
+      GO:0050868:
+        text: GO:0050868
+        description: negative regulation of T cell activation
+        meaning: GO:0050868
+      GO:1903553:
+        text: GO:1903553
+        description: positive regulation of extracellular exosome assembly
+        meaning: GO:1903553
+      GO:0032412:
+        text: GO:0032412
+        description: regulation of ion transmembrane transporter activity
+        meaning: GO:0032412
+      GO:1900048:
+        text: GO:1900048
+        description: positive regulation of hemostasis
+        meaning: GO:1900048
+      GO:0002660:
+        text: GO:0002660
+        description: positive regulation of peripheral tolerance induction
+        meaning: GO:0002660
+      GO:2000850:
+        text: GO:2000850
+        description: negative regulation of glucocorticoid secretion
+        meaning: GO:2000850
+      GO:0050869:
+        text: GO:0050869
+        description: negative regulation of B cell activation
+        meaning: GO:0050869
+      GO:0098801:
+        text: GO:0098801
+        description: regulation of renal system process
+        meaning: GO:0098801
+      GO:2000145:
+        text: GO:2000145
+        description: regulation of cell motility
+        meaning: GO:2000145
+      GO:0002686:
+        text: GO:0002686
+        description: negative regulation of leukocyte migration
+        meaning: GO:0002686
+      GO:0051447:
+        text: GO:0051447
+        description: negative regulation of meiotic cell cycle
+        meaning: GO:0051447
+      GO:0022603:
+        text: GO:0022603
+        description: regulation of anatomical structure morphogenesis
+        meaning: GO:0022603
+      GO:0007162:
+        text: GO:0007162
+        description: negative regulation of cell adhesion
+        meaning: GO:0007162
+      GO:0090394:
+        text: GO:0090394
+        description: negative regulation of excitatory postsynaptic potential
+        meaning: GO:0090394
+      GO:0002712:
+        text: GO:0002712
+        description: regulation of B cell mediated immunity
+        meaning: GO:0002712
+      GO:0050866:
+        text: GO:0050866
+        description: negative regulation of cell activation
+        meaning: GO:0050866
+      GO:0002792:
+        text: GO:0002792
+        description: negative regulation of peptide secretion
+        meaning: GO:0002792
+      GO:2001251:
+        text: GO:2001251
+        description: negative regulation of chromosome organization
+        meaning: GO:2001251
+      GO:0032227:
+        text: GO:0032227
+        description: negative regulation of synaptic transmission, dopaminergic
+        meaning: GO:0032227
+      GO:0002922:
+        text: GO:0002922
+        description: positive regulation of humoral immune response
+        meaning: GO:0002922
+      GO:0010701:
+        text: GO:0010701
+        description: positive regulation of norepinephrine secretion
+        meaning: GO:0010701
+      GO:0070094:
+        text: GO:0070094
+        description: positive regulation of glucagon secretion
+        meaning: GO:0070094
+      GO:0051783:
+        text: GO:0051783
+        description: regulation of nuclear division
+        meaning: GO:0051783
+      GO:0045638:
+        text: GO:0045638
+        description: negative regulation of myeloid cell differentiation
+        meaning: GO:0045638
+      GO:0045649:
+        text: GO:0045649
+        description: regulation of macrophage differentiation
+        meaning: GO:0045649
+      GO:0090303:
+        text: GO:0090303
+        description: positive regulation of wound healing
+        meaning: GO:0090303
+      GO:0002890:
+        text: GO:0002890
+        description: negative regulation of immunoglobulin mediated immune response
+        meaning: GO:0002890
+      GO:0002715:
+        text: GO:0002715
+        description: regulation of natural killer cell mediated immunity
+        meaning: GO:0002715
+      GO:0023057:
+        text: GO:0023057
+        description: negative regulation of signaling
+        meaning: GO:0023057
+      GO:0106016:
+        text: GO:0106016
+        description: positive regulation of inflammatory response to wounding
+        meaning: GO:0106016
+      GO:0002701:
+        text: GO:0002701
+        description: negative regulation of production of molecular mediator of immune
+          response
+        meaning: GO:0002701
+      GO:1901318:
+        text: GO:1901318
+        description: negative regulation of flagellated sperm motility
+        meaning: GO:1901318
+      GO:0002833:
+        text: GO:0002833
+        description: positive regulation of response to biotic stimulus
+        meaning: GO:0002833
+      GO:0043380:
+        text: GO:0043380
+        description: regulation of memory T cell differentiation
+        meaning: GO:0043380
+      GO:0051049:
+        text: GO:0051049
+        description: regulation of transport
+        meaning: GO:0051049
+      GO:0033605:
+        text: GO:0033605
+        description: positive regulation of catecholamine secretion
+        meaning: GO:0033605
+      GO:0032891:
+        text: GO:0032891
+        description: negative regulation of organic acid transport
+        meaning: GO:0032891
+      GO:2000845:
+        text: GO:2000845
+        description: positive regulation of testosterone secretion
+        meaning: GO:2000845
+      GO:0051955:
+        text: GO:0051955
+        description: regulation of amino acid transport
+        meaning: GO:0051955
+      GO:0034250:
+        text: GO:0034250
+        description: positive regulation of cellular amide metabolic process
+        meaning: GO:0034250
+      GO:0033046:
+        text: GO:0033046
+        description: negative regulation of sister chromatid segregation
+        meaning: GO:0033046
+      GO:0050870:
+        text: GO:0050870
+        description: positive regulation of T cell activation
+        meaning: GO:0050870
+      GO:0002587:
+        text: GO:0002587
+        description: negative regulation of antigen processing and presentation of
+          peptide antigen via MHC class II
+        meaning: GO:0002587
+      GO:0045595:
+        text: GO:0045595
+        description: regulation of cell differentiation
+        meaning: GO:0045595
+      GO:1903055:
+        text: GO:1903055
+        description: positive regulation of extracellular matrix organization
+        meaning: GO:1903055
+      GO:0051047:
+        text: GO:0051047
+        description: positive regulation of secretion
+        meaning: GO:0051047
+      GO:0009890:
+        text: GO:0009890
+        description: negative regulation of biosynthetic process
+        meaning: GO:0009890
+      GO:0019222:
+        text: GO:0019222
+        description: regulation of metabolic process
+        meaning: GO:0019222
+      GO:0045124:
+        text: GO:0045124
+        description: regulation of bone resorption
+        meaning: GO:0045124
+      GO:0090277:
+        text: GO:0090277
+        description: positive regulation of peptide hormone secretion
+        meaning: GO:0090277
+      GO:0002717:
+        text: GO:0002717
+        description: positive regulation of natural killer cell mediated immunity
+        meaning: GO:0002717
+      GO:0051445:
+        text: GO:0051445
+        description: regulation of meiotic cell cycle
+        meaning: GO:0051445
+      GO:0048585:
+        text: GO:0048585
+        description: negative regulation of response to stimulus
+        meaning: GO:0048585
+      GO:0031325:
+        text: GO:0031325
+        description: positive regulation of cellular metabolic process
+        meaning: GO:0031325
+      GO:0002700:
+        text: GO:0002700
+        description: regulation of production of molecular mediator of immune response
+        meaning: GO:0002700
+      GO:0048518:
+        text: GO:0048518
+        description: positive regulation of biological process
+        meaning: GO:0048518
+      GO:0090278:
+        text: GO:0090278
+        description: negative regulation of peptide hormone secretion
+        meaning: GO:0090278
+      GO:1904364:
+        text: GO:1904364
+        description: positive regulation of calcitonin secretion
+        meaning: GO:1904364
+      GO:0110111:
+        text: GO:0110111
+        description: negative regulation of animal organ morphogenesis
+        meaning: GO:0110111
+      GO:0045655:
+        text: GO:0045655
+        description: regulation of monocyte differentiation
+        meaning: GO:0045655
+      GO:0050819:
+        text: GO:0050819
+        description: negative regulation of coagulation
+        meaning: GO:0050819
+      GO:1905880:
+        text: GO:1905880
+        description: negative regulation of oogenesis
+        meaning: GO:1905880
+      GO:0002685:
+        text: GO:0002685
+        description: regulation of leukocyte migration
+        meaning: GO:0002685
+      GO:0045935:
+        text: GO:0045935
+        description: positive regulation of nucleobase-containing compound metabolic
+          process
+        meaning: GO:0045935
+      GO:0010942:
+        text: GO:0010942
+        description: positive regulation of cell death
+        meaning: GO:0010942
+      GO:0009968:
+        text: GO:0009968
+        description: negative regulation of signal transduction
+        meaning: GO:0009968
+      GO:0045836:
+        text: GO:0045836
+        description: positive regulation of meiotic nuclear division
+        meaning: GO:0045836
+      GO:1904252:
+        text: GO:1904252
+        description: negative regulation of bile acid metabolic process
+        meaning: GO:1904252
+      GO:0051952:
+        text: GO:0051952
+        description: regulation of amine transport
+        meaning: GO:0051952
+      GO:0034103:
+        text: GO:0034103
+        description: regulation of tissue remodeling
+        meaning: GO:0034103
+      GO:0002824:
+        text: GO:0002824
+        description: positive regulation of adaptive immune response based on somatic
+          recombination of immune receptors built from immunoglobulin superfamily
+          domains
+        meaning: GO:0002824
+      GO:1902531:
+        text: GO:1902531
+        description: regulation of intracellular signal transduction
+        meaning: GO:1902531
+      GO:0051240:
+        text: GO:0051240
+        description: positive regulation of multicellular organismal process
+        meaning: GO:0051240
+      GO:0099565:
+        text: GO:0099565
+        description: chemical synaptic transmission, postsynaptic
+        meaning: GO:0099565
+      GO:0090257:
+        text: GO:0090257
+        description: regulation of muscle system process
+        meaning: GO:0090257
+      GO:0045621:
+        text: GO:0045621
+        description: positive regulation of lymphocyte differentiation
+        meaning: GO:0045621
+      GO:2000833:
+        text: GO:2000833
+        description: positive regulation of steroid hormone secretion
+        meaning: GO:2000833
+      GO:1901343:
+        text: GO:1901343
+        description: negative regulation of vasculature development
+        meaning: GO:1901343
+      GO:0060255:
+        text: GO:0060255
+        description: regulation of macromolecule metabolic process
+        meaning: GO:0060255
+      GO:1903037:
+        text: GO:1903037
+        description: regulation of leukocyte cell-cell adhesion
+        meaning: GO:1903037
+      GO:1900424:
+        text: GO:1900424
+        description: regulation of defense response to bacterium
+        meaning: GO:1900424
+      GO:0046852:
+        text: GO:0046852
+        description: positive regulation of bone remodeling
+        meaning: GO:0046852
+      GO:0050793:
+        text: GO:0050793
+        description: regulation of developmental process
+        meaning: GO:0050793
+      GO:0031346:
+        text: GO:0031346
+        description: positive regulation of cell projection organization
+        meaning: GO:0031346
+      GO:1900046:
+        text: GO:1900046
+        description: regulation of hemostasis
+        meaning: GO:1900046
+      GO:0080154:
+        text: GO:0080154
+        description: regulation of fertilization
+        meaning: GO:0080154
+      GO:0051176:
+        text: GO:0051176
+        description: positive regulation of sulfur metabolic process
+        meaning: GO:0051176
+      GO:0050778:
+        text: GO:0050778
+        description: positive regulation of immune response
+        meaning: GO:0050778
+      GO:0008284:
+        text: GO:0008284
+        description: positive regulation of cell population proliferation
+        meaning: GO:0008284
+      GO:0001818:
+        text: GO:0001818
+        description: negative regulation of cytokine production
+        meaning: GO:0001818
+      GO:0045987:
+        text: GO:0045987
+        description: positive regulation of smooth muscle contraction
+        meaning: GO:0045987
+      GO:2000612:
+        text: GO:2000612
+        description: regulation of thyroid-stimulating hormone secretion
+        meaning: GO:2000612
+      GO:1903038:
+        text: GO:1903038
+        description: negative regulation of leukocyte cell-cell adhesion
+        meaning: GO:1903038
+      GO:0002820:
+        text: GO:0002820
+        description: negative regulation of adaptive immune response
+        meaning: GO:0002820
+      GO:0002828:
+        text: GO:0002828
+        description: regulation of type 2 immune response
+        meaning: GO:0002828
+      GO:0045766:
+        text: GO:0045766
+        description: positive regulation of angiogenesis
+        meaning: GO:0045766
+      GO:0099550:
+        text: GO:0099550
+        description: trans-synaptic signaling, modulating synaptic transmission
+        meaning: GO:0099550
+      GO:0045581:
+        text: GO:0045581
+        description: negative regulation of T cell differentiation
+        meaning: GO:0045581
+      GO:0008016:
+        text: GO:0008016
+        description: regulation of heart contraction
+        meaning: GO:0008016
+      GO:0032352:
+        text: GO:0032352
+        description: positive regulation of hormone metabolic process
+        meaning: GO:0032352
+      GO:0050728:
+        text: GO:0050728
+        description: negative regulation of inflammatory response
+        meaning: GO:0050728
+      GO:0050714:
+        text: GO:0050714
+        description: positive regulation of protein secretion
+        meaning: GO:0050714
+      GO:0043902:
+        text: GO:0043902
+        description: positive regulation of multi-organism process
+        meaning: GO:0043902
+      GO:0120033:
+        text: GO:0120033
+        description: negative regulation of plasma membrane bounded cell projection
+          assembly
+        meaning: GO:0120033
+      GO:1901533:
+        text: GO:1901533
+        description: negative regulation of hematopoietic progenitor cell differentiation
+        meaning: GO:1901533
+      GO:0050806:
+        text: GO:0050806
+        description: positive regulation of synaptic transmission
+        meaning: GO:0050806
+      GO:0016525:
+        text: GO:0016525
+        description: negative regulation of angiogenesis
+        meaning: GO:0016525
+      GO:0051785:
+        text: GO:0051785
+        description: positive regulation of nuclear division
+        meaning: GO:0051785
+      GO:0050863:
+        text: GO:0050863
+        description: regulation of T cell activation
+        meaning: GO:0050863
+      GO:0002709:
+        text: GO:0002709
+        description: regulation of T cell mediated immunity
+        meaning: GO:0002709
+      GO:0060457:
+        text: GO:0060457
+        description: negative regulation of digestive system process
+        meaning: GO:0060457
+      GO:0045940:
+        text: GO:0045940
+        description: positive regulation of steroid metabolic process
+        meaning: GO:0045940
+      GO:0048523:
+        text: GO:0048523
+        description: negative regulation of cellular process
+        meaning: GO:0048523
+      GO:0050764:
+        text: GO:0050764
+        description: regulation of phagocytosis
+        meaning: GO:0050764
+      GO:0050796:
+        text: GO:0050796
+        description: regulation of insulin secretion
+        meaning: GO:0050796
+      GO:0043066:
+        text: GO:0043066
+        description: negative regulation of apoptotic process
+        meaning: GO:0043066
+      GO:0050921:
+        text: GO:0050921
+        description: positive regulation of chemotaxis
+        meaning: GO:0050921
+      GO:0014061:
+        text: GO:0014061
+        description: regulation of norepinephrine secretion
+        meaning: GO:0014061
+      GO:0034248:
+        text: GO:0034248
+        description: regulation of cellular amide metabolic process
+        meaning: GO:0034248
+      GO:1904746:
+        text: GO:1904746
+        description: negative regulation of apoptotic process involved in development
+        meaning: GO:1904746
+      GO:0010558:
+        text: GO:0010558
+        description: negative regulation of macromolecule biosynthetic process
+        meaning: GO:0010558
+      GO:1903961:
+        text: GO:1903961
+        description: positive regulation of anion transmembrane transport
+        meaning: GO:1903961
+      GO:0051784:
+        text: GO:0051784
+        description: negative regulation of nuclear division
+        meaning: GO:0051784
+      GO:1905952:
+        text: GO:1905952
+        description: regulation of lipid localization
+        meaning: GO:1905952
+      GO:0060548:
+        text: GO:0060548
+        description: negative regulation of cell death
+        meaning: GO:0060548
+      GO:0008348:
+        text: GO:0008348
+        description: negative regulation of antimicrobial humoral response
+        meaning: GO:0008348
+      GO:0061045:
+        text: GO:0061045
+        description: negative regulation of wound healing
+        meaning: GO:0061045
+      GO:0120188:
+        text: GO:0120188
+        description: regulation of bile acid secretion
+        meaning: GO:0120188
+      GO:0014053:
+        text: GO:0014053
+        description: negative regulation of gamma-aminobutyric acid secretion
+        meaning: GO:0014053
+      GO:0071622:
+        text: GO:0071622
+        description: regulation of granulocyte chemotaxis
+        meaning: GO:0071622
+      GO:0001916:
+        text: GO:0001916
+        description: positive regulation of T cell mediated cytotoxicity
+        meaning: GO:0001916
+      GO:0060786:
+        text: GO:0060786
+        description: regulation of cell differentiation involved in tissue homeostasis
+        meaning: GO:0060786
+      GO:0045640:
+        text: GO:0045640
+        description: regulation of basophil differentiation
+        meaning: GO:0045640
+      GO:0044087:
+        text: GO:0044087
+        description: regulation of cellular component biogenesis
+        meaning: GO:0044087
+      GO:0034767:
+        text: GO:0034767
+        description: positive regulation of ion transmembrane transport
+        meaning: GO:0034767
+      GO:0045658:
+        text: GO:0045658
+        description: regulation of neutrophil differentiation
+        meaning: GO:0045658
+      GO:1900017:
+        text: GO:1900017
+        description: positive regulation of cytokine production involved in inflammatory
+          response
+        meaning: GO:1900017
+      GO:1903530:
+        text: GO:1903530
+        description: regulation of secretion by cell
+        meaning: GO:1903530
+      GO:0051054:
+        text: GO:0051054
+        description: positive regulation of DNA metabolic process
+        meaning: GO:0051054
+      GO:1903551:
+        text: GO:1903551
+        description: regulation of extracellular exosome assembly
+        meaning: GO:1903551
+      GO:0002708:
+        text: GO:0002708
+        description: positive regulation of lymphocyte mediated immunity
+        meaning: GO:0002708
+      GO:0045597:
+        text: GO:0045597
+        description: positive regulation of cell differentiation
+        meaning: GO:0045597
+      GO:0051223:
+        text: GO:0051223
+        description: regulation of protein transport
+        meaning: GO:0051223
+      GO:1903380:
+        text: GO:1903380
+        description: positive regulation of mitotic chromosome condensation
+        meaning: GO:1903380
+      GO:0032753:
+        text: GO:0032753
+        description: positive regulation of interleukin-4 production
+        meaning: GO:0032753
+      GO:0099171:
+        text: GO:0099171
+        description: presynaptic modulation of chemical synaptic transmission
+        meaning: GO:0099171
+      GO:0002694:
+        text: GO:0002694
+        description: regulation of leukocyte activation
+        meaning: GO:0002694
+      GO:1903379:
+        text: GO:1903379
+        description: regulation of mitotic chromosome condensation
+        meaning: GO:1903379
+      GO:1903295:
+        text: GO:1903295
+        description: negative regulation of glutamate secretion, neurotransmission
+        meaning: GO:1903295
+      GO:1902018:
+        text: GO:1902018
+        description: negative regulation of cilium assembly
+        meaning: GO:1902018
+      GO:0002704:
+        text: GO:0002704
+        description: negative regulation of leukocyte mediated immunity
+        meaning: GO:0002704
+      GO:0051493:
+        text: GO:0051493
+        description: regulation of cytoskeleton organization
+        meaning: GO:0051493
+      GO:0043065:
+        text: GO:0043065
+        description: positive regulation of apoptotic process
+        meaning: GO:0043065
+      GO:0007346:
+        text: GO:0007346
+        description: regulation of mitotic cell cycle
+        meaning: GO:0007346
+      GO:2000835:
+        text: GO:2000835
+        description: negative regulation of androgen secretion
+        meaning: GO:2000835
+      GO:0060376:
+        text: GO:0060376
+        description: positive regulation of mast cell differentiation
+        meaning: GO:0060376
+      GO:0045620:
+        text: GO:0045620
+        description: negative regulation of lymphocyte differentiation
+        meaning: GO:0045620
+      GO:0045654:
+        text: GO:0045654
+        description: positive regulation of megakaryocyte differentiation
+        meaning: GO:0045654
+      GO:0045910:
+        text: GO:0045910
+        description: negative regulation of DNA recombination
+        meaning: GO:0045910
+      GO:0051093:
+        text: GO:0051093
+        description: negative regulation of developmental process
+        meaning: GO:0051093
+      GO:0043134:
+        text: GO:0043134
+        description: regulation of hindgut contraction
+        meaning: GO:0043134
+      GO:1904251:
+        text: GO:1904251
+        description: regulation of bile acid metabolic process
+        meaning: GO:1904251
+      GO:2000195:
+        text: GO:2000195
+        description: negative regulation of female gonad development
+        meaning: GO:2000195
+      GO:0070201:
+        text: GO:0070201
+        description: regulation of establishment of protein localization
+        meaning: GO:0070201
+      GO:0002585:
+        text: GO:0002585
+        description: positive regulation of antigen processing and presentation of
+          peptide antigen
+        meaning: GO:0002585
+      GO:1904677:
+        text: GO:1904677
+        description: positive regulation of somatic stem cell division
+        meaning: GO:1904677
+      GO:0010638:
+        text: GO:0010638
+        description: positive regulation of organelle organization
+        meaning: GO:0010638
+      GO:0002695:
+        text: GO:0002695
+        description: negative regulation of leukocyte activation
+        meaning: GO:0002695
+      GO:0044065:
+        text: GO:0044065
+        description: regulation of respiratory system process
+        meaning: GO:0044065
+      GO:0090275:
+        text: GO:0090275
+        description: negative regulation of somatostatin secretion
+        meaning: GO:0090275
+      GO:0009893:
+        text: GO:0009893
+        description: positive regulation of metabolic process
+        meaning: GO:0009893
+      GO:0098828:
+        text: GO:0098828
+        description: modulation of inhibitory postsynaptic potential
+        meaning: GO:0098828
+      GO:0060627:
+        text: GO:0060627
+        description: regulation of vesicle-mediated transport
+        meaning: GO:0060627
+      GO:1903035:
+        text: GO:1903035
+        description: negative regulation of response to wounding
+        meaning: GO:1903035
+      GO:0032880:
+        text: GO:0032880
+        description: regulation of protein localization
+        meaning: GO:0032880
+      GO:0002690:
+        text: GO:0002690
+        description: positive regulation of leukocyte chemotaxis
+        meaning: GO:0002690
+      GO:0002687:
+        text: GO:0002687
+        description: positive regulation of leukocyte migration
+        meaning: GO:0002687
+      GO:1903532:
+        text: GO:1903532
+        description: positive regulation of secretion by cell
+        meaning: GO:1903532
+      GO:0002921:
+        text: GO:0002921
+        description: negative regulation of humoral immune response
+        meaning: GO:0002921
+      GO:0002578:
+        text: GO:0002578
+        description: negative regulation of antigen processing and presentation
+        meaning: GO:0002578
+      GO:0007165:
+        text: GO:0007165
+        description: signal transduction
+        meaning: GO:0007165
+      GO:0051048:
+        text: GO:0051048
+        description: negative regulation of secretion
+        meaning: GO:0051048
+      GO:0032228:
+        text: GO:0032228
+        description: regulation of synaptic transmission, GABAergic
+        meaning: GO:0032228
+      GO:0002713:
+        text: GO:0002713
+        description: negative regulation of B cell mediated immunity
+        meaning: GO:0002713
+      GO:0043576:
+        text: GO:0043576
+        description: regulation of respiratory gaseous exchange
+        meaning: GO:0043576
+      GO:0062013:
+        text: GO:0062013
+        description: positive regulation of small molecule metabolic process
+        meaning: GO:0062013
+      GO:0010893:
+        text: GO:0010893
+        description: positive regulation of steroid biosynthetic process
+        meaning: GO:0010893
+      GO:0032410:
+        text: GO:0032410
+        description: negative regulation of transporter activity
+        meaning: GO:0032410
+      GO:0050922:
+        text: GO:0050922
+        description: negative regulation of chemotaxis
+        meaning: GO:0050922
+      GO:0033685:
+        text: GO:0033685
+        description: negative regulation of luteinizing hormone secretion
+        meaning: GO:0033685
+      GO:0045760:
+        text: GO:0045760
+        description: positive regulation of action potential
+        meaning: GO:0045760
+      GO:0003354:
+        text: GO:0003354
+        description: negative regulation of cilium movement
+        meaning: GO:0003354
+      GO:0045651:
+        text: GO:0045651
+        description: positive regulation of macrophage differentiation
+        meaning: GO:0045651
+      GO:0034108:
+        text: GO:0034108
+        description: positive regulation of erythrocyte clearance
+        meaning: GO:0034108
+      GO:0051968:
+        text: GO:0051968
+        description: positive regulation of synaptic transmission, glutamatergic
+        meaning: GO:0051968
+      GO:0019216:
+        text: GO:0019216
+        description: regulation of lipid metabolic process
+        meaning: GO:0019216
+      GO:0002794:
+        text: GO:0002794
+        description: regulation of antimicrobial peptide secretion
+        meaning: GO:0002794
+      GO:0034764:
+        text: GO:0034764
+        description: positive regulation of transmembrane transport
+        meaning: GO:0034764
+      GO:0032886:
+        text: GO:0032886
+        description: regulation of microtubule-based process
+        meaning: GO:0032886
+      GO:0050871:
+        text: GO:0050871
+        description: positive regulation of B cell activation
+        meaning: GO:0050871
+      GO:0003352:
+        text: GO:0003352
+        description: regulation of cilium movement
+        meaning: GO:0003352
+      GO:0023056:
+        text: GO:0023056
+        description: positive regulation of signaling
+        meaning: GO:0023056
+      GO:2000848:
+        text: GO:2000848
+        description: positive regulation of corticosteroid hormone secretion
+        meaning: GO:2000848
+      GO:0019219:
+        text: GO:0019219
+        description: regulation of nucleobase-containing compound metabolic process
+        meaning: GO:0019219
+      GO:0032226:
+        text: GO:0032226
+        description: positive regulation of synaptic transmission, dopaminergic
+        meaning: GO:0032226
+      GO:0045652:
+        text: GO:0045652
+        description: regulation of megakaryocyte differentiation
+        meaning: GO:0045652
+      GO:0010639:
+        text: GO:0010639
+        description: negative regulation of organelle organization
+        meaning: GO:0010639
+      GO:0031644:
+        text: GO:0031644
+        description: regulation of nervous system process
+        meaning: GO:0031644
+      GO:0090027:
+        text: GO:0090027
+        description: negative regulation of monocyte chemotaxis
+        meaning: GO:0090027
+      GO:1903522:
+        text: GO:1903522
+        description: regulation of blood circulation
+        meaning: GO:1903522
+      GO:1901534:
+        text: GO:1901534
+        description: positive regulation of hematopoietic progenitor cell differentiation
+        meaning: GO:1901534
+      GO:0030885:
+        text: GO:0030885
+        description: regulation of myeloid dendritic cell activation
+        meaning: GO:0030885
+      GO:0002714:
+        text: GO:0002714
+        description: positive regulation of B cell mediated immunity
+        meaning: GO:0002714
+      GO:1904018:
+        text: GO:1904018
+        description: positive regulation of vasculature development
+        meaning: GO:1904018
+      GO:1902622:
+        text: GO:1902622
+        description: regulation of neutrophil migration
+        meaning: GO:1902622
+      GO:0033686:
+        text: GO:0033686
+        description: positive regulation of luteinizing hormone secretion
+        meaning: GO:0033686
+      GO:2000181:
+        text: GO:2000181
+        description: negative regulation of blood vessel morphogenesis
+        meaning: GO:2000181
+      GO:0042489:
+        text: GO:0042489
+        description: negative regulation of odontogenesis of dentin-containing tooth
+        meaning: GO:0042489
+      GO:0032276:
+        text: GO:0032276
+        description: regulation of gonadotropin secretion
+        meaning: GO:0032276
+      GO:0070507:
+        text: GO:0070507
+        description: regulation of microtubule cytoskeleton organization
+        meaning: GO:0070507
+      GO:0046889:
+        text: GO:0046889
+        description: positive regulation of lipid biosynthetic process
+        meaning: GO:0046889
+      GO:0042481:
+        text: GO:0042481
+        description: regulation of odontogenesis
+        meaning: GO:0042481
+      GO:1904362:
+        text: GO:1904362
+        description: regulation of calcitonin secretion
+        meaning: GO:1904362
+      GO:0002658:
+        text: GO:0002658
+        description: regulation of peripheral tolerance induction
+        meaning: GO:0002658
+      GO:0051055:
+        text: GO:0051055
+        description: negative regulation of lipid biosynthetic process
+        meaning: GO:0051055
+      GO:2000035:
+        text: GO:2000035
+        description: regulation of stem cell division
+        meaning: GO:2000035
+      GO:0046676:
+        text: GO:0046676
+        description: negative regulation of insulin secretion
+        meaning: GO:0046676
+      GO:0009891:
+        text: GO:0009891
+        description: positive regulation of biosynthetic process
+        meaning: GO:0009891
+      GO:0035556:
+        text: GO:0035556
+        description: intracellular signal transduction
+        meaning: GO:0035556
+      GO:0002677:
+        text: GO:0002677
+        description: negative regulation of chronic inflammatory response
+        meaning: GO:0002677
+      GO:0106015:
+        text: GO:0106015
+        description: negative regulation of inflammatory response to wounding
+        meaning: GO:0106015
+      GO:0045579:
+        text: GO:0045579
+        description: positive regulation of B cell differentiation
+        meaning: GO:0045579
+      GO:2000843:
+        text: GO:2000843
+        description: regulation of testosterone secretion
+        meaning: GO:2000843
+      GO:0044070:
+        text: GO:0044070
+        description: regulation of anion transport
+        meaning: GO:0044070
+      GO:2000847:
+        text: GO:2000847
+        description: negative regulation of corticosteroid hormone secretion
+        meaning: GO:2000847
+      GO:1903707:
+        text: GO:1903707
+        description: negative regulation of hemopoiesis
+        meaning: GO:1903707
+      GO:0032413:
+        text: GO:0032413
+        description: negative regulation of ion transmembrane transporter activity
+        meaning: GO:0032413
+      GO:0002087:
+        text: GO:0002087
+        description: regulation of respiratory gaseous exchange by nervous system
+          process
+        meaning: GO:0002087
+      GO:0045639:
+        text: GO:0045639
+        description: positive regulation of myeloid cell differentiation
+        meaning: GO:0045639
+      GO:0002581:
+        text: GO:0002581
+        description: negative regulation of antigen processing and presentation of
+          peptide or polysaccharide antigen via MHC class II
+        meaning: GO:0002581
+      GO:0022407:
+        text: GO:0022407
+        description: regulation of cell-cell adhesion
+        meaning: GO:0022407
+      GO:0099177:
+        text: GO:0099177
+        description: regulation of trans-synaptic signaling
+        meaning: GO:0099177
+      GO:1900047:
+        text: GO:1900047
+        description: negative regulation of hemostasis
+        meaning: GO:1900047
+      GO:1902337:
+        text: GO:1902337
+        description: regulation of apoptotic process involved in morphogenesis
+        meaning: GO:1902337
+      GO:0032387:
+        text: GO:0032387
+        description: negative regulation of intracellular transport
+        meaning: GO:0032387
+      GO:0045930:
+        text: GO:0045930
+        description: negative regulation of mitotic cell cycle
+        meaning: GO:0045930
+      GO:2000243:
+        text: GO:2000243
+        description: positive regulation of reproductive process
+        meaning: GO:2000243
+      GO:0098900:
+        text: GO:0098900
+        description: regulation of action potential
+        meaning: GO:0098900
+      GO:0001912:
+        text: GO:0001912
+        description: positive regulation of leukocyte mediated cytotoxicity
+        meaning: GO:0001912
+      GO:0050794:
+        text: GO:0050794
+        description: regulation of cellular process
+        meaning: GO:0050794
+      GO:1903566:
+        text: GO:1903566
+        description: positive regulation of protein localization to cilium
+        meaning: GO:1903566
+      GO:0002682:
+        text: GO:0002682
+        description: regulation of immune system process
+        meaning: GO:0002682
+      GO:0050920:
+        text: GO:0050920
+        description: regulation of chemotaxis
+        meaning: GO:0050920
+      GO:0045645:
+        text: GO:0045645
+        description: positive regulation of eosinophil differentiation
+        meaning: GO:0045645
+      GO:0045830:
+        text: GO:0045830
+        description: positive regulation of isotype switching
+        meaning: GO:0045830
+      GO:0060377:
+        text: GO:0060377
+        description: negative regulation of mast cell differentiation
+        meaning: GO:0060377
+      GO:0120035:
+        text: GO:0120035
+        description: regulation of plasma membrane bounded cell projection organization
+        meaning: GO:0120035
+      GO:1901342:
+        text: GO:1901342
+        description: regulation of vasculature development
+        meaning: GO:1901342
+      GO:0045911:
+        text: GO:0045911
+        description: positive regulation of DNA recombination
+        meaning: GO:0045911
+      GO:0051953:
+        text: GO:0051953
+        description: negative regulation of amine transport
+        meaning: GO:0051953
+      GO:0032101:
+        text: GO:0032101
+        description: regulation of response to external stimulus
+        meaning: GO:0032101
+      GO:0033604:
+        text: GO:0033604
+        description: negative regulation of catecholamine secretion
+        meaning: GO:0033604
+      GO:0045088:
+        text: GO:0045088
+        description: regulation of innate immune response
+        meaning: GO:0045088
+      GO:1904748:
+        text: GO:1904748
+        description: regulation of apoptotic process involved in development
+        meaning: GO:1904748
+      GO:0032729:
+        text: GO:0032729
+        description: positive regulation of interferon-gamma production
+        meaning: GO:0032729
+      GO:0050729:
+        text: GO:0050729
+        description: positive regulation of inflammatory response
+        meaning: GO:0050729
+      GO:0002889:
+        text: GO:0002889
+        description: regulation of immunoglobulin mediated immune response
+        meaning: GO:0002889
+      GO:0014063:
+        text: GO:0014063
+        description: negative regulation of serotonin secretion
+        meaning: GO:0014063
+      GO:0051954:
+        text: GO:0051954
+        description: positive regulation of amine transport
+        meaning: GO:0051954
+      GO:0060124:
+        text: GO:0060124
+        description: positive regulation of growth hormone secretion
+        meaning: GO:0060124
+      GO:0002823:
+        text: GO:0002823
+        description: negative regulation of adaptive immune response based on somatic
+          recombination of immune receptors built from immunoglobulin superfamily
+          domains
+        meaning: GO:0002823
+      GO:0090026:
+        text: GO:0090026
+        description: positive regulation of monocyte chemotaxis
+        meaning: GO:0090026
+      GO:0032649:
+        text: GO:0032649
+        description: regulation of interferon-gamma production
+        meaning: GO:0032649
+      GO:0031348:
+        text: GO:0031348
+        description: negative regulation of defense response
+        meaning: GO:0031348
+      GO:0040013:
+        text: GO:0040013
+        description: negative regulation of locomotion
+        meaning: GO:0040013
+      GO:0014062:
+        text: GO:0014062
+        description: regulation of serotonin secretion
+        meaning: GO:0014062
+      GO:0043900:
+        text: GO:0043900
+        description: regulation of multi-organism process
+        meaning: GO:0043900
+      GO:0062014:
+        text: GO:0062014
+        description: negative regulation of small molecule metabolic process
+        meaning: GO:0062014
+      GO:0001819:
+        text: GO:0001819
+        description: positive regulation of cytokine production
+        meaning: GO:0001819
+      GO:0060341:
+        text: GO:0060341
+        description: regulation of cellular localization
+        meaning: GO:0060341
+      GO:1903793:
+        text: GO:1903793
+        description: positive regulation of anion transport
+        meaning: GO:1903793
+      GO:1902624:
+        text: GO:1902624
+        description: positive regulation of neutrophil migration
+        meaning: GO:1902624
+      GO:0045701:
+        text: GO:0045701
+        description: negative regulation of spermatid nuclear differentiation
+        meaning: GO:0045701
+      GO:2000155:
+        text: GO:2000155
+        description: positive regulation of cilium-dependent cell motility
+        meaning: GO:2000155
+      GO:0060295:
+        text: GO:0060295
+        description: regulation of cilium movement involved in cell motility
+        meaning: GO:0060295
+      GO:0006937:
+        text: GO:0006937
+        description: regulation of muscle contraction
+        meaning: GO:0006937
+      GO:2000851:
+        text: GO:2000851
+        description: positive regulation of glucocorticoid secretion
+        meaning: GO:2000851
+      GO:0051983:
+        text: GO:0051983
+        description: regulation of chromosome segregation
+        meaning: GO:0051983
+      GO:0032278:
+        text: GO:0032278
+        description: positive regulation of gonadotropin secretion
+        meaning: GO:0032278
+      GO:0050865:
+        text: GO:0050865
+        description: regulation of cell activation
+        meaning: GO:0050865
+      GO:1903552:
+        text: GO:1903552
+        description: negative regulation of extracellular exosome assembly
+        meaning: GO:1903552
+      GO:1905881:
+        text: GO:1905881
+        description: positive regulation of oogenesis
+        meaning: GO:1905881
+      GO:0022409:
+        text: GO:0022409
+        description: positive regulation of cell-cell adhesion
+        meaning: GO:0022409
+      GO:0050777:
+        text: GO:0050777
+        description: negative regulation of immune response
+        meaning: GO:0050777
+      GO:0051969:
+        text: GO:0051969
+        description: regulation of transmission of nerve impulse
+        meaning: GO:0051969
+      GO:0070257:
+        text: GO:0070257
+        description: positive regulation of mucus secretion
+        meaning: GO:0070257
+      GO:0032713:
+        text: GO:0032713
+        description: negative regulation of interleukin-4 production
+        meaning: GO:0032713
+      GO:0080090:
+        text: GO:0080090
+        description: regulation of primary metabolic process
+        meaning: GO:0080090
+      GO:0045580:
+        text: GO:0045580
+        description: regulation of T cell differentiation
+        meaning: GO:0045580
+      GO:0033157:
+        text: GO:0033157
+        description: regulation of intracellular protein transport
+        meaning: GO:0033157
+      GO:0040012:
+        text: GO:0040012
+        description: regulation of locomotion
+        meaning: GO:0040012
+      GO:0001817:
+        text: GO:0001817
+        description: regulation of cytokine production
+        meaning: GO:0001817
+      GO:0045582:
+        text: GO:0045582
+        description: positive regulation of T cell differentiation
+        meaning: GO:0045582
+      GO:0045648:
+        text: GO:0045648
+        description: positive regulation of erythrocyte differentiation
+        meaning: GO:0045648
+      GO:1902533:
+        text: GO:1902533
+        description: positive regulation of intracellular signal transduction
+        meaning: GO:1902533
+      GO:0043270:
+        text: GO:0043270
+        description: positive regulation of ion transport
+        meaning: GO:0043270
+      GO:0051459:
+        text: GO:0051459
+        description: regulation of corticotropin secretion
+        meaning: GO:0051459
+      GO:0033043:
+        text: GO:0033043
+        description: regulation of organelle organization
+        meaning: GO:0033043
+      GO:0032102:
+        text: GO:0032102
+        description: negative regulation of response to external stimulus
+        meaning: GO:0032102
+      GO:1900015:
+        text: GO:1900015
+        description: regulation of cytokine production involved in inflammatory response
+        meaning: GO:1900015
+      GO:0002696:
+        text: GO:0002696
+        description: positive regulation of leukocyte activation
+        meaning: GO:0002696
+      GO:0090317:
+        text: GO:0090317
+        description: negative regulation of intracellular protein transport
+        meaning: GO:0090317
+      GO:0032673:
+        text: GO:0032673
+        description: regulation of interleukin-4 production
+        meaning: GO:0032673
+      GO:0022898:
+        text: GO:0022898
+        description: regulation of transmembrane transporter activity
+        meaning: GO:0022898
+      GO:1903829:
+        text: GO:1903829
+        description: positive regulation of cellular protein localization
+        meaning: GO:1903829
+      GO:0042127:
+        text: GO:0042127
+        description: regulation of cell population proliferation
+        meaning: GO:0042127
+      GO:0031341:
+        text: GO:0031341
+        description: regulation of cell killing
+        meaning: GO:0031341
+      GO:0031349:
+        text: GO:0031349
+        description: positive regulation of defense response
+        meaning: GO:0031349
+      GO:0048522:
+        text: GO:0048522
+        description: positive regulation of cellular process
+        meaning: GO:0048522
+      GO:0002784:
+        text: GO:0002784
+        description: regulation of antimicrobial peptide production
+        meaning: GO:0002784
+      GO:2000026:
+        text: GO:2000026
+        description: regulation of multicellular organismal development
+        meaning: GO:2000026
+      GO:2000872:
+        text: GO:2000872
+        description: positive regulation of progesterone secretion
+        meaning: GO:2000872
+      GO:1903034:
+        text: GO:1903034
+        description: regulation of response to wounding
+        meaning: GO:1903034
+      GO:0030193:
+        text: GO:0030193
+        description: regulation of blood coagulation
+        meaning: GO:0030193
+      GO:1905114:
+        text: GO:1905114
+        description: cell surface receptor signaling pathway involved in cell-cell
+          signaling
+        meaning: GO:1905114
+      GO:0071623:
+        text: GO:0071623
+        description: negative regulation of granulocyte chemotaxis
+        meaning: GO:0071623
+      GO:0051050:
+        text: GO:0051050
+        description: positive regulation of transport
+        meaning: GO:0051050
+      GO:1903565:
+        text: GO:1903565
+        description: negative regulation of protein localization to cilium
+        meaning: GO:1903565
+      GO:0002645:
+        text: GO:0002645
+        description: positive regulation of tolerance induction
+        meaning: GO:0002645
+      GO:1903960:
+        text: GO:1903960
+        description: negative regulation of anion transmembrane transport
+        meaning: GO:1903960
+      GO:0043381:
+        text: GO:0043381
+        description: negative regulation of memory T cell differentiation
+        meaning: GO:0043381
+      GO:0002639:
+        text: GO:0002639
+        description: positive regulation of immunoglobulin production
+        meaning: GO:0002639
+      GO:0030155:
+        text: GO:0030155
+        description: regulation of cell adhesion
+        meaning: GO:0030155
+      GO:1903294:
+        text: GO:1903294
+        description: regulation of glutamate secretion, neurotransmission
+        meaning: GO:1903294
+      GO:1905939:
+        text: GO:1905939
+        description: regulation of gonad development
+        meaning: GO:1905939
+      GO:0045759:
+        text: GO:0045759
+        description: negative regulation of action potential
+        meaning: GO:0045759
+      GO:0002830:
+        text: GO:0002830
+        description: positive regulation of type 2 immune response
+        meaning: GO:0002830
+      GO:0030853:
+        text: GO:0030853
+        description: negative regulation of granulocyte differentiation
+        meaning: GO:0030853
+      GO:2001199:
+        text: GO:2001199
+        description: negative regulation of dendritic cell differentiation
+        meaning: GO:2001199
+      GO:0010604:
+        text: GO:0010604
+        description: positive regulation of macromolecule metabolic process
+        meaning: GO:0010604
+      GO:0045840:
+        text: GO:0045840
+        description: positive regulation of mitotic nuclear division
+        meaning: GO:0045840
+      GO:0060451:
+        text: GO:0060451
+        description: negative regulation of hindgut contraction
+        meaning: GO:0060451
+      GO:1902116:
+        text: GO:1902116
+        description: negative regulation of organelle assembly
+        meaning: GO:1902116
+      GO:0002891:
+        text: GO:0002891
+        description: positive regulation of immunoglobulin mediated immune response
+        meaning: GO:0002891
+      GO:1900135:
+        text: GO:1900135
+        description: positive regulation of renin secretion into blood stream
+        meaning: GO:1900135
+      GO:0099170:
+        text: GO:0099170
+        description: postsynaptic modulation of chemical synaptic transmission
+        meaning: GO:0099170
+      GO:1901532:
+        text: GO:1901532
+        description: regulation of hematopoietic progenitor cell differentiation
+        meaning: GO:1901532
+      GO:0060450:
+        text: GO:0060450
+        description: positive regulation of hindgut contraction
+        meaning: GO:0060450
+      GO:0023019:
+        text: GO:0023019
+        description: signal transduction involved in regulation of gene expression
+        meaning: GO:0023019
+      GO:0010564:
+        text: GO:0010564
+        description: regulation of cell cycle process
+        meaning: GO:0010564
+      GO:1903708:
+        text: GO:1903708
+        description: positive regulation of hemopoiesis
+        meaning: GO:1903708
+      GO:0002678:
+        text: GO:0002678
+        description: positive regulation of chronic inflammatory response
+        meaning: GO:0002678
+      GO:0070857:
+        text: GO:0070857
+        description: regulation of bile acid biosynthetic process
+        meaning: GO:0070857
+      GO:1900426:
+        text: GO:1900426
+        description: positive regulation of defense response to bacterium
+        meaning: GO:1900426
+      GO:0070256:
+        text: GO:0070256
+        description: negative regulation of mucus secretion
+        meaning: GO:0070256
+      GO:2000836:
+        text: GO:2000836
+        description: positive regulation of androgen secretion
+        meaning: GO:2000836
+      GO:0002654:
+        text: GO:0002654
+        description: positive regulation of tolerance induction dependent upon immune
+          response
+        meaning: GO:0002654
+      GO:0009967:
+        text: GO:0009967
+        description: positive regulation of signal transduction
+        meaning: GO:0009967
+      GO:0051494:
+        text: GO:0051494
+        description: negative regulation of cytoskeleton organization
+        meaning: GO:0051494
+      GO:0002659:
+        text: GO:0002659
+        description: negative regulation of peripheral tolerance induction
+        meaning: GO:0002659
+      GO:0033045:
+        text: GO:0033045
+        description: regulation of sister chromatid segregation
+        meaning: GO:0033045
+      GO:0045670:
+        text: GO:0045670
+        description: regulation of osteoclast differentiation
+        meaning: GO:0045670
+      GO:1900116:
+        text: GO:1900116
+        description: extracellular negative regulation of signal transduction
+        meaning: GO:1900116
+      GO:0032879:
+        text: GO:0032879
+        description: regulation of localization
+        meaning: GO:0032879
+      GO:0046850:
+        text: GO:0046850
+        description: regulation of bone remodeling
+        meaning: GO:0046850
+      GO:0051130:
+        text: GO:0051130
+        description: positive regulation of cellular component organization
+        meaning: GO:0051130
+      GO:0051094:
+        text: GO:0051094
+        description: positive regulation of developmental process
+        meaning: GO:0051094
+      GO:0045931:
+        text: GO:0045931
+        description: positive regulation of mitotic cell cycle
+        meaning: GO:0045931
+      GO:1902340:
+        text: GO:1902340
+        description: negative regulation of chromosome condensation
+        meaning: GO:1902340
+      GO:0003353:
+        text: GO:0003353
+        description: positive regulation of cilium movement
+        meaning: GO:0003353
+      GO:0032892:
+        text: GO:0032892
+        description: positive regulation of organic acid transport
+        meaning: GO:0032892
+      GO:0045779:
+        text: GO:0045779
+        description: negative regulation of bone resorption
+        meaning: GO:0045779
+      GO:0009889:
+        text: GO:0009889
+        description: regulation of biosynthetic process
+        meaning: GO:0009889
+      GO:1904170:
+        text: GO:1904170
+        description: regulation of bleb assembly
+        meaning: GO:1904170
+      GO:0009966:
+        text: GO:0009966
+        description: regulation of signal transduction
+        meaning: GO:0009966
+      GO:0045839:
+        text: GO:0045839
+        description: negative regulation of mitotic nuclear division
+        meaning: GO:0045839
+      GO:0045765:
+        text: GO:0045765
+        description: regulation of angiogenesis
+        meaning: GO:0045765
+      GO:1902722:
+        text: GO:1902722
+        description: positive regulation of prolactin secretion
+        meaning: GO:1902722
+      GO:0032388:
+        text: GO:0032388
+        description: positive regulation of intracellular transport
+        meaning: GO:0032388
+      GO:1902106:
+        text: GO:1902106
+        description: negative regulation of leukocyte differentiation
+        meaning: GO:1902106
+      GO:0051251:
+        text: GO:0051251
+        description: positive regulation of lymphocyte activation
+        meaning: GO:0051251
+      GO:0002795:
+        text: GO:0002795
+        description: negative regulation of antimicrobial peptide secretion
+        meaning: GO:0002795
+      GO:1903531:
+        text: GO:1903531
+        description: negative regulation of secretion by cell
+        meaning: GO:1903531
+      GO:0060785:
+        text: GO:0060785
+        description: regulation of apoptosis involved in tissue homeostasis
+        meaning: GO:0060785
+      GO:0051589:
+        text: GO:0051589
+        description: negative regulation of neurotransmitter transport
+        meaning: GO:0051589
+      GO:0010941:
+        text: GO:0010941
+        description: regulation of cell death
+        meaning: GO:0010941
+      GO:1903524:
+        text: GO:1903524
+        description: positive regulation of blood circulation
+        meaning: GO:1903524
+      GO:0045659:
+        text: GO:0045659
+        description: negative regulation of neutrophil differentiation
+        meaning: GO:0045659
+      GO:0002759:
+        text: GO:0002759
+        description: regulation of antimicrobial humoral response
+        meaning: GO:0002759
+      GO:2000849:
+        text: GO:2000849
+        description: regulation of glucocorticoid secretion
+        meaning: GO:2000849
+      GO:0032369:
+        text: GO:0032369
+        description: negative regulation of lipid transport
+        meaning: GO:0032369
+      GO:0090068:
+        text: GO:0090068
+        description: positive regulation of cell cycle process
+        meaning: GO:0090068
+      GO:0045724:
+        text: GO:0045724
+        description: positive regulation of cilium assembly
+        meaning: GO:0045724
+      GO:0070093:
+        text: GO:0070093
+        description: negative regulation of glucagon secretion
+        meaning: GO:0070093
+      GO:0034762:
+        text: GO:0034762
+        description: regulation of transmembrane transport
+        meaning: GO:0034762
+      GO:0032225:
+        text: GO:0032225
+        description: regulation of synaptic transmission, dopaminergic
+        meaning: GO:0032225
+      GO:0051222:
+        text: GO:0051222
+        description: positive regulation of protein transport
+        meaning: GO:0051222
+      GO:0009892:
+        text: GO:0009892
+        description: negative regulation of metabolic process
+        meaning: GO:0009892
+      GO:0051588:
+        text: GO:0051588
+        description: regulation of neurotransmitter transport
+        meaning: GO:0051588
+      GO:0046887:
+        text: GO:0046887
+        description: positive regulation of hormone secretion
+        meaning: GO:0046887
+      GO:1904675:
+        text: GO:1904675
+        description: regulation of somatic stem cell division
+        meaning: GO:1904675
+      GO:2000463:
+        text: GO:2000463
+        description: positive regulation of excitatory postsynaptic potential
+        meaning: GO:2000463
+      GO:0070255:
+        text: GO:0070255
+        description: regulation of mucus secretion
+        meaning: GO:0070255
+      GO:0051966:
+        text: GO:0051966
+        description: regulation of synaptic transmission, glutamatergic
+        meaning: GO:0051966
+      GO:2000614:
+        text: GO:2000614
+        description: positive regulation of thyroid-stimulating hormone secretion
+        meaning: GO:2000614
+      GO:0000018:
+        text: GO:0000018
+        description: regulation of DNA recombination
+        meaning: GO:0000018
+      GO:0002829:
+        text: GO:0002829
+        description: negative regulation of type 2 immune response
+        meaning: GO:0002829
+      GO:0002720:
+        text: GO:0002720
+        description: positive regulation of cytokine production involved in immune
+          response
+        meaning: GO:0002720
+      GO:0031328:
+        text: GO:0031328
+        description: positive regulation of cellular biosynthetic process
+        meaning: GO:0031328
+      GO:0045660:
+        text: GO:0045660
+        description: positive regulation of neutrophil differentiation
+        meaning: GO:0045660
+      GO:0034765:
+        text: GO:0034765
+        description: regulation of ion transmembrane transport
+        meaning: GO:0034765
+      GO:0060623:
+        text: GO:0060623
+        description: regulation of chromosome condensation
+        meaning: GO:0060623
+      GO:1903053:
+        text: GO:1903053
+        description: regulation of extracellular matrix organization
+        meaning: GO:1903053
+      GO:0060125:
+        text: GO:0060125
+        description: negative regulation of growth hormone secretion
+        meaning: GO:0060125
+      GO:1903523:
+        text: GO:1903523
+        description: negative regulation of blood circulation
+        meaning: GO:1903523
+      GO:2000846:
+        text: GO:2000846
+        description: regulation of corticosteroid hormone secretion
+        meaning: GO:2000846
+      GO:0032223:
+        text: GO:0032223
+        description: negative regulation of synaptic transmission, cholinergic
+        meaning: GO:0032223
+      GO:0050820:
+        text: GO:0050820
+        description: positive regulation of coagulation
+        meaning: GO:0050820
+      GO:1903706:
+        text: GO:1903706
+        description: regulation of hemopoiesis
+        meaning: GO:1903706
+      GO:0030334:
+        text: GO:0030334
+        description: regulation of cell migration
+        meaning: GO:0030334
+      GO:0007088:
+        text: GO:0007088
+        description: regulation of mitotic nuclear division
+        meaning: GO:0007088
+      GO:0002796:
+        text: GO:0002796
+        description: positive regulation of antimicrobial peptide secretion
+        meaning: GO:0002796
+      GO:1900425:
+        text: GO:1900425
+        description: negative regulation of defense response to bacterium
+        meaning: GO:1900425
+      GO:0030886:
+        text: GO:0030886
+        description: negative regulation of myeloid dendritic cell activation
+        meaning: GO:0030886
+      GO:1902339:
+        text: GO:1902339
+        description: positive regulation of apoptotic process involved in morphogenesis
+        meaning: GO:1902339
+      GO:0045672:
+        text: GO:0045672
+        description: positive regulation of osteoclast differentiation
+        meaning: GO:0045672
+      GO:0002697:
+        text: GO:0002697
+        description: regulation of immune effector process
+        meaning: GO:0002697
+      GO:0051224:
+        text: GO:0051224
+        description: negative regulation of protein transport
+        meaning: GO:0051224
+      GO:0010721:
+        text: GO:0010721
+        description: negative regulation of cell development
+        meaning: GO:0010721
+      GO:0043069:
+        text: GO:0043069
+        description: negative regulation of programmed cell death
+        meaning: GO:0043069
+      GO:0050709:
+        text: GO:0050709
+        description: negative regulation of protein secretion
+        meaning: GO:0050709
+      GO:0010605:
+        text: GO:0010605
+        description: negative regulation of macromolecule metabolic process
+        meaning: GO:0010605
+      GO:0002716:
+        text: GO:0002716
+        description: negative regulation of natural killer cell mediated immunity
+        meaning: GO:0002716
+      GO:1900118:
+        text: GO:1900118
+        description: negative regulation of execution phase of apoptosis
+        meaning: GO:1900118
+      GO:1904951:
+        text: GO:1904951
+        description: positive regulation of establishment of protein localization
+        meaning: GO:1904951
+      GO:0046888:
+        text: GO:0046888
+        description: negative regulation of hormone secretion
+        meaning: GO:0046888
+      GO:0002706:
+        text: GO:0002706
+        description: regulation of lymphocyte mediated immunity
+        meaning: GO:0002706
+      GO:1904253:
+        text: GO:1904253
+        description: positive regulation of bile acid metabolic process
+        meaning: GO:1904253
+      GO:1905879:
+        text: GO:1905879
+        description: regulation of oogenesis
+        meaning: GO:1905879
+      GO:0090273:
+        text: GO:0090273
+        description: regulation of somatostatin secretion
+        meaning: GO:0090273
+      GO:0045785:
+        text: GO:0045785
+        description: positive regulation of cell adhesion
+        meaning: GO:0045785
+      GO:1903959:
+        text: GO:1903959
+        description: regulation of anion transmembrane transport
+        meaning: GO:1903959
+      GO:2000871:
+        text: GO:2000871
+        description: negative regulation of progesterone secretion
+        meaning: GO:2000871
+classes:
+  TargetPathwayOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of the treatment target pathway.
+        title: Target pathway
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Target pathway ontology ID
+        range: TargetPathwayOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Target pathway ontology label

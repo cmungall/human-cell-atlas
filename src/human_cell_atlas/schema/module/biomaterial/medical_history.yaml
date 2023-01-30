@@ -1,0 +1,42 @@
+name: Medical_history
+id: https://example.org/Medical-history
+imports:
+- linkml:types
+prefixes:
+  Medical_history: https://example.org/Medical-history
+  linkml: https://w3id.org/linkml/
+default_prefix: Medical_history
+enums:
+  MedicalHistory_nutritional_state_options:
+    permissible_values:
+      normal: {}
+      fasting: {}
+      feeding tube removed: {}
+classes:
+  MedicalHistory:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      alcohol_history:
+        description: Estimated amount of alcohol consumed per day.
+        title: Alcohol history
+      medication:
+        description: Medications the individual was taking at time of biomaterial
+          collection.
+        title: Medications
+      smoking_history:
+        description: Estimated number of cigarettes smoked per day.
+        title: Smoking history
+      nutritional_state:
+        description: Nutritional state of individual at time of biomaterial collection.
+        title: Nutritional state
+        range: MedicalHistory_nutritional_state_options
+      test_results:
+        description: Results from medical tests performed on the individual.
+        title: Test results
+      treatment:
+        description: Treatments the individual has undergone prior to biomaterial
+          collection.
+        title: Treatments

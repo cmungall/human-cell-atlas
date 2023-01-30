@@ -1,0 +1,29 @@
+name: Timecourse
+id: https://example.org/Timecourse
+imports:
+- linkml:types
+- module/ontology/time_unit_ontology
+prefixes:
+  Timecourse: https://example.org/Timecourse
+  linkml: https://w3id.org/linkml/
+default_prefix: Timecourse
+classes:
+  Timecourse:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      value:
+        description: The numerical value in Timecourse unit associated with a time
+          interval used in the experiment.
+        title: Timecourse value
+        required: true
+      unit:
+        description: The unit in which the Timecourse value is expressed.
+        title: Timecourse unit
+        range: TimeUnitOntology
+        required: true
+      relevance:
+        description: Relevance of the Timecourse value/unit to the experiment.
+        title: Timecourse relevance

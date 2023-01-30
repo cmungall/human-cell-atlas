@@ -1,0 +1,44 @@
+name: Collection_protocol
+id: https://example.org/Collection-protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+- module/ontology/process_type_ontology
+- module/process/purchased_reagents
+prefixes:
+  Collection_protocol: https://example.org/Collection-protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: Collection_protocol
+enums:
+  CollectionProtocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+classes:
+  CollectionProtocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: CollectionProtocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      method:
+        description: Method used to collect the biomaterial.
+        title: Collection method
+        range: ProcessTypeOntology
+        required: true
+      reagents:
+        multivalued: true
+        range: PurchasedReagents

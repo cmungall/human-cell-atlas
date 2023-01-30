@@ -1,0 +1,47 @@
+name: Treatment_method_ontology
+id: https://example.org/Treatment-method-ontology
+imports:
+- linkml:types
+prefixes:
+  Treatment_method_ontology: https://example.org/Treatment-method-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Treatment_method_ontology
+enums:
+  TreatmentMethodOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:efo
+        source_nodes:
+        - OBI:0000070
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:obi
+        source_nodes:
+        - OBI:0000070
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+classes:
+  TreatmentMethodOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of a treatment method or approach being used.
+        title: Treatment method
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Treatment ontology ID
+        range: TreatmentMethodOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Treatment ontology label

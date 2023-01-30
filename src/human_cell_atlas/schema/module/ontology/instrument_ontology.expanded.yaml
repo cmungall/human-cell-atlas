@@ -1,0 +1,319 @@
+name: Instrument_ontology
+id: https://example.org/Instrument-ontology
+imports:
+- linkml:types
+prefixes:
+  Instrument_ontology: https://example.org/Instrument-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Instrument_ontology
+enums:
+  InstrumentOntology_ontology_options:
+    reachable_from:
+      source_ontology: obo:efo
+      source_nodes:
+      - EFO:0000548
+      relationship_types:
+      - rdfs:subClassOf
+      is_direct: false
+      include_self: false
+    permissible_values:
+      OBI:0400109:
+        text: OBI:0400109
+        description: homogenizer
+        meaning: OBI:0400109
+      OBI:0400104:
+        text: OBI:0400104
+        description: array scanner
+        meaning: OBI:0400104
+      OBI:0400103:
+        text: OBI:0400103
+        description: DNA sequencer
+        meaning: OBI:0400103
+      OBI:0400106:
+        text: OBI:0400106
+        description: centrifuge
+        meaning: OBI:0400106
+      OBI:0400105:
+        text: OBI:0400105
+        description: arrayer
+        meaning: OBI:0400105
+      OBI:0400108:
+        text: OBI:0400108
+        description: heating block
+        meaning: OBI:0400108
+      OBI:0400107:
+        text: OBI:0400107
+        description: computer
+        meaning: OBI:0400107
+      OBI:0400155:
+        text: OBI:0400155
+        description: water bath
+        meaning: OBI:0400155
+      OBI:0400114:
+        text: OBI:0400114
+        description: sonicator
+        meaning: OBI:0400114
+      OBI:0400113:
+        text: OBI:0400113
+        description: oligonucleotide synthesizer
+        meaning: OBI:0400113
+      OBI:0400116:
+        text: OBI:0400116
+        description: thermal cycler
+        meaning: OBI:0400116
+      OBI:0400115:
+        text: OBI:0400115
+        description: spectrophotometer
+        meaning: OBI:0400115
+      OBI:0400118:
+        text: OBI:0400118
+        description: vortexer
+        meaning: OBI:0400118
+      OBI:0400117:
+        text: OBI:0400117
+        description: vacuum dryer
+        meaning: OBI:0400117
+      OBI:0400110:
+        text: OBI:0400110
+        description: hybridization chamber
+        meaning: OBI:0400110
+      OBI:0400112:
+        text: OBI:0400112
+        description: liquid handler
+        meaning: OBI:0400112
+      OBI:0400111:
+        text: OBI:0400111
+        description: hybridization station
+        meaning: OBI:0400111
+      EFO:0011027:
+        text: EFO:0011027
+        description: Illumina HiSeq 1500
+        meaning: EFO:0011027
+      EFO:0010939:
+        text: EFO:0010939
+        description: oligonucleotide DNA microarray
+        meaning: EFO:0010939
+      EFO:0010938:
+        text: EFO:0010938
+        description: large-insert clone DNA microarray
+        meaning: EFO:0010938
+      EFO:0010962:
+        text: EFO:0010962
+        description: Illumina NextSeq 1000
+        meaning: EFO:0010962
+      EFO:0010963:
+        text: EFO:0010963
+        description: Illumina NextSeq 2000
+        meaning: EFO:0010963
+      EFO:0002698:
+        text: EFO:0002698
+        description: array
+        meaning: EFO:0002698
+      EFO:0002699:
+        text: EFO:0002699
+        description: high throughput sequencer
+        meaning: EFO:0002699
+      EFO:0009990:
+        text: EFO:0009990
+        description: Fluidigm C1 microfluidics platform
+        meaning: EFO:0009990
+      EFO:0009989:
+        text: EFO:0009989
+        description: long read sequencer
+        meaning: EFO:0009989
+      EFO:0008567:
+        text: EFO:0008567
+        description: Illumina HiSeq X
+        meaning: EFO:0008567
+      EFO:0008566:
+        text: EFO:0008566
+        description: Illumina NextSeq 550
+        meaning: EFO:0008566
+      EFO:0008565:
+        text: EFO:0008565
+        description: Illumina HiSeq 2500
+        meaning: EFO:0008565
+      EFO:0008563:
+        text: EFO:0008563
+        description: Illumina HiSeq 4000
+        meaning: EFO:0008563
+      EFO:0008564:
+        text: EFO:0008564
+        description: Illumina HiSeq 3000
+        meaning: EFO:0008564
+      OBI:0000049:
+        text: OBI:0000049
+        description: mass spectrometer
+        meaning: OBI:0000049
+      EFO:0002028:
+        text: EFO:0002028
+        description: microarray wash station
+        meaning: EFO:0002028
+      EFO:0004439:
+        text: EFO:0004439
+        description: AB SOLiD System 3.0
+        meaning: EFO:0004439
+      EFO:0004432:
+        text: EFO:0004432
+        description: 454 GS FLX sequencer
+        meaning: EFO:0004432
+      EFO:0004431:
+        text: EFO:0004431
+        description: 454 GS sequencer
+        meaning: EFO:0004431
+      EFO:0004434:
+        text: EFO:0004434
+        description: 454 GS Junior sequencer
+        meaning: EFO:0004434
+      EFO:0004433:
+        text: EFO:0004433
+        description: 454 GS FLX Titanium sequencer
+        meaning: EFO:0004433
+      EFO:0004436:
+        text: EFO:0004436
+        description: AB SOLiD 5500xl
+        meaning: EFO:0004436
+      EFO:0004435:
+        text: EFO:0004435
+        description: AB SOLiD System
+        meaning: EFO:0004435
+      EFO:0004438:
+        text: EFO:0004438
+        description: AB SOLiD 4 System
+        meaning: EFO:0004438
+      EFO:0004437:
+        text: EFO:0004437
+        description: AB SOLiD PI System
+        meaning: EFO:0004437
+      EFO:0004440:
+        text: EFO:0004440
+        description: AB SOLiD 5500
+        meaning: EFO:0004440
+      EFO:0004442:
+        text: EFO:0004442
+        description: AB SOLiD System 2.0
+        meaning: EFO:0004442
+      EFO:0004441:
+        text: EFO:0004441
+        description: AB SOLiD 4hq System
+        meaning: EFO:0004441
+      EFO:0004202:
+        text: EFO:0004202
+        description: Illumina Genome Analyzer IIx
+        meaning: EFO:0004202
+      EFO:0004201:
+        text: EFO:0004201
+        description: Illumina Genome Analyzer II
+        meaning: EFO:0004201
+      EFO:0004204:
+        text: EFO:0004204
+        description: Illumina HiSeq 1000
+        meaning: EFO:0004204
+      EFO:0004203:
+        text: EFO:0004203
+        description: Illumina HiSeq 2000
+        meaning: EFO:0004203
+      EFO:0004206:
+        text: EFO:0004206
+        description: 454 GS 20 sequencer
+        meaning: EFO:0004206
+      EFO:0004205:
+        text: EFO:0004205
+        description: Illumina MiSeq
+        meaning: EFO:0004205
+      EFO:0004200:
+        text: EFO:0004200
+        description: Illumina Genome Analyzer
+        meaning: EFO:0004200
+      EFO:0002701:
+        text: EFO:0002701
+        description: DNA array
+        meaning: EFO:0002701
+      EFO:0002702:
+        text: EFO:0002702
+        description: protein array
+        meaning: EFO:0002702
+      EFO:0002703:
+        text: EFO:0002703
+        description: SNP array
+        meaning: EFO:0002703
+      EFO:0002704:
+        text: EFO:0002704
+        description: tiling array
+        meaning: EFO:0002704
+      EFO:0009173:
+        text: EFO:0009173
+        description: Illumina NextSeq 500
+        meaning: EFO:0009173
+      EFO:0004291:
+        text: EFO:0004291
+        description: braces
+        meaning: EFO:0004291
+      EFO:0004903:
+        text: EFO:0004903
+        description: probe design element
+        meaning: EFO:0004903
+      EFO:0003739:
+        text: EFO:0003739
+        description: sequencer
+        meaning: EFO:0003739
+      EFO:0008632:
+        text: EFO:0008632
+        description: ONT MinION
+        meaning: EFO:0008632
+      EFO:0008631:
+        text: EFO:0008631
+        description: PacBio RS II
+        meaning: EFO:0008631
+      EFO:0008630:
+        text: EFO:0008630
+        description: PacBio Sequel System
+        meaning: EFO:0008630
+      EFO:0008636:
+        text: EFO:0008636
+        description: Illumina MiniSeq
+        meaning: EFO:0008636
+      EFO:0008635:
+        text: EFO:0008635
+        description: Illumina iSeq 100
+        meaning: EFO:0008635
+      EFO:0008634:
+        text: EFO:0008634
+        description: ONT PromethION
+        meaning: EFO:0008634
+      EFO:0008633:
+        text: EFO:0008633
+        description: ONT GridION X5
+        meaning: EFO:0008633
+      EFO:0008637:
+        text: EFO:0008637
+        description: Illumina NovaSeq 6000
+        meaning: EFO:0008637
+      EFO:0030075:
+        text: EFO:0030075
+        description: cDNA microarray
+        meaning: EFO:0030075
+      EFO:0030076:
+        text: EFO:0030076
+        description: methylation-specific microarray
+        meaning: EFO:0030076
+classes:
+  InstrumentOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: Version number in major.minor.patch format.
+      text:
+        description: The full name of the instrument used.
+        title: Instrument
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Instrument ontology ID
+        range: InstrumentOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Instrument ontology label

@@ -1,0 +1,34 @@
+name: Purchased_reagents
+id: https://example.org/Purchased-reagents
+imports:
+- linkml:types
+prefixes:
+  Purchased_reagents: https://example.org/Purchased-reagents
+  linkml: https://w3id.org/linkml/
+default_prefix: Purchased_reagents
+classes:
+  PurchasedReagents:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      retail_name:
+        description: The retail name of the kit/reagent.
+        title: Retail name
+      catalog_number:
+        description: The catalog number of the kit/reagent.
+        title: Catalog number
+      manufacturer:
+        description: The manufacturer of the kit/reagent.
+        title: Manufacturer
+      lot_number:
+        description: The batch or lot number of the kit/reagent.
+        title: Batch/lot number
+      expiry_date:
+        description: The date of expiration for the kit/reagent.
+        title: Expiry date
+      kit_titer:
+        description: Appropriate titer and volume recommendations found in kit/reagent
+          Certificate of Analysis.
+        title: Titer

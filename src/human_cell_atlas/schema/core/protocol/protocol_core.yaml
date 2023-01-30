@@ -1,0 +1,34 @@
+name: Protocol_core
+id: https://example.org/Protocol-core
+imports:
+- linkml:types
+prefixes:
+  Protocol_core: https://example.org/Protocol-core
+  linkml: https://w3id.org/linkml/
+default_prefix: Protocol_core
+classes:
+  ProtocolCore:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      protocol_id:
+        description: A unique ID for the protocol.
+        title: Protocol ID
+        required: true
+      protocol_name:
+        description: A short name for the protocol.
+        title: Protocol name
+      protocol_description:
+        description: A general description of the protocol.
+        title: Protocol description
+      publication_doi:
+        description: The publication digital object identifier (doi) for the protocol.
+        title: Publication DOI
+      protocols_io_doi:
+        description: The protocols.io digital object identifier (doi) for the protocol.
+        title: protocols.io DOI
+      document:
+        description: A filename of a PDF document containing the details of the protocol.
+        title: Document filename

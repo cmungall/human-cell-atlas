@@ -1,0 +1,20 @@
+name: INSDC_experiment
+id: https://example.org/INSDC-experiment
+imports:
+- linkml:types
+prefixes:
+  INSDC_experiment: https://example.org/INSDC-experiment
+  linkml: https://w3id.org/linkml/
+default_prefix: INSDC_experiment
+classes:
+  InsdcExperiment:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      insdc_experiment_accession:
+        description: An International Nucleotide Sequence Database Collaboration (INSDC)
+          experiment accession.
+        title: INSDC experiment accession
+        required: true

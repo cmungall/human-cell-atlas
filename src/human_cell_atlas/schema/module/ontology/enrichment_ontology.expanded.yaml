@@ -1,0 +1,103 @@
+name: Enrichment_ontology
+id: https://example.org/Enrichment-ontology
+imports:
+- linkml:types
+prefixes:
+  Enrichment_ontology: https://example.org/Enrichment-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Enrichment_ontology
+enums:
+  EnrichmentOntology_ontology_options:
+    reachable_from:
+      source_ontology: obo:efo
+      source_nodes:
+      - EFO:0009090
+      relationship_types:
+      - rdfs:subClassOf
+      is_direct: false
+      include_self: false
+    permissible_values:
+      EFO:0010048:
+        text: EFO:0010048
+        description: Fluidigm C1-based dissociation
+        meaning: EFO:0010048
+      OBI:0000512:
+        text: OBI:0000512
+        description: isolation of cell population
+        meaning: OBI:0000512
+      EFO:0004185:
+        text: EFO:0004185
+        description: enrichment of methylated DNA
+        meaning: EFO:0004185
+      OBI:0000540:
+        text: OBI:0000540
+        description: isolation of adherent cells
+        meaning: OBI:0000540
+      EFO:0009337:
+        text: EFO:0009337
+        description: cell size selection
+        meaning: EFO:0009337
+      EFO:0009109:
+        text: EFO:0009109
+        description: magnetic affinity cell sorting
+        meaning: EFO:0009109
+      EFO:0009108:
+        text: EFO:0009108
+        description: fluorescence-activated cell sorting
+        meaning: EFO:0009108
+      EFO:0009106:
+        text: EFO:0009106
+        description: sample enrichment
+        meaning: EFO:0009106
+      EFO:0009112:
+        text: EFO:0009112
+        description: density gradient centrifugation
+        meaning: EFO:0009112
+      EFO:0009111:
+        text: EFO:0009111
+        description: laser capture microdissection
+        meaning: EFO:0009111
+      EFO:0009110:
+        text: EFO:0009110
+        description: Ficoll-Hypaque method
+        meaning: EFO:0009110
+      EFO:0010175:
+        text: EFO:0010175
+        description: EasySep cell separation
+        meaning: EFO:0010175
+      EFO:0010182:
+        text: EFO:0010182
+        description: mouth pipetting
+        meaning: EFO:0010182
+      EFO:0010180:
+        text: EFO:0010180
+        description: droplet-based cell isolation
+        meaning: EFO:0010180
+      EFO:0010181:
+        text: EFO:0010181
+        description: cell picking
+        meaning: EFO:0010181
+      EFO:0010806:
+        text: EFO:0010806
+        description: enrichment of phosphorylated protein
+        meaning: EFO:0010806
+classes:
+  EnrichmentOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of an enrichment approach being used.
+        title: Enrichment
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Enrichment ontology ID
+        range: EnrichmentOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Enrichment ontology label

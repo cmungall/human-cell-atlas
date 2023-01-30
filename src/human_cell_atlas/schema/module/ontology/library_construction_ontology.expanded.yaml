@@ -1,0 +1,303 @@
+name: Library_construction_ontology
+id: https://example.org/Library-construction-ontology
+imports:
+- linkml:types
+prefixes:
+  Library_construction_ontology: https://example.org/Library-construction-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Library_construction_ontology
+enums:
+  LibraryConstructionOntology_ontology_options:
+    reachable_from:
+      source_ontology: obo:efo
+      source_nodes:
+      - OBI:0000711
+      relationship_types:
+      - rdfs:subClassOf
+      is_direct: false
+      include_self: false
+    permissible_values:
+      EFO:0007045:
+        text: EFO:0007045
+        description: ATAC-seq
+        meaning: EFO:0007045
+      EFO:0008906:
+        text: EFO:0008906
+        description: scChIP-seq
+        meaning: EFO:0008906
+      EFO:0008905:
+        text: EFO:0008905
+        description: scBS-seq
+        meaning: EFO:0008905
+      EFO:0008904:
+        text: EFO:0008904
+        description: scATAC-seq (Microfluidics)
+        meaning: EFO:0008904
+      EFO:0010004:
+        text: EFO:0010004
+        description: SCRB-seq
+        meaning: EFO:0010004
+      EFO:0008919:
+        text: EFO:0008919
+        description: Seq-Well
+        meaning: EFO:0008919
+      EFO:0008925:
+        text: EFO:0008925
+        description: scATAC-seq (cell index)
+        meaning: EFO:0008925
+      EFO:0010010:
+        text: EFO:0010010
+        description: CEL-seq2
+        meaning: EFO:0010010
+      EFO:0008931:
+        text: EFO:0008931
+        description: Smart-seq2
+        meaning: EFO:0008931
+      EFO:0009294:
+        text: EFO:0009294
+        description: CITE-seq
+        meaning: EFO:0009294
+      EFO:0008930:
+        text: EFO:0008930
+        description: Smart-seq
+        meaning: EFO:0008930
+      EFO:0008953:
+        text: EFO:0008953
+        description: STRT-seq
+        meaning: EFO:0008953
+      EFO:0009901:
+        text: EFO:0009901
+        description: 10x 3' v1
+        meaning: EFO:0009901
+      EFO:0009900:
+        text: EFO:0009900
+        description: 10x 5' v2
+        meaning: EFO:0009900
+      EFO:0004187:
+        text: EFO:0004187
+        description: cDNA library construction
+        meaning: EFO:0004187
+      EFO:0010058:
+        text: EFO:0010058
+        description: Fluidigm C1-based library preparation
+        meaning: EFO:0010058
+      EFO:0009919:
+        text: EFO:0009919
+        description: SPLiT-seq
+        meaning: EFO:0009919
+      EFO:0008995:
+        text: EFO:0008995
+        description: 10x technology
+        meaning: EFO:0008995
+      EFO:0011025:
+        text: EFO:0011025
+        description: 10x 5' v1
+        meaning: EFO:0011025
+      EFO:0008720:
+        text: EFO:0008720
+        description: DroNc-seq
+        meaning: EFO:0008720
+      EFO:0009922:
+        text: EFO:0009922
+        description: 10x 3' v3
+        meaning: EFO:0009922
+      EFO:0009920:
+        text: EFO:0009920
+        description: Slide-seq
+        meaning: EFO:0009920
+      EFO:0008722:
+        text: EFO:0008722
+        description: Drop-seq
+        meaning: EFO:0008722
+      EFO:0008736:
+        text: EFO:0008736
+        description: Fast-ATAC
+        meaning: EFO:0008736
+      EFO:0010961:
+        text: EFO:0010961
+        description: Visium Spatial Gene Expression
+        meaning: EFO:0010961
+      EFO:0010964:
+        text: EFO:0010964
+        description: barcoded plate-based single cell RNA-seq
+        meaning: EFO:0010964
+      EFO:0008780:
+        text: EFO:0008780
+        description: inDrop
+        meaning: EFO:0008780
+      EFO:0009979:
+        text: EFO:0009979
+        description: single cell Hi-C
+        meaning: EFO:0009979
+      EFO:0008796:
+        text: EFO:0008796
+        description: MARS-seq
+        meaning: EFO:0008796
+      EFO:0010714:
+        text: EFO:0010714
+        description: 10x TCR enrichment
+        meaning: EFO:0010714
+      EFO:0010713:
+        text: EFO:0010713
+        description: 10x immune profiling
+        meaning: EFO:0010713
+      EFO:0010715:
+        text: EFO:0010715
+        description: 10x Ig enrichment
+        meaning: EFO:0010715
+      EFO:0010550:
+        text: EFO:0010550
+        description: sci-RNA-seq
+        meaning: EFO:0010550
+      EFO:0010172:
+        text: EFO:0010172
+        description: DNA library construction
+        meaning: EFO:0010172
+      EFO:0010184:
+        text: EFO:0010184
+        description: Smart-like
+        meaning: EFO:0010184
+      EFO:0010183:
+        text: EFO:0010183
+        description: single cell library construction
+        meaning: EFO:0010183
+      EFO:0008877:
+        text: EFO:0008877
+        description: Quartz-seq
+        meaning: EFO:0008877
+      EFO:0030026:
+        text: EFO:0030026
+        description: sci-Plex
+        meaning: EFO:0030026
+      EFO:0030027:
+        text: EFO:0030027
+        description: snmC-Seq2
+        meaning: EFO:0030027
+      EFO:0030028:
+        text: EFO:0030028
+        description: sci-RNA-seq3
+        meaning: EFO:0030028
+      EFO:0030029:
+        text: EFO:0030029
+        description: NanoString digital spatial profiling
+        meaning: EFO:0030029
+      EFO:0030031:
+        text: EFO:0030031
+        description: SCOPE-chip
+        meaning: EFO:0030031
+      EFO:0008679:
+        text: EFO:0008679
+        description: CEL-seq
+        meaning: EFO:0008679
+      EFO:0030001:
+        text: EFO:0030001
+        description: sci-CAR
+        meaning: EFO:0030001
+      EFO:0030002:
+        text: EFO:0030002
+        description: microwell-seq
+        meaning: EFO:0030002
+      EFO:0030003:
+        text: EFO:0030003
+        description: 10x 3' transcription profiling
+        meaning: EFO:0030003
+      EFO:0030004:
+        text: EFO:0030004
+        description: 10x 5' transcription profiling
+        meaning: EFO:0030004
+      EFO:0030007:
+        text: EFO:0030007
+        description: 10x scATAC-seq
+        meaning: EFO:0030007
+      EFO:0030008:
+        text: EFO:0030008
+        description: CITE-seq (cell surface protein profiling)
+        meaning: EFO:0030008
+      EFO:0030009:
+        text: EFO:0030009
+        description: CITE-seq (sample multiplexing)
+        meaning: EFO:0030009
+      EFO:0030010:
+        text: EFO:0030010
+        description: 10x feature profiling
+        meaning: EFO:0030010
+      EFO:0030011:
+        text: EFO:0030011
+        description: 10x feature barcode (cell surface protein profiling)
+        meaning: EFO:0030011
+      EFO:0030012:
+        text: EFO:0030012
+        description: 10x feature barcode (sample multiplexing)
+        meaning: EFO:0030012
+      EFO:0030013:
+        text: EFO:0030013
+        description: 10x feature barcode (CRISPR screening)
+        meaning: EFO:0030013
+      EFO:0009899:
+        text: EFO:0009899
+        description: 10x 3' v2
+        meaning: EFO:0009899
+      EFO:0030019:
+        text: EFO:0030019
+        description: Seq-Well S3
+        meaning: EFO:0030019
+      EFO:0030021:
+        text: EFO:0030021
+        description: Nx1-seq
+        meaning: EFO:0030021
+      EFO:0030074:
+        text: EFO:0030074
+        description: SORT-seq
+        meaning: EFO:0030074
+      EFO:0030077:
+        text: EFO:0030077
+        description: cell hashing
+        meaning: EFO:0030077
+      EFO:0030078:
+        text: EFO:0030078
+        description: droplet-based single-cell RNA library preparation
+        meaning: EFO:0030078
+      EFO:0030080:
+        text: EFO:0030080
+        description: 10x transcription profiling
+        meaning: EFO:0030080
+      EFO:0010891:
+        text: EFO:0010891
+        description: scATAC-seq
+        meaning: EFO:0010891
+      EFO:0030059:
+        text: EFO:0030059
+        description: 10x multiome
+        meaning: EFO:0030059
+      EFO:0030060:
+        text: EFO:0030060
+        description: mCT-seq
+        meaning: EFO:0030060
+      EFO:0030061:
+        text: EFO:0030061
+        description: mcSCRB-seq
+        meaning: EFO:0030061
+      EFO:0030062:
+        text: EFO:0030062
+        description: Slide-seqV2
+        meaning: EFO:0030062
+classes:
+  LibraryConstructionOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of a library construction approach being used.
+        title: Library construction
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Library construction ontology ID
+        range: LibraryConstructionOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Library construction ontology label

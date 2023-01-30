@@ -1,0 +1,488 @@
+name: Protocol_type_ontology
+id: https://example.org/Protocol-type-ontology
+imports:
+- linkml:types
+prefixes:
+  Protocol_type_ontology: https://example.org/Protocol-type-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Protocol_type_ontology
+enums:
+  ProtocolTypeOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:efo
+        source_nodes:
+        - OBI:0000272
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:obi
+        source_nodes:
+        - OBI:0000272
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    permissible_values:
+      EFO:0005519:
+        text: EFO:0005519
+        description: dissection protocol
+        meaning: EFO:0005519
+      EFO:0005518:
+        text: EFO:0005518
+        description: sample collection protocol
+        meaning: EFO:0005518
+      OBI:0001166:
+        text: OBI:0001166
+        description: validation by real time PCR design
+        meaning: OBI:0001166
+      OBI:0001162:
+        text: OBI:0001162
+        description: validation by reverse transcription PCR design
+        meaning: OBI:0001162
+      EFO:0005520:
+        text: EFO:0005520
+        description: conversion protocol
+        meaning: EFO:0005520
+      EFO:0000629:
+        text: EFO:0000629
+        description: observational design
+        meaning: EFO:0000629
+      EFO:0010213:
+        text: EFO:0010213
+        description: single cell library construction protocol
+        meaning: EFO:0010213
+      EFO:0010214:
+        text: EFO:0010214
+        description: single cell isolation protocol
+        meaning: EFO:0010214
+      EFO:0004172:
+        text: EFO:0004172
+        description: cot filtration for moderately repetitive genomic DNA
+        meaning: EFO:0004172
+      EFO:0004171:
+        text: EFO:0004171
+        description: cot filtration for single or low copy genomic DNA
+        meaning: EFO:0004171
+      EFO:0004174:
+        text: EFO:0004174
+        description: cot filtration for theoretical single copy genomic DNA
+        meaning: EFO:0004174
+      EFO:0004173:
+        text: EFO:0004173
+        description: cot filtration for highly repetitive genomic DNA
+        meaning: EFO:0004173
+      EFO:0003814:
+        text: EFO:0003814
+        description: array scanning and feature extraction protocol
+        meaning: EFO:0003814
+      EFO:0003813:
+        text: EFO:0003813
+        description: nucleic acid labeling protocol
+        meaning: EFO:0003813
+      EFO:0004170:
+        text: EFO:0004170
+        description: nucleic acid sequencing protocol
+        meaning: EFO:0004170
+      EFO:0003808:
+        text: EFO:0003808
+        description: labelling protocol
+        meaning: EFO:0003808
+      EFO:0003809:
+        text: EFO:0003809
+        description: sample treatment protocol
+        meaning: EFO:0003809
+      EFO:0004184:
+        text: EFO:0004184
+        description: nucleic acid library construction protocol
+        meaning: EFO:0004184
+      EFO:0001426:
+        text: EFO:0001426
+        description: study design
+        meaning: EFO:0001426
+      EFO:0001427:
+        text: EFO:0001427
+        description: case control design
+        meaning: EFO:0001427
+      EFO:0001428:
+        text: EFO:0001428
+        description: cross sectional design
+        meaning: EFO:0001428
+      EFO:0001429:
+        text: EFO:0001429
+        description: family based design
+        meaning: EFO:0001429
+      EFO:0003816:
+        text: EFO:0003816
+        description: normalization data transformation protocol
+        meaning: EFO:0003816
+      EFO:0003815:
+        text: EFO:0003815
+        description: nucleic acid hybridization to array protocol
+        meaning: EFO:0003815
+      EFO:0001430:
+        text: EFO:0001430
+        description: population based design
+        meaning: EFO:0001430
+      EFO:0001431:
+        text: EFO:0001431
+        description: twin design
+        meaning: EFO:0001431
+      EFO:0000490:
+        text: EFO:0000490
+        description: extraction protocol
+        meaning: EFO:0000490
+      EFO:0009089:
+        text: EFO:0009089
+        description: enrichment protocol
+        meaning: EFO:0009089
+      EFO:0009088:
+        text: EFO:0009088
+        description: dissociation protocol
+        meaning: EFO:0009088
+      EFO:0007573:
+        text: EFO:0007573
+        description: HCS data analysis protocol
+        meaning: EFO:0007573
+      EFO:0007571:
+        text: EFO:0007571
+        description: HCS library protocol
+        meaning: EFO:0007571
+      EFO:0007572:
+        text: EFO:0007572
+        description: HCS image acquistion and feature extraction protocol
+        meaning: EFO:0007572
+      EFO:0007570:
+        text: EFO:0007570
+        description: HCS protocol
+        meaning: EFO:0007570
+      EFO:0010959:
+        text: EFO:0010959
+        description: RNA extraction protocol
+        meaning: EFO:0010959
+      EFO:0004669:
+        text: EFO:0004669
+        description: methodological variation design
+        meaning: EFO:0004669
+      EFO:0004664:
+        text: EFO:0004664
+        description: binding site identification design
+        meaning: EFO:0004664
+      EFO:0004666:
+        text: EFO:0004666
+        description: cellular modification design
+        meaning: EFO:0004666
+      EFO:0004665:
+        text: EFO:0004665
+        description: biomolecular annotation design
+        meaning: EFO:0004665
+      EFO:0004668:
+        text: EFO:0004668
+        description: array specific design
+        meaning: EFO:0004668
+      EFO:0004667:
+        text: EFO:0004667
+        description: biological variation design
+        meaning: EFO:0004667
+      EFO:0009371:
+        text: EFO:0009371
+        description: ketogenic diet
+        meaning: EFO:0009371
+      EFO:0001743:
+        text: EFO:0001743
+        description: cell component comparison design
+        meaning: EFO:0001743
+      EFO:0001744:
+        text: EFO:0001744
+        description: cell cycle design
+        meaning: EFO:0001744
+      EFO:0001745:
+        text: EFO:0001745
+        description: cell type comparison design
+        meaning: EFO:0001745
+      EFO:0005693:
+        text: EFO:0005693
+        description: mobile element identification design
+        meaning: EFO:0005693
+      EFO:0005692:
+        text: EFO:0005692
+        description: transposable element identification design
+        meaning: EFO:0005692
+      EFO:0001750:
+        text: EFO:0001750
+        description: organism part comparison design
+        meaning: EFO:0001750
+      EFO:0001751:
+        text: EFO:0001751
+        description: organism status design
+        meaning: EFO:0001751
+      EFO:0001752:
+        text: EFO:0001752
+        description: sex design
+        meaning: EFO:0001752
+      EFO:0001753:
+        text: EFO:0001753
+        description: species design
+        meaning: EFO:0001753
+      EFO:0001754:
+        text: EFO:0001754
+        description: strain or line design
+        meaning: EFO:0001754
+      EFO:0001755:
+        text: EFO:0001755
+        description: compound treatment design
+        meaning: EFO:0001755
+      EFO:0001756:
+        text: EFO:0001756
+        description: disease state design
+        meaning: EFO:0001756
+      EFO:0001757:
+        text: EFO:0001757
+        description: dose response design
+        meaning: EFO:0001757
+      EFO:0002944:
+        text: EFO:0002944
+        description: nucleic acid extraction protocol
+        meaning: EFO:0002944
+      EFO:0001746:
+        text: EFO:0001746
+        description: development or differentiation design
+        meaning: EFO:0001746
+      EFO:0001747:
+        text: EFO:0001747
+        description: imprinting design
+        meaning: EFO:0001747
+      EFO:0001748:
+        text: EFO:0001748
+        description: genotype design
+        meaning: EFO:0001748
+      EFO:0001749:
+        text: EFO:0001749
+        description: innate behavior design
+        meaning: EFO:0001749
+      EFO:0001762:
+        text: EFO:0001762
+        description: stimulus or stress design
+        meaning: EFO:0001762
+      EFO:0001763:
+        text: EFO:0001763
+        description: all pairs
+        meaning: EFO:0001763
+      EFO:0001764:
+        text: EFO:0001764
+        description: array platform variation design
+        meaning: EFO:0001764
+      EFO:0001765:
+        text: EFO:0001765
+        description: dye swap design
+        meaning: EFO:0001765
+      EFO:0001767:
+        text: EFO:0001767
+        description: hardware variation design
+        meaning: EFO:0001767
+      EFO:0001760:
+        text: EFO:0001760
+        description: injury design
+        meaning: EFO:0001760
+      EFO:0001761:
+        text: EFO:0001761
+        description: pathogenicity design
+        meaning: EFO:0001761
+      EFO:0001758:
+        text: EFO:0001758
+        description: genetic modification design
+        meaning: EFO:0001758
+      EFO:0001759:
+        text: EFO:0001759
+        description: growth condition design
+        meaning: EFO:0001759
+      EFO:0001774:
+        text: EFO:0001774
+        description: quality control testing design
+        meaning: EFO:0001774
+      EFO:0001775:
+        text: EFO:0001775
+        description: reference design
+        meaning: EFO:0001775
+      EFO:0001776:
+        text: EFO:0001776
+        description: replicate design
+        meaning: EFO:0001776
+      EFO:0001777:
+        text: EFO:0001777
+        description: self vs self design
+        meaning: EFO:0001777
+      EFO:0001778:
+        text: EFO:0001778
+        description: software variation design
+        meaning: EFO:0001778
+      EFO:0001779:
+        text: EFO:0001779
+        description: time series design
+        meaning: EFO:0001779
+      EFO:0001770:
+        text: EFO:0001770
+        description: loop design
+        meaning: EFO:0001770
+      EFO:0001771:
+        text: EFO:0001771
+        description: normalization testing design
+        meaning: EFO:0001771
+      EFO:0001772:
+        text: EFO:0001772
+        description: operator variation design
+        meaning: EFO:0001772
+      EFO:0001773:
+        text: EFO:0001773
+        description: optimization design
+        meaning: EFO:0001773
+      EFO:0001786:
+        text: EFO:0001786
+        description: secreted protein identification design
+        meaning: EFO:0001786
+      EFO:0001787:
+        text: EFO:0001787
+        description: translational bias design
+        meaning: EFO:0001787
+      EFO:0001780:
+        text: EFO:0001780
+        description: clinical history design
+        meaning: EFO:0001780
+      EFO:0001783:
+        text: EFO:0001783
+        description: RNA stability design
+        meaning: EFO:0001783
+      EFO:0001784:
+        text: EFO:0001784
+        description: genotyping design
+        meaning: EFO:0001784
+      EFO:0001785:
+        text: EFO:0001785
+        description: operon identification design
+        meaning: EFO:0001785
+      EFO:0002755:
+        text: EFO:0002755
+        description: diet
+        meaning: EFO:0002755
+      EFO:0000355:
+        text: EFO:0000355
+        description: clinical treatment protocol
+        meaning: EFO:0000355
+      EFO:0002757:
+        text: EFO:0002757
+        description: high fat diet
+        meaning: EFO:0002757
+      EFO:0002758:
+        text: EFO:0002758
+        description: low fat diet
+        meaning: EFO:0002758
+      EFO:0003969:
+        text: EFO:0003969
+        description: treatment protocol
+        meaning: EFO:0003969
+      EFO:0004917:
+        text: EFO:0004917
+        description: high throughput sequence alignment protocol
+        meaning: EFO:0004917
+      EFO:0000395:
+        text: EFO:0000395
+        description: delivery method
+        meaning: EFO:0000395
+      EFO:0005051:
+        text: EFO:0005051
+        description: 454 GS 20 standard manufacturer's protocol
+        meaning: EFO:0005051
+      EFO:0005083:
+        text: EFO:0005083
+        description: Illumina Genome Analyzer II standard manufacturer's protocol
+        meaning: EFO:0005083
+      EFO:0005082:
+        text: EFO:0005082
+        description: Illumina Genome Analyzer standard manufacturer's protocol
+        meaning: EFO:0005082
+      EFO:0003789:
+        text: EFO:0003789
+        description: growth protocol
+        meaning: EFO:0003789
+      EFO:0005085:
+        text: EFO:0005085
+        description: Illumina HiSeq 1000 standard manufacturer's protocol
+        meaning: EFO:0005085
+      EFO:0003788:
+        text: EFO:0003788
+        description: gene expression protocol
+        meaning: EFO:0003788
+      EFO:0005084:
+        text: EFO:0005084
+        description: Illumina Genome Analyzer IIx standard manufacturer's protocol
+        meaning: EFO:0005084
+      EFO:0005087:
+        text: EFO:0005087
+        description: Illumina MiSeq standard manufacturer's protocol
+        meaning: EFO:0005087
+      EFO:0005086:
+        text: EFO:0005086
+        description: Illumina HiSeq 2000 standard manufacturer's protocol
+        meaning: EFO:0005086
+      EFO:0003790:
+        text: EFO:0003790
+        description: hybridization protocol
+        meaning: EFO:0003790
+      EFO:0008444:
+        text: EFO:0008444
+        description: Drop-seq sequencing protocol
+        meaning: EFO:0008444
+      EFO:0008442:
+        text: EFO:0008442
+        description: Smart-seq2 protocol
+        meaning: EFO:0008442
+      EFO:0008443:
+        text: EFO:0008443
+        description: 10x sequencing protocol
+        meaning: EFO:0008443
+      EFO:0008439:
+        text: EFO:0008439
+        description: single cell nucleic acid sequencing protocol
+        meaning: EFO:0008439
+      EFO:0010892:
+        text: EFO:0010892
+        description: hydrolysis collection protocol
+        meaning: EFO:0010892
+      OBI:0000715:
+        text: OBI:0000715
+        description: animal care protocol
+        meaning: OBI:0000715
+      OBI:0000688:
+        text: OBI:0000688
+        description: rodent care protocol
+        meaning: OBI:0000688
+      OBI:0003069:
+        text: OBI:0003069
+        description: sequencing protocol
+        meaning: OBI:0003069
+      OBI:0003070:
+        text: OBI:0003070
+        description: specimen collection protocol
+        meaning: OBI:0003070
+classes:
+  ProtocolTypeOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of a protocol type used.
+        title: Protocol type
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Protocol type ontology ID
+        range: ProtocolTypeOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Protocol type ontology label

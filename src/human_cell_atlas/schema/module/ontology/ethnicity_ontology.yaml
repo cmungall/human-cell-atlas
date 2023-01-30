@@ -1,0 +1,38 @@
+name: Ethnicity_ontology
+id: https://example.org/Ethnicity-ontology
+imports:
+- linkml:types
+prefixes:
+  Ethnicity_ontology: https://example.org/Ethnicity-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Ethnicity_ontology
+enums:
+  EthnicityOntology_ontology_options:
+    reachable_from:
+      source_ontology: obo:hancestro
+      source_nodes:
+      - HANCESTRO:0004
+      relationship_types:
+      - rdfs:subClassOf
+      is_direct: false
+      include_self: false
+classes:
+  EthnicityOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: Version number in major.minor.patch format.
+      text:
+        description: The ethnicity of the human donor.
+        title: Ethnicity
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Ethnicity ontology ID
+        range: EthnicityOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Ethnicity ontology label

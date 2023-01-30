@@ -1,0 +1,24 @@
+name: License
+id: https://example.org/License
+imports:
+- linkml:types
+prefixes:
+  License: https://example.org/License
+  linkml: https://w3id.org/linkml/
+default_prefix: License
+classes:
+  License:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      identifier:
+        description: Identifier of the license under which this dataset is made available.
+        title: License identifier
+      full_name:
+        description: Full name of the license under which this dataset is made available.
+        title: License description
+      url:
+        description: URL of the license under which this data is available.
+        title: License URL

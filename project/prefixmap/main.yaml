@@ -1,0 +1,350 @@
+{
+   "Aggregate_generation_protocol": "https://example.org/Aggregate-generation-protocol",
+   "Analysis_file": "https://example.org/Analysis-file",
+   "Analysis_process": "https://example.org/Analysis-process",
+   "Analysis_protocol": "https://example.org/Analysis-protocol",
+   "Barcode": {
+      "@id": "Barcode:Barcode"
+   },
+   "Biological_macromolecule_ontology": "https://example.org/Biological-macromolecule-ontology",
+   "Biomaterial_core": "https://example.org/Biomaterial-core",
+   "Cell_cycle_ontology": "https://example.org/Cell-cycle-ontology",
+   "Cell_line": "https://example.org/Cell-line",
+   "Cell_morphology": "https://example.org/Cell-morphology",
+   "Cell_suspension": "https://example.org/Cell-suspension",
+   "Cell_type_ontology": "https://example.org/Cell-type-ontology",
+   "Cellular_component_ontology": "https://example.org/Cellular-component-ontology",
+   "Channel": {
+      "@id": "Channel:Channel"
+   },
+   "Collection_protocol": "https://example.org/Collection-protocol",
+   "Contact": {
+      "@id": "Contact:Contact"
+   },
+   "Contributor_role_ontology": "https://example.org/Contributor-role-ontology",
+   "Death": {
+      "@id": "Death:Death"
+   },
+   "Development_stage_ontology": "https://example.org/Development-stage-ontology",
+   "Differentiation_protocol": "https://example.org/Differentiation-protocol",
+   "Disease_ontology": "https://example.org/Disease-ontology",
+   "Dissociation_protocol": "https://example.org/Dissociation-protocol",
+   "Donor_organism": "https://example.org/Donor-organism",
+   "Enrichment_ontology": "https://example.org/Enrichment-ontology",
+   "Enrichment_protocol": "https://example.org/Enrichment-protocol",
+   "Ethnicity_ontology": "https://example.org/Ethnicity-ontology",
+   "Familial_relationship": "https://example.org/Familial-relationship",
+   "File_content_ontology": "https://example.org/File-content-ontology",
+   "File_core": "https://example.org/File-core",
+   "File_descriptor": "https://example.org/File-descriptor",
+   "File_format_ontology": "https://example.org/File-format-ontology",
+   "Funder": {
+      "@id": "Funder:Funder"
+   },
+   "Growth_conditions": "https://example.org/Growth-conditions",
+   "Human_specific": "https://example.org/Human-specific",
+   "INSDC_experiment": "https://example.org/INSDC-experiment",
+   "Image_file": "https://example.org/Image-file",
+   "Imaged_specimen": "https://example.org/Imaged-specimen",
+   "Imaging_Protocol": "https://example.org/Imaging-Protocol",
+   "Imaging_preparation_protocol": "https://example.org/Imaging-preparation-protocol",
+   "Instrument_ontology": "https://example.org/Instrument-ontology",
+   "Length_unit_ontology": "https://example.org/Length-unit-ontology",
+   "Library_amplification_ontology": "https://example.org/Library-amplification-ontology",
+   "Library_construction_ontology": "https://example.org/Library-construction-ontology",
+   "Library_preparation_protocol": "https://example.org/Library-preparation-protocol",
+   "License": {
+      "@id": "License:License"
+   },
+   "Links": {
+      "@id": "Links:Links"
+   },
+   "Mass_unit_ontology": "https://example.org/Mass-unit-ontology",
+   "Matrix": {
+      "@id": "Matrix:Matrix"
+   },
+   "Medical_history": "https://example.org/Medical-history",
+   "Microscopy_ontology": "https://example.org/Microscopy-ontology",
+   "Mouse_specific": "https://example.org/Mouse-specific",
+   "Organ_ontology": "https://example.org/Organ-ontology",
+   "Organ_part_ontology": "https://example.org/Organ-part-ontology",
+   "Organoid": {
+      "@id": "Organoid:Organoid"
+   },
+   "Plate_based_sequencing": "https://example.org/Plate-based-sequencing",
+   "Preservation_and_storage": "https://example.org/Preservation-and-storage",
+   "Probe": {
+      "@id": "Probe:Probe"
+   },
+   "Process": {
+      "@id": "Process:Process"
+   },
+   "Process_core": "https://example.org/Process-core",
+   "Process_type_ontology": "https://example.org/Process-type-ontology",
+   "Project": {
+      "@id": "Project:Project"
+   },
+   "Project_core": "https://example.org/Project-core",
+   "Protocol": {
+      "@id": "Protocol:Protocol"
+   },
+   "Protocol_core": "https://example.org/Protocol-core",
+   "Protocol_type_ontology": "https://example.org/Protocol-type-ontology",
+   "Provenance": {
+      "@id": "Provenance:Provenance"
+   },
+   "Publication": {
+      "@id": "Publication:Publication"
+   },
+   "Purchased_reagents": "https://example.org/Purchased-reagents",
+   "Reference_file": "https://example.org/Reference-file",
+   "S10x": {
+      "@id": "S10x:S10x"
+   },
+   "Sequence_file": "https://example.org/Sequence-file",
+   "Sequencing_ontology": "https://example.org/Sequencing-ontology",
+   "Sequencing_protocol": "https://example.org/Sequencing-protocol",
+   "Species_ontology": "https://example.org/Species-ontology",
+   "Specimen_from_organism": "https://example.org/Specimen-from-organism",
+   "State_of_specimen": "https://example.org/State-of-specimen",
+   "Strain_ontology": "https://example.org/Strain-ontology",
+   "Supplementary_file": "https://example.org/Supplementary-file",
+   "Target_pathway_ontology": "https://example.org/Target-pathway-ontology",
+   "Time_unit_ontology": "https://example.org/Time-unit-ontology",
+   "Timecourse": {
+      "@id": "Timecourse:Timecourse"
+   },
+   "Treatment_method_ontology": "https://example.org/Treatment-method-ontology",
+   "Treatment_protocol": "https://example.org/Treatment-protocol",
+   "hca": "http://example.org/hca/",
+   "iPSC_induction_protocol": "https://example.org/iPSC-induction-protocol",
+   "linkml": "https://w3id.org/linkml/",
+   "AggregateGenerationProtocol": {
+      "@id": "Aggregate_generation_protocol:AggregateGenerationProtocol"
+   },
+   "AnalysisFile": {
+      "@id": "Analysis_file:AnalysisFile"
+   },
+   "AnalysisProcess": {
+      "@id": "Analysis_process:AnalysisProcess"
+   },
+   "AnalysisProtocol": {
+      "@id": "Analysis_protocol:AnalysisProtocol"
+   },
+   "BiologicalMacromoleculeOntology": {
+      "@id": "Biological_macromolecule_ontology:BiologicalMacromoleculeOntology"
+   },
+   "BiomaterialCore": {
+      "@id": "Biomaterial_core:BiomaterialCore"
+   },
+   "CellCycleOntology": {
+      "@id": "Cell_cycle_ontology:CellCycleOntology"
+   },
+   "CellLine": {
+      "@id": "Cell_line:CellLine"
+   },
+   "CellMorphology": {
+      "@id": "Cell_morphology:CellMorphology"
+   },
+   "CellSuspension": {
+      "@id": "Cell_suspension:CellSuspension"
+   },
+   "CellTypeOntology": {
+      "@id": "Cell_type_ontology:CellTypeOntology"
+   },
+   "CellularComponentOntology": {
+      "@id": "Cellular_component_ontology:CellularComponentOntology"
+   },
+   "CollectionProtocol": {
+      "@id": "Collection_protocol:CollectionProtocol"
+   },
+   "ContributorRoleOntology": {
+      "@id": "Contributor_role_ontology:ContributorRoleOntology"
+   },
+   "DevelopmentStageOntology": {
+      "@id": "Development_stage_ontology:DevelopmentStageOntology"
+   },
+   "DifferentiationProtocol": {
+      "@id": "Differentiation_protocol:DifferentiationProtocol"
+   },
+   "DiseaseOntology": {
+      "@id": "Disease_ontology:DiseaseOntology"
+   },
+   "DissociationProtocol": {
+      "@id": "Dissociation_protocol:DissociationProtocol"
+   },
+   "DonorOrganism": {
+      "@id": "Donor_organism:DonorOrganism"
+   },
+   "EnrichmentOntology": {
+      "@id": "Enrichment_ontology:EnrichmentOntology"
+   },
+   "EnrichmentProtocol": {
+      "@id": "Enrichment_protocol:EnrichmentProtocol"
+   },
+   "Entity": {
+      "@id": "Links:Entity"
+   },
+   "EthnicityOntology": {
+      "@id": "Ethnicity_ontology:EthnicityOntology"
+   },
+   "FamilialRelationship": {
+      "@id": "Familial_relationship:FamilialRelationship"
+   },
+   "FileContentOntology": {
+      "@id": "File_content_ontology:FileContentOntology"
+   },
+   "FileCore": {
+      "@id": "File_core:FileCore"
+   },
+   "FileDescriptor": {
+      "@id": "File_descriptor:FileDescriptor"
+   },
+   "FileFormatOntology": {
+      "@id": "File_format_ontology:FileFormatOntology"
+   },
+   "GrowthConditions": {
+      "@id": "Growth_conditions:GrowthConditions"
+   },
+   "HumanSpecific": {
+      "@id": "Human_specific:HumanSpecific"
+   },
+   "ImagedSpecimen": {
+      "@id": "Imaged_specimen:ImagedSpecimen"
+   },
+   "ImageFile": {
+      "@id": "Image_file:ImageFile"
+   },
+   "ImagingPreparationProtocol": {
+      "@id": "Imaging_preparation_protocol:ImagingPreparationProtocol"
+   },
+   "ImagingProtocol": {
+      "@id": "Imaging_Protocol:ImagingProtocol"
+   },
+   "Input": {
+      "@id": "Links:Input"
+   },
+   "InsdcExperiment": {
+      "@id": "INSDC_experiment:InsdcExperiment"
+   },
+   "InstrumentOntology": {
+      "@id": "Instrument_ontology:InstrumentOntology"
+   },
+   "IpscInductionProtocol": {
+      "@id": "iPSC_induction_protocol:IpscInductionProtocol"
+   },
+   "LengthUnitOntology": {
+      "@id": "Length_unit_ontology:LengthUnitOntology"
+   },
+   "LibraryAmplificationOntology": {
+      "@id": "Library_amplification_ontology:LibraryAmplificationOntology"
+   },
+   "LibraryConstructionOntology": {
+      "@id": "Library_construction_ontology:LibraryConstructionOntology"
+   },
+   "LibraryPreparationProtocol": {
+      "@id": "Library_preparation_protocol:LibraryPreparationProtocol"
+   },
+   "MassUnitOntology": {
+      "@id": "Mass_unit_ontology:MassUnitOntology"
+   },
+   "MedicalHistory": {
+      "@id": "Medical_history:MedicalHistory"
+   },
+   "MicroscopyOntology": {
+      "@id": "Microscopy_ontology:MicroscopyOntology"
+   },
+   "MouseSpecific": {
+      "@id": "Mouse_specific:MouseSpecific"
+   },
+   "OrganOntology": {
+      "@id": "Organ_ontology:OrganOntology"
+   },
+   "OrganPartOntology": {
+      "@id": "Organ_part_ontology:OrganPartOntology"
+   },
+   "Output": {
+      "@id": "Links:Output"
+   },
+   "Parameter": {
+      "@id": "Analysis_process:Parameter"
+   },
+   "PlateBasedSequencing": {
+      "@id": "Plate_based_sequencing:PlateBasedSequencing"
+   },
+   "PreservationStorage": {
+      "@id": "Preservation_and_storage:PreservationStorage"
+   },
+   "ProcessCore": {
+      "@id": "Process_core:ProcessCore"
+   },
+   "ProcessLink": {
+      "@id": "Links:ProcessLink"
+   },
+   "ProcessTypeOntology": {
+      "@id": "Process_type_ontology:ProcessTypeOntology"
+   },
+   "ProjectCore": {
+      "@id": "Project_core:ProjectCore"
+   },
+   "ProtocolCore": {
+      "@id": "Protocol_core:ProtocolCore"
+   },
+   "ProtocolReference": {
+      "@id": "Links:ProtocolReference"
+   },
+   "ProtocolTypeOntology": {
+      "@id": "Protocol_type_ontology:ProtocolTypeOntology"
+   },
+   "PurchasedReagents": {
+      "@id": "Purchased_reagents:PurchasedReagents"
+   },
+   "ReferenceFile": {
+      "@id": "Reference_file:ReferenceFile"
+   },
+   "SequenceFile": {
+      "@id": "Sequence_file:SequenceFile"
+   },
+   "SequencingOntology": {
+      "@id": "Sequencing_ontology:SequencingOntology"
+   },
+   "SequencingProtocol": {
+      "@id": "Sequencing_protocol:SequencingProtocol"
+   },
+   "SpeciesOntology": {
+      "@id": "Species_ontology:SpeciesOntology"
+   },
+   "SpecimenFromOrganism": {
+      "@id": "Specimen_from_organism:SpecimenFromOrganism"
+   },
+   "StateOfSpecimen": {
+      "@id": "State_of_specimen:StateOfSpecimen"
+   },
+   "StrainOntology": {
+      "@id": "Strain_ontology:StrainOntology"
+   },
+   "SupplementaryFile": {
+      "@id": "Supplementary_file:SupplementaryFile"
+   },
+   "SupplementaryFileEntity": {
+      "@id": "Links:SupplementaryFileEntity"
+   },
+   "SupplementaryFileLink": {
+      "@id": "Links:SupplementaryFileLink"
+   },
+   "TargetPathwayOntology": {
+      "@id": "Target_pathway_ontology:TargetPathwayOntology"
+   },
+   "Task": {
+      "@id": "Analysis_process:Task"
+   },
+   "TimeUnitOntology": {
+      "@id": "Time_unit_ontology:TimeUnitOntology"
+   },
+   "TreatmentMethodOntology": {
+      "@id": "Treatment_method_ontology:TreatmentMethodOntology"
+   },
+   "TreatmentProtocol": {
+      "@id": "Treatment_protocol:TreatmentProtocol"
+   }
+}

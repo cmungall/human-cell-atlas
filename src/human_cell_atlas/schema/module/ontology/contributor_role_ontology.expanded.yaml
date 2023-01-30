@@ -1,0 +1,779 @@
+name: Contributor_role_ontology
+id: https://example.org/Contributor-role-ontology
+imports:
+- linkml:types
+prefixes:
+  Contributor_role_ontology: https://example.org/Contributor-role-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Contributor_role_ontology
+enums:
+  ContributorRoleOntology_ontology_options:
+    reachable_from:
+      source_ontology: obo:efo
+      source_nodes:
+      - BFO:0000023
+      relationship_types:
+      - rdfs:subClassOf
+      is_direct: false
+      include_self: false
+    permissible_values:
+      EFO:0007029:
+        text: EFO:0007029
+        description: SC
+        meaning: EFO:0007029
+      EFO:0007027:
+        text: EFO:0007027
+        description: SD
+        meaning: EFO:0007027
+      EFO:0007028:
+        text: EFO:0007028
+        description: SD minus nitrogen
+        meaning: EFO:0007028
+      CHEBI:35195:
+        text: CHEBI:35195
+        description: surfactant role
+        meaning: CHEBI:35195
+      CHEBI:59163:
+        text: CHEBI:59163
+        description: biomarker
+        meaning: CHEBI:59163
+      EFO:0007025:
+        text: EFO:0007025
+        description: YEPD
+        meaning: EFO:0007025
+      EFO:0007026:
+        text: EFO:0007026
+        description: YEPG
+        meaning: EFO:0007026
+      EFO:0007024:
+        text: EFO:0007024
+        description: yeast media
+        meaning: EFO:0007024
+      EFO:0007032:
+        text: EFO:0007032
+        description: F1
+        meaning: EFO:0007032
+      EFO:0007033:
+        text: EFO:0007033
+        description: SPO
+        meaning: EFO:0007033
+      EFO:0007030:
+        text: EFO:0007030
+        description: SCIM
+        meaning: EFO:0007030
+      EFO:0007031:
+        text: EFO:0007031
+        description: SL
+        meaning: EFO:0007031
+      CHEBI:25355:
+        text: CHEBI:25355
+        description: mitochondrial respiratory-chain inhibitor
+        meaning: CHEBI:25355
+      CHEBI:48358:
+        text: CHEBI:48358
+        description: polar aprotic solvent role
+        meaning: CHEBI:48358
+      CHEBI:24127:
+        text: CHEBI:24127
+        description: fungicide
+        meaning: CHEBI:24127
+      CHEBI:48354:
+        text: CHEBI:48354
+        description: polar solvent role
+        meaning: CHEBI:48354
+      CHEBI:50790:
+        text: CHEBI:50790
+        description: aromatase inhibitor
+        meaning: CHEBI:50790
+      CHEBI:50792:
+        text: CHEBI:50792
+        description: estrogen receptor antagonist role
+        meaning: CHEBI:50792
+      OBI:0001142:
+        text: OBI:0001142
+        description: dye swap quality control role
+        meaning: OBI:0001142
+      OBI:0001140:
+        text: OBI:0001140
+        description: spike-in quality control role
+        meaning: OBI:0001140
+      CHEBI:4836:
+        text: CHEBI:4836
+        description: amphiprotic solvent role
+        meaning: CHEBI:4836
+      CHEBI:27780:
+        text: CHEBI:27780
+        description: detergent role
+        meaning: CHEBI:27780
+      EFO:0001824:
+        text: EFO:0001824
+        description: hormone role
+        meaning: EFO:0001824
+      EFO:0000643:
+        text: EFO:0000643
+        description: pathogen
+        meaning: EFO:0000643
+      CHEBI:18292:
+        text: CHEBI:18292
+        description: jasmonic acid
+        meaning: CHEBI:18292
+      EFO:0000647:
+        text: EFO:0000647
+        description: experiment performer
+        meaning: EFO:0000647
+      CHEBI:50739:
+        text: CHEBI:50739
+        description: estrogen receptor modulator
+        meaning: CHEBI:50739
+      CHEBI:50733:
+        text: CHEBI:50733
+        description: nutraceutical
+        meaning: CHEBI:50733
+      CHEBI:51086:
+        text: CHEBI:51086
+        description: chemical role
+        meaning: CHEBI:51086
+      CHEBI:23366:
+        text: CHEBI:23366
+        description: compatible osmolytes role
+        meaning: CHEBI:23366
+      EFO:0004367:
+        text: EFO:0004367
+        description: induces sterile inflammation
+        meaning: EFO:0004367
+      EFO:0000683:
+        text: EFO:0000683
+        description: replicate
+        meaning: EFO:0000683
+      CHEBI:15929:
+        text: CHEBI:15929
+        description: methyl (-)-jasmonate
+        meaning: CHEBI:15929
+      CHEBI:28001:
+        text: CHEBI:28001
+        description: vancomycin
+        meaning: CHEBI:28001
+      CHEBI:51065:
+        text: CHEBI:51065
+        description: dopamine agonist
+        meaning: CHEBI:51065
+      EFO:0001899:
+        text: EFO:0001899
+        description: drug role
+        meaning: EFO:0001899
+      CHEBI:50514:
+        text: CHEBI:50514
+        description: vasoconstrictor agent
+        meaning: CHEBI:50514
+      CHEBI:63060:
+        text: CHEBI:63060
+        description: phase-transfer catalyst role
+        meaning: CHEBI:63060
+      CHEBI:50504:
+        text: CHEBI:50504
+        description: osmotic diuretic
+        meaning: CHEBI:50504
+      CHEBI:50505:
+        text: CHEBI:50505
+        description: sweetening agent role
+        meaning: CHEBI:50505
+      CHEBI:50750:
+        text: CHEBI:50750
+        description: topoisomerase II inhibitor
+        meaning: CHEBI:50750
+      CHEBI:48561:
+        text: CHEBI:48561
+        description: dopaminergic antagonist
+        meaning: CHEBI:48561
+      CHEBI:39116:
+        text: CHEBI:39116
+        description: pyrethroid ester insecticide
+        meaning: CHEBI:39116
+      EFO:0001674:
+        text: EFO:0001674
+        description: placebo
+        meaning: EFO:0001674
+      CHEBI:33281:
+        text: CHEBI:33281
+        description: antimicrobial agent
+        meaning: CHEBI:33281
+      CHEBI:33284:
+        text: CHEBI:33284
+        description: nutrient
+        meaning: CHEBI:33284
+      CHEBI:33286:
+        text: CHEBI:33286
+        description: agrochemical role
+        meaning: CHEBI:33286
+      CHEBI:33287:
+        text: CHEBI:33287
+        description: fertilizer
+        meaning: CHEBI:33287
+      CHEBI:35679:
+        text: CHEBI:35679
+        description: antilipemic drug
+        meaning: CHEBI:35679
+      CHEBI:53784:
+        text: CHEBI:53784
+        description: antispasmodic
+        meaning: CHEBI:53784
+      CHEBI:38147:
+        text: CHEBI:38147
+        description: cardiotonic drug
+        meaning: CHEBI:38147
+      CHEBI:50177:
+        text: CHEBI:50177
+        description: dermatologic drug
+        meaning: CHEBI:50177
+      CHEBI:35469:
+        text: CHEBI:35469
+        description: antidepressant
+        meaning: CHEBI:35469
+      CHEBI:37848:
+        text: CHEBI:37848
+        description: plant growth hormone
+        meaning: CHEBI:37848
+      EFO:0001461:
+        text: EFO:0001461
+        description: control
+        meaning: EFO:0001461
+      CHEBI:35457:
+        text: CHEBI:35457
+        description: angiotensin-converting enzyme inhibitor
+        meaning: CHEBI:35457
+      CHEBI:35444:
+        text: CHEBI:35444
+        description: antinematodal drug
+        meaning: CHEBI:35444
+      CHEBI:37845:
+        text: CHEBI:37845
+        description: growth hormone
+        meaning: CHEBI:37845
+      CHEBI:48873:
+        text: CHEBI:48873
+        description: cholinergic antagonist
+        meaning: CHEBI:48873
+      EFO:0007589:
+        text: EFO:0007589
+        description: etiolation
+        meaning: EFO:0007589
+      CHEBI:48876:
+        text: CHEBI:48876
+        description: muscarinic antagonist
+        meaning: CHEBI:48876
+      CHEBI:33295:
+        text: CHEBI:33295
+        description: diagnostic agent
+        meaning: CHEBI:33295
+      CHEBI:16522:
+        text: CHEBI:16522
+        description: trans-zeatin
+        meaning: CHEBI:16522
+      EFO:0009741:
+        text: EFO:0009741
+        description: experimental scientist
+        meaning: EFO:0009741
+      EFO:0009740:
+        text: EFO:0009740
+        description: clinician
+        meaning: EFO:0009740
+      EFO:0009743:
+        text: EFO:0009743
+        description: administrator
+        meaning: EFO:0009743
+      EFO:0009742:
+        text: EFO:0009742
+        description: computational scientist
+        meaning: EFO:0009742
+      CHEBI:50112:
+        text: CHEBI:50112
+        description: sex hormone
+        meaning: CHEBI:50112
+      CHEBI:22676:
+        text: CHEBI:22676
+        description: auxin role
+        meaning: CHEBI:22676
+      CHEBI:50370:
+        text: CHEBI:50370
+        description: parasympatholytic
+        meaning: CHEBI:50370
+      EFO:0009737:
+        text: EFO:0009737
+        description: data curator
+        meaning: EFO:0009737
+      EFO:0009736:
+        text: EFO:0009736
+        description: principal investigator
+        meaning: EFO:0009736
+      EFO:0009735:
+        text: EFO:0009735
+        description: co-investigator
+        meaning: EFO:0009735
+      EFO:0009739:
+        text: EFO:0009739
+        description: technician
+        meaning: EFO:0009739
+      EFO:0009738:
+        text: EFO:0009738
+        description: pathologist
+        meaning: EFO:0009738
+      CHEBI:50103:
+        text: CHEBI:50103
+        description: excitatory amino acid agonist
+        meaning: CHEBI:50103
+      BTO:0000221:
+        text: BTO:0000221
+        description: cell suspension culture
+        meaning: BTO:0000221
+      CHEBI:35821:
+        text: CHEBI:35821
+        description: anticholesteremic drug
+        meaning: CHEBI:35821
+      CHEBI:24852:
+        text: CHEBI:24852
+        description: insecticide
+        meaning: CHEBI:24852
+      CHEBI:35640:
+        text: CHEBI:35640
+        description: adrenergic uptake inhibitor
+        meaning: CHEBI:35640
+      CHEBI:33229:
+        text: CHEBI:33229
+        description: vitamin
+        meaning: CHEBI:33229
+      CHEBI:26155:
+        text: CHEBI:26155
+        description: plant growth regulator
+        meaning: CHEBI:26155
+      CHEBI:33232:
+        text: CHEBI:33232
+        description: application
+        meaning: CHEBI:33232
+      CHEBI:26158:
+        text: CHEBI:26158
+        description: phytohormone
+        meaning: CHEBI:26158
+      CHEBI:35610:
+        text: CHEBI:35610
+        description: antineoplastic agent
+        meaning: CHEBI:35610
+      CHEBI:35620:
+        text: CHEBI:35620
+        description: vasodilator agent
+        meaning: CHEBI:35620
+      CHEBI:25212:
+        text: CHEBI:25212
+        description: metabolite role
+        meaning: CHEBI:25212
+      CHEBI:50683:
+        text: CHEBI:50683
+        description: folic acid reductase inhibitor
+        meaning: CHEBI:50683
+      CHEBI:23924:
+        text: CHEBI:23924
+        description: enzyme inhibitor
+        meaning: CHEBI:23924
+      OBI:0000018:
+        text: OBI:0000018
+        description: material supplier role
+        meaning: OBI:0000018
+      EFO:0002012:
+        text: EFO:0002012
+        description: organization role
+        meaning: EFO:0002012
+      CHEBI:48218:
+        text: CHEBI:48218
+        description: antiseptic drug
+        meaning: CHEBI:48218
+      CHEBI:37699:
+        text: CHEBI:37699
+        description: protein kinase inhibitor
+        meaning: CHEBI:37699
+      CHEBI:38637:
+        text: CHEBI:38637
+        description: tyrosine kinase inhibitor
+        meaning: CHEBI:38637
+      CHEBI:36047:
+        text: CHEBI:36047
+        description: antibacterial drug
+        meaning: CHEBI:36047
+      EFO:0000732:
+        text: EFO:0000732
+        description: vehicle role
+        meaning: EFO:0000732
+      CHEBI:50469:
+        text: CHEBI:50469
+        description: phospholipase A2 inhibitor
+        meaning: CHEBI:50469
+      EFO:0004447:
+        text: EFO:0004447
+        description: peer review quality control role
+        meaning: EFO:0004447
+      CHEBI:48278:
+        text: CHEBI:48278
+        description: serotonergic drug
+        meaning: CHEBI:48278
+      CHEBI:48279:
+        text: CHEBI:48279
+        description: serotonergic antagonist
+        meaning: CHEBI:48279
+      EFO:0004456:
+        text: EFO:0004456
+        description: reduce cholesterol levels
+        meaning: EFO:0004456
+      EFO:0004457:
+        text: EFO:0004457
+        description: carcinogen role
+        meaning: EFO:0004457
+      EFO:0000523:
+        text: EFO:0000523
+        description: growth condition
+        meaning: EFO:0000523
+      EFO:0002090:
+        text: EFO:0002090
+        description: technical replicate
+        meaning: EFO:0002090
+      EFO:0002091:
+        text: EFO:0002091
+        description: biological replicate
+        meaning: EFO:0002091
+      CHEBI:50864:
+        text: CHEBI:50864
+        description: insulin-sensitizing drug
+        meaning: CHEBI:50864
+      EFO:0002092:
+        text: EFO:0002092
+        description: dye swap replicate
+        meaning: EFO:0002092
+      CHEBI:38828:
+        text: CHEBI:38828
+        description: non ionic surfactant role
+        meaning: CHEBI:38828
+      EFO:0001730:
+        text: EFO:0001730
+        description: biosequence provider
+        meaning: EFO:0001730
+      EFO:0001731:
+        text: EFO:0001731
+        description: consortium member
+        meaning: EFO:0001731
+      EFO:0001732:
+        text: EFO:0001732
+        description: consultant
+        meaning: EFO:0001732
+      EFO:0001733:
+        text: EFO:0001733
+        description: curator
+        meaning: EFO:0001733
+      EFO:0000532:
+        text: EFO:0000532
+        description: host
+        meaning: EFO:0000532
+      CHEBI:37890:
+        text: CHEBI:37890
+        description: alpha-adrenergic antagonist
+        meaning: CHEBI:37890
+      CHEBI:35493:
+        text: CHEBI:35493
+        description: antipyretic
+        meaning: CHEBI:35493
+      CHEBI:50855:
+        text: CHEBI:50855
+        description: antiatherogenic agent
+        meaning: CHEBI:50855
+      EFO:0001728:
+        text: EFO:0001728
+        description: array manufacturer
+        meaning: EFO:0001728
+      EFO:0001729:
+        text: EFO:0001729
+        description: biomaterial provider
+        meaning: EFO:0001729
+      EFO:0001740:
+        text: EFO:0001740
+        description: software manufacturer
+        meaning: EFO:0001740
+      CHEBI:24432:
+        text: CHEBI:24432
+        description: biological role
+        meaning: CHEBI:24432
+      EFO:0001741:
+        text: EFO:0001741
+        description: submitter
+        meaning: EFO:0001741
+      CHEBI:35482:
+        text: CHEBI:35482
+        description: opioid analgesic
+        meaning: CHEBI:35482
+      CHEBI:35481:
+        text: CHEBI:35481
+        description: non-narcotic analgesic
+        meaning: CHEBI:35481
+      CHEBI:35221:
+        text: CHEBI:35221
+        description: antimetabolite role
+        meaning: CHEBI:35221
+      CHEBI:37887:
+        text: CHEBI:37887
+        description: adrenergic antagonist
+        meaning: CHEBI:37887
+      CHEBI:35222:
+        text: CHEBI:35222
+        description: inhibitor role
+        meaning: CHEBI:35222
+      EFO:0001734:
+        text: EFO:0001734
+        description: data analyst
+        meaning: EFO:0001734
+      EFO:0001735:
+        text: EFO:0001735
+        description: data coder
+        meaning: EFO:0001735
+      EFO:0001736:
+        text: EFO:0001736
+        description: funder
+        meaning: EFO:0001736
+      EFO:0001737:
+        text: EFO:0001737
+        description: hardware manufacturer
+        meaning: EFO:0001737
+      EFO:0001738:
+        text: EFO:0001738
+        description: institution
+        meaning: EFO:0001738
+      EFO:0001739:
+        text: EFO:0001739
+        description: investigator
+        meaning: EFO:0001739
+      CHEBI:35475:
+        text: CHEBI:35475
+        description: non-steroidal anti-inflammatory drug
+        meaning: CHEBI:35475
+      CHEBI:35472:
+        text: CHEBI:35472
+        description: anti-inflammatory drug
+        meaning: CHEBI:35472
+      CHEBI:35477:
+        text: CHEBI:35477
+        description: antimanic drug
+        meaning: CHEBI:35477
+      CHEBI:35476:
+        text: CHEBI:35476
+        description: antipsychotic drug
+        meaning: CHEBI:35476
+      CHEBI:35219:
+        text: CHEBI:35219
+        description: plant growth retardant
+        meaning: CHEBI:35219
+      CHEBI:25435:
+        text: CHEBI:25435
+        description: mutagen
+        meaning: CHEBI:25435
+      CHEBI:50646:
+        text: CHEBI:50646
+        description: bone density conservation agent
+        meaning: CHEBI:50646
+      CHEBI:38870:
+        text: CHEBI:38870
+        description: inhalation anaesthetic
+        meaning: CHEBI:38870
+      EFO:0000579:
+        text: EFO:0000579
+        description: media
+        meaning: EFO:0000579
+      CHEBI:38877:
+        text: CHEBI:38877
+        description: intravenous anaesthetic
+        meaning: CHEBI:38877
+      CHEBI:22917:
+        text: CHEBI:22917
+        description: phytogenic insecticide
+        meaning: CHEBI:22917
+      CHEBI:50630:
+        text: CHEBI:50630
+        description: cyclooxygenase 1 inhibitor
+        meaning: CHEBI:50630
+      CHEBI:50629:
+        text: CHEBI:50629
+        description: cyclooxygenase 2 inhibitor
+        meaning: CHEBI:50629
+      EFO:0009171:
+        text: EFO:0009171
+        description: blood group--lutheran inhibitor
+        meaning: EFO:0009171
+      CHEBI:64202:
+        text: CHEBI:64202
+        description: methiothepin maleate
+        meaning: CHEBI:64202
+      CHEBI:50919:
+        text: CHEBI:50919
+        description: antiemetic
+        meaning: CHEBI:50919
+      CHEBI:35554:
+        text: CHEBI:35554
+        description: cardiovascular drug
+        meaning: CHEBI:35554
+      CHEBI:37956:
+        text: CHEBI:37956
+        description: histamine antagonist
+        meaning: CHEBI:37956
+      CHEBI:35544:
+        text: CHEBI:35544
+        description: cyclooxygenase inhibitor
+        meaning: CHEBI:35544
+      CHEBI:35526:
+        text: CHEBI:35526
+        description: hypoglycemic drug
+        meaning: CHEBI:35526
+      CHEBI:37930:
+        text: CHEBI:37930
+        description: phenothiazine antipsychotic drug
+        meaning: CHEBI:37930
+      CHEBI:35522:
+        text: CHEBI:35522
+        description: beta-adrenergic agonist
+        meaning: CHEBI:35522
+      CHEBI:37733:
+        text: CHEBI:37733
+        description: cholinesterase inhibitor
+        meaning: CHEBI:37733
+      CHEBI:23354:
+        text: CHEBI:23354
+        description: coenzyme
+        meaning: CHEBI:23354
+      CHEBI:63490:
+        text: CHEBI:63490
+        description: explosive role
+        meaning: CHEBI:63490
+      CHEBI:38068:
+        text: CHEBI:38068
+        description: antimalarial
+        meaning: CHEBI:38068
+      CHEBI:38070:
+        text: CHEBI:38070
+        description: anti-arrhythmia drug
+        meaning: CHEBI:38070
+      CHEBI:27027:
+        text: CHEBI:27027
+        description: micronutrient
+        meaning: CHEBI:27027
+      CHEBI:27026:
+        text: CHEBI:27026
+        description: toxin
+        meaning: CHEBI:27026
+      CHEBI:37960:
+        text: CHEBI:37960
+        description: dye role
+        meaning: CHEBI:37960
+      CHEBI:37700:
+        text: CHEBI:37700
+        description: protein kinase C inhibitor
+        meaning: CHEBI:37700
+      CHEBI:59517:
+        text: CHEBI:59517
+        description: DNA synthesis inhibitor
+        meaning: CHEBI:59517
+      CHEBI:24937:
+        text: CHEBI:24937
+        description: jasmonic acids
+        meaning: CHEBI:24937
+      BTO:0000332:
+        text: BTO:0000332
+        description: culture condition:dark-grown cell
+        meaning: BTO:0000332
+      CHEBI:35718:
+        text: CHEBI:35718
+        description: antifungal drug
+        meaning: CHEBI:35718
+      CHEBI:35717:
+        text: CHEBI:35717
+        description: sedative drug
+        meaning: CHEBI:35717
+      CHEBI:50249:
+        text: CHEBI:50249
+        description: anticoagulant
+        meaning: CHEBI:50249
+      CHEBI:38215:
+        text: CHEBI:38215
+        description: calcium channel blocker
+        meaning: CHEBI:38215
+      CHEBI:38462:
+        text: CHEBI:38462
+        description: acetylcholinesterase inhibitor
+        meaning: CHEBI:38462
+      EFO:0003787:
+        text: EFO:0003787
+        description: cytokine role
+        meaning: EFO:0003787
+      CHEBI:35705:
+        text: CHEBI:35705
+        description: immunosuppressive agent
+        meaning: CHEBI:35705
+      CHEBI:35703:
+        text: CHEBI:35703
+        description: xenobiotic
+        meaning: CHEBI:35703
+      EFO:0009635:
+        text: EFO:0009635
+        description: blood donor
+        meaning: EFO:0009635
+      EFO:0009634:
+        text: EFO:0009634
+        description: organ donor
+        meaning: EFO:0009634
+      EFO:0009633:
+        text: EFO:0009633
+        description: tissue donor
+        meaning: EFO:0009633
+      CHEBI:22586:
+        text: CHEBI:22586
+        description: antioxidant
+        meaning: CHEBI:22586
+      CHEBI:22587:
+        text: CHEBI:22587
+        description: antiviral
+        meaning: CHEBI:22587
+      CHEBI:23530:
+        text: CHEBI:23530
+        description: cytokinins
+        meaning: CHEBI:23530
+      CHEBI:22333:
+        text: CHEBI:22333
+        description: alkylating agent role
+        meaning: CHEBI:22333
+      OBI:0000275:
+        text: OBI:0000275
+        description: analyte role
+        meaning: OBI:0000275
+      CHEBI:50276:
+        text: CHEBI:50276
+        description: topoisomerase I inhibitor
+        meaning: CHEBI:50276
+      CHEBI:38498:
+        text: CHEBI:38498
+        description: mitochondrial NADH:ubiquinone reductase inhibitor
+        meaning: CHEBI:38498
+      CHEBI:50266:
+        text: CHEBI:50266
+        description: prodrug role
+        meaning: CHEBI:50266
+classes:
+  ContributorRoleOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: Version number in major.minor.patch format.
+      text:
+        description: The primary role of the contributor in the project.
+        title: Contributor role
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Contributor role ontology ID
+        range: ContributorRoleOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Contributor role ontology label

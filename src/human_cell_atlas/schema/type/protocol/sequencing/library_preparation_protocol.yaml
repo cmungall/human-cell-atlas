@@ -1,0 +1,138 @@
+name: Library_preparation_protocol
+id: https://example.org/Library-preparation-protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+- module/process/sequencing/barcode
+- module/ontology/biological_macromolecule_ontology
+- module/ontology/library_construction_ontology
+- module/process/purchased_reagents
+- module/ontology/library_amplification_ontology
+prefixes:
+  Library_preparation_protocol: https://example.org/Library-preparation-protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: Library_preparation_protocol
+enums:
+  LibraryPreparationProtocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+  LibraryPreparationProtocol_nucleic_acid_source_options:
+    permissible_values:
+      bulk cell: {}
+      single cell: {}
+      single nucleus: {}
+      bulk nuclei: {}
+      mitochondria: {}
+  LibraryPreparationProtocol_end_bias_options:
+    permissible_values:
+      3 prime tag: {}
+      3 prime end bias: {}
+      5 prime tag: {}
+      5 prime end bias: {}
+      full length: {}
+  LibraryPreparationProtocol_primer_options:
+    permissible_values:
+      poly-dT: {}
+      random: {}
+  LibraryPreparationProtocol_strand_options:
+    permissible_values:
+      first: {}
+      second: {}
+      unstranded: {}
+      not provided: {}
+classes:
+  LibraryPreparationProtocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: LibraryPreparationProtocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      cell_barcode:
+        description: Information about cell identifier barcodes.
+        title: Cell barcode
+        range: Barcode
+      spatial_barcode:
+        description: Information about spatial barcodes.
+        title: Spatial barcode
+        range: Barcode
+      input_nucleic_acid_molecule:
+        description: Starting nucleic acid molecule isolated for sequencing.
+        title: Input nucleic acid molecule
+        range: BiologicalMacromoleculeOntology
+        required: true
+      nucleic_acid_source:
+        description: Source cells or organelles from which nucleic acid molecules
+          were collected.
+        title: Nucleic acid source
+        range: LibraryPreparationProtocol_nucleic_acid_source_options
+        required: true
+      library_construction_method:
+        description: The general method for sequencing library construction.
+        title: Library construction method
+        range: LibraryConstructionOntology
+        required: true
+      library_construction_kit:
+        description: Name of kit used to construct the sequencing library.
+        title: Library construction kit
+        range: PurchasedReagents
+      nucleic_acid_conversion_kit:
+        description: Name of kit used to convert RNA to DNA for sequencing.
+        title: Nucleic acid conversion kit
+        range: PurchasedReagents
+      end_bias:
+        description: The type of tag or end bias the library has.
+        title: End bias
+        range: LibraryPreparationProtocol_end_bias_options
+        required: true
+      primer:
+        description: Primer used for cDNA synthesis from RNA.
+        title: Primer
+        range: LibraryPreparationProtocol_primer_options
+      strand:
+        description: Library strandedness.
+        title: Strand
+        range: LibraryPreparationProtocol_strand_options
+        required: true
+      spike_in_kit:
+        description: Information about a spike-in kit.
+        title: Spike-in kit
+        range: PurchasedReagents
+      spike_in_dilution:
+        description: Dilution of spike-in.
+        title: Spike-in dilution
+        range: integer
+      umi_barcode:
+        description: Information about unique molecular identifier (UMI) barcodes.
+        title: UMI barcode
+        range: Barcode
+      library_preamplification_method:
+        description: The method used to amplify RNA prior to adaptor ligation.
+        title: Library pre-amplification method
+        range: LibraryAmplificationOntology
+      cdna_library_amplification_method:
+        description: The method used to amplify cDNA library prior to sequencing.
+        title: cDNA library amplification method
+        range: LibraryAmplificationOntology
+      nominal_length:
+        description: Average (insert) size of the fragments being sequenced.
+        title: Nominal length
+        range: integer
+      nominal_sdev:
+        description: Standard deviation of the (insert) size of the fragments being
+          sequenced.
+        title: Nominal standard deviation
+        range: integer

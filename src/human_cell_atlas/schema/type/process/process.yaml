@@ -1,0 +1,63 @@
+name: Process
+id: https://example.org/Process
+imports:
+- linkml:types
+- system/provenance
+- core/process/process_core
+- module/ontology/time_unit_ontology
+- module/ontology/process_type_ontology
+- module/process/sequencing/insdc_experiment
+prefixes:
+  Process: https://example.org/Process
+  linkml: https://w3id.org/linkml/
+default_prefix: Process
+enums:
+  Process_schema_type_options:
+    permissible_values:
+      process: {}
+classes:
+  Process:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: Process_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      process_core:
+        description: Core process-level information.
+        title: Process core
+        range: ProcessCore
+        required: true
+      start_time:
+        description: Date and time the process started.
+        title: Start time
+      end_time:
+        description: Date and time the process ended.
+        title: End time
+      length_of_time:
+        description: Length of time the process took to execute in Length of time
+          unit.
+        title: Length of time
+      length_of_time_unit:
+        description: The unit in which Length of time is expressed.
+        title: Length of time unit
+        range: TimeUnitOntology
+      type:
+        description: The type of process.
+        title: Process type
+        range: ProcessTypeOntology
+      deviation_from_protocol:
+        description: A deviation from the protocol provided.
+        title: Deviation from protocol
+      insdc_experiment:
+        description: An International Nucleotide Sequence Database Collaboration (INSDC)
+          experiment accession.
+        title: INSDC experiment accession
+        range: InsdcExperiment

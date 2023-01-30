@@ -1,0 +1,24 @@
+name: Familial_relationship
+id: https://example.org/Familial-relationship
+imports:
+- linkml:types
+prefixes:
+  Familial_relationship: https://example.org/Familial-relationship
+  linkml: https://w3id.org/linkml/
+default_prefix: Familial_relationship
+classes:
+  FamilialRelationship:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      parent:
+        description: The individual's parent.
+        title: Parent
+      child:
+        description: The individual's child.
+        title: Child
+      sibling:
+        description: The individual's sibling.
+        title: Sibling

@@ -1,0 +1,176 @@
+name: Mass_unit_ontology
+id: https://example.org/Mass-unit-ontology
+imports:
+- linkml:types
+prefixes:
+  Mass_unit_ontology: https://example.org/Mass-unit-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Mass_unit_ontology
+enums:
+  MassUnitOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:efo
+        source_nodes:
+        - UO:0000002
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:uo
+        source_nodes:
+        - UO:0000002
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    permissible_values:
+      UO:0000221:
+        text: UO:0000221
+        description: dalton
+        meaning: UO:0000221
+      UO:0000022:
+        text: UO:0000022
+        description: milligram
+        meaning: UO:0000022
+      UO:0000021:
+        text: UO:0000021
+        description: gram
+        meaning: UO:0000021
+      UO:0000024:
+        text: UO:0000024
+        description: nanogram
+        meaning: UO:0000024
+      UO:0000023:
+        text: UO:0000023
+        description: microgram
+        meaning: UO:0000023
+      UO:0000026:
+        text: UO:0000026
+        description: femtogram
+        meaning: UO:0000026
+      UO:0000025:
+        text: UO:0000025
+        description: picogram
+        meaning: UO:0000025
+      UO:0000009:
+        text: UO:0000009
+        description: kilogram
+        meaning: UO:0000009
+      UO:0010036:
+        text: UO:0010036
+        description: quarter
+        meaning: UO:0010036
+      UO:1000221:
+        text: UO:1000221
+        description: dalton based unit
+        meaning: UO:1000221
+      UO:1010034:
+        text: UO:1010034
+        description: pound based unit
+        meaning: UO:1010034
+      UO:0000055:
+        text: UO:0000055
+        description: molar mass unit
+        meaning: UO:0000055
+      UO:1010035:
+        text: UO:1010035
+        description: stone based unit
+        meaning: UO:1010035
+      UO:0010032:
+        text: UO:0010032
+        description: drachm
+        meaning: UO:0010032
+      UO:0010034:
+        text: UO:0010034
+        description: pound
+        meaning: UO:0010034
+      UO:0010033:
+        text: UO:0010033
+        description: ounce
+        meaning: UO:0010033
+      UO:0010035:
+        text: UO:0010035
+        description: stone
+        meaning: UO:0010035
+      UO:0010038:
+        text: UO:0010038
+        description: ton
+        meaning: UO:0010038
+      UO:1010036:
+        text: UO:1010036
+        description: quarter based unit
+        meaning: UO:1010036
+      UO:1010032:
+        text: UO:1010032
+        description: drachm based unit
+        meaning: UO:1010032
+      UO:1010033:
+        text: UO:1010033
+        description: ounce based unit
+        meaning: UO:1010033
+      UO:0010009:
+        text: UO:0010009
+        description: milli
+        meaning: UO:0010009
+      UO:1010031:
+        text: UO:1010031
+        description: grain based unit
+        meaning: UO:1010031
+      UO:1010038:
+        text: UO:1010038
+        description: ton based unit
+        meaning: UO:1010038
+      UO:1010037:
+        text: UO:1010037
+        description: hundredweight based unit
+        meaning: UO:1010037
+      UO:0000087:
+        text: UO:0000087
+        description: kilogram per mole
+        meaning: UO:0000087
+      UO:0000222:
+        text: UO:0000222
+        description: kilodalton
+        meaning: UO:0000222
+      UO:0000088:
+        text: UO:0000088
+        description: gram per mole
+        meaning: UO:0000088
+      UO:0010037:
+        text: UO:0010037
+        description: hundredweight
+        meaning: UO:0010037
+      UO:1000021:
+        text: UO:1000021
+        description: gram based unit
+        meaning: UO:1000021
+      UO:1000088:
+        text: UO:1000088
+        description: gram per mole based unit
+        meaning: UO:1000088
+      UO:0010031:
+        text: UO:0010031
+        description: grain
+        meaning: UO:0010031
+classes:
+  MassUnitOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of a mass unit being used.
+        title: Mass unit
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Mass unit ontology ID
+        range: MassUnitOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Mass unit ontology label

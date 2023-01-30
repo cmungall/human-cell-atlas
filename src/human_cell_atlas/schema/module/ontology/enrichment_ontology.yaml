@@ -1,0 +1,38 @@
+name: Enrichment_ontology
+id: https://example.org/Enrichment-ontology
+imports:
+- linkml:types
+prefixes:
+  Enrichment_ontology: https://example.org/Enrichment-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Enrichment_ontology
+enums:
+  EnrichmentOntology_ontology_options:
+    reachable_from:
+      source_ontology: obo:efo
+      source_nodes:
+      - EFO:0009090
+      relationship_types:
+      - rdfs:subClassOf
+      is_direct: false
+      include_self: false
+classes:
+  EnrichmentOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of an enrichment approach being used.
+        title: Enrichment
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Enrichment ontology ID
+        range: EnrichmentOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Enrichment ontology label

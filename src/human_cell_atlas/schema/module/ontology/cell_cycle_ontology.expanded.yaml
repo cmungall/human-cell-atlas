@@ -1,0 +1,282 @@
+name: Cell_cycle_ontology
+id: https://example.org/Cell-cycle-ontology
+imports:
+- linkml:types
+prefixes:
+  Cell_cycle_ontology: https://example.org/Cell-cycle-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Cell_cycle_ontology
+enums:
+  CellCycleOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:hcao
+        source_nodes:
+        - GO:0007049
+        - GO:0022403
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:go
+        source_nodes:
+        - GO:0007049
+        - GO:0022403
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    permissible_values:
+      GO:0000084:
+        text: GO:0000084
+        description: mitotic S phase
+        meaning: GO:0000084
+      GO:0000237:
+        text: GO:0000237
+        description: leptotene
+        meaning: GO:0000237
+      GO:0051323:
+        text: GO:0051323
+        description: metaphase
+        meaning: GO:0051323
+      GO:0098763:
+        text: GO:0098763
+        description: mitotic cell cycle phase
+        meaning: GO:0098763
+      GO:0051332:
+        text: GO:0051332
+        description: meiotic S phase
+        meaning: GO:0051332
+      GO:0051320:
+        text: GO:0051320
+        description: S phase
+        meaning: GO:0051320
+      GO:0000092:
+        text: GO:0000092
+        description: mitotic anaphase B
+        meaning: GO:0000092
+      GO:0000093:
+        text: GO:0000093
+        description: mitotic telophase
+        meaning: GO:0000093
+      GO:0000238:
+        text: GO:0000238
+        description: zygotene
+        meaning: GO:0000238
+      GO:0000087:
+        text: GO:0000087
+        description: mitotic M phase
+        meaning: GO:0000087
+      GO:0000279:
+        text: GO:0000279
+        description: M phase
+        meaning: GO:0000279
+      GO:0098765:
+        text: GO:0098765
+        description: meiosis II cell cycle phase
+        meaning: GO:0098765
+      GO:0051328:
+        text: GO:0051328
+        description: meiotic interphase
+        meaning: GO:0051328
+      GO:0051331:
+        text: GO:0051331
+        description: meiotic G2 phase
+        meaning: GO:0051331
+      GO:0098764:
+        text: GO:0098764
+        description: meiosis I cell cycle phase
+        meaning: GO:0098764
+      GO:0044844:
+        text: GO:0044844
+        description: meiotic interphase II
+        meaning: GO:0044844
+      GO:0000089:
+        text: GO:0000089
+        description: mitotic metaphase
+        meaning: GO:0000089
+      GO:0000090:
+        text: GO:0000090
+        description: mitotic anaphase
+        meaning: GO:0000090
+      GO:0000240:
+        text: GO:0000240
+        description: diplotene
+        meaning: GO:0000240
+      GO:0007137:
+        text: GO:0007137
+        description: meiotic metaphase II
+        meaning: GO:0007137
+      GO:0007139:
+        text: GO:0007139
+        description: meiotic telophase II
+        meaning: GO:0007139
+      GO:0007133:
+        text: GO:0007133
+        description: meiotic anaphase I
+        meaning: GO:0007133
+      GO:0000080:
+        text: GO:0000080
+        description: mitotic G1 phase
+        meaning: GO:0000080
+      GO:0000091:
+        text: GO:0000091
+        description: mitotic anaphase A
+        meaning: GO:0000091
+      GO:0051324:
+        text: GO:0051324
+        description: prophase
+        meaning: GO:0051324
+      GO:0051322:
+        text: GO:0051322
+        description: anaphase
+        meaning: GO:0051322
+      GO:0051325:
+        text: GO:0051325
+        description: interphase
+        meaning: GO:0051325
+      GO:0000236:
+        text: GO:0000236
+        description: mitotic prometaphase
+        meaning: GO:0000236
+      GO:0051330:
+        text: GO:0051330
+        description: meiotic G1 phase
+        meaning: GO:0051330
+      GO:0007138:
+        text: GO:0007138
+        description: meiotic anaphase II
+        meaning: GO:0007138
+      GO:0000088:
+        text: GO:0000088
+        description: mitotic prophase
+        meaning: GO:0000088
+      GO:0007134:
+        text: GO:0007134
+        description: meiotic telophase I
+        meaning: GO:0007134
+      GO:0098762:
+        text: GO:0098762
+        description: meiotic cell cycle phase
+        meaning: GO:0098762
+      GO:0007136:
+        text: GO:0007136
+        description: meiotic prophase II
+        meaning: GO:0007136
+      GO:0051319:
+        text: GO:0051319
+        description: G2 phase
+        meaning: GO:0051319
+      GO:0000241:
+        text: GO:0000241
+        description: diakinesis
+        meaning: GO:0000241
+      GO:0007128:
+        text: GO:0007128
+        description: meiotic prophase I
+        meaning: GO:0007128
+      GO:0044838:
+        text: GO:0044838
+        description: cell quiescence
+        meaning: GO:0044838
+      GO:0051327:
+        text: GO:0051327
+        description: meiotic M phase
+        meaning: GO:0051327
+      GO:0098768:
+        text: GO:0098768
+        description: meiotic prometaphase I
+        meaning: GO:0098768
+      GO:0051326:
+        text: GO:0051326
+        description: telophase
+        meaning: GO:0051326
+      GO:0051318:
+        text: GO:0051318
+        description: G1 phase
+        meaning: GO:0051318
+      GO:0051329:
+        text: GO:0051329
+        description: mitotic interphase
+        meaning: GO:0051329
+      GO:0000085:
+        text: GO:0000085
+        description: mitotic G2 phase
+        meaning: GO:0000085
+      GO:0000239:
+        text: GO:0000239
+        description: pachytene
+        meaning: GO:0000239
+      GO:0007132:
+        text: GO:0007132
+        description: meiotic metaphase I
+        meaning: GO:0007132
+      GO:0007113:
+        text: GO:0007113
+        description: endomitotic cell cycle
+        meaning: GO:0007113
+      GO:0000278:
+        text: GO:0000278
+        description: mitotic cell cycle
+        meaning: GO:0000278
+      GO:0051321:
+        text: GO:0051321
+        description: meiotic cell cycle
+        meaning: GO:0051321
+      GO:0035186:
+        text: GO:0035186
+        description: syncytial blastoderm mitotic cell cycle
+        meaning: GO:0035186
+      GO:0009556:
+        text: GO:0009556
+        description: microsporogenesis
+        meaning: GO:0009556
+      GO:0016330:
+        text: GO:0016330
+        description: second mitotic wave involved in compound eye morphogenesis
+        meaning: GO:0016330
+      GO:0009554:
+        text: GO:0009554
+        description: megasporogenesis
+        meaning: GO:0009554
+      GO:0033301:
+        text: GO:0033301
+        description: cell cycle comprising mitosis without cytokinesis
+        meaning: GO:0033301
+      GO:0045448:
+        text: GO:0045448
+        description: mitotic cell cycle, embryonic
+        meaning: GO:0045448
+      GO:0048236:
+        text: GO:0048236
+        description: plant-type sporogenesis
+        meaning: GO:0048236
+      GO:0035185:
+        text: GO:0035185
+        description: preblastoderm mitotic cell cycle
+        meaning: GO:0035185
+      GO:0033277:
+        text: GO:0033277
+        description: abortive mitotic cell cycle
+        meaning: GO:0033277
+classes:
+  CellCycleOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: Version number in major.minor.patch format.
+      text:
+        description: The name of a cell cycle of the cells in the specimen.
+        title: Cell cycle
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Cell cycle ontology ID
+        range: CellCycleOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Cell cycle ontology label

@@ -1,0 +1,41 @@
+name: Aggregate_generation_protocol
+id: https://example.org/Aggregate-generation-protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+prefixes:
+  Aggregate_generation_protocol: https://example.org/Aggregate-generation-protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: Aggregate_generation_protocol
+enums:
+  AggregateGenerationProtocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+classes:
+  AggregateGenerationProtocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: AggregateGenerationProtocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      formation_method:
+        description: Method used to form cell aggregates.
+        title: Aggregate formation method
+        required: true
+      cell_uniformity:
+        description: Description of the cell aggregates uniformity after formation.
+        title: Aggregate cell uniformity

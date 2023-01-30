@@ -1,0 +1,55 @@
+name: State_of_specimen
+id: https://example.org/State-of-specimen
+imports:
+- linkml:types
+prefixes:
+  State_of_specimen: https://example.org/State-of-specimen
+  linkml: https://w3id.org/linkml/
+default_prefix: State_of_specimen
+enums:
+  StateOfSpecimen_autolysis_score_options:
+    permissible_values:
+      none: {}
+      mild: {}
+      moderate: {}
+  StateOfSpecimen_ischemic_temperature_options:
+    permissible_values:
+      warm: {}
+      cold: {}
+classes:
+  StateOfSpecimen:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      autolysis_score:
+        description: State of tissue breakdown due to self-digestion.
+        title: Autolysis score
+        range: StateOfSpecimen_autolysis_score_options
+      gross_description:
+        description: Color, size, and other aspects of specimen as visible to naked
+          eye.
+        title: Gross description
+      gross_images:
+        multivalued: true
+      ischemic_temperature:
+        description: Whether specimen experienced warm or cold ischemia.
+        title: Ischemic temperature
+        range: StateOfSpecimen_ischemic_temperature_options
+      ischemic_time:
+        description: Duration of time, in seconds, between when the specimen stopped
+          receiving oxygen and when it was preserved or processed.
+        title: Ischemic time
+        range: integer
+      microscopic_description:
+        description: How the specimen looks under the microscope and how it compares
+          with normal cells.
+        title: Microscopic description
+      microscopic_images:
+        multivalued: true
+      postmortem_interval:
+        description: Duration of time between when death was declared and when the
+          specimen was preserved or processed.
+        title: Post-mortem interval
+        range: integer

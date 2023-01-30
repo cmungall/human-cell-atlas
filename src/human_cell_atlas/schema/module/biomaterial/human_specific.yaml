@@ -1,0 +1,23 @@
+name: Human_specific
+id: https://example.org/Human-specific
+imports:
+- linkml:types
+- module/ontology/ethnicity_ontology
+prefixes:
+  Human_specific: https://example.org/Human-specific
+  linkml: https://w3id.org/linkml/
+default_prefix: Human_specific
+classes:
+  HumanSpecific:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      body_mass_index:
+        description: The body mass index of the donor.
+        title: Body mass index
+        range: float
+      ethnicity:
+        multivalued: true
+        range: EthnicityOntology

@@ -1,0 +1,61 @@
+name: Sequence_file
+id: https://example.org/Sequence-file
+imports:
+- linkml:types
+- system/provenance
+- core/file/file_core
+prefixes:
+  Sequence_file: https://example.org/Sequence-file
+  linkml: https://w3id.org/linkml/
+default_prefix: Sequence_file
+enums:
+  SequenceFile_schema_type_options:
+    permissible_values:
+      file: {}
+  SequenceFile_read_index_options:
+    permissible_values:
+      read1: {}
+      read2: {}
+      read3: {}
+      read4: {}
+      index1: {}
+      index2: {}
+      single-end, non-indexed: {}
+classes:
+  SequenceFile:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: SequenceFile_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      file_core:
+        description: Core file-level information.
+        title: File core
+        range: FileCore
+        required: true
+      read_index:
+        description: The sequencing read this file represents.
+        title: Read index
+        range: SequenceFile_read_index_options
+        required: true
+      lane_index:
+        description: The lane that this file was sequenced from.
+        title: Lane index
+        range: integer
+      read_length:
+        description: The length of a sequenced read in this file, in nucleotides.
+        title: Read length
+        range: integer
+      insdc_run_accessions:
+        multivalued: true
+      library_prep_id:
+        description: A unique ID for the library preparation.
+        title: Library preparation ID

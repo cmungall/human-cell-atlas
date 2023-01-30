@@ -1,0 +1,150 @@
+name: Links
+id: https://example.org/Links
+imports:
+- linkml:types
+- type/file/supplementary_file
+prefixes:
+  Links: https://example.org/Links
+  linkml: https://w3id.org/linkml/
+default_prefix: Links
+enums:
+  ProtocolReference_protocol_type_options:
+    permissible_values:
+      analysis_protocol: {}
+      aggregate_generation_protocol: {}
+      collection_protocol: {}
+      differentiation_protocol: {}
+      dissociation_protocol: {}
+      enrichment_protocol: {}
+      ipsc_induction_protocol: {}
+      imaging_preparation_protocol: {}
+      imaging_protocol: {}
+      library_preparation_protocol: {}
+      sequencing_protocol: {}
+      treatment_protocol: {}
+  ProcessLink_link_type_options:
+    permissible_values:
+      process_link: {}
+  SupplementaryFileEntity_file_type_options:
+    permissible_values:
+      supplementary_file: {}
+  Entity_entity_type_options:
+    permissible_values:
+      project: {}
+  SupplementaryFileLink_link_type_options:
+    permissible_values:
+      supplementary_file_link: {}
+  Links_schema_type_options:
+    permissible_values:
+      links: {}
+classes:
+  Input:
+    description: An input to a process
+    attributes:
+      input_type:
+        description: The concrete type of the input entity.
+        title: Input type
+        required: true
+      input_id:
+        description: UUID of the input entity.
+        title: Input entity UUID
+        required: true
+  Output:
+    description: An output from a process
+    attributes:
+      output_type:
+        description: The concrete type of the output entity.
+        title: Output type
+        required: true
+      output_id:
+        description: UUID of the output entity.
+        title: Output entity UUID
+        required: true
+  ProtocolReference:
+    description: A protocol used in a process
+    attributes:
+      protocol_type:
+        description: The concrete type of protocol entity.
+        title: Protocol type
+        range: ProtocolReference_protocol_type_options
+        required: true
+      protocol_id:
+        description: UUID of the protocol entity.
+        title: Protocol entity UUID
+        required: true
+  ProcessLink:
+    attributes:
+      process_type:
+        description: The concrete type of the process described by this link.
+        title: Process type
+        required: true
+      process_id:
+        description: UUID of the process described by this link.
+        title: Process entity UUID
+        required: true
+      inputs:
+        multivalued: true
+        range: Input
+        required: true
+      outputs:
+        multivalued: true
+        range: Output
+        required: true
+      protocols:
+        multivalued: true
+        range: ProtocolReference
+        required: true
+      link_type:
+        description: The type of this link.
+        range: ProcessLink_link_type_options
+        required: true
+  SupplementaryFileEntity:
+    attributes:
+      file_id:
+        description: ID for this supplementary file entity
+        required: true
+      file_type:
+        description: concrete type of this supplementary file entity
+        range: SupplementaryFileEntity_file_type_options
+        required: true
+  Entity:
+    attributes:
+      entity_id:
+        description: ID of this entity
+        required: true
+      entity_type:
+        description: The concrete type of this entity
+        range: Entity_entity_type_options
+        required: true
+  SupplementaryFileLink:
+    attributes:
+      entity:
+        description: An entity that refers to this supplementary file
+        range: Entity
+        required: true
+      files:
+        multivalued: true
+        range: SupplementaryFile
+        required: true
+      link_type:
+        description: The type of this link.
+        range: SupplementaryFileLink_link_type_options
+        required: true
+  Links:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: Links_schema_type_options
+        required: true
+      links:
+        multivalued: true
+        required: true
+        range_expression:
+          exactly_one_of:
+            - is_a: ProcessLink
+            - is_a: SupplementaryFileLink

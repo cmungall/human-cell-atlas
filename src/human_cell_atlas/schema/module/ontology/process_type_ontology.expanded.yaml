@@ -1,0 +1,3084 @@
+name: Process_type_ontology
+id: https://example.org/Process-type-ontology
+imports:
+- linkml:types
+prefixes:
+  Process_type_ontology: https://example.org/Process-type-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Process_type_ontology
+enums:
+  ProcessTypeOntology_ontology_options:
+    reachable_from:
+      source_ontology: obo:efo
+      source_nodes:
+      - EFO:0002694
+      relationship_types:
+      - rdfs:subClassOf
+      is_direct: false
+      include_self: false
+    permissible_values:
+      BTO:0000155:
+        text: BTO:0000155
+        description: bronchoalveolar lavage
+        meaning: BTO:0000155
+      EFO:0010676:
+        text: EFO:0010676
+        description: cornea transplantation
+        meaning: EFO:0010676
+      EFO:0010681:
+        text: EFO:0010681
+        description: ileostomy
+        meaning: EFO:0010681
+      EFO:0010682:
+        text: EFO:0010682
+        description: liver transplant
+        meaning: EFO:0010682
+      EFO:0010673:
+        text: EFO:0010673
+        description: cardiac transplant
+        meaning: EFO:0010673
+      EFO:0010672:
+        text: EFO:0010672
+        description: blood vessel replacement
+        meaning: EFO:0010672
+      EFO:0010674:
+        text: EFO:0010674
+        description: cardioverter defibrillator
+        meaning: EFO:0010674
+      EFO:0007045:
+        text: EFO:0007045
+        description: ATAC-seq
+        meaning: EFO:0007045
+      EFO:0010690:
+        text: EFO:0010690
+        description: renal dialysis
+        meaning: EFO:0010690
+      OBI:0200169:
+        text: OBI:0200169
+        description: normalization data transformation
+        meaning: OBI:0200169
+      EFO:0007060:
+        text: EFO:0007060
+        description: Weiss grade
+        meaning: EFO:0007060
+      EFO:0005517:
+        text: EFO:0005517
+        description: RIP-Chip by array
+        meaning: EFO:0005517
+      EFO:0000644:
+        text: EFO:0000644
+        description: pathogen test
+        meaning: EFO:0000644
+      EFO:0003143:
+        text: EFO:0003143
+        description: CLIP-seq
+        meaning: EFO:0003143
+      EFO:0008907:
+        text: EFO:0008907
+        description: scDNase-seq
+        meaning: EFO:0008907
+      EFO:0008906:
+        text: EFO:0008906
+        description: scChIP-seq
+        meaning: EFO:0008906
+      EFO:0008905:
+        text: EFO:0008905
+        description: scBS-seq
+        meaning: EFO:0008905
+      EFO:0008904:
+        text: EFO:0008904
+        description: scATAC-seq (Microfluidics)
+        meaning: EFO:0008904
+      EFO:0008909:
+        text: EFO:0008909
+        description: SCL-exo
+        meaning: EFO:0008909
+      EFO:0008908:
+        text: EFO:0008908
+        description: SCI-seq
+        meaning: EFO:0008908
+      EFO:0005302:
+        text: EFO:0005302
+        description: ChIP-exo
+        meaning: EFO:0005302
+      EFO:0010001:
+        text: EFO:0010001
+        description: MAB-seq
+        meaning: EFO:0010001
+      EFO:0010000:
+        text: EFO:0010000
+        description: JBP1-seq
+        meaning: EFO:0010000
+      EFO:0008903:
+        text: EFO:0008903
+        description: SC3-seq
+        meaning: EFO:0008903
+      EFO:0008902:
+        text: EFO:0008902
+        description: SAPAS
+        meaning: EFO:0008902
+      EFO:0008901:
+        text: EFO:0008901
+        description: Safe-SeqS
+        meaning: EFO:0008901
+      EFO:0008900:
+        text: EFO:0008900
+        description: RRBS
+        meaning: EFO:0008900
+      EFO:0010007:
+        text: EFO:0010007
+        description: scTrio-seq
+        meaning: EFO:0010007
+      EFO:0010006:
+        text: EFO:0010006
+        description: scM&T-seq
+        meaning: EFO:0010006
+      EFO:0010009:
+        text: EFO:0010009
+        description: pVAC-Seq
+        meaning: EFO:0010009
+      EFO:0010008:
+        text: EFO:0010008
+        description: irCLIP
+        meaning: EFO:0010008
+      EFO:0010003:
+        text: EFO:0010003
+        description: RASL-seq
+        meaning: EFO:0010003
+      EFO:0010002:
+        text: EFO:0010002
+        description: RRMAB-seq
+        meaning: EFO:0010002
+      EFO:0010005:
+        text: EFO:0010005
+        description: DR-Seq
+        meaning: EFO:0010005
+      EFO:0010004:
+        text: EFO:0010004
+        description: SCRB-seq
+        meaning: EFO:0010004
+      EFO:0008919:
+        text: EFO:0008919
+        description: Seq-Well
+        meaning: EFO:0008919
+      EFO:0008918:
+        text: EFO:0008918
+        description: SELEX-seq
+        meaning: EFO:0008918
+      EFO:0008916:
+        text: EFO:0008916
+        description: scWGBS
+        meaning: EFO:0008916
+      EFO:0008911:
+        text: EFO:0008911
+        description: scMT-Seq
+        meaning: EFO:0008911
+      EFO:0008910:
+        text: EFO:0008910
+        description: SCMDA
+        meaning: EFO:0008910
+      EFO:0005316:
+        text: EFO:0005316
+        description: sample pooling
+        meaning: EFO:0005316
+      EFO:0009013:
+        text: EFO:0009013
+        description: in vitro transcription
+        meaning: EFO:0009013
+      EFO:0008915:
+        text: EFO:0008915
+        description: scTHS-seq
+        meaning: EFO:0008915
+      EFO:0008914:
+        text: EFO:0008914
+        description: scRRBS
+        meaning: EFO:0008914
+      EFO:0008913:
+        text: EFO:0008913
+        description: single-cell RNA sequencing
+        meaning: EFO:0008913
+      EFO:0008912:
+        text: EFO:0008912
+        description: scRC-Seq
+        meaning: EFO:0008912
+      EFO:0005310:
+        text: EFO:0005310
+        description: RIP-seq
+        meaning: EFO:0005310
+      EFO:0000696:
+        text: EFO:0000696
+        description: shear stressing
+        meaning: EFO:0000696
+      EFO:0008929:
+        text: EFO:0008929
+        description: SMA
+        meaning: EFO:0008929
+      EFO:0008928:
+        text: EFO:0008928
+        description: SLBS
+        meaning: EFO:0008928
+      EFO:0010023:
+        text: EFO:0010023
+        description: PELE-Seq
+        meaning: EFO:0010023
+      EFO:0008923:
+        text: EFO:0008923
+        description: SiMSen-Seq
+        meaning: EFO:0008923
+      EFO:0010022:
+        text: EFO:0010022
+        description: Smart-3Seq
+        meaning: EFO:0010022
+      EFO:0008922:
+        text: EFO:0008922
+        description: SHAPE-Seq
+        meaning: EFO:0008922
+      EFO:0008921:
+        text: EFO:0008921
+        description: SHAPE-MaP
+        meaning: EFO:0008921
+      EFO:0010025:
+        text: EFO:0010025
+        description: PASP
+        meaning: EFO:0010025
+      EFO:0008920:
+        text: EFO:0008920
+        description: SeqZip
+        meaning: EFO:0008920
+      EFO:0010024:
+        text: EFO:0010024
+        description: AGO-PAR-CLIP
+        meaning: EFO:0010024
+      EFO:0008927:
+        text: EFO:0008927
+        description: SLAF-Seq
+        meaning: EFO:0008927
+      EFO:0008926:
+        text: EFO:0008926
+        description: SITE-Seq
+        meaning: EFO:0008926
+      EFO:0010021:
+        text: EFO:0010021
+        description: miniARS-seq
+        meaning: EFO:0010021
+      EFO:0008925:
+        text: EFO:0008925
+        description: scATAC-seq (cell index)
+        meaning: EFO:0008925
+      EFO:0010020:
+        text: EFO:0010020
+        description: AGO HITS-CLIP
+        meaning: EFO:0010020
+      EFO:0008924:
+        text: EFO:0008924
+        description: Simul-seq
+        meaning: EFO:0008924
+      EFO:0010027:
+        text: EFO:0010027
+        description: RESA
+        meaning: EFO:0010027
+      EFO:0010026:
+        text: EFO:0010026
+        description: RESA-CLIP
+        meaning: EFO:0010026
+      EFO:0010029:
+        text: EFO:0010029
+        description: SPLASH
+        meaning: EFO:0010029
+      EFO:0010028:
+        text: EFO:0010028
+        description: STAP-seq
+        meaning: EFO:0010028
+      EFO:0010011:
+        text: EFO:0010011
+        description: HiChIP
+        meaning: EFO:0010011
+      EFO:0008935:
+        text: EFO:0008935
+        description: smMIP
+        meaning: EFO:0008935
+      EFO:0010010:
+        text: EFO:0010010
+        description: CEL-seq2
+        meaning: EFO:0010010
+      EFO:0008934:
+        text: EFO:0008934
+        description: SMIT
+        meaning: EFO:0008934
+      EFO:0008933:
+        text: EFO:0008933
+        description: SMiLE-seq
+        meaning: EFO:0008933
+      EFO:0010013:
+        text: EFO:0010013
+        description: ATAC-see
+        meaning: EFO:0010013
+      EFO:0008932:
+        text: EFO:0008932
+        description: SMDB
+        meaning: EFO:0008932
+      EFO:0010012:
+        text: EFO:0010012
+        description: ADPr-ChAP
+        meaning: EFO:0010012
+      EFO:0008939:
+        text: EFO:0008939
+        description: snmC-seq
+        meaning: EFO:0008939
+      EFO:0008938:
+        text: EFO:0008938
+        description: SNES
+        meaning: EFO:0008938
+      EFO:0008937:
+        text: EFO:0008937
+        description: snDrop-seq
+        meaning: EFO:0008937
+      EFO:0008936:
+        text: EFO:0008936
+        description: SMORE-Seq
+        meaning: EFO:0008936
+      EFO:0010019:
+        text: EFO:0010019
+        description: m6A-LAIC-seq
+        meaning: EFO:0010019
+      EFO:0010018:
+        text: EFO:0010018
+        description: 2OMe-seq
+        meaning: EFO:0010018
+      EFO:0008931:
+        text: EFO:0008931
+        description: Smart-seq2
+        meaning: EFO:0008931
+      EFO:0010015:
+        text: EFO:0010015
+        description: SCTG
+        meaning: EFO:0010015
+      EFO:0009294:
+        text: EFO:0009294
+        description: CITE-seq
+        meaning: EFO:0009294
+      EFO:0008930:
+        text: EFO:0008930
+        description: Smart-seq
+        meaning: EFO:0008930
+      EFO:0010014:
+        text: EFO:0010014
+        description: Omni-ATAC
+        meaning: EFO:0010014
+      EFO:0009293:
+        text: EFO:0009293
+        description: percutaneous kidney biopsy
+        meaning: EFO:0009293
+      EFO:0010017:
+        text: EFO:0010017
+        description: HTGTS-Rep-seq
+        meaning: EFO:0010017
+      EFO:0009292:
+        text: EFO:0009292
+        description: bone marrow aspiration
+        meaning: EFO:0009292
+      EFO:0010016:
+        text: EFO:0010016
+        description: HiRes-Seq
+        meaning: EFO:0010016
+      EFO:0010041:
+        text: EFO:0010041
+        description: Nascent-Seq
+        meaning: EFO:0010041
+      EFO:0010040:
+        text: EFO:0010040
+        description: Nano-hmC-Seal
+        meaning: EFO:0010040
+      EFO:0010047:
+        text: EFO:0010047
+        description: assay by Fluidigm C1 microfluidics platform
+        meaning: EFO:0010047
+      EFO:0008947:
+        text: EFO:0008947
+        description: sRNA-Seq
+        meaning: EFO:0008947
+      EFO:0010046:
+        text: EFO:0010046
+        description: TAm-Seq
+        meaning: EFO:0010046
+      EFO:0008946:
+        text: EFO:0008946
+        description: SPLAT
+        meaning: EFO:0008946
+      EFO:0008945:
+        text: EFO:0008945
+        description: SPET-seq
+        meaning: EFO:0008945
+      EFO:0008944:
+        text: EFO:0008944
+        description: SpDamID
+        meaning: EFO:0008944
+      EFO:0010048:
+        text: EFO:0010048
+        description: Fluidigm C1-based dissociation
+        meaning: EFO:0010048
+      EFO:0010043:
+        text: EFO:0010043
+        description: Stable-Seq
+        meaning: EFO:0010043
+      EFO:0020981:
+        text: EFO:0020981
+        description: dependence on enabling machines and devices
+        meaning: EFO:0020981
+      EFO:0010042:
+        text: EFO:0010042
+        description: Ren-Seq
+        meaning: EFO:0010042
+      EFO:0010045:
+        text: EFO:0010045
+        description: Start-seq
+        meaning: EFO:0010045
+      EFO:0008949:
+        text: EFO:0008949
+        description: SSB-Seq
+        meaning: EFO:0008949
+      EFO:0010044:
+        text: EFO:0010044
+        description: STARR-Seq
+        meaning: EFO:0010044
+      EFO:0008948:
+        text: EFO:0008948
+        description: SS3-Seq
+        meaning: EFO:0008948
+      EFO:0020989:
+        text: EFO:0020989
+        description: bone marrow transplantation
+        meaning: EFO:0020989
+      EFO:0008943:
+        text: EFO:0008943
+        description: SPARE
+        meaning: EFO:0008943
+      EFO:0020988:
+        text: EFO:0020988
+        description: blood transfusion
+        meaning: EFO:0020988
+      EFO:0008942:
+        text: EFO:0008942
+        description: Sono-Seq
+        meaning: EFO:0008942
+      EFO:0020987:
+        text: EFO:0020987
+        description: mastectomy
+        meaning: EFO:0020987
+      EFO:0008941:
+        text: EFO:0008941
+        description: sNuc-Seq
+        meaning: EFO:0008941
+      EFO:0004160:
+        text: EFO:0004160
+        description: whole chromosome random sequencing
+        meaning: EFO:0004160
+      EFO:0020979:
+        text: EFO:0020979
+        description: digestive system surgery
+        meaning: EFO:0020979
+      EFO:0004162:
+        text: EFO:0004162
+        description: CTS (Concatenated Tag Sequencing)
+        meaning: EFO:0004162
+      EFO:0004161:
+        text: EFO:0004161
+        description: finishing sequencing assay
+        meaning: EFO:0004161
+      EFO:0004167:
+        text: EFO:0004167
+        description: RAPD
+        meaning: EFO:0004167
+      EFO:0010035:
+        text: EFO:0010035
+        description: Frac-Seq
+        meaning: EFO:0010035
+      EFO:0008959:
+        text: EFO:0008959
+        description: TaDa
+        meaning: EFO:0008959
+      EFO:0010034:
+        text: EFO:0010034
+        description: Cappable-Seq
+        meaning: EFO:0010034
+      EFO:0008958:
+        text: EFO:0008958
+        description: TAB-Seq
+        meaning: EFO:0008958
+      EFO:0008957:
+        text: EFO:0008957
+        description: T-WGBS
+        meaning: EFO:0008957
+      EFO:0010037:
+        text: EFO:0010037
+        description: INTACT
+        meaning: EFO:0010037
+      EFO:0008956:
+        text: EFO:0008956
+        description: SUPeR-seq
+        meaning: EFO:0008956
+      EFO:0010036:
+        text: EFO:0010036
+        description: HITS-KIN
+        meaning: EFO:0010036
+      EFO:0010031:
+        text: EFO:0010031
+        description: BAsE-Seq
+        meaning: EFO:0010031
+      EFO:0010030:
+        text: EFO:0010030
+        description: CRISPR-UMI
+        meaning: EFO:0010030
+      EFO:0010033:
+        text: EFO:0010033
+        description: RSMA
+        meaning: EFO:0010033
+      EFO:0010032:
+        text: EFO:0010032
+        description: EasyMF
+        meaning: EFO:0010032
+      EFO:0020973:
+        text: EFO:0020973
+        description: revision of total hip arthroplasty
+        meaning: EFO:0020973
+      EFO:0008951:
+        text: EFO:0008951
+        description: STATseq
+        meaning: EFO:0008951
+      EFO:0008950:
+        text: EFO:0008950
+        description: ssRNA-seq
+        meaning: EFO:0008950
+      EFO:0020972:
+        text: EFO:0020972
+        description: revision of total knee arthroplasty
+        meaning: EFO:0020972
+      EFO:0004158:
+        text: EFO:0004158
+        description: random RNA-Seq across whole transcriptome
+        meaning: EFO:0004158
+      EFO:0008955:
+        text: EFO:0008955
+        description: Structure-Seq
+        meaning: EFO:0008955
+      EFO:0010039:
+        text: EFO:0010039
+        description: mutARS-Seq
+        meaning: EFO:0010039
+      EFO:0008954:
+        text: EFO:0008954
+        description: STRT-seq-2i
+        meaning: EFO:0008954
+      EFO:0010038:
+        text: EFO:0010038
+        description: Mu-Seq
+        meaning: EFO:0010038
+      EFO:0008953:
+        text: EFO:0008953
+        description: STRT-seq
+        meaning: EFO:0008953
+      EFO:0020975:
+        text: EFO:0020975
+        description: total knee arthroplasty
+        meaning: EFO:0020975
+      EFO:0020974:
+        text: EFO:0020974
+        description: revision of total joint arthroplasty
+        meaning: EFO:0020974
+      EFO:0008952:
+        text: EFO:0008952
+        description: Strand-seq
+        meaning: EFO:0008952
+      EFO:0004175:
+        text: EFO:0004175
+        description: Methylation Spanning Linker Library (MSLL) processing
+        meaning: EFO:0004175
+      EFO:0008970:
+        text: EFO:0008970
+        description: TIF-Seq
+        meaning: EFO:0008970
+      EFO:0004177:
+        text: EFO:0004177
+        description: Micrococcal Nuclease digestion
+        meaning: EFO:0004177
+      EFO:0008971:
+        text: EFO:0008971
+        description: TIVA
+        meaning: EFO:0008971
+      EFO:0004176:
+        text: EFO:0004176
+        description: ChIP
+        meaning: EFO:0004176
+      EFO:0004179:
+        text: EFO:0004179
+        description: restriction digest
+        meaning: EFO:0004179
+      EFO:0004178:
+        text: EFO:0004178
+        description: reduced representation preparation
+        meaning: EFO:0004178
+      EFO:0010063:
+        text: EFO:0010063
+        description: Therapeutic Procedure
+        meaning: EFO:0010063
+      EFO:0010065:
+        text: EFO:0010065
+        description: response to intravenous immunoglobulin therapy
+        meaning: EFO:0010065
+      EFO:0010064:
+        text: EFO:0010064
+        description: Pharmacotherapy
+        meaning: EFO:0010064
+      EFO:0008705:
+        text: EFO:0008705
+        description: DAP-seq
+        meaning: EFO:0008705
+      EFO:0008704:
+        text: EFO:0008704
+        description: DamID
+        meaning: EFO:0008704
+      EFO:0009901:
+        text: EFO:0009901
+        description: 10x 3' v1
+        meaning: EFO:0009901
+      EFO:0008703:
+        text: EFO:0008703
+        description: CytoSeq
+        meaning: EFO:0008703
+      EFO:0008969:
+        text: EFO:0008969
+        description: THS-seq
+        meaning: EFO:0008969
+      EFO:0009900:
+        text: EFO:0009900
+        description: 10x 5' v2
+        meaning: EFO:0009900
+      EFO:0008702:
+        text: EFO:0008702
+        description: CrY2H-seq
+        meaning: EFO:0008702
+      EFO:0008968:
+        text: EFO:0008968
+        description: Term-Seq
+        meaning: EFO:0008968
+      EFO:0008709:
+        text: EFO:0008709
+        description: Digenome-seq
+        meaning: EFO:0008709
+      EFO:0008708:
+        text: EFO:0008708
+        description: DeepCAGE
+        meaning: EFO:0008708
+      EFO:0008707:
+        text: EFO:0008707
+        description: ddRADseq
+        meaning: EFO:0008707
+      OBI:0000512:
+        text: OBI:0000512
+        description: isolation of cell population
+        meaning: OBI:0000512
+      EFO:0008706:
+        text: EFO:0008706
+        description: DArTSeq
+        meaning: EFO:0008706
+      EFO:0004169:
+        text: EFO:0004169
+        description: methyl filtration
+        meaning: EFO:0004169
+      EFO:0008963:
+        text: EFO:0008963
+        description: TATL-seq
+        meaning: EFO:0008963
+      EFO:0004168:
+        text: EFO:0004168
+        description: hypomethylated partial restriction digest
+        meaning: EFO:0004168
+      EFO:0008962:
+        text: EFO:0008962
+        description: TARDIS
+        meaning: EFO:0008962
+      EFO:0008961:
+        text: EFO:0008961
+        description: TAmC-Seq
+        meaning: EFO:0008961
+      EFO:0008960:
+        text: EFO:0008960
+        description: TAIL-seq
+        meaning: EFO:0008960
+      EFO:0008967:
+        text: EFO:0008967
+        description: TCR-LA-MC PCR
+        meaning: EFO:0008967
+      EFO:0008701:
+        text: EFO:0008701
+        description: CROP-Seq
+        meaning: EFO:0008701
+      EFO:0008700:
+        text: EFO:0008700
+        description: CREST-seq
+        meaning: EFO:0008700
+      EFO:0008966:
+        text: EFO:0008966
+        description: TCR Chain Paring
+        meaning: EFO:0008966
+      EFO:0008965:
+        text: EFO:0008965
+        description: TCC
+        meaning: EFO:0008965
+      EFO:0008964:
+        text: EFO:0008964
+        description: TC-Seq
+        meaning: EFO:0008964
+      EFO:0004183:
+        text: EFO:0004183
+        description: size fractionation
+        meaning: EFO:0004183
+      EFO:0004187:
+        text: EFO:0004187
+        description: cDNA library construction
+        meaning: EFO:0004187
+      EFO:0000487:
+        text: EFO:0000487
+        description: exposure
+        meaning: EFO:0000487
+      EFO:0004185:
+        text: EFO:0004185
+        description: enrichment of methylated DNA
+        meaning: EFO:0004185
+      EFO:0004186:
+        text: EFO:0004186
+        description: Deoxyribonuclease digestion
+        meaning: EFO:0004186
+      EFO:0004189:
+        text: EFO:0004189
+        description: DNA shearing
+        meaning: EFO:0004189
+      EFO:0008983:
+        text: EFO:0008983
+        description: VirScan
+        meaning: EFO:0008983
+      EFO:0008981:
+        text: EFO:0008981
+        description: VDJ-Seq
+        meaning: EFO:0008981
+      EFO:0004188:
+        text: EFO:0004188
+        description: hybrid selection of targets
+        meaning: EFO:0004188
+      EFO:0008982:
+        text: EFO:0008982
+        description: VirCapSeq-VERT
+        meaning: EFO:0008982
+      EFO:0008980:
+        text: EFO:0008980
+        description: UMI Method
+        meaning: EFO:0008980
+      EFO:0004180:
+        text: EFO:0004180
+        description: DNA selection through 5-methylcytidine antibody
+        meaning: EFO:0004180
+      EFO:0004182:
+        text: EFO:0004182
+        description: Rapid Amplification of cDNA Ends
+        meaning: EFO:0004182
+      EFO:0004181:
+        text: EFO:0004181
+        description: cap analysis gene expression
+        meaning: EFO:0004181
+      OBI:0001700:
+        text: OBI:0001700
+        description: immunoprecipitation assay
+        meaning: OBI:0001700
+      EFO:0010058:
+        text: EFO:0010058
+        description: Fluidigm C1-based library preparation
+        meaning: EFO:0010058
+      EFO:0008715:
+        text: EFO:0008715
+        description: Dnase I SIM
+        meaning: EFO:0008715
+      EFO:0008714:
+        text: EFO:0008714
+        description: DMS-Seq
+        meaning: EFO:0008714
+      EFO:0009919:
+        text: EFO:0009919
+        description: SPLiT-seq
+        meaning: EFO:0009919
+      EFO:0009918:
+        text: EFO:0009918
+        description: smFISH
+        meaning: EFO:0009918
+      EFO:0008719:
+        text: EFO:0008719
+        description: dRNA-Seq
+        meaning: EFO:0008719
+      EFO:0008718:
+        text: EFO:0008718
+        description: DP-Seq
+        meaning: EFO:0008718
+      EFO:0008975:
+        text: EFO:0008975
+        description: TRAP-Seq
+        meaning: EFO:0008975
+      EFO:0008974:
+        text: EFO:0008974
+        description: Tomo-Seq
+        meaning: EFO:0008974
+      EFO:0008973:
+        text: EFO:0008973
+        description: TN-Seq
+        meaning: EFO:0008973
+      EFO:0008972:
+        text: EFO:0008972
+        description: TL-seq
+        meaning: EFO:0008972
+      EFO:0008713:
+        text: EFO:0008713
+        description: DMS-MapSeq
+        meaning: EFO:0008713
+      EFO:0008979:
+        text: EFO:0008979
+        description: Tuba-seq
+        meaning: EFO:0008979
+      EFO:0008978:
+        text: EFO:0008978
+        description: TSS Sequencing
+        meaning: EFO:0008978
+      EFO:0008712:
+        text: EFO:0008712
+        description: DLAF
+        meaning: EFO:0008712
+      EFO:0008711:
+        text: EFO:0008711
+        description: DIP-seq
+        meaning: EFO:0008711
+      EFO:0008977:
+        text: EFO:0008977
+        description: TruePrime
+        meaning: EFO:0008977
+      EFO:0008976:
+        text: EFO:0008976
+        description: TRIBE
+        meaning: EFO:0008976
+      EFO:0008710:
+        text: EFO:0008710
+        description: Digital RNA
+        meaning: EFO:0008710
+      EFO:0008990:
+        text: EFO:0008990
+        description: FISSEQ
+        meaning: EFO:0008990
+      EFO:0005397:
+        text: EFO:0005397
+        description: high content analysis of cells
+        meaning: EFO:0005397
+      EFO:0005396:
+        text: EFO:0005396
+        description: exome sequencing
+        meaning: EFO:0005396
+      EFO:0005399:
+        text: EFO:0005399
+        description: high content analysis of cells by morphological and physical
+          properties
+        meaning: EFO:0005399
+      EFO:0008995:
+        text: EFO:0008995
+        description: 10x technology
+        meaning: EFO:0008995
+      EFO:0005398:
+        text: EFO:0005398
+        description: high content analysis of cells by molecular content
+        meaning: EFO:0005398
+      EFO:0008994:
+        text: EFO:0008994
+        description: spatial transcriptomics
+        meaning: EFO:0008994
+      EFO:0008992:
+        text: EFO:0008992
+        description: MERFISH
+        meaning: EFO:0008992
+      EFO:0008993:
+        text: EFO:0008993
+        description: Ex-FISH
+        meaning: EFO:0008993
+      EFO:0009091:
+        text: EFO:0009091
+        description: sample dissociation
+        meaning: EFO:0009091
+      EFO:0008991:
+        text: EFO:0008991
+        description: seqFISH
+        meaning: EFO:0008991
+      EFO:0009090:
+        text: EFO:0009090
+        description: enrichment process
+        meaning: EFO:0009090
+      EFO:0002896:
+        text: EFO:0002896
+        description: microRNA profiling by high throughput sequencing
+        meaning: EFO:0002896
+      EFO:0008729:
+        text: EFO:0008729
+        description: END-seq
+        meaning: EFO:0008729
+      EFO:0011026:
+        text: EFO:0011026
+        description: enzyme-free chemical dissociation
+        meaning: EFO:0011026
+      EFO:0008728:
+        text: EFO:0008728
+        description: EC-seq
+        meaning: EFO:0008728
+      EFO:0011029:
+        text: EFO:0011029
+        description: tracheal brush
+        meaning: EFO:0011029
+      EFO:0008727:
+        text: EFO:0008727
+        description: Duplex-Seq
+        meaning: EFO:0008727
+      EFO:0011028:
+        text: EFO:0011028
+        description: BRB-seq
+        meaning: EFO:0011028
+      EFO:0008726:
+        text: EFO:0008726
+        description: dsRNA-Seq
+        meaning: EFO:0008726
+      EFO:0011025:
+        text: EFO:0011025
+        description: 10x 5' v1
+        meaning: EFO:0011025
+      EFO:0000494:
+        text: EFO:0000494
+        description: feature extraction
+        meaning: EFO:0000494
+      EFO:0008987:
+        text: EFO:0008987
+        description: YAMAT-Seq
+        meaning: EFO:0008987
+      EFO:0008721:
+        text: EFO:0008721
+        description: Drop-ChIP
+        meaning: EFO:0008721
+      EFO:0008986:
+        text: EFO:0008986
+        description: X-ChIP-seq
+        meaning: EFO:0008986
+      EFO:0008720:
+        text: EFO:0008720
+        description: DroNc-seq
+        meaning: EFO:0008720
+      EFO:0008985:
+        text: EFO:0008985
+        description: WGBS
+        meaning: EFO:0008985
+      EFO:0008984:
+        text: EFO:0008984
+        description: WGA-X
+        meaning: EFO:0008984
+      EFO:0008725:
+        text: EFO:0008725
+        description: DSBCapture
+        meaning: EFO:0008725
+      EFO:0009922:
+        text: EFO:0009922
+        description: 10x 3' v3
+        meaning: EFO:0009922
+      EFO:0008724:
+        text: EFO:0008724
+        description: DSB-seq
+        meaning: EFO:0008724
+      EFO:0008989:
+        text: EFO:0008989
+        description: ISS
+        meaning: EFO:0008989
+      EFO:0008723:
+        text: EFO:0008723
+        description: Droplet-CirSeq
+        meaning: EFO:0008723
+      EFO:0009920:
+        text: EFO:0009920
+        description: Slide-seq
+        meaning: EFO:0009920
+      EFO:0008722:
+        text: EFO:0008722
+        description: Drop-seq
+        meaning: EFO:0008722
+      EFO:0008988:
+        text: EFO:0008988
+        description: Ψ-seq
+        meaning: EFO:0008988
+      EFO:0008741:
+        text: EFO:0008741
+        description: fCAB-Seq
+        meaning: EFO:0008741
+      EFO:0008740:
+        text: EFO:0008740
+        description: fC-Seal
+        meaning: EFO:0008740
+      EFO:0008739:
+        text: EFO:0008739
+        description: fC-CET
+        meaning: EFO:0008739
+      EFO:0011016:
+        text: EFO:0011016
+        description: immunoFISH
+        meaning: EFO:0011016
+      EFO:0008738:
+        text: EFO:0008738
+        description: FAST-SeqS
+        meaning: EFO:0008738
+      EFO:0010078:
+        text: EFO:0010078
+        description: dentures
+        meaning: EFO:0010078
+      EFO:0008733:
+        text: EFO:0008733
+        description: eWGA
+        meaning: EFO:0008733
+      EFO:0008732:
+        text: EFO:0008732
+        description: epiGBS
+        meaning: EFO:0008732
+      EFO:0008731:
+        text: EFO:0008731
+        description: EPIG-Seq
+        meaning: EFO:0008731
+      EFO:0008730:
+        text: EFO:0008730
+        description: EnIGMA
+        meaning: EFO:0008730
+      EFO:0008737:
+        text: EFO:0008737
+        description: FAST-iCLIP
+        meaning: EFO:0008737
+      EFO:0008736:
+        text: EFO:0008736
+        description: Fast-ATAC
+        meaning: EFO:0008736
+      EFO:0008735:
+        text: EFO:0008735
+        description: FACS-seq
+        meaning: EFO:0008735
+      EFO:0008734:
+        text: EFO:0008734
+        description: ezRAD
+        meaning: EFO:0008734
+      EFO:0003856:
+        text: EFO:0003856
+        description: dissection
+        meaning: EFO:0003856
+      EFO:0007550:
+        text: EFO:0007550
+        description: high content screen
+        meaning: EFO:0007550
+      EFO:0008753:
+        text: EFO:0008753
+        description: GMUCT 2.0
+        meaning: EFO:0008753
+      EFO:0008752:
+        text: EFO:0008752
+        description: GMUCT 1.0
+        meaning: EFO:0008752
+      EFO:0007552:
+        text: EFO:0007552
+        description: high content screen of cells in a gene deletion library
+        meaning: EFO:0007552
+      EFO:0008750:
+        text: EFO:0008750
+        description: G4 ChIP-seq
+        meaning: EFO:0008750
+      EFO:0008751:
+        text: EFO:0008751
+        description: G4-seq
+        meaning: EFO:0008751
+      EFO:0007551:
+        text: EFO:0007551
+        description: high content screen of cells treated with library of siRNAs
+        meaning: EFO:0007551
+      EFO:0007553:
+        text: EFO:0007553
+        description: high content screen of cells in treated with a compound library
+        meaning: EFO:0007553
+      EFO:0001456:
+        text: EFO:0001456
+        description: DNA assay
+        meaning: EFO:0001456
+      EFO:0001457:
+        text: EFO:0001457
+        description: RNA assay
+        meaning: EFO:0001457
+      EFO:0001458:
+        text: EFO:0001458
+        description: protein assay
+        meaning: EFO:0001458
+      OBI:0302903:
+        text: OBI:0302903
+        description: nucleic acid hybridization
+        meaning: OBI:0302903
+      EFO:0008745:
+        text: EFO:0008745
+        description: Frag-seq
+        meaning: EFO:0008745
+      EFO:0008744:
+        text: EFO:0008744
+        description: FlowSeq
+        meaning: EFO:0008744
+      EFO:0008743:
+        text: EFO:0008743
+        description: FiT-Seq
+        meaning: EFO:0008743
+      EFO:0008749:
+        text: EFO:0008749
+        description: Fusion-seq
+        meaning: EFO:0008749
+      EFO:0008748:
+        text: EFO:0008748
+        description: FRT-Seq
+        meaning: EFO:0008748
+      EFO:0008747:
+        text: EFO:0008747
+        description: FRISCR
+        meaning: EFO:0008747
+      OBI:0000552:
+        text: OBI:0000552
+        description: reverse transcribed polymerase chain reaction
+        meaning: OBI:0000552
+      EFO:0008746:
+        text: EFO:0008746
+        description: FREQ-Seq
+        meaning: EFO:0008746
+      EFO:0008760:
+        text: EFO:0008760
+        description: GUIDE-seq
+        meaning: EFO:0008760
+      EFO:0008765:
+        text: EFO:0008765
+        description: HiTS-Flip
+        meaning: EFO:0008765
+      EFO:0008764:
+        text: EFO:0008764
+        description: Histone meth.
+        meaning: EFO:0008764
+      EFO:0008763:
+        text: EFO:0008763
+        description: Hi-SCL
+        meaning: EFO:0008763
+      EFO:0008761:
+        text: EFO:0008761
+        description: HELP-Seq
+        meaning: EFO:0008761
+      EFO:0008762:
+        text: EFO:0008762
+        description: hi-CLIP
+        meaning: EFO:0008762
+      EFO:0010936:
+        text: EFO:0010936
+        description: SDS-PAGE
+        meaning: EFO:0010936
+      EFO:0010935:
+        text: EFO:0010935
+        description: cytokine secretion assay
+        meaning: EFO:0010935
+      EFO:0010937:
+        text: EFO:0010937
+        description: comparative genomic hybridization (CGH)
+        meaning: EFO:0010937
+      EFO:0008757:
+        text: EFO:0008757
+        description: gSELEX-Seq
+        meaning: EFO:0008757
+      EFO:0008756:
+        text: EFO:0008756
+        description: GRO-CAP
+        meaning: EFO:0008756
+      EFO:0008755:
+        text: EFO:0008755
+        description: GRIP
+        meaning: EFO:0008755
+      EFO:0008754:
+        text: EFO:0008754
+        description: GRIL-seq
+        meaning: EFO:0008754
+      EFO:0008759:
+        text: EFO:0008759
+        description: GTI-Seq
+        meaning: EFO:0008759
+      EFO:0008758:
+        text: EFO:0008758
+        description: GT-seq
+        meaning: EFO:0008758
+      OBI:0000540:
+        text: OBI:0000540
+        description: isolation of adherent cells
+        meaning: OBI:0000540
+      EFO:0008772:
+        text: EFO:0008772
+        description: hyRAD
+        meaning: EFO:0008772
+      EFO:0008773:
+        text: EFO:0008773
+        description: ICE
+        meaning: EFO:0008773
+      EFO:0010960:
+        text: EFO:0010960
+        description: lumbar puncture
+        meaning: EFO:0010960
+      EFO:0009970:
+        text: EFO:0009970
+        description: multi-stage Repli-seq
+        meaning: EFO:0009970
+      EFO:0008771:
+        text: EFO:0008771
+        description: HydEn-seq
+        meaning: EFO:0008771
+      EFO:0008770:
+        text: EFO:0008770
+        description: HTGTS
+        meaning: EFO:0008770
+      EFO:0010961:
+        text: EFO:0010961
+        description: Visium Spatial Gene Expression
+        meaning: EFO:0010961
+      EFO:0009975:
+        text: EFO:0009975
+        description: dilution HiC
+        meaning: EFO:0009975
+      EFO:0008777:
+        text: EFO:0008777
+        description: Ig-Seq
+        meaning: EFO:0008777
+      EFO:0009974:
+        text: EFO:0009974
+        description: in situ HiC
+        meaning: EFO:0009974
+      EFO:0008776:
+        text: EFO:0008776
+        description: iDES
+        meaning: EFO:0008776
+      EFO:0009973:
+        text: EFO:0009973
+        description: CUT&RUN
+        meaning: EFO:0009973
+      EFO:0008775:
+        text: EFO:0008775
+        description: icSHAPE
+        meaning: EFO:0008775
+      EFO:0009972:
+        text: EFO:0009972
+        description: NAD-seq
+        meaning: EFO:0009972
+      EFO:0008774:
+        text: EFO:0008774
+        description: iCLIP
+        meaning: EFO:0008774
+      EFO:0009971:
+        text: EFO:0009971
+        description: TSA-seq
+        meaning: EFO:0009971
+      EFO:0010964:
+        text: EFO:0010964
+        description: barcoded plate-based single cell RNA-seq
+        meaning: EFO:0010964
+      EFO:0010965:
+        text: EFO:0010965
+        description: RNAscope
+        meaning: EFO:0010965
+      EFO:0009967:
+        text: EFO:0009967
+        description: ligation-mediated chromosome conformation capture assay
+        meaning: EFO:0009967
+      EFO:0008769:
+        text: EFO:0008769
+        description: HT-SELEX
+        meaning: EFO:0008769
+      EFO:0009966:
+        text: EFO:0009966
+        description: assay by long read sequencer
+        meaning: EFO:0009966
+      EFO:0008768:
+        text: EFO:0008768
+        description: HT-ChIP
+        meaning: EFO:0008768
+      EFO:0008767:
+        text: EFO:0008767
+        description: hMeDIP-seq
+        meaning: EFO:0008767
+      EFO:0008766:
+        text: EFO:0008766
+        description: HITS-RAP
+        meaning: EFO:0008766
+      EFO:0009969:
+        text: EFO:0009969
+        description: 2-stage Repli-seq
+        meaning: EFO:0009969
+      EFO:0009968:
+        text: EFO:0009968
+        description: ligation-free chromosome conformation capture assay
+        meaning: EFO:0009968
+      EFO:0009983:
+        text: EFO:0009983
+        description: MC-4C
+        meaning: EFO:0009983
+      EFO:0008785:
+        text: EFO:0008785
+        description: LIANTI
+        meaning: EFO:0008785
+      EFO:0009982:
+        text: EFO:0009982
+        description: Trac-Loop
+        meaning: EFO:0009982
+      EFO:0008783:
+        text: EFO:0008783
+        description: IVT-SAPAS
+        meaning: EFO:0008783
+      EFO:0008784:
+        text: EFO:0008784
+        description: LAM-HTGTS
+        meaning: EFO:0008784
+      EFO:0009981:
+        text: EFO:0009981
+        description: PLAC-seq
+        meaning: EFO:0009981
+      EFO:0008782:
+        text: EFO:0008782
+        description: INSeq
+        meaning: EFO:0008782
+      EFO:0009980:
+        text: EFO:0009980
+        description: MC-Hi-C
+        meaning: EFO:0009980
+      EFO:0008781:
+        text: EFO:0008781
+        description: ini-seq
+        meaning: EFO:0008781
+      EFO:0009987:
+        text: EFO:0009987
+        description: GAM
+        meaning: EFO:0009987
+      EFO:0008789:
+        text: EFO:0008789
+        description: M6A-RIP
+        meaning: EFO:0008789
+      EFO:0009986:
+        text: EFO:0009986
+        description: RNA-DNA SPRITE
+        meaning: EFO:0009986
+      EFO:0008788:
+        text: EFO:0008788
+        description: m1A mapping
+        meaning: EFO:0008788
+      EFO:0009985:
+        text: EFO:0009985
+        description: DNA SPRITE
+        meaning: EFO:0009985
+      EFO:0008787:
+        text: EFO:0008787
+        description: Look-Seq
+        meaning: EFO:0008787
+      EFO:0009984:
+        text: EFO:0009984
+        description: SPRITE
+        meaning: EFO:0009984
+      EFO:0008786:
+        text: EFO:0008786
+        description: LM-Seq
+        meaning: EFO:0008786
+      EFO:0008780:
+        text: EFO:0008780
+        description: inDrop
+        meaning: EFO:0008780
+      EFO:0009719:
+        text: EFO:0009719
+        description: artificial cardiac pacemaker
+        meaning: EFO:0009719
+      EFO:0003881:
+        text: EFO:0003881
+        description: hysterectomy
+        meaning: EFO:0003881
+      EFO:0009979:
+        text: EFO:0009979
+        description: single cell Hi-C
+        meaning: EFO:0009979
+      EFO:0009978:
+        text: EFO:0009978
+        description: sn-Hi-C
+        meaning: EFO:0009978
+      EFO:0009977:
+        text: EFO:0009977
+        description: sci-Hi-C
+        meaning: EFO:0009977
+      EFO:0008779:
+        text: EFO:0008779
+        description: in-cell SHAPE-Seq
+        meaning: EFO:0008779
+      EFO:0009976:
+        text: EFO:0009976
+        description: DNase Hi-C
+        meaning: EFO:0009976
+      EFO:0008778:
+        text: EFO:0008778
+        description: IMS-MDA
+        meaning: EFO:0008778
+      EFO:0009717:
+        text: EFO:0009717
+        description: bilateral oophorectomy
+        meaning: EFO:0009717
+      EFO:0000283:
+        text: EFO:0000283
+        description: behavioral stimulus
+        meaning: EFO:0000283
+      EFO:0009995:
+        text: EFO:0009995
+        description: UMI-4C
+        meaning: EFO:0009995
+      EFO:0008797:
+        text: EFO:0008797
+        description: MATQ-seq
+        meaning: EFO:0008797
+      EFO:0009994:
+        text: EFO:0009994
+        description: scABA-seq
+        meaning: EFO:0009994
+      EFO:0008796:
+        text: EFO:0008796
+        description: MARS-seq
+        meaning: EFO:0008796
+      EFO:0009993:
+        text: EFO:0009993
+        description: ChIP-BMS
+        meaning: EFO:0009993
+      EFO:0008794:
+        text: EFO:0008794
+        description: MARDI
+        meaning: EFO:0008794
+      EFO:0008795:
+        text: EFO:0008795
+        description: MARIO
+        meaning: EFO:0008795
+      EFO:0009992:
+        text: EFO:0009992
+        description: Bubble-Seq
+        meaning: EFO:0009992
+      EFO:0010720:
+        text: EFO:0010720
+        description: invasive mechanical ventilation
+        meaning: EFO:0010720
+      EFO:0008793:
+        text: EFO:0008793
+        description: MALBAC
+        meaning: EFO:0008793
+      EFO:0009991:
+        text: EFO:0009991
+        description: Nuc-Seq
+        meaning: EFO:0009991
+      EFO:0009999:
+        text: EFO:0009999
+        description: G&T-Seq
+        meaning: EFO:0009999
+      EFO:0009998:
+        text: EFO:0009998
+        description: eCLIP
+        meaning: EFO:0009998
+      EFO:0009997:
+        text: EFO:0009997
+        description: EpiRADSeq
+        meaning: EFO:0009997
+      EFO:0008799:
+        text: EFO:0008799
+        description: MCC-Seq
+        meaning: EFO:0008799
+      EFO:0009996:
+        text: EFO:0009996
+        description: ddMDA
+        meaning: EFO:0009996
+      EFO:0008798:
+        text: EFO:0008798
+        description: MBDCap-Seq
+        meaning: EFO:0008798
+      EFO:0010726:
+        text: EFO:0010726
+        description: total joint arthroplasty
+        meaning: EFO:0010726
+      EFO:0002697:
+        text: EFO:0002697
+        description: assay by high throughput sequencer
+        meaning: EFO:0002697
+      EFO:0010728:
+        text: EFO:0010728
+        description: curettage
+        meaning: EFO:0010728
+      EFO:0010727:
+        text: EFO:0010727
+        description: vacuum aspiration
+        meaning: EFO:0010727
+      EFO:0008792:
+        text: EFO:0008792
+        description: MAINE-Seq
+        meaning: EFO:0008792
+      EFO:0010722:
+        text: EFO:0010722
+        description: ophthalmic procedure
+        meaning: EFO:0010722
+      EFO:0008791:
+        text: EFO:0008791
+        description: MAF
+        meaning: EFO:0008791
+      EFO:0010721:
+        text: EFO:0010721
+        description: lung transplantation
+        meaning: EFO:0010721
+      EFO:0008790:
+        text: EFO:0008790
+        description: m6A-seq
+        meaning: EFO:0008790
+      EFO:0002692:
+        text: EFO:0002692
+        description: ChIP-seq
+        meaning: EFO:0002692
+      EFO:0002693:
+        text: EFO:0002693
+        description: DNA-seq
+        meaning: EFO:0002693
+      EFO:0002696:
+        text: EFO:0002696
+        description: assay by array
+        meaning: EFO:0002696
+      EFO:0009988:
+        text: EFO:0009988
+        description: MARGI
+        meaning: EFO:0009988
+      EFO:0009729:
+        text: EFO:0009729
+        description: surgery on leg artery
+        meaning: EFO:0009729
+      EFO:0009728:
+        text: EFO:0009728
+        description: cochlear implant
+        meaning: EFO:0009728
+      EFO:0009744:
+        text: EFO:0009744
+        description: surgical resection
+        meaning: EFO:0009744
+      EFO:0010714:
+        text: EFO:0010714
+        description: 10x TCR enrichment
+        meaning: EFO:0010714
+      EFO:0010713:
+        text: EFO:0010713
+        description: 10x immune profiling
+        meaning: EFO:0010713
+      EFO:0010715:
+        text: EFO:0010715
+        description: 10x Ig enrichment
+        meaning: EFO:0010715
+      EFO:0010719:
+        text: EFO:0010719
+        description: continuous positive airway pressure
+        meaning: EFO:0010719
+      EFO:0010741:
+        text: EFO:0010741
+        description: nasal brush
+        meaning: EFO:0010741
+      EFO:0009520:
+        text: EFO:0009520
+        description: contraception
+        meaning: EFO:0009520
+      EFO:0009517:
+        text: EFO:0009517
+        description: checkup
+        meaning: EFO:0009517
+      EFO:0001031:
+        text: EFO:0001031
+        description: tiling path by array
+        meaning: EFO:0001031
+      EFO:0001032:
+        text: EFO:0001032
+        description: transcription profiling
+        meaning: EFO:0001032
+      EFO:0001033:
+        text: EFO:0001033
+        description: translation profiling
+        meaning: EFO:0001033
+      EFO:0001030:
+        text: EFO:0001030
+        description: RNAi profiling by array
+        meaning: EFO:0001030
+      OBI:0200000:
+        text: OBI:0200000
+        description: data transformation
+        meaning: OBI:0200000
+      OBI:0200006:
+        text: OBI:0200006
+        description: biexponential transformation
+        meaning: OBI:0200006
+      EFO:0010550:
+        text: EFO:0010550
+        description: sci-RNA-seq
+        meaning: EFO:0010550
+      EFO:0009309:
+        text: EFO:0009309
+        description: Div-Seq
+        meaning: EFO:0009309
+      EFO:0009577:
+        text: EFO:0009577
+        description: orthopedic nursing
+        meaning: EFO:0009577
+      EFO:0004428:
+        text: EFO:0004428
+        description: FAIRE-seq
+        meaning: EFO:0004428
+      EFO:0005620:
+        text: EFO:0005620
+        description: lung adenocarcinoma grade
+        meaning: EFO:0005620
+      EFO:0009581:
+        text: EFO:0009581
+        description: rehabilitation
+        meaning: EFO:0009581
+      EFO:0009580:
+        text: EFO:0009580
+        description: prophylactic surgery
+        meaning: EFO:0009580
+      EFO:0000726:
+        text: EFO:0000726
+        description: transfection
+        meaning: EFO:0000726
+      EFO:0009337:
+        text: EFO:0009337
+        description: cell size selection
+        meaning: EFO:0009337
+      OBI:0000070:
+        text: OBI:0000070
+        description: assay
+        meaning: OBI:0000070
+      EFO:0000735:
+        text: EFO:0000735
+        description: washing
+        meaning: EFO:0000735
+      EFO:0000753:
+        text: EFO:0000753
+        description: microRNA profiling by array
+        meaning: EFO:0000753
+      EFO:0000752:
+        text: EFO:0000752
+        description: metabolomic profiling
+        meaning: EFO:0000752
+      EFO:0000751:
+        text: EFO:0000751
+        description: methylation profiling
+        meaning: EFO:0000751
+      EFO:0000750:
+        text: EFO:0000750
+        description: genotyping
+        meaning: EFO:0000750
+      EFO:0000749:
+        text: EFO:0000749
+        description: comparative genomic hybridization by array
+        meaning: EFO:0000749
+      EFO:0000748:
+        text: EFO:0000748
+        description: ChIP-Chip
+        meaning: EFO:0000748
+      EFO:0000747:
+        text: EFO:0000747
+        description: antigen profiling
+        meaning: EFO:0000747
+      EFO:0000746:
+        text: EFO:0000746
+        description: proteomic profiling
+        meaning: EFO:0000746
+      EFO:0600086:
+        text: EFO:0600086
+        description: appendectomy
+        meaning: EFO:0600086
+      EFO:0004455:
+        text: EFO:0004455
+        description: cot filtration
+        meaning: EFO:0004455
+      OBI:0600005:
+        text: OBI:0600005
+        description: collecting specimen from organism
+        meaning: OBI:0600005
+      OBI:0600002:
+        text: OBI:0600002
+        description: tumor grading
+        meaning: OBI:0600002
+      EFO:0009109:
+        text: EFO:0009109
+        description: magnetic affinity cell sorting
+        meaning: EFO:0009109
+      EFO:0009108:
+        text: EFO:0009108
+        description: fluorescence-activated cell sorting
+        meaning: EFO:0009108
+      EFO:0009107:
+        text: EFO:0009107
+        description: nucleic acid amplification
+        meaning: EFO:0009107
+      EFO:0009106:
+        text: EFO:0009106
+        description: sample enrichment
+        meaning: EFO:0009106
+      EFO:0002907:
+        text: EFO:0002907
+        description: population growth assay
+        meaning: EFO:0002907
+      EFO:0002908:
+        text: EFO:0002908
+        description: motility assay
+        meaning: EFO:0002908
+      EFO:0002909:
+        text: EFO:0002909
+        description: microscopy assay
+        meaning: EFO:0002909
+      EFO:0009112:
+        text: EFO:0009112
+        description: density gradient centrifugation
+        meaning: EFO:0009112
+      EFO:0009111:
+        text: EFO:0009111
+        description: laser capture microdissection
+        meaning: EFO:0009111
+      EFO:0009110:
+        text: EFO:0009110
+        description: Ficoll-Hypaque method
+        meaning: EFO:0009110
+      EFO:0002912:
+        text: EFO:0002912
+        description: characterization of functional areas of human genome
+        meaning: EFO:0002912
+      EFO:0009126:
+        text: EFO:0009126
+        description: leukapheresis
+        meaning: EFO:0009126
+      EFO:0009125:
+        text: EFO:0009125
+        description: bronchial brush biopsy
+        meaning: EFO:0009125
+      EFO:0009124:
+        text: EFO:0009124
+        description: organ extraction
+        meaning: EFO:0009124
+      EFO:0009123:
+        text: EFO:0009123
+        description: urine collection
+        meaning: EFO:0009123
+      EFO:0009129:
+        text: EFO:0009129
+        description: mechanical dissociation
+        meaning: EFO:0009129
+      EFO:0009128:
+        text: EFO:0009128
+        description: enzymatic dissociation
+        meaning: EFO:0009128
+      EFO:0009122:
+        text: EFO:0009122
+        description: scraping
+        meaning: EFO:0009122
+      EFO:0009121:
+        text: EFO:0009121
+        description: blood draw
+        meaning: EFO:0009121
+      EFO:0009120:
+        text: EFO:0009120
+        description: biopsy
+        meaning: EFO:0009120
+      EFO:0005684:
+        text: EFO:0005684
+        description: RNA-seq of coding RNA from single cells
+        meaning: EFO:0005684
+      EFO:0002924:
+        text: EFO:0002924
+        description: HapMap haplotype mapping
+        meaning: EFO:0002924
+      OBI:0600015:
+        text: OBI:0600015
+        description: group assignment
+        meaning: OBI:0600015
+      EFO:0005685:
+        text: EFO:0005685
+        description: RNA-seq of non coding RNA from single cells
+        meaning: EFO:0005685
+      EFO:0002925:
+        text: EFO:0002925
+        description: ENCODE functional genome mapping
+        meaning: EFO:0002925
+      EFO:0002941:
+        text: EFO:0002941
+        description: transcription profiling by SAGE
+        meaning: EFO:0002941
+      EFO:0002942:
+        text: EFO:0002942
+        description: transcription profiling by MPSS
+        meaning: EFO:0002942
+      EFO:0002943:
+        text: EFO:0002943
+        description: transcription profiling by RT-PCR
+        meaning: EFO:0002943
+      OBI:0000711:
+        text: OBI:0000711
+        description: library preparation
+        meaning: OBI:0000711
+      EFO:0010134:
+        text: EFO:0010134
+        description: kidney transplant
+        meaning: EFO:0010134
+      EFO:0007832:
+        text: EFO:0007832
+        description: single cell sequencing
+        meaning: EFO:0007832
+      OBI:0600044:
+        text: OBI:0600044
+        description: lavage
+        meaning: OBI:0600044
+      EFO:0000554:
+        text: EFO:0000554
+        description: irradiate
+        meaning: EFO:0000554
+      EFO:0000562:
+        text: EFO:0000562
+        description: labelling
+        meaning: EFO:0000562
+      EFO:0000561:
+        text: EFO:0000561
+        description: knock in expression
+        meaning: EFO:0000561
+      EFO:0008809:
+        text: EFO:0008809
+        description: MIDAS
+        meaning: EFO:0008809
+      EFO:0008808:
+        text: EFO:0008808
+        description: Micro-C XL
+        meaning: EFO:0008808
+      EFO:0008807:
+        text: EFO:0008807
+        description: miCLIP-m6A
+        meaning: EFO:0008807
+      OBI:0000724:
+        text: OBI:0000724
+        description: Illumina sequencing
+        meaning: OBI:0000724
+      EFO:0008802:
+        text: EFO:0008802
+        description: ME-Scan-SVA
+        meaning: EFO:0008802
+      EFO:0008801:
+        text: EFO:0008801
+        description: MDS
+        meaning: EFO:0008801
+      EFO:0008800:
+        text: EFO:0008800
+        description: MDA
+        meaning: EFO:0008800
+      EFO:0008806:
+        text: EFO:0008806
+        description: miCLIP-m5A
+        meaning: EFO:0008806
+      EFO:0008805:
+        text: EFO:0008805
+        description: MethylCap-Seq
+        meaning: EFO:0008805
+      EFO:0008804:
+        text: EFO:0008804
+        description: Methyl-seq
+        meaning: EFO:0008804
+      EFO:0008803:
+        text: EFO:0008803
+        description: MeRIP-Seq
+        meaning: EFO:0008803
+      EFO:0003906:
+        text: EFO:0003906
+        description: heart valve prosthesis
+        meaning: EFO:0003906
+      EFO:0010172:
+        text: EFO:0010172
+        description: DNA library construction
+        meaning: EFO:0010172
+      EFO:0010174:
+        text: EFO:0010174
+        description: tonsillectomy
+        meaning: EFO:0010174
+      EFO:0010173:
+        text: EFO:0010173
+        description: oophorectomy
+        meaning: EFO:0010173
+      EFO:0008819:
+        text: EFO:0008819
+        description: mNET-seq
+        meaning: EFO:0008819
+      EFO:0000325:
+        text: EFO:0000325
+        description: cellular modification
+        meaning: EFO:0000325
+      EFO:0008814:
+        text: EFO:0008814
+        description: MIPSTR
+        meaning: EFO:0008814
+      EFO:0008813:
+        text: EFO:0008813
+        description: Mint-ChIP
+        meaning: EFO:0008813
+      EFO:0008812:
+        text: EFO:0008812
+        description: MINCE-seq
+        meaning: EFO:0008812
+      EFO:0005219:
+        text: EFO:0005219
+        description: TraDIS sequencing
+        meaning: EFO:0005219
+      EFO:0008811:
+        text: EFO:0008811
+        description: MiGS
+        meaning: EFO:0008811
+      EFO:0008818:
+        text: EFO:0008818
+        description: miTRAP
+        meaning: EFO:0008818
+      EFO:0010175:
+        text: EFO:0010175
+        description: EasySep cell separation
+        meaning: EFO:0010175
+      EFO:0008817:
+        text: EFO:0008817
+        description: MitoRCA-seq
+        meaning: EFO:0008817
+      EFO:0008816:
+        text: EFO:0008816
+        description: MIRA
+        meaning: EFO:0008816
+      EFO:0008815:
+        text: EFO:0008815
+        description: MiR‐CLIP
+        meaning: EFO:0008815
+      EFO:0008810:
+        text: EFO:0008810
+        description: middRAD
+        meaning: EFO:0008810
+      EFO:0008826:
+        text: EFO:0008826
+        description: NET-Seq
+        meaning: EFO:0008826
+      EFO:0008825:
+        text: EFO:0008825
+        description: Nanogrid RNA-Seq
+        meaning: EFO:0008825
+      EFO:0008824:
+        text: EFO:0008824
+        description: NanoCAGE
+        meaning: EFO:0008824
+      EFO:0008823:
+        text: EFO:0008823
+        description: Mseek
+        meaning: EFO:0008823
+      EFO:0008829:
+        text: EFO:0008829
+        description: NOIR
+        meaning: EFO:0008829
+      EFO:0008828:
+        text: EFO:0008828
+        description: Nm-seq
+        meaning: EFO:0008828
+      EFO:0008827:
+        text: EFO:0008827
+        description: NG Capture-C
+        meaning: EFO:0008827
+      EFO:0008822:
+        text: EFO:0008822
+        description: MPRA
+        meaning: EFO:0008822
+      EFO:0008821:
+        text: EFO:0008821
+        description: MPE-seq
+        meaning: EFO:0008821
+      EFO:0008820:
+        text: EFO:0008820
+        description: Mosaic-Seq
+        meaning: EFO:0008820
+      EFO:0005227:
+        text: EFO:0005227
+        description: GRO-seq
+        meaning: EFO:0005227
+      EFO:0003942:
+        text: EFO:0003942
+        description: Xenograft
+        meaning: EFO:0003942
+      EFO:0005244:
+        text: EFO:0005244
+        description: gastric bypass
+        meaning: EFO:0005244
+      EFO:0000347:
+        text: EFO:0000347
+        description: classifier prediction
+        meaning: EFO:0000347
+      EFO:0008838:
+        text: EFO:0008838
+        description: ORGANIC
+        meaning: EFO:0008838
+      EFO:0008837:
+        text: EFO:0008837
+        description: OK-Seq
+        meaning: EFO:0008837
+      EFO:0008836:
+        text: EFO:0008836
+        description: Nucleo-Seq
+        meaning: EFO:0008836
+      EFO:0008835:
+        text: EFO:0008835
+        description: nuc-seq
+        meaning: EFO:0008835
+      EFO:0008839:
+        text: EFO:0008839
+        description: OS-Seq
+        meaning: EFO:0008839
+      EFO:0008830:
+        text: EFO:0008830
+        description: NOME-Seq
+        meaning: EFO:0008830
+      EFO:0008834:
+        text: EFO:0008834
+        description: nucleosome sequencing
+        meaning: EFO:0008834
+      EFO:0008833:
+        text: EFO:0008833
+        description: nuc-ChIP-seq
+        meaning: EFO:0008833
+      EFO:0008832:
+        text: EFO:0008832
+        description: NSCR
+        meaning: EFO:0008832
+      EFO:0008831:
+        text: EFO:0008831
+        description: NS-seq
+        meaning: EFO:0008831
+      EFO:0003953:
+        text: EFO:0003953
+        description: circumcision
+        meaning: EFO:0003953
+      EFO:0008850:
+        text: EFO:0008850
+        description: PAS-Seq
+        meaning: EFO:0008850
+      EFO:0002759:
+        text: EFO:0002759
+        description: methylation profiling by array
+        meaning: EFO:0002759
+      EFO:0010184:
+        text: EFO:0010184
+        description: Smart-like
+        meaning: EFO:0010184
+      EFO:0010183:
+        text: EFO:0010183
+        description: single cell library construction
+        meaning: EFO:0010183
+      EFO:0010182:
+        text: EFO:0010182
+        description: mouth pipetting
+        meaning: EFO:0010182
+      EFO:0003951:
+        text: EFO:0003951
+        description: percutaneous transluminal coronary angioplasty
+        meaning: EFO:0003951
+      EFO:0010180:
+        text: EFO:0010180
+        description: droplet-based cell isolation
+        meaning: EFO:0010180
+      EFO:0010181:
+        text: EFO:0010181
+        description: cell picking
+        meaning: EFO:0010181
+      EFO:0008849:
+        text: EFO:0008849
+        description: PARTE
+        meaning: EFO:0008849
+      EFO:0008848:
+        text: EFO:0008848
+        description: PARS
+        meaning: EFO:0008848
+      EFO:0008847:
+        text: EFO:0008847
+        description: PARIS
+        meaning: EFO:0008847
+      EFO:0008842:
+        text: EFO:0008842
+        description: Paired VH:VL Antibody Repertoire Analysis
+        meaning: EFO:0008842
+      EFO:0008841:
+        text: EFO:0008841
+        description: PAIR
+        meaning: EFO:0008841
+      EFO:0008840:
+        text: EFO:0008840
+        description: oxBS-Seq
+        meaning: EFO:0008840
+      EFO:0008846:
+        text: EFO:0008846
+        description: PARE-Seq
+        meaning: EFO:0008846
+      EFO:0008845:
+        text: EFO:0008845
+        description: PAR-CLIP
+        meaning: EFO:0008845
+      EFO:0008844:
+        text: EFO:0008844
+        description: PAPERCLIP
+        meaning: EFO:0008844
+      EFO:0008843:
+        text: EFO:0008843
+        description: PAL-seq
+        meaning: EFO:0008843
+      EFO:0002766:
+        text: EFO:0002766
+        description: proteomic profiling by mass spectrometer
+        meaning: EFO:0002766
+      EFO:0002767:
+        text: EFO:0002767
+        description: genotyping by array
+        meaning: EFO:0002767
+      EFO:0002768:
+        text: EFO:0002768
+        description: transcription profiling by array
+        meaning: EFO:0002768
+      EFO:0002769:
+        text: EFO:0002769
+        description: transcription profiling by tiling array
+        meaning: EFO:0002769
+      EFO:0008862:
+        text: EFO:0008862
+        description: PIP-Seq
+        meaning: EFO:0008862
+      EFO:0008860:
+        text: EFO:0008860
+        description: Perturb-Seq
+        meaning: EFO:0008860
+      EFO:0008861:
+        text: EFO:0008861
+        description: PhIP-seq
+        meaning: EFO:0008861
+      EFO:0002760:
+        text: EFO:0002760
+        description: ChIP-chip by array
+        meaning: EFO:0002760
+      EFO:0002761:
+        text: EFO:0002761
+        description: methylation profiling by high throughput sequencing
+        meaning: EFO:0002761
+      EFO:0002762:
+        text: EFO:0002762
+        description: ChIP-chip by tiling array
+        meaning: EFO:0002762
+      EFO:0002764:
+        text: EFO:0002764
+        description: ChIP-chip by SNP array
+        meaning: EFO:0002764
+      EFO:0002765:
+        text: EFO:0002765
+        description: proteomic profiling by array
+        meaning: EFO:0002765
+      EFO:0008859:
+        text: EFO:0008859
+        description: PEAT
+        meaning: EFO:0008859
+      EFO:0008854:
+        text: EFO:0008854
+        description: PB-seq
+        meaning: EFO:0008854
+      EFO:0008853:
+        text: EFO:0008853
+        description: Patch-seq
+        meaning: EFO:0008853
+      EFO:0008852:
+        text: EFO:0008852
+        description: PAT–ChIP
+        meaning: EFO:0008852
+      EFO:0008851:
+        text: EFO:0008851
+        description: PAT-Seq
+        meaning: EFO:0008851
+      EFO:0008858:
+        text: EFO:0008858
+        description: PE RAD-Seq
+        meaning: EFO:0008858
+      EFO:0008857:
+        text: EFO:0008857
+        description: PDZ-Seq
+        meaning: EFO:0008857
+      EFO:0008856:
+        text: EFO:0008856
+        description: PD-Seq
+        meaning: EFO:0008856
+      EFO:0008855:
+        text: EFO:0008855
+        description: PBAT
+        meaning: EFO:0008855
+      EFO:0008874:
+        text: EFO:0008874
+        description: PTB-Seq
+        meaning: EFO:0008874
+      EFO:0008873:
+        text: EFO:0008873
+        description: PSI-seq
+        meaning: EFO:0008873
+      EFO:0008871:
+        text: EFO:0008871
+        description: ProP-PD
+        meaning: EFO:0008871
+      EFO:0008872:
+        text: EFO:0008872
+        description: Pseudo-seq
+        meaning: EFO:0008872
+      EFO:0008870:
+        text: EFO:0008870
+        description: Profiler
+        meaning: EFO:0008870
+      EFO:0002770:
+        text: EFO:0002770
+        description: transcription profiling by high throughput sequencing
+        meaning: EFO:0002770
+      EFO:0002771:
+        text: EFO:0002771
+        description: genotyping by high throughput sequencing
+        meaning: EFO:0002771
+      EFO:0002772:
+        text: EFO:0002772
+        description: assay by molecule
+        meaning: EFO:0002772
+      EFO:0002773:
+        text: EFO:0002773
+        description: assay by instrument
+        meaning: EFO:0002773
+      EFO:0002774:
+        text: EFO:0002774
+        description: assay by mass spectrometry
+        meaning: EFO:0002774
+      EFO:0009806:
+        text: EFO:0009806
+        description: total hip arthroplasty
+        meaning: EFO:0009806
+      OBI:0000659:
+        text: OBI:0000659
+        description: specimen collection process
+        meaning: OBI:0000659
+      EFO:0009809:
+        text: EFO:0009809
+        description: single nucleus RNA sequencing
+        meaning: EFO:0009809
+      EFO:0009808:
+        text: EFO:0009808
+        description: immunosurgery
+        meaning: EFO:0009808
+      EFO:0009807:
+        text: EFO:0009807
+        description: cadaver dissection
+        meaning: EFO:0009807
+      EFO:0008866:
+        text: EFO:0008866
+        description: Poly(A)-ClickSeq
+        meaning: EFO:0008866
+      OBI:0000650:
+        text: OBI:0000650
+        description: differential expression analysis data transformation
+        meaning: OBI:0000650
+      EFO:0008865:
+        text: EFO:0008865
+        description: Pol II CLIP
+        meaning: EFO:0008865
+      EFO:0008864:
+        text: EFO:0008864
+        description: PMA
+        meaning: EFO:0008864
+      EFO:0008863:
+        text: EFO:0008863
+        description: PLATE-Seq
+        meaning: EFO:0008863
+      EFO:0008869:
+        text: EFO:0008869
+        description: PRO-seq
+        meaning: EFO:0008869
+      EFO:0008868:
+        text: EFO:0008868
+        description: PRO-cap
+        meaning: EFO:0008868
+      EFO:0008867:
+        text: EFO:0008867
+        description: Pool-Seq
+        meaning: EFO:0008867
+      EFO:0008881:
+        text: EFO:0008881
+        description: Rapture
+        meaning: EFO:0008881
+      EFO:0008880:
+        text: EFO:0008880
+        description: RAP
+        meaning: EFO:0008880
+      EFO:0007687:
+        text: EFO:0007687
+        description: microRNA profiling by RT-PCR
+        meaning: EFO:0007687
+      EFO:0008886:
+        text: EFO:0008886
+        description: RedBS-Seq
+        meaning: EFO:0008886
+      EFO:0007688:
+        text: EFO:0007688
+        description: chromosome conformation capture assay
+        meaning: EFO:0007688
+      EFO:0008885:
+        text: EFO:0008885
+        description: RC-Seq
+        meaning: EFO:0008885
+      EFO:0008884:
+        text: EFO:0008884
+        description: RBNS
+        meaning: EFO:0008884
+      EFO:0008882:
+        text: EFO:0008882
+        description: RARseq
+        meaning: EFO:0008882
+      EFO:0008883:
+        text: EFO:0008883
+        description: RBBS
+        meaning: EFO:0008883
+      EFO:0005016:
+        text: EFO:0005016
+        description: 454 Sequencing
+        meaning: EFO:0005016
+      EFO:0009810:
+        text: EFO:0009810
+        description: full length single nucleus RNA sequencing
+        meaning: EFO:0009810
+      EFO:0008878:
+        text: EFO:0008878
+        description: restriction-site associated DNA sequencing
+        meaning: EFO:0008878
+      EFO:0008877:
+        text: EFO:0008877
+        description: Quartz-seq
+        meaning: EFO:0008877
+      EFO:0008876:
+        text: EFO:0008876
+        description: Pvu-Seal-seq
+        meaning: EFO:0008876
+      EFO:0008875:
+        text: EFO:0008875
+        description: Pu-seq
+        meaning: EFO:0008875
+      EFO:0009811:
+        text: EFO:0009811
+        description: tag based single nucleus RNA sequencing
+        meaning: EFO:0009811
+      EFO:0008879:
+        text: EFO:0008879
+        description: RAD-tag
+        meaning: EFO:0008879
+      EFO:0008893:
+        text: EFO:0008893
+        description: Ribose-seq
+        meaning: EFO:0008893
+      EFO:0008894:
+        text: EFO:0008894
+        description: RICC-seq
+        meaning: EFO:0008894
+      EFO:0008892:
+        text: EFO:0008892
+        description: RiboMeth-seq
+        meaning: EFO:0008892
+      EFO:0008891:
+        text: EFO:0008891
+        description: Ribo-seq
+        meaning: EFO:0008891
+      EFO:0003737:
+        text: EFO:0003737
+        description: RNA-seq of non coding RNA
+        meaning: EFO:0003737
+      EFO:0007692:
+        text: EFO:0007692
+        description: 5C
+        meaning: EFO:0007692
+      EFO:0005033:
+        text: EFO:0005033
+        description: RIP
+        meaning: EFO:0005033
+      EFO:0008890:
+        text: EFO:0008890
+        description: rG4-seq
+        meaning: EFO:0008890
+      EFO:0005032:
+        text: EFO:0005032
+        description: IP-seq
+        meaning: EFO:0005032
+      EFO:0007693:
+        text: EFO:0007693
+        description: Hi-C
+        meaning: EFO:0007693
+      EFO:0008898:
+        text: EFO:0008898
+        description: RNET-seq
+        meaning: EFO:0008898
+      EFO:0003738:
+        text: EFO:0003738
+        description: RNA-seq of coding RNA
+        meaning: EFO:0003738
+      EFO:0008897:
+        text: EFO:0008897
+        description: RNAtag-Seq
+        meaning: EFO:0008897
+      EFO:0008896:
+        text: EFO:0008896
+        description: RNA-Seq
+        meaning: EFO:0008896
+      EFO:0008895:
+        text: EFO:0008895
+        description: RIL-seq
+        meaning: EFO:0008895
+      EFO:0007690:
+        text: EFO:0007690
+        description: 4C
+        meaning: EFO:0007690
+      EFO:0007691:
+        text: EFO:0007691
+        description: Capture-C
+        meaning: EFO:0007691
+      EFO:0010806:
+        text: EFO:0010806
+        description: enrichment of phosphorylated protein
+        meaning: EFO:0010806
+      EFO:0010805:
+        text: EFO:0010805
+        description: massively parallel signature sequencing
+        meaning: EFO:0010805
+      OBI:0000415:
+        text: OBI:0000415
+        description: PCR
+        meaning: OBI:0000415
+      EFO:0008889:
+        text: EFO:0008889
+        description: Repli-Seq
+        meaning: EFO:0008889
+      EFO:0007689:
+        text: EFO:0007689
+        description: 3C
+        meaning: EFO:0007689
+      EFO:0008888:
+        text: EFO:0008888
+        description: RepeatSeq
+        meaning: EFO:0008888
+      EFO:0008887:
+        text: EFO:0008887
+        description: Rep-Seq
+        meaning: EFO:0008887
+      EFO:0003747:
+        text: EFO:0003747
+        description: amplicon sequencing
+        meaning: EFO:0003747
+      EFO:0003746:
+        text: EFO:0003746
+        description: random exon sequencing
+        meaning: EFO:0003746
+      EFO:0003749:
+        text: EFO:0003749
+        description: MeDIP-seq
+        meaning: EFO:0003749
+      EFO:0003748:
+        text: EFO:0003748
+        description: MRE-seq
+        meaning: EFO:0003748
+      EFO:0008644:
+        text: EFO:0008644
+        description: 3P-Seq
+        meaning: EFO:0008644
+      EFO:0008643:
+        text: EFO:0008643
+        description: 3′-Seq
+        meaning: EFO:0008643
+      EFO:0008642:
+        text: EFO:0008642
+        description: 3’NT method
+        meaning: EFO:0008642
+      EFO:0008640:
+        text: EFO:0008640
+        description: 3'T-fill
+        meaning: EFO:0008640
+      EFO:0008641:
+        text: EFO:0008641
+        description: 3’-end-seq
+        meaning: EFO:0008641
+      EFO:0003741:
+        text: EFO:0003741
+        description: pooled clone sequencing
+        meaning: EFO:0003741
+      EFO:0003740:
+        text: EFO:0003740
+        description: assay by sequencer
+        meaning: EFO:0003740
+      EFO:0003743:
+        text: EFO:0003743
+        description: clone end sequencing
+        meaning: EFO:0003743
+      EFO:0003742:
+        text: EFO:0003742
+        description: clone by clone sequencing
+        meaning: EFO:0003742
+      EFO:0003745:
+        text: EFO:0003745
+        description: random chromosome sequencing
+        meaning: EFO:0003745
+      EFO:0003744:
+        text: EFO:0003744
+        description: whole genome shotgun sequencing
+        meaning: EFO:0003744
+      EFO:0008899:
+        text: EFO:0008899
+        description: RPL
+        meaning: EFO:0008899
+      EFO:0008639:
+        text: EFO:0008639
+        description: 2P-Seq
+        meaning: EFO:0008639
+      EFO:0008638:
+        text: EFO:0008638
+        description: 2b-RAD
+        meaning: EFO:0008638
+      EFO:0008651:
+        text: EFO:0008651
+        description: AGO-CLIP
+        meaning: EFO:0008651
+      EFO:0008652:
+        text: EFO:0008652
+        description: AHT-ChIP-Seq
+        meaning: EFO:0008652
+      EFO:0008650:
+        text: EFO:0008650
+        description: Advanved Chia-PET
+        meaning: EFO:0008650
+      EFO:0008656:
+        text: EFO:0008656
+        description: BisChIP-Seq
+        meaning: EFO:0008656
+      EFO:0008655:
+        text: EFO:0008655
+        description: Barcode-Seq
+        meaning: EFO:0008655
+      EFO:0008654:
+        text: EFO:0008654
+        description: Bar-Seq
+        meaning: EFO:0008654
+      EFO:0008653:
+        text: EFO:0008653
+        description: ARS-Seq
+        meaning: EFO:0008653
+      EFO:0003751:
+        text: EFO:0003751
+        description: MNase-seq
+        meaning: EFO:0003751
+      EFO:0003750:
+        text: EFO:0003750
+        description: MBD-seq
+        meaning: EFO:0003750
+      EFO:0003753:
+        text: EFO:0003753
+        description: Bisulfite-seq
+        meaning: EFO:0003753
+      EFO:0003752:
+        text: EFO:0003752
+        description: DNase-hypersensitivity seq
+        meaning: EFO:0003752
+      EFO:0003755:
+        text: EFO:0003755
+        description: FL-cDNA
+        meaning: EFO:0003755
+      EFO:0003754:
+        text: EFO:0003754
+        description: EST sequencing
+        meaning: EFO:0003754
+      EFO:0008648:
+        text: EFO:0008648
+        description: 5PSeq
+        meaning: EFO:0008648
+      EFO:0008647:
+        text: EFO:0008647
+        description: 5’-GRO-seq
+        meaning: EFO:0008647
+      EFO:0008646:
+        text: EFO:0008646
+        description: 4sUDRB-seq
+        meaning: EFO:0008646
+      EFO:0008645:
+        text: EFO:0008645
+        description: 3-Seq
+        meaning: EFO:0008645
+      OBI:0000697:
+        text: OBI:0000697
+        description: Helicos sequencing
+        meaning: OBI:0000697
+      EFO:0008649:
+        text: EFO:0008649
+        description: Aba-seq
+        meaning: EFO:0008649
+      EFO:0030024:
+        text: EFO:0030024
+        description: analysis of matrices
+        meaning: EFO:0030024
+      EFO:0008664:
+        text: EFO:0008664
+        description: BruUV-Seq
+        meaning: EFO:0008664
+      EFO:0030025:
+        text: EFO:0030025
+        description: spatial analysis
+        meaning: EFO:0030025
+      EFO:0008662:
+        text: EFO:0008662
+        description: BruChase-Seq
+        meaning: EFO:0008662
+      EFO:0008663:
+        text: EFO:0008663
+        description: BruDRB-seq
+        meaning: EFO:0008663
+      EFO:0030026:
+        text: EFO:0030026
+        description: sci-Plex
+        meaning: EFO:0030026
+      EFO:0008661:
+        text: EFO:0008661
+        description: Bru-Seq
+        meaning: EFO:0008661
+      EFO:0030027:
+        text: EFO:0030027
+        description: snmC-Seq2
+        meaning: EFO:0030027
+      EFO:0008660:
+        text: EFO:0008660
+        description: BRIC-seq
+        meaning: EFO:0008660
+      EFO:0030028:
+        text: EFO:0030028
+        description: sci-RNA-seq3
+        meaning: EFO:0030028
+      EFO:0008668:
+        text: EFO:0008668
+        description: CAB-Seq
+        meaning: EFO:0008668
+      EFO:0030029:
+        text: EFO:0030029
+        description: NanoString digital spatial profiling
+        meaning: EFO:0030029
+      EFO:0008667:
+        text: EFO:0008667
+        description: BSPP
+        meaning: EFO:0008667
+      EFO:0008666:
+        text: EFO:0008666
+        description: BSAS
+        meaning: EFO:0008666
+      EFO:0008665:
+        text: EFO:0008665
+        description: BS-Seq
+        meaning: EFO:0008665
+      EFO:0008659:
+        text: EFO:0008659
+        description: Break-seq
+        meaning: EFO:0008659
+      EFO:0030030:
+        text: EFO:0030030
+        description: Quant-seq
+        meaning: EFO:0030030
+      EFO:0008658:
+        text: EFO:0008658
+        description: BrdU-CLIP
+        meaning: EFO:0008658
+      EFO:0030031:
+        text: EFO:0030031
+        description: SCOPE-chip
+        meaning: EFO:0030031
+      EFO:0008657:
+        text: EFO:0008657
+        description: BLESS
+        meaning: EFO:0008657
+      EFO:0030033:
+        text: EFO:0030033
+        description: gRNA-seq
+        meaning: EFO:0030033
+      EFO:0030034:
+        text: EFO:0030034
+        description: shRNA-seq
+        meaning: EFO:0030034
+      EFO:0030036:
+        text: EFO:0030036
+        description: bronchoscopic microsampling
+        meaning: EFO:0030036
+      EFO:0008676:
+        text: EFO:0008676
+        description: CAST-ChIP
+        meaning: EFO:0008676
+      EFO:0030037:
+        text: EFO:0030037
+        description: T cell activation assay
+        meaning: EFO:0030037
+      EFO:0008675:
+        text: EFO:0008675
+        description: CaptureSeq
+        meaning: EFO:0008675
+      EFO:0008673:
+        text: EFO:0008673
+        description: CapSeq
+        meaning: EFO:0008673
+      EFO:0008674:
+        text: EFO:0008674
+        description: Capture-HiC
+        meaning: EFO:0008674
+      EFO:0008672:
+        text: EFO:0008672
+        description: Capp-Seq
+        meaning: EFO:0008672
+      EFO:0008679:
+        text: EFO:0008679
+        description: CEL-seq
+        meaning: EFO:0008679
+      EFO:0008678:
+        text: EFO:0008678
+        description: CATCH-seq
+        meaning: EFO:0008678
+      EFO:0008677:
+        text: EFO:0008677
+        description: CATCH-IT
+        meaning: EFO:0008677
+      EFO:0003776:
+        text: EFO:0003776
+        description: coronary artery bypass
+        meaning: EFO:0003776
+      EFO:0008671:
+        text: EFO:0008671
+        description: CAP-seq
+        meaning: EFO:0008671
+      EFO:0008670:
+        text: EFO:0008670
+        description: caMAB-seq
+        meaning: EFO:0008670
+      EFO:0020684:
+        text: EFO:0020684
+        description: radical prostatectomy
+        meaning: EFO:0020684
+      EFO:0002571:
+        text: EFO:0002571
+        description: medical procedure
+        meaning: EFO:0002571
+      EFO:0009868:
+        text: EFO:0009868
+        description: sedation
+        meaning: EFO:0009868
+      EFO:0008669:
+        text: EFO:0008669
+        description: CAGEscan
+        meaning: EFO:0008669
+      EFO:0030000:
+        text: EFO:0030000
+        description: STARmap
+        meaning: EFO:0030000
+      EFO:0008688:
+        text: EFO:0008688
+        description: CIP-TAP
+        meaning: EFO:0008688
+      EFO:0030001:
+        text: EFO:0030001
+        description: sci-CAR
+        meaning: EFO:0030001
+      EFO:0008687:
+        text: EFO:0008687
+        description: ChIRP
+        meaning: EFO:0008687
+      EFO:0030002:
+        text: EFO:0030002
+        description: microwell-seq
+        meaning: EFO:0030002
+      EFO:0008686:
+        text: EFO:0008686
+        description: ChIPmentation
+        meaning: EFO:0008686
+      EFO:0030003:
+        text: EFO:0030003
+        description: 10x 3' transcription profiling
+        meaning: EFO:0030003
+      EFO:0008684:
+        text: EFO:0008684
+        description: Chia-PET
+        meaning: EFO:0008684
+      EFO:0008685:
+        text: EFO:0008685
+        description: ChIP-BS-seq
+        meaning: EFO:0008685
+      EFO:0030004:
+        text: EFO:0030004
+        description: 10x 5' transcription profiling
+        meaning: EFO:0030004
+      EFO:0030005:
+        text: EFO:0030005
+        description: spatial transcriptomics by high-throughput sequencing
+        meaning: EFO:0030005
+      EFO:0030006:
+        text: EFO:0030006
+        description: immune sequencing
+        meaning: EFO:0030006
+      EFO:0030007:
+        text: EFO:0030007
+        description: 10x scATAC-seq
+        meaning: EFO:0030007
+      EFO:0008689:
+        text: EFO:0008689
+        description: Circle-Seq
+        meaning: EFO:0008689
+      EFO:0030008:
+        text: EFO:0030008
+        description: CITE-seq (cell surface protein profiling)
+        meaning: EFO:0030008
+      EFO:0030009:
+        text: EFO:0030009
+        description: CITE-seq (sample multiplexing)
+        meaning: EFO:0030009
+      EFO:0008683:
+        text: EFO:0008683
+        description: Chem-Seq
+        meaning: EFO:0008683
+      EFO:0008682:
+        text: EFO:0008682
+        description: ChEC-seq
+        meaning: EFO:0008682
+      EFO:0008681:
+        text: EFO:0008681
+        description: CHART
+        meaning: EFO:0008681
+      EFO:0008680:
+        text: EFO:0008680
+        description: ChAP-seq
+        meaning: EFO:0008680
+      EFO:0002581:
+        text: EFO:0002581
+        description: pancreatectomy
+        meaning: EFO:0002581
+      OBI:0001686:
+        text: OBI:0001686
+        description: in-situ hybridization assay
+        meaning: OBI:0001686
+      EFO:0030010:
+        text: EFO:0030010
+        description: 10x feature profiling
+        meaning: EFO:0030010
+      EFO:0030011:
+        text: EFO:0030011
+        description: 10x feature barcode (cell surface protein profiling)
+        meaning: EFO:0030011
+      EFO:0030012:
+        text: EFO:0030012
+        description: 10x feature barcode (sample multiplexing)
+        meaning: EFO:0030012
+      EFO:0009632:
+        text: EFO:0009632
+        description: amputation
+        meaning: EFO:0009632
+      EFO:0030013:
+        text: EFO:0030013
+        description: 10x feature barcode (CRISPR screening)
+        meaning: EFO:0030013
+      EFO:0008699:
+        text: EFO:0008699
+        description: CRE-Seq
+        meaning: EFO:0008699
+      EFO:0030014:
+        text: EFO:0030014
+        description: bulk immune repertoire sequencing
+        meaning: EFO:0030014
+      EFO:0008698:
+        text: EFO:0008698
+        description: CPT-seq
+        meaning: EFO:0008698
+      EFO:0030015:
+        text: EFO:0030015
+        description: single cell immune repertoire sequencing
+        meaning: EFO:0030015
+      EFO:0008697:
+        text: EFO:0008697
+        description: cP-RNA-Seq
+        meaning: EFO:0008697
+      EFO:0030016:
+        text: EFO:0030016
+        description: sample splitting
+        meaning: EFO:0030016
+      EFO:0009636:
+        text: EFO:0009636
+        description: cesarean section
+        meaning: EFO:0009636
+      EFO:0009899:
+        text: EFO:0009899
+        description: 10x 3' v2
+        meaning: EFO:0009899
+      EFO:0030019:
+        text: EFO:0030019
+        description: Seq-Well S3
+        meaning: EFO:0030019
+      EFO:0008691:
+        text: EFO:0008691
+        description: CirSeq
+        meaning: EFO:0008691
+      EFO:0008690:
+        text: EFO:0008690
+        description: CIRS-seq
+        meaning: EFO:0008690
+      EFO:0008695:
+        text: EFO:0008695
+        description: CNV-Seq
+        meaning: EFO:0008695
+      EFO:0008696:
+        text: EFO:0008696
+        description: COPRO-seq
+        meaning: EFO:0008696
+      EFO:0008694:
+        text: EFO:0008694
+        description: ClickSeq
+        meaning: EFO:0008694
+      EFO:0008693:
+        text: EFO:0008693
+        description: CLASH
+        meaning: EFO:0008693
+      EFO:0008692:
+        text: EFO:0008692
+        description: CLaP
+        meaning: EFO:0008692
+      EFO:0009627:
+        text: EFO:0009627
+        description: collecting specimen from organ postmortem
+        meaning: EFO:0009627
+      EFO:0030020:
+        text: EFO:0030020
+        description: breast milk collection
+        meaning: EFO:0030020
+      EFO:0030021:
+        text: EFO:0030021
+        description: Nx1-seq
+        meaning: EFO:0030021
+      EFO:0030022:
+        text: EFO:0030022
+        description: raw matrix generation
+        meaning: EFO:0030022
+      EFO:0030023:
+        text: EFO:0030023
+        description: processed matrix generation
+        meaning: EFO:0030023
+      EFO:0009643:
+        text: EFO:0009643
+        description: pregnancy test
+        meaning: EFO:0009643
+      EFO:0009642:
+        text: EFO:0009642
+        description: follow-up
+        meaning: EFO:0009642
+      EFO:0008441:
+        text: EFO:0008441
+        description: full length single cell RNA sequencing
+        meaning: EFO:0008441
+      EFO:0008440:
+        text: EFO:0008440
+        description: tag based single cell RNA sequencing
+        meaning: EFO:0008440
+      EFO:0030074:
+        text: EFO:0030074
+        description: SORT-seq
+        meaning: EFO:0030074
+      EFO:0030077:
+        text: EFO:0030077
+        description: cell hashing
+        meaning: EFO:0030077
+      EFO:0030078:
+        text: EFO:0030078
+        description: droplet-based single-cell RNA library preparation
+        meaning: EFO:0030078
+      EFO:0030079:
+        text: EFO:0030079
+        description: paracentesis
+        meaning: EFO:0030079
+      EFO:0009653:
+        text: EFO:0009653
+        description: RNA-seq of total RNA
+        meaning: EFO:0009653
+      EFO:0030080:
+        text: EFO:0030080
+        description: 10x transcription profiling
+        meaning: EFO:0030080
+      EFO:0030081:
+        text: EFO:0030081
+        description: HLA typing by NGS
+        meaning: EFO:0030081
+      EFO:0010891:
+        text: EFO:0010891
+        description: scATAC-seq
+        meaning: EFO:0010891
+      EFO:0600009:
+        text: EFO:0600009
+        description: cardiac ablation
+        meaning: EFO:0600009
+      EFO:0030053:
+        text: EFO:0030053
+        description: pseudo-bulk aggregation of single-cell expression data
+        meaning: EFO:0030053
+      EFO:0030054:
+        text: EFO:0030054
+        description: label-free quantification
+        meaning: EFO:0030054
+      EFO:0030055:
+        text: EFO:0030055
+        description: 16S metagenomic sequencing
+        meaning: EFO:0030055
+      EFO:0030056:
+        text: EFO:0030056
+        description: tandem mass spectrometry
+        meaning: EFO:0030056
+      EFO:0030057:
+        text: EFO:0030057
+        description: Luminex multi-analyte profiling
+        meaning: EFO:0030057
+      EFO:0030058:
+        text: EFO:0030058
+        description: transcription profiling by NanoString
+        meaning: EFO:0030058
+      EFO:0030059:
+        text: EFO:0030059
+        description: 10x multiome
+        meaning: EFO:0030059
+      OBI:0200071:
+        text: OBI:0200071
+        description: loess transformation
+        meaning: OBI:0200071
+      EFO:0030060:
+        text: EFO:0030060
+        description: mCT-seq
+        meaning: EFO:0030060
+      EFO:0030061:
+        text: EFO:0030061
+        description: mcSCRB-seq
+        meaning: EFO:0030061
+      EFO:0030062:
+        text: EFO:0030062
+        description: Slide-seqV2
+        meaning: EFO:0030062
+classes:
+  ProcessTypeOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of a process type being used.
+        title: Process type
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Process type ontology ID
+        range: ProcessTypeOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Process type ontology label

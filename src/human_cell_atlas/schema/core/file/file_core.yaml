@@ -1,0 +1,50 @@
+name: File_core
+id: https://example.org/File-core
+imports:
+- linkml:types
+- module/ontology/file_content_ontology
+prefixes:
+  File_core: https://example.org/File-core
+  linkml: https://w3id.org/linkml/
+default_prefix: File_core
+enums:
+  FileCore_file_source_options:
+    permissible_values:
+      DCP/2 Analysis: {}
+      Contributor: {}
+      ArrayExpress: {}
+      HCA Release: {}
+      GEO: {}
+      SCEA: {}
+      SCP: {}
+      DCP/1 Matrix Service: {}
+      LungMAP: {}
+      Zenodo: {}
+      Publication: {}
+      DCP/2 Ingest: {}
+classes:
+  FileCore:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      file_name:
+        description: The name of the file.
+        title: File name
+        required: true
+      format:
+        description: The format of the file.
+        title: File format
+        required: true
+      content_description:
+        multivalued: true
+        range: FileContentOntology
+      checksum:
+        description: MD5 checksum of the file.
+        title: Checksum
+      file_source:
+        description: The source of the file. This is typically an organisation, repository,
+          person or dedicated process.
+        title: File source
+        range: FileCore_file_source_options

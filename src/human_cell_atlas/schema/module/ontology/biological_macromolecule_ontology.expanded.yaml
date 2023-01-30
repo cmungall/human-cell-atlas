@@ -1,0 +1,372 @@
+name: Biological_macromolecule_ontology
+id: https://example.org/Biological-macromolecule-ontology
+imports:
+- linkml:types
+prefixes:
+  Biological_macromolecule_ontology: https://example.org/Biological-macromolecule-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Biological_macromolecule_ontology
+enums:
+  BiologicalMacromoleculeOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:efo
+        source_nodes:
+        - EFO:0004446
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:chebi
+        source_nodes:
+        - EFO:0004446
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:obi
+        source_nodes:
+        - EFO:0004446
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    permissible_values:
+      EFO:0004521:
+        text: EFO:0004521
+        description: adhesion factor
+        meaning: EFO:0004521
+      EFO:0008481:
+        text: EFO:0008481
+        description: cDNA
+        meaning: EFO:0008481
+      EFO:0008480:
+        text: EFO:0008480
+        description: mitochondrial DNA
+        meaning: EFO:0008480
+      PR:000016283:
+        text: PR:000016283
+        description: thyroglobulin
+        meaning: PR:000016283
+      PR:000003918:
+        text: PR:000003918
+        description: serum albumin
+        meaning: PR:000003918
+      EFO:0004580:
+        text: EFO:0004580
+        description: interleukin 18 (Homo sapiens)
+        meaning: EFO:0004580
+      CHEBI:17089:
+        text: CHEBI:17089
+        description: glycoprotein
+        meaning: CHEBI:17089
+      CHEBI:16991:
+        text: CHEBI:16991
+        description: DNA
+        meaning: CHEBI:16991
+      EFO:0003172:
+        text: EFO:0003172
+        description: pleiotrophin
+        meaning: EFO:0003172
+      EFO:0004100:
+        text: EFO:0004100
+        description: interleukin
+        meaning: EFO:0004100
+      EFO:0003183:
+        text: EFO:0003183
+        description: thrombin
+        meaning: EFO:0003183
+      EFO:0003191:
+        text: EFO:0003191
+        description: ocimene
+        meaning: EFO:0003191
+      EFO:0003199:
+        text: EFO:0003199
+        description: leptin
+        meaning: EFO:0003199
+      OBI:0000869:
+        text: OBI:0000869
+        description: polyA RNA
+        meaning: OBI:0000869
+      EFO:0003800:
+        text: EFO:0003800
+        description: interleukin-17 (Mus musculus)
+        meaning: EFO:0003800
+      EFO:0003801:
+        text: EFO:0003801
+        description: interleukin-19 (Homo sapiens)
+        meaning: EFO:0003801
+      EFO:0003810:
+        text: EFO:0003810
+        description: interleukin-22 (Homo sapiens)
+        meaning: EFO:0003810
+      EFO:0003804:
+        text: EFO:0003804
+        description: interleukin-21 (Mus musculus)
+        meaning: EFO:0003804
+      EFO:0003803:
+        text: EFO:0003803
+        description: interleukin-20 (Homo sapiens)
+        meaning: EFO:0003803
+      EFO:0003806:
+        text: EFO:0003806
+        description: interleukin-26 (Homo sapiens)
+        meaning: EFO:0003806
+      EFO:0003805:
+        text: EFO:0003805
+        description: interleukin-24 (Homo sapiens)
+        meaning: EFO:0003805
+      EFO:0003807:
+        text: EFO:0003807
+        description: interleukin-33 (Rattus norvegicus)
+        meaning: EFO:0003807
+      EFO:0009915:
+        text: EFO:0009915
+        description: TBC1 domain family member 24
+        meaning: EFO:0009915
+      EFO:0009914:
+        text: EFO:0009914
+        description: FA complementation group E
+        meaning: EFO:0009914
+      EFO:0009916:
+        text: EFO:0009916
+        description: ATP binding cassette subfamily B member 6
+        meaning: EFO:0009916
+      EFO:0004195:
+        text: EFO:0004195
+        description: LDL cholesterol
+        meaning: EFO:0004195
+      EFO:0003836:
+        text: EFO:0003836
+        description: lipoprotein
+        meaning: EFO:0003836
+      EFO:0002679:
+        text: EFO:0002679
+        description: urocortin I
+        meaning: EFO:0002679
+      CHEBI:16113:
+        text: CHEBI:16113
+        description: cholesterol
+        meaning: CHEBI:16113
+      EFO:0002680:
+        text: EFO:0002680
+        description: urocortin II
+        meaning: EFO:0002680
+      CHEBI:33699:
+        text: CHEBI:33699
+        description: messenger RNA
+        meaning: CHEBI:33699
+      CHEBI:33697:
+        text: CHEBI:33697
+        description: RNA
+        meaning: CHEBI:33697
+      EFO:0005816:
+        text: EFO:0005816
+        description: microtubule-associated protein tau
+        meaning: EFO:0005816
+      SO:0000274:
+        text: SO:0000274
+        description: snRNA
+        meaning: SO:0000274
+      EFO:0003200:
+        text: EFO:0003200
+        description: oncostatin M
+        meaning: EFO:0003200
+      EFO:0003234:
+        text: EFO:0003234
+        description: follicle stimulating hormone
+        meaning: EFO:0003234
+      EFO:0003233:
+        text: EFO:0003233
+        description: erythropoietin
+        meaning: EFO:0003233
+      EFO:0003236:
+        text: EFO:0003236
+        description: thrombopoietin
+        meaning: EFO:0003236
+      EFO:0003241:
+        text: EFO:0003241
+        description: flagellin
+        meaning: EFO:0003241
+      EFO:0003271:
+        text: EFO:0003271
+        description: tumor necrosis factor-alpha
+        meaning: EFO:0003271
+      EFO:0003266:
+        text: EFO:0003266
+        description: neuromedin U
+        meaning: EFO:0003266
+      SO:0000655:
+        text: SO:0000655
+        description: ncRNA
+        meaning: SO:0000655
+      EFO:0003276:
+        text: EFO:0003276
+        description: vascular endothelial growth factor
+        meaning: EFO:0003276
+      EFO:0003292:
+        text: EFO:0003292
+        description: interleukin-2 (Mus musculus)
+        meaning: EFO:0003292
+      EFO:0003296:
+        text: EFO:0003296
+        description: interleukin-4 (Homo sapiens)
+        meaning: EFO:0003296
+      EFO:0003294:
+        text: EFO:0003294
+        description: listeriolysin
+        meaning: EFO:0003294
+      EFO:0003021:
+        text: EFO:0003021
+        description: interferon alpha
+        meaning: EFO:0003021
+      EFO:0003022:
+        text: EFO:0003022
+        description: interferon alpha 2a
+        meaning: EFO:0003022
+      EFO:0003023:
+        text: EFO:0003023
+        description: interferon beta
+        meaning: EFO:0003023
+      EFO:0003024:
+        text: EFO:0003024
+        description: interferon gamma
+        meaning: EFO:0003024
+      EFO:0005688:
+        text: EFO:0005688
+        description: NHDL cholesterol
+        meaning: EFO:0005688
+      EFO:0003298:
+        text: EFO:0003298
+        description: epidermal growth factor
+        meaning: EFO:0003298
+      EFO:0010161:
+        text: EFO:0010161
+        description: carbonic anhydrase 2
+        meaning: EFO:0010161
+      EFO:0003941:
+        text: EFO:0003941
+        description: sex hormone-binding globulin
+        meaning: EFO:0003941
+      CHEBI:47775:
+        text: CHEBI:47775
+        description: HDL cholesterol
+        meaning: CHEBI:47775
+      CHEBI:7044:
+        text: CHEBI:7044
+        description: myoglobin
+        meaning: CHEBI:7044
+      EFO:0005018:
+        text: EFO:0005018
+        description: long non polyA RNA
+        meaning: EFO:0005018
+      EFO:0005017:
+        text: EFO:0005017
+        description: non polyA RNA
+        meaning: EFO:0005017
+      EFO:0005019:
+        text: EFO:0005019
+        description: long poly A RNA
+        meaning: EFO:0005019
+      EFO:0004964:
+        text: EFO:0004964
+        description: total RNA
+        meaning: EFO:0004964
+      CHEBI:5931:
+        text: CHEBI:5931
+        description: insulin
+        meaning: CHEBI:5931
+      CHEBI:36080:
+        text: CHEBI:36080
+        description: protein
+        meaning: CHEBI:36080
+      EFO:0003786:
+        text: EFO:0003786
+        description: cytokine
+        meaning: EFO:0003786
+      EFO:0003799:
+        text: EFO:0003799
+        description: interleukin-14 (Mus musculus)
+        meaning: EFO:0003799
+      EFO:0003798:
+        text: EFO:0003798
+        description: interleukin-13 (Mus musculus)
+        meaning: EFO:0003798
+      EFO:0003791:
+        text: EFO:0003791
+        description: interleukin (Homo sapiens)
+        meaning: EFO:0003791
+      EFO:0003793:
+        text: EFO:0003793
+        description: interleukin (Rattus norvegicus)
+        meaning: EFO:0003793
+      EFO:0003792:
+        text: EFO:0003792
+        description: interleukin (Mus musculus)
+        meaning: EFO:0003792
+      EFO:0003795:
+        text: EFO:0003795
+        description: interleukin-1 beta (Mus musculus)
+        meaning: EFO:0003795
+      EFO:0003794:
+        text: EFO:0003794
+        description: interleukin-1 beta (Homo sapiens)
+        meaning: EFO:0003794
+      EFO:0003797:
+        text: EFO:0003797
+        description: interleukin-13 (Homo sapiens)
+        meaning: EFO:0003797
+      EFO:0003796:
+        text: EFO:0003796
+        description: interleukin-1 beta (Rattus norvegicus)
+        meaning: EFO:0003796
+      EFO:0003303:
+        text: EFO:0003303
+        description: hepatocyte growth factor
+        meaning: EFO:0003303
+      EFO:0003304:
+        text: EFO:0003304
+        description: anti-CD28
+        meaning: EFO:0003304
+      EFO:0003308:
+        text: EFO:0003308
+        description: heregulin B1
+        meaning: EFO:0003308
+      EFO:0030052:
+        text: EFO:0030052
+        description: nuclear RNA
+        meaning: EFO:0030052
+      EFO:0008479:
+        text: EFO:0008479
+        description: genomic DNA
+        meaning: EFO:0008479
+      EFO:0003317:
+        text: EFO:0003317
+        description: anti-CD3
+        meaning: EFO:0003317
+      EFO:0003316:
+        text: EFO:0003316
+        description: basic fibroblast growth factor
+        meaning: EFO:0003316
+classes:
+  BiologicalMacromoleculeOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of the biological macromolecule being used.
+        title: Biological macromolecule
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Biological macromolecule ontology ID
+        range: BiologicalMacromoleculeOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Biological macromolecule ontology label

@@ -1,0 +1,71 @@
+name: Specimen_from_organism
+id: https://example.org/Specimen-from-organism
+imports:
+- linkml:types
+- system/provenance
+- core/biomaterial/biomaterial_core
+- module/ontology/species_ontology
+- module/ontology/organ_ontology
+- module/ontology/organ_part_ontology
+- module/ontology/disease_ontology
+- module/biomaterial/state_of_specimen
+- module/biomaterial/preservation_storage
+- module/process/purchased_reagents
+prefixes:
+  Specimen_from_organism: https://example.org/Specimen-from-organism
+  linkml: https://w3id.org/linkml/
+default_prefix: Specimen_from_organism
+enums:
+  SpecimenFromOrganism_schema_type_options:
+    permissible_values:
+      biomaterial: {}
+classes:
+  SpecimenFromOrganism:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: SpecimenFromOrganism_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      biomaterial_core:
+        description: Core biomaterial-level information.
+        title: Biomaterial core
+        range: BiomaterialCore
+        required: true
+      genus_species:
+        multivalued: true
+        range: SpeciesOntology
+      organ:
+        description: The organ that the biomaterial came from.
+        title: Organ
+        range: OrganOntology
+        required: true
+      organ_parts:
+        multivalued: true
+        range: OrganPartOntology
+      diseases:
+        multivalued: true
+        range: DiseaseOntology
+      state_of_specimen:
+        description: State of the specimen at the time of collection.
+        title: State of specimen
+        range: StateOfSpecimen
+      preservation_storage:
+        description: Information about how a specimen was preserved and/or stored
+          over a period of time.
+        title: Preservation/Storage
+        range: PreservationStorage
+      collection_time:
+        description: When the biomaterial was collected.
+        title: Time of collection
+      purchased_specimen:
+        description: Information about a purchased specimen.
+        title: Purchased specimen
+        range: PurchasedReagents

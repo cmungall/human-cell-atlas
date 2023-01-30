@@ -1,0 +1,60 @@
+name: File_descriptor
+id: https://example.org/File-descriptor
+imports:
+- linkml:types
+prefixes:
+  File_descriptor: https://example.org/File-descriptor
+  linkml: https://w3id.org/linkml/
+default_prefix: File_descriptor
+enums:
+  FileDescriptor_schema_type_options:
+    permissible_values:
+      file_descriptor: {}
+classes:
+  FileDescriptor:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: FileDescriptor_schema_type_options
+        required: true
+      file_name:
+        description: The object name of the data file relative to the staging area's
+          `data/` directory
+        title: Staging file name
+        required: true
+      file_id:
+        description: UUID that uniquely identifies each data file in its source
+        title: File UUID
+        required: true
+      file_version:
+        description: The version of the file given in date time format
+        title: File version
+        required: true
+      content_type:
+        description: An appropriate MIME type for this file.
+        title: Content type
+        required: true
+      size:
+        description: The size of the file in bytes.
+        title: Size
+        range: integer
+        required: true
+      sha256:
+        description: The SHA-256 hash of the file.
+        title: SHA-256
+        required: true
+      crc32c:
+        description: The CRC-32C code generated for this file.
+        title: CRC32C
+        required: true
+      sha1:
+        description: The SHA-1 hash of the file.
+        title: SHA-1
+      s3_etag:
+        description: An AWS S3 ETag of this file
+        title: S3 ETag

@@ -1,0 +1,30 @@
+name: Process_core
+id: https://example.org/Process-core
+imports:
+- linkml:types
+prefixes:
+  Process_core: https://example.org/Process-core
+  linkml: https://w3id.org/linkml/
+default_prefix: Process_core
+classes:
+  ProcessCore:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      process_id:
+        description: A unique ID for the process.
+        title: Process ID
+        required: true
+      process_name:
+        description: A short, descriptive name for the process that need not be unique.
+        title: Process name
+      process_description:
+        description: A general description of the process.
+        title: Process description
+      location:
+        description: Location where the process took place.
+        title: Location
+      operators:
+        multivalued: true

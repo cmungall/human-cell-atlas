@@ -1,0 +1,138 @@
+name: Time_unit_ontology
+id: https://example.org/Time-unit-ontology
+imports:
+- linkml:types
+prefixes:
+  Time_unit_ontology: https://example.org/Time-unit-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Time_unit_ontology
+enums:
+  TimeUnitOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:efo
+        source_nodes:
+        - UO:0000003
+        - UO:0000149
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:uo
+        source_nodes:
+        - UO:0000003
+        - UO:0000149
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    permissible_values:
+      UO:0000029:
+        text: UO:0000029
+        description: microsecond
+        meaning: UO:0000029
+      UO:0000034:
+        text: UO:0000034
+        description: week
+        meaning: UO:0000034
+      UO:0000033:
+        text: UO:0000033
+        description: day
+        meaning: UO:0000033
+      UO:0000036:
+        text: UO:0000036
+        description: year
+        meaning: UO:0000036
+      UO:0000035:
+        text: UO:0000035
+        description: month
+        meaning: UO:0000035
+      UO:0000032:
+        text: UO:0000032
+        description: hour
+        meaning: UO:0000032
+      UO:0000031:
+        text: UO:0000031
+        description: minute
+        meaning: UO:0000031
+      UO:0000010:
+        text: UO:0000010
+        description: second
+        meaning: UO:0000010
+      UO:0000028:
+        text: UO:0000028
+        description: millisecond
+        meaning: UO:0000028
+      UO:0000152:
+        text: UO:0000152
+        description: half life
+        meaning: UO:0000152
+      UO:1000151:
+        text: UO:1000151
+        description: century based unit
+        meaning: UO:1000151
+      UO:1000032:
+        text: UO:1000032
+        description: hour based unit
+        meaning: UO:1000032
+      UO:0000150:
+        text: UO:0000150
+        description: nanosecond
+        meaning: UO:0000150
+      UO:1000033:
+        text: UO:1000033
+        description: day based unit
+        meaning: UO:1000033
+      UO:1000152:
+        text: UO:1000152
+        description: half life based unit
+        meaning: UO:1000152
+      UO:0000030:
+        text: UO:0000030
+        description: picosecond
+        meaning: UO:0000030
+      UO:1000035:
+        text: UO:1000035
+        description: month based unit
+        meaning: UO:1000035
+      UO:0000151:
+        text: UO:0000151
+        description: century
+        meaning: UO:0000151
+      UO:1000010:
+        text: UO:1000010
+        description: second based unit
+        meaning: UO:1000010
+      UO:1000031:
+        text: UO:1000031
+        description: minute based unit
+        meaning: UO:1000031
+      UO:1000036:
+        text: UO:1000036
+        description: year based unit
+        meaning: UO:1000036
+      UO:1000034:
+        text: UO:1000034
+        description: week based unit
+        meaning: UO:1000034
+classes:
+  TimeUnitOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of a time unit being used.
+        title: Time unit
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Time unit ontology ID
+        range: TimeUnitOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Time unit ontology label

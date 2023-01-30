@@ -1,0 +1,67 @@
+name: Project
+id: https://example.org/Project
+imports:
+- linkml:types
+- system/provenance
+- core/project/project_core
+- module/project/contact
+- module/project/publication
+- module/project/funder
+prefixes:
+  Project: https://example.org/Project
+  linkml: https://w3id.org/linkml/
+default_prefix: Project
+enums:
+  Project_schema_type_options:
+    permissible_values:
+      project: {}
+classes:
+  Project:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: Project_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      project_core:
+        description: Core project-level information.
+        title: Project core
+        range: ProjectCore
+        required: true
+      contributors:
+        multivalued: true
+        range: Contact
+      supplementary_links:
+        multivalued: true
+      publications:
+        multivalued: true
+        range: Publication
+      insdc_project_accessions:
+        multivalued: true
+      ega_accessions:
+        multivalued: true
+      dbgap_accessions:
+        multivalued: true
+      geo_series_accessions:
+        multivalued: true
+      array_express_accessions:
+        multivalued: true
+      insdc_study_accessions:
+        multivalued: true
+      biostudies_accessions:
+        multivalued: true
+      funders:
+        multivalued: true
+        range: Funder
+        required: true
+      estimated_cell_count:
+        description: An estimated number of cells in this project
+        title: Estimated cell count
+        range: integer

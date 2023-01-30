@@ -1,0 +1,39 @@
+name: Publication
+id: https://example.org/Publication
+imports:
+- linkml:types
+prefixes:
+  Publication: https://example.org/Publication
+  linkml: https://w3id.org/linkml/
+default_prefix: Publication
+classes:
+  Publication:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      authors:
+        multivalued: true
+        required: true
+      title:
+        description: The title of the publication.
+        title: Publication title
+        required: true
+      doi:
+        description: The publication digital object identifier (doi) of the publication.
+        title: Publication DOI
+      pmid:
+        description: The PubMed ID of the publication.
+        title: Publication PMID
+        range: integer
+      url:
+        description: A URL for the publication.
+        title: Publication URL
+      official_hca_publication:
+        description: Has the publication been accepted as an official HCA publication,
+          according to the process described in https://www.humancellatlas.org/publications/
+          ?
+        title: Official HCA Publication
+        range: boolean
+        required: true

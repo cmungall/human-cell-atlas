@@ -1,0 +1,49 @@
+name: Analysis_protocol
+id: https://example.org/Analysis-protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+- module/ontology/process_type_ontology
+- module/protocol/matrix
+prefixes:
+  Analysis_protocol: https://example.org/Analysis-protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: Analysis_protocol
+enums:
+  AnalysisProtocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+classes:
+  AnalysisProtocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: AnalysisProtocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      type:
+        description: The type of protocol.
+        title: Protocol type
+        range: ProcessTypeOntology
+        required: true
+      computational_method:
+        description: A URI to a versioned workflow and versioned execution environment
+          in a GA4GH-compliant repository.
+        title: Computational method
+      matrix:
+        description: Information related to protocols that output a matrix.
+        title: Matrix
+        range: Matrix

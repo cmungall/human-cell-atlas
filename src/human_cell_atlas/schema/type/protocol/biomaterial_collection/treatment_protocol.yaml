@@ -1,0 +1,50 @@
+name: Treatment_protocol
+id: https://example.org/Treatment-protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+- module/ontology/treatment_method_ontology
+- module/process/purchased_reagents
+- module/ontology/target_pathway_ontology
+prefixes:
+  Treatment_protocol: https://example.org/Treatment-protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: Treatment_protocol
+enums:
+  TreatmentProtocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+classes:
+  TreatmentProtocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: TreatmentProtocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      method:
+        multivalued: true
+        range: TreatmentMethodOntology
+        required: true
+      media:
+        description: Culture media used to induce a specific treatment response.
+        title: Treatment media
+      reagents:
+        multivalued: true
+        range: PurchasedReagents
+      target_pathway:
+        multivalued: true
+        range: TargetPathwayOntology

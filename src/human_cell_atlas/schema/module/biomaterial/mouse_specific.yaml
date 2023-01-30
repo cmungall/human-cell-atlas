@@ -1,0 +1,19 @@
+name: Mouse_specific
+id: https://example.org/Mouse-specific
+imports:
+- linkml:types
+- module/ontology/strain_ontology
+prefixes:
+  Mouse_specific: https://example.org/Mouse-specific
+  linkml: https://w3id.org/linkml/
+default_prefix: Mouse_specific
+classes:
+  MouseSpecific:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      strain:
+        multivalued: true
+        range: StrainOntology

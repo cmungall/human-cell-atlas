@@ -1,0 +1,196 @@
+name: Length_unit_ontology
+id: https://example.org/Length-unit-ontology
+imports:
+- linkml:types
+prefixes:
+  Length_unit_ontology: https://example.org/Length-unit-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Length_unit_ontology
+enums:
+  LengthUnitOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:efo
+        source_nodes:
+        - UO:0000001
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:uo
+        source_nodes:
+        - UO:0000001
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    permissible_values:
+      EFO:0004387:
+        text: EFO:0004387
+        description: inch
+        meaning: EFO:0004387
+      EFO:0001721:
+        text: EFO:0001721
+        description: femtometer
+        meaning: EFO:0001721
+      UO:0000020:
+        text: UO:0000020
+        description: picometer
+        meaning: UO:0000020
+      UO:0000018:
+        text: UO:0000018
+        description: nanometer
+        meaning: UO:0000018
+      UO:0000017:
+        text: UO:0000017
+        description: micrometer
+        meaning: UO:0000017
+      UO:0000016:
+        text: UO:0000016
+        description: millimeter
+        meaning: UO:0000016
+      UO:0000015:
+        text: UO:0000015
+        description: centimeter
+        meaning: UO:0000015
+      UO:0000008:
+        text: UO:0000008
+        description: meter
+        meaning: UO:0000008
+      UO:0010012:
+        text: UO:0010012
+        description: thou
+        meaning: UO:0010012
+      UO:1010017:
+        text: UO:1010017
+        description: mile based unit
+        meaning: UO:1010017
+      UO:0010018:
+        text: UO:0010018
+        description: league
+        meaning: UO:0010018
+      UO:1010015:
+        text: UO:1010015
+        description: chain based unit
+        meaning: UO:1010015
+      UO:1010020:
+        text: UO:1010020
+        description: fathom based unit
+        meaning: UO:1010020
+      UO:0010013:
+        text: UO:0010013
+        description: foot
+        meaning: UO:0010013
+      UO:0000327:
+        text: UO:0000327
+        description: centiRay
+        meaning: UO:0000327
+      UO:1000019:
+        text: UO:1000019
+        description: angstrom based unit
+        meaning: UO:1000019
+      UO:0010019:
+        text: UO:0010019
+        description: maritime length unit
+        meaning: UO:0010019
+      UO:0010011:
+        text: UO:0010011
+        description: inch
+        meaning: UO:0010011
+      UO:1000008:
+        text: UO:1000008
+        description: meter based unit
+        meaning: UO:1000008
+      UO:1010014:
+        text: UO:1010014
+        description: yard based unit
+        meaning: UO:1010014
+      UO:1010012:
+        text: UO:1010012
+        description: thou based unit
+        meaning: UO:1010012
+      UO:1010013:
+        text: UO:1010013
+        description: foot based unit
+        meaning: UO:1010013
+      UO:0010014:
+        text: UO:0010014
+        description: yard
+        meaning: UO:0010014
+      UO:0000019:
+        text: UO:0000019
+        description: angstrom
+        meaning: UO:0000019
+      UO:1010018:
+        text: UO:1010018
+        description: league based unit
+        meaning: UO:1010018
+      UO:0010016:
+        text: UO:0010016
+        description: furlong
+        meaning: UO:0010016
+      UO:0010020:
+        text: UO:0010020
+        description: fathom
+        meaning: UO:0010020
+      UO:1010021:
+        text: UO:1010021
+        description: cable based unit
+        meaning: UO:1010021
+      UO:0000326:
+        text: UO:0000326
+        description: centiMorgan
+        meaning: UO:0000326
+      UO:1010022:
+        text: UO:1010022
+        description: nautical mile based unit
+        meaning: UO:1010022
+      UO:1010016:
+        text: UO:1010016
+        description: furlong based unit
+        meaning: UO:1010016
+      UO:0010021:
+        text: UO:0010021
+        description: cable
+        meaning: UO:0010021
+      UO:0010017:
+        text: UO:0010017
+        description: mile
+        meaning: UO:0010017
+      UO:1010011:
+        text: UO:1010011
+        description: inch based unit
+        meaning: UO:1010011
+      UO:1010019:
+        text: UO:1010019
+        description: maritime length unit based unit
+        meaning: UO:1010019
+      UO:0010015:
+        text: UO:0010015
+        description: chain
+        meaning: UO:0010015
+      UO:0010022:
+        text: UO:0010022
+        description: nautical mile
+        meaning: UO:0010022
+classes:
+  LengthUnitOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of a length unit being used.
+        title: Length unit
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Length unit ontology ID
+        range: LengthUnitOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Length unit ontology label

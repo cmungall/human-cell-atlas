@@ -1,0 +1,1255 @@
+name: Ethnicity_ontology
+id: https://example.org/Ethnicity-ontology
+imports:
+- linkml:types
+prefixes:
+  Ethnicity_ontology: https://example.org/Ethnicity-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Ethnicity_ontology
+enums:
+  EthnicityOntology_ontology_options:
+    reachable_from:
+      source_ontology: obo:hancestro
+      source_nodes:
+      - HANCESTRO:0004
+      relationship_types:
+      - rdfs:subClassOf
+      is_direct: false
+      include_self: false
+    permissible_values:
+      HANCESTRO:0555:
+        text: HANCESTRO:0555
+        description: Arab Israeli founder
+        meaning: HANCESTRO:0555
+      HANCESTRO:0441:
+        text: HANCESTRO:0441
+        description: Jordanian
+        meaning: HANCESTRO:0441
+      HANCESTRO:0513:
+        text: HANCESTRO:0513
+        description: Namibian
+        meaning: HANCESTRO:0513
+      HANCESTRO:0398:
+        text: HANCESTRO:0398
+        description: Bahamian
+        meaning: HANCESTRO:0398
+      HANCESTRO:0462:
+        text: HANCESTRO:0462
+        description: British
+        meaning: HANCESTRO:0462
+      HANCESTRO:0381:
+        text: HANCESTRO:0381
+        description: Polish
+        meaning: HANCESTRO:0381
+      HANCESTRO:0576:
+        text: HANCESTRO:0576
+        description: West African
+        meaning: HANCESTRO:0576
+      HANCESTRO:0536:
+        text: HANCESTRO:0536
+        description: Ghanaian
+        meaning: HANCESTRO:0536
+      HANCESTRO:0455:
+        text: HANCESTRO:0455
+        description: Christmas Islander
+        meaning: HANCESTRO:0455
+      HANCESTRO:0456:
+        text: HANCESTRO:0456
+        description: Cocos Islander
+        meaning: HANCESTRO:0456
+      HANCESTRO:0557:
+        text: HANCESTRO:0557
+        description: Costa Rican founder
+        meaning: HANCESTRO:0557
+      HANCESTRO:0404:
+        text: HANCESTRO:0404
+        description: Costa Rican
+        meaning: HANCESTRO:0404
+      HANCESTRO:0510:
+        text: HANCESTRO:0510
+        description: Mauritanian
+        meaning: HANCESTRO:0510
+      HANCESTRO:0412:
+        text: HANCESTRO:0412
+        description: Guyanese
+        meaning: HANCESTRO:0412
+      HANCESTRO:0392:
+        text: HANCESTRO:0392
+        description: Spanish
+        meaning: HANCESTRO:0392
+      HANCESTRO:0005:
+        text: HANCESTRO:0005
+        description: European
+        meaning: HANCESTRO:0005
+      HANCESTRO:0438:
+        text: HANCESTRO:0438
+        description: Iranian
+        meaning: HANCESTRO:0438
+      HANCESTRO:0516:
+        text: HANCESTRO:0516
+        description: Seychellois
+        meaning: HANCESTRO:0516
+      HANCESTRO:0509:
+        text: HANCESTRO:0509
+        description: Malagasy
+        meaning: HANCESTRO:0509
+      HANCESTRO:0546:
+        text: HANCESTRO:0546
+        description: Swazi
+        meaning: HANCESTRO:0546
+      HANCESTRO:0409:
+        text: HANCESTRO:0409
+        description: French Guianese
+        meaning: HANCESTRO:0409
+      HANCESTRO:0423:
+        text: HANCESTRO:0423
+        description: Saint Lucian
+        meaning: HANCESTRO:0423
+      HANCESTRO:0360:
+        text: HANCESTRO:0360
+        description: Estonian
+        meaning: HANCESTRO:0360
+      HANCESTRO:0544:
+        text: HANCESTRO:0544
+        description: Nigerian
+        meaning: HANCESTRO:0544
+      HANCESTRO:0026:
+        text: HANCESTRO:0026
+        description: Hong Kong Chinese
+        meaning: HANCESTRO:0026
+      HANCESTRO:0569:
+        text: HANCESTRO:0569
+        description: Talana
+        meaning: HANCESTRO:0569
+      HANCESTRO:0480:
+        text: HANCESTRO:0480
+        description: Tokelauan
+        meaning: HANCESTRO:0480
+      HANCESTRO:0474:
+        text: HANCESTRO:0474
+        description: Niuean
+        meaning: HANCESTRO:0474
+      HANCESTRO:0416:
+        text: HANCESTRO:0416
+        description: Montserratian
+        meaning: HANCESTRO:0416
+      HANCESTRO:0396:
+        text: HANCESTRO:0396
+        description: Ukrainian
+        meaning: HANCESTRO:0396
+      HANCESTRO:0006:
+        text: HANCESTRO:0006
+        description: South Asian
+        meaning: HANCESTRO:0006
+      HANCESTRO:0478:
+        text: HANCESTRO:0478
+        description: Samoan
+        meaning: HANCESTRO:0478
+      HANCESTRO:0415:
+        text: HANCESTRO:0415
+        description: Mexican
+        meaning: HANCESTRO:0415
+      HANCESTRO:0427:
+        text: HANCESTRO:0427
+        description: Turks and Caicos Islander
+        meaning: HANCESTRO:0427
+      HANCESTRO:0573:
+        text: HANCESTRO:0573
+        description: Native Hawaiian
+        meaning: HANCESTRO:0573
+      HANCESTRO:0008:
+        text: HANCESTRO:0008
+        description: Asian
+        meaning: HANCESTRO:0008
+      HANCESTRO:0387:
+        text: HANCESTRO:0387
+        description: Saint-Pierrais or Miquelonnais
+        meaning: HANCESTRO:0387
+      HANCESTRO:0408:
+        text: HANCESTRO:0408
+        description: Salvadoran
+        meaning: HANCESTRO:0408
+      HANCESTRO:0498:
+        text: HANCESTRO:0498
+        description: Filipino
+        meaning: HANCESTRO:0498
+      HANCESTRO:0343:
+        text: HANCESTRO:0343
+        description: Kyrgyzstani
+        meaning: HANCESTRO:0343
+      HANCESTRO:0011:
+        text: HANCESTRO:0011
+        description: Sub-Saharan African
+        meaning: HANCESTRO:0011
+      HANCESTRO:0340:
+        text: HANCESTRO:0340
+        description: Uzbekistani
+        meaning: HANCESTRO:0340
+      HANCESTRO:0371:
+        text: HANCESTRO:0371
+        description: Latvian
+        meaning: HANCESTRO:0371
+      HANCESTRO:0548:
+        text: HANCESTRO:0548
+        description: Tanzanian
+        meaning: HANCESTRO:0548
+      HANCESTRO:0471:
+        text: HANCESTRO:0471
+        description: Micronesian
+        meaning: HANCESTRO:0471
+      HANCESTRO:0491:
+        text: HANCESTRO:0491
+        description: Sri Lankan
+        meaning: HANCESTRO:0491
+      HANCESTRO:0399:
+        text: HANCESTRO:0399
+        description: Belizean
+        meaning: HANCESTRO:0399
+      HANCESTRO:0528:
+        text: HANCESTRO:0528
+        description: Comoran
+        meaning: HANCESTRO:0528
+      HANCESTRO:0543:
+        text: HANCESTRO:0543
+        description: Nigerien
+        meaning: HANCESTRO:0543
+      HANCESTRO:0418:
+        text: HANCESTRO:0418
+        description: Panamanian
+        meaning: HANCESTRO:0418
+      HANCESTRO:0429:
+        text: HANCESTRO:0429
+        description: Uruguayan
+        meaning: HANCESTRO:0429
+      HANCESTRO:0538:
+        text: HANCESTRO:0538
+        description: Bissau-Guinean
+        meaning: HANCESTRO:0538
+      HANCESTRO:0532:
+        text: HANCESTRO:0532
+        description: Equatorial Guinean
+        meaning: HANCESTRO:0532
+      HANCESTRO:0375:
+        text: HANCESTRO:0375
+        description: Maltese
+        meaning: HANCESTRO:0375
+      HANCESTRO:0411:
+        text: HANCESTRO:0411
+        description: Guatemalan
+        meaning: HANCESTRO:0411
+      HANCESTRO:0518:
+        text: HANCESTRO:0518
+        description: Somali
+        meaning: HANCESTRO:0518
+      HANCESTRO:0430:
+        text: HANCESTRO:0430
+        description: Venezuelan
+        meaning: HANCESTRO:0430
+      HANCESTRO:0363:
+        text: HANCESTRO:0363
+        description: French
+        meaning: HANCESTRO:0363
+      HANCESTRO:0588:
+        text: HANCESTRO:0588
+        description: Jewish Israeli
+        meaning: HANCESTRO:0588
+      HANCESTRO:0361:
+        text: HANCESTRO:0361
+        description: Faroese
+        meaning: HANCESTRO:0361
+      HANCESTRO:0444:
+        text: HANCESTRO:0444
+        description: Libyan
+        meaning: HANCESTRO:0444
+      HANCESTRO:0332:
+        text: HANCESTRO:0332
+        description: Sahrawi
+        meaning: HANCESTRO:0332
+      HANCESTRO:0400:
+        text: HANCESTRO:0400
+        description: Bolivian
+        meaning: HANCESTRO:0400
+      HANCESTRO:0564:
+        text: HANCESTRO:0564
+        description: Vis founder
+        meaning: HANCESTRO:0564
+      HANCESTRO:0467:
+        text: HANCESTRO:0467
+        description: French Polynesian
+        meaning: HANCESTRO:0467
+      HANCESTRO:0350:
+        text: HANCESTRO:0350
+        description: Bermudian
+        meaning: HANCESTRO:0350
+      HANCESTRO:0019:
+        text: HANCESTRO:0019
+        description: Japanese
+        meaning: HANCESTRO:0019
+      HANCESTRO:0472:
+        text: HANCESTRO:0472
+        description: Nauruan
+        meaning: HANCESTRO:0472
+      HANCESTRO:0514:
+        text: HANCESTRO:0514
+        description: Sao Tomean
+        meaning: HANCESTRO:0514
+      HANCESTRO:0561:
+        text: HANCESTRO:0561
+        description: Romanian founder
+        meaning: HANCESTRO:0561
+      HANCESTRO:0334:
+        text: HANCESTRO:0334
+        description: Antiguan or Barbudan
+        meaning: HANCESTRO:0334
+      HANCESTRO:0389:
+        text: HANCESTRO:0389
+        description: Serb
+        meaning: HANCESTRO:0389
+      HANCESTRO:0517:
+        text: HANCESTRO:0517
+        description: Sierra Leonean
+        meaning: HANCESTRO:0517
+      HANCESTRO:0505:
+        text: HANCESTRO:0505
+        description: Chadian
+        meaning: HANCESTRO:0505
+      HANCESTRO:0587:
+        text: HANCESTRO:0587
+        description: Martu Australian Aboriginal
+        meaning: HANCESTRO:0587
+      HANCESTRO:0559:
+        text: HANCESTRO:0559
+        description: Italian founder
+        meaning: HANCESTRO:0559
+      HANCESTRO:0459:
+        text: HANCESTRO:0459
+        description: Northern Mariana Islander
+        meaning: HANCESTRO:0459
+      HANCESTRO:0017:
+        text: HANCESTRO:0017
+        description: Oceanian
+        meaning: HANCESTRO:0017
+      HANCESTRO:0524:
+        text: HANCESTRO:0524
+        description: Motswana
+        meaning: HANCESTRO:0524
+      HANCESTRO:0539:
+        text: HANCESTRO:0539
+        description: Mosotho
+        meaning: HANCESTRO:0539
+      HANCESTRO:0453:
+        text: HANCESTRO:0453
+        description: Yemeni
+        meaning: HANCESTRO:0453
+      HANCESTRO:0443:
+        text: HANCESTRO:0443
+        description: Lebanese
+        meaning: HANCESTRO:0443
+      HANCESTRO:0570:
+        text: HANCESTRO:0570
+        description: Pima Indian
+        meaning: HANCESTRO:0570
+      HANCESTRO:0439:
+        text: HANCESTRO:0439
+        description: Iraqi
+        meaning: HANCESTRO:0439
+      HANCESTRO:0581:
+        text: HANCESTRO:0581
+        description: Uygur Chinese
+        meaning: HANCESTRO:0581
+      HANCESTRO:0391:
+        text: HANCESTRO:0391
+        description: Slovene
+        meaning: HANCESTRO:0391
+      HANCESTRO:0519:
+        text: HANCESTRO:0519
+        description: South African
+        meaning: HANCESTRO:0519
+      HANCESTRO:0315:
+        text: HANCESTRO:0315
+        description: Hutterite
+        meaning: HANCESTRO:0315
+      HANCESTRO:0386:
+        text: HANCESTRO:0386
+        description: Russian
+        meaning: HANCESTRO:0386
+      HANCESTRO:0549:
+        text: HANCESTRO:0549
+        description: Zambian
+        meaning: HANCESTRO:0549
+      HANCESTRO:0483:
+        text: HANCESTRO:0483
+        description: Ni-Vanuato
+        meaning: HANCESTRO:0483
+      HANCESTRO:0382:
+        text: HANCESTRO:0382
+        description: Portugese
+        meaning: HANCESTRO:0382
+      HANCESTRO:0413:
+        text: HANCESTRO:0413
+        description: Honduran
+        meaning: HANCESTRO:0413
+      HANCESTRO:0488:
+        text: HANCESTRO:0488
+        description: Maldivian
+        meaning: HANCESTRO:0488
+      HANCESTRO:0547:
+        text: HANCESTRO:0547
+        description: Togolese
+        meaning: HANCESTRO:0547
+      HANCESTRO:0010:
+        text: HANCESTRO:0010
+        description: African
+        meaning: HANCESTRO:0010
+      HANCESTRO:0542:
+        text: HANCESTRO:0542
+        description: Mozambican
+        meaning: HANCESTRO:0542
+      HANCESTRO:0568:
+        text: HANCESTRO:0568
+        description: African American
+        meaning: HANCESTRO:0568
+      HANCESTRO:0372:
+        text: HANCESTRO:0372
+        description: Liechtensteiner
+        meaning: HANCESTRO:0372
+      HANCESTRO:0428:
+        text: HANCESTRO:0428
+        description: Virgin Islander
+        meaning: HANCESTRO:0428
+      HANCESTRO:0596:
+        text: HANCESTRO:0596
+        description: Arab
+        meaning: HANCESTRO:0596
+      HANCESTRO:0338:
+        text: HANCESTRO:0338
+        description: Tajikistani
+        meaning: HANCESTRO:0338
+      HANCESTRO:0479:
+        text: HANCESTRO:0479
+        description: Solomon Islander
+        meaning: HANCESTRO:0479
+      HANCESTRO:0007:
+        text: HANCESTRO:0007
+        description: South East Asian
+        meaning: HANCESTRO:0007
+      HANCESTRO:0436:
+        text: HANCESTRO:0436
+        description: Egyptian
+        meaning: HANCESTRO:0436
+      HANCESTRO:0497:
+        text: HANCESTRO:0497
+        description: Burmese
+        meaning: HANCESTRO:0497
+      HANCESTRO:0527:
+        text: HANCESTRO:0527
+        description: Central African
+        meaning: HANCESTRO:0527
+      HANCESTRO:0023:
+        text: HANCESTRO:0023
+        description: Mongolian
+        meaning: HANCESTRO:0023
+      HANCESTRO:0550:
+        text: HANCESTRO:0550
+        description: Zimbabweian
+        meaning: HANCESTRO:0550
+      HANCESTRO:0490:
+        text: HANCESTRO:0490
+        description: Pakistani
+        meaning: HANCESTRO:0490
+      HANCESTRO:0556:
+        text: HANCESTRO:0556
+        description: Cilento
+        meaning: HANCESTRO:0556
+      HANCESTRO:0311:
+        text: HANCESTRO:0311
+        description: Friuli Venezia Giulia
+        meaning: HANCESTRO:0311
+      HANCESTRO:0309:
+        text: HANCESTRO:0309
+        description: Sardinian
+        meaning: HANCESTRO:0309
+      HANCESTRO:0395:
+        text: HANCESTRO:0395
+        description: Macedonian
+        meaning: HANCESTRO:0395
+      HANCESTRO:0420:
+        text: HANCESTRO:0420
+        description: Peruvian
+        meaning: HANCESTRO:0420
+      HANCESTRO:0496:
+        text: HANCESTRO:0496
+        description: Malaysian
+        meaning: HANCESTRO:0496
+      HANCESTRO:0506:
+        text: HANCESTRO:0506
+        description: Ethiopian
+        meaning: HANCESTRO:0506
+      HANCESTRO:0431:
+        text: HANCESTRO:0431
+        description: Algerian
+        meaning: HANCESTRO:0431
+      HANCESTRO:0446:
+        text: HANCESTRO:0446
+        description: Palestinian
+        meaning: HANCESTRO:0446
+      HANCESTRO:0347:
+        text: HANCESTRO:0347
+        description: Austrian
+        meaning: HANCESTRO:0347
+      HANCESTRO:0419:
+        text: HANCESTRO:0419
+        description: Paraguayan
+        meaning: HANCESTRO:0419
+      HANCESTRO:0021:
+        text: HANCESTRO:0021
+        description: Chinese
+        meaning: HANCESTRO:0021
+      HANCESTRO:0492:
+        text: HANCESTRO:0492
+        description: Bruneian
+        meaning: HANCESTRO:0492
+      HANCESTRO:0567:
+        text: HANCESTRO:0567
+        description: Afro-Caribbean
+        meaning: HANCESTRO:0567
+      HANCESTRO:0457:
+        text: HANCESTRO:0457
+        description: Curacaoan
+        meaning: HANCESTRO:0457
+      HANCESTRO:0502:
+        text: HANCESTRO:0502
+        description: Vietnamese
+        meaning: HANCESTRO:0502
+      HANCESTRO:0313:
+        text: HANCESTRO:0313
+        description: Old Order Amish
+        meaning: HANCESTRO:0313
+      HANCESTRO:0465:
+        text: HANCESTRO:0465
+        description: Cook Islander
+        meaning: HANCESTRO:0465
+      HANCESTRO:0348:
+        text: HANCESTRO:0348
+        description: Belarusian
+        meaning: HANCESTRO:0348
+      HANCESTRO:0484:
+        text: HANCESTRO:0484
+        description: Wallis and Futuna Islander
+        meaning: HANCESTRO:0484
+      HANCESTRO:0512:
+        text: HANCESTRO:0512
+        description: Mahoran
+        meaning: HANCESTRO:0512
+      HANCESTRO:0402:
+        text: HANCESTRO:0402
+        description: Caymanian
+        meaning: HANCESTRO:0402
+      HANCESTRO:0580:
+        text: HANCESTRO:0580
+        description: Malaysian Chinese
+        meaning: HANCESTRO:0580
+      HANCESTRO:0290:
+        text: HANCESTRO:0290
+        description: genetically isolated population
+        meaning: HANCESTRO:0290
+      HANCESTRO:0466:
+        text: HANCESTRO:0466
+        description: Fijian
+        meaning: HANCESTRO:0466
+      HANCESTRO:0009:
+        text: HANCESTRO:0009
+        description: East Asian
+        meaning: HANCESTRO:0009
+      HANCESTRO:0533:
+        text: HANCESTRO:0533
+        description: Eritrean
+        meaning: HANCESTRO:0533
+      HANCESTRO:0469:
+        text: HANCESTRO:0469
+        description: I-Kiribati
+        meaning: HANCESTRO:0469
+      HANCESTRO:0473:
+        text: HANCESTRO:0473
+        description: New Caledonian
+        meaning: HANCESTRO:0473
+      HANCESTRO:0367:
+        text: HANCESTRO:0367
+        description: Greenlander
+        meaning: HANCESTRO:0367
+      HANCESTRO:0307:
+        text: HANCESTRO:0307
+        description: Italian
+        meaning: HANCESTRO:0307
+      HANCESTRO:0485:
+        text: HANCESTRO:0485
+        description: Bangladeshi
+        meaning: HANCESTRO:0485
+      HANCESTRO:0577:
+        text: HANCESTRO:0577
+        description: Dai Chinese
+        meaning: HANCESTRO:0577
+      HANCESTRO:0451:
+        text: HANCESTRO:0451
+        description: Turkish
+        meaning: HANCESTRO:0451
+      HANCESTRO:0425:
+        text: HANCESTRO:0425
+        description: Surinamese
+        meaning: HANCESTRO:0425
+      HANCESTRO:0463:
+        text: HANCESTRO:0463
+        description: American
+        meaning: HANCESTRO:0463
+      HANCESTRO:0316:
+        text: HANCESTRO:0316
+        description: Amish
+        meaning: HANCESTRO:0316
+      HANCESTRO:0356:
+        text: HANCESTRO:0356
+        description: Chilean
+        meaning: HANCESTRO:0356
+      HANCESTRO:0504:
+        text: HANCESTRO:0504
+        description: Cape Verdean
+        meaning: HANCESTRO:0504
+      HANCESTRO:0584:
+        text: HANCESTRO:0584
+        description: Sri Lankan Sinhalese
+        meaning: HANCESTRO:0584
+      HANCESTRO:0414:
+        text: HANCESTRO:0414
+        description: Martinican
+        meaning: HANCESTRO:0414
+      HANCESTRO:0494:
+        text: HANCESTRO:0494
+        description: Indonesian
+        meaning: HANCESTRO:0494
+      HANCESTRO:0314:
+        text: HANCESTRO:0314
+        description: Sorbian
+        meaning: HANCESTRO:0314
+      HANCESTRO:0595:
+        text: HANCESTRO:0595
+        description: Eskimo
+        meaning: HANCESTRO:0595
+      HANCESTRO:0432:
+        text: HANCESTRO:0432
+        description: Armenian
+        meaning: HANCESTRO:0432
+      HANCESTRO:0535:
+        text: HANCESTRO:0535
+        description: Gambian
+        meaning: HANCESTRO:0535
+      HANCESTRO:0440:
+        text: HANCESTRO:0440
+        description: Israeli
+        meaning: HANCESTRO:0440
+      HANCESTRO:0501:
+        text: HANCESTRO:0501
+        description: Timorese
+        meaning: HANCESTRO:0501
+      HANCESTRO:0458:
+        text: HANCESTRO:0458
+        description: Kosovar
+        meaning: HANCESTRO:0458
+      HANCESTRO:0318:
+        text: HANCESTRO:0318
+        description: Orcadian
+        meaning: HANCESTRO:0318
+      HANCESTRO:0016:
+        text: HANCESTRO:0016
+        description: African American or Afro-Caribbean
+        meaning: HANCESTRO:0016
+      HANCESTRO:0437:
+        text: HANCESTRO:0437
+        description: Georgian
+        meaning: HANCESTRO:0437
+      HANCESTRO:0351:
+        text: HANCESTRO:0351
+        description: Bosnian or Herzegovinian
+        meaning: HANCESTRO:0351
+      HANCESTRO:0405:
+        text: HANCESTRO:0405
+        description: Cuban
+        meaning: HANCESTRO:0405
+      HANCESTRO:0583:
+        text: HANCESTRO:0583
+        description: Taiwanese Han
+        meaning: HANCESTRO:0583
+      HANCESTRO:0324:
+        text: HANCESTRO:0324
+        description: Ashkenazi Jew
+        meaning: HANCESTRO:0324
+      HANCESTRO:0482:
+        text: HANCESTRO:0482
+        description: Tuvaluan
+        meaning: HANCESTRO:0482
+      HANCESTRO:0401:
+        text: HANCESTRO:0401
+        description: British Virgin Islander
+        meaning: HANCESTRO:0401
+      HANCESTRO:0452:
+        text: HANCESTRO:0452
+        description: Emirati
+        meaning: HANCESTRO:0452
+      HANCESTRO:0317:
+        text: HANCESTRO:0317
+        description: Erasmus Rucphen
+        meaning: HANCESTRO:0317
+      HANCESTRO:0018:
+        text: HANCESTRO:0018
+        description: uncategorised population
+        meaning: HANCESTRO:0018
+      HANCESTRO:0529:
+        text: HANCESTRO:0529
+        description: Congolese
+        meaning: HANCESTRO:0529
+      HANCESTRO:0572:
+        text: HANCESTRO:0572
+        description: Kosraen
+        meaning: HANCESTRO:0572
+      HANCESTRO:0342:
+        text: HANCESTRO:0342
+        description: Kazakhstani
+        meaning: HANCESTRO:0342
+      HANCESTRO:0554:
+        text: HANCESTRO:0554
+        description: Silk Road founder
+        meaning: HANCESTRO:0554
+      HANCESTRO:0526:
+        text: HANCESTRO:0526
+        description: Burundian
+        meaning: HANCESTRO:0526
+      HANCESTRO:0487:
+        text: HANCESTRO:0487
+        description: Indian
+        meaning: HANCESTRO:0487
+      HANCESTRO:0448:
+        text: HANCESTRO:0448
+        description: Qatari
+        meaning: HANCESTRO:0448
+      HANCESTRO:0537:
+        text: HANCESTRO:0537
+        description: Guinean
+        meaning: HANCESTRO:0537
+      HANCESTRO:0365:
+        text: HANCESTRO:0365
+        description: Gibraltarian
+        meaning: HANCESTRO:0365
+      HANCESTRO:0358:
+        text: HANCESTRO:0358
+        description: Czech
+        meaning: HANCESTRO:0358
+      HANCESTRO:0369:
+        text: HANCESTRO:0369
+        description: Icelandic
+        meaning: HANCESTRO:0369
+      HANCESTRO:0384:
+        text: HANCESTRO:0384
+        description: Moldovan
+        meaning: HANCESTRO:0384
+      HANCESTRO:0449:
+        text: HANCESTRO:0449
+        description: Saudi
+        meaning: HANCESTRO:0449
+      HANCESTRO:0335:
+        text: HANCESTRO:0335
+        description: Barbadian
+        meaning: HANCESTRO:0335
+      HANCESTRO:0286:
+        text: HANCESTRO:0286
+        description: Central Asian
+        meaning: HANCESTRO:0286
+      HANCESTRO:0359:
+        text: HANCESTRO:0359
+        description: Danish
+        meaning: HANCESTRO:0359
+      HANCESTRO:0393:
+        text: HANCESTRO:0393
+        description: Swedish
+        meaning: HANCESTRO:0393
+      HANCESTRO:0541:
+        text: HANCESTRO:0541
+        description: Malian
+        meaning: HANCESTRO:0541
+      HANCESTRO:0476:
+        text: HANCESTRO:0476
+        description: Papua New Guinean
+        meaning: HANCESTRO:0476
+      HANCESTRO:0422:
+        text: HANCESTRO:0422
+        description: Kittitian or Nevisian
+        meaning: HANCESTRO:0422
+      HANCESTRO:0551:
+        text: HANCESTRO:0551
+        description: genetically homogenous Irish
+        meaning: HANCESTRO:0551
+      HANCESTRO:0493:
+        text: HANCESTRO:0493
+        description: Cambodian
+        meaning: HANCESTRO:0493
+      HANCESTRO:0337:
+        text: HANCESTRO:0337
+        description: Jamaican
+        meaning: HANCESTRO:0337
+      HANCESTRO:0434:
+        text: HANCESTRO:0434
+        description: Bahraini
+        meaning: HANCESTRO:0434
+      HANCESTRO:0388:
+        text: HANCESTRO:0388
+        description: Sammarinese
+        meaning: HANCESTRO:0388
+      HANCESTRO:0530:
+        text: HANCESTRO:0530
+        description: Ivoirian
+        meaning: HANCESTRO:0530
+      HANCESTRO:0312:
+        text: HANCESTRO:0312
+        description: Carlantino
+        meaning: HANCESTRO:0312
+      HANCESTRO:0407:
+        text: HANCESTRO:0407
+        description: Ecuadorian
+        meaning: HANCESTRO:0407
+      HANCESTRO:0383:
+        text: HANCESTRO:0383
+        description: Irish
+        meaning: HANCESTRO:0383
+      HANCESTRO:0323:
+        text: HANCESTRO:0323
+        description: Dutch founder
+        meaning: HANCESTRO:0323
+      HANCESTRO:0368:
+        text: HANCESTRO:0368
+        description: Hungrian
+        meaning: HANCESTRO:0368
+      HANCESTRO:0521:
+        text: HANCESTRO:0521
+        description: Ugandan
+        meaning: HANCESTRO:0521
+      HANCESTRO:0374:
+        text: HANCESTRO:0374
+        description: Luxembourgish
+        meaning: HANCESTRO:0374
+      HANCESTRO:0590:
+        text: HANCESTRO:0590
+        description: European American
+        meaning: HANCESTRO:0590
+      HANCESTRO:0022:
+        text: HANCESTRO:0022
+        description: Korean
+        meaning: HANCESTRO:0022
+      HANCESTRO:0346:
+        text: HANCESTRO:0346
+        description: Australian
+        meaning: HANCESTRO:0346
+      HANCESTRO:0445:
+        text: HANCESTRO:0445
+        description: Moroccan
+        meaning: HANCESTRO:0445
+      HANCESTRO:0593:
+        text: HANCESTRO:0593
+        description: Maasai
+        meaning: HANCESTRO:0593
+      HANCESTRO:0379:
+        text: HANCESTRO:0379
+        description: Norfolk Islander
+        meaning: HANCESTRO:0379
+      HANCESTRO:0377:
+        text: HANCESTRO:0377
+        description: Montenegrin
+        meaning: HANCESTRO:0377
+      HANCESTRO:0511:
+        text: HANCESTRO:0511
+        description: Mauritian
+        meaning: HANCESTRO:0511
+      HANCESTRO:0366:
+        text: HANCESTRO:0366
+        description: Greek
+        meaning: HANCESTRO:0366
+      HANCESTRO:0349:
+        text: HANCESTRO:0349
+        description: Belgian
+        meaning: HANCESTRO:0349
+      HANCESTRO:0582:
+        text: HANCESTRO:0582
+        description: Tibetan
+        meaning: HANCESTRO:0582
+      HANCESTRO:0500:
+        text: HANCESTRO:0500
+        description: Thai
+        meaning: HANCESTRO:0500
+      HANCESTRO:0460:
+        text: HANCESTRO:0460
+        description: South Sudanese
+        meaning: HANCESTRO:0460
+      HANCESTRO:0015:
+        text: HANCESTRO:0015
+        description: Greater Middle Eastern  (Middle Eastern, North African or Persian)
+        meaning: HANCESTRO:0015
+      HANCESTRO:0507:
+        text: HANCESTRO:0507
+        description: Kenyan
+        meaning: HANCESTRO:0507
+      HANCESTRO:0589:
+        text: HANCESTRO:0589
+        description: Punjabi Sikh
+        meaning: HANCESTRO:0589
+      HANCESTRO:0592:
+        text: HANCESTRO:0592
+        description: Luhya
+        meaning: HANCESTRO:0592
+      HANCESTRO:0454:
+        text: HANCESTRO:0454
+        description: Aruban
+        meaning: HANCESTRO:0454
+      HANCESTRO:0461:
+        text: HANCESTRO:0461
+        description: Syrian
+        meaning: HANCESTRO:0461
+      HANCESTRO:0426:
+        text: HANCESTRO:0426
+        description: Trinidadian or Tobagonian
+        meaning: HANCESTRO:0426
+      HANCESTRO:0385:
+        text: HANCESTRO:0385
+        description: Romanian
+        meaning: HANCESTRO:0385
+      HANCESTRO:0545:
+        text: HANCESTRO:0545
+        description: Rwandan
+        meaning: HANCESTRO:0545
+      HANCESTRO:0468:
+        text: HANCESTRO:0468
+        description: Guamanian
+        meaning: HANCESTRO:0468
+      HANCESTRO:0424:
+        text: HANCESTRO:0424
+        description: Saint Vincentian
+        meaning: HANCESTRO:0424
+      HANCESTRO:0341:
+        text: HANCESTRO:0341
+        description: Afghan
+        meaning: HANCESTRO:0341
+      HANCESTRO:0450:
+        text: HANCESTRO:0450
+        description: Tunisian
+        meaning: HANCESTRO:0450
+      HANCESTRO:0310:
+        text: HANCESTRO:0310
+        description: Val Borbera
+        meaning: HANCESTRO:0310
+      HANCESTRO:0571:
+        text: HANCESTRO:0571
+        description: Plains American Indian
+        meaning: HANCESTRO:0571
+      HANCESTRO:0495:
+        text: HANCESTRO:0495
+        description: Lao
+        meaning: HANCESTRO:0495
+      HANCESTRO:0020:
+        text: HANCESTRO:0020
+        description: Taiwanese
+        meaning: HANCESTRO:0020
+      HANCESTRO:0534:
+        text: HANCESTRO:0534
+        description: Gabonese
+        meaning: HANCESTRO:0534
+      HANCESTRO:0319:
+        text: HANCESTRO:0319
+        description: Korculan
+        meaning: HANCESTRO:0319
+      HANCESTRO:0522:
+        text: HANCESTRO:0522
+        description: Angolan
+        meaning: HANCESTRO:0522
+      HANCESTRO:0025:
+        text: HANCESTRO:0025
+        description: Singaporean Chinese
+        meaning: HANCESTRO:0025
+      HANCESTRO:0578:
+        text: HANCESTRO:0578
+        description: Hui Chinese
+        meaning: HANCESTRO:0578
+      HANCESTRO:0339:
+        text: HANCESTRO:0339
+        description: Turkmen
+        meaning: HANCESTRO:0339
+      HANCESTRO:0403:
+        text: HANCESTRO:0403
+        description: Colombian
+        meaning: HANCESTRO:0403
+      HANCESTRO:0344:
+        text: HANCESTRO:0344
+        description: Albanian
+        meaning: HANCESTRO:0344
+      HANCESTRO:0486:
+        text: HANCESTRO:0486
+        description: Bhutanese
+        meaning: HANCESTRO:0486
+      HANCESTRO:0355:
+        text: HANCESTRO:0355
+        description: Channel Islander
+        meaning: HANCESTRO:0355
+      HANCESTRO:0503:
+        text: HANCESTRO:0503
+        description: Cameroonian
+        meaning: HANCESTRO:0503
+      HANCESTRO:0579:
+        text: HANCESTRO:0579
+        description: Jingpo Chinese
+        meaning: HANCESTRO:0579
+      HANCESTRO:0464:
+        text: HANCESTRO:0464
+        description: American Samoan
+        meaning: HANCESTRO:0464
+      HANCESTRO:0558:
+        text: HANCESTRO:0558
+        description: French Canadian founder
+        meaning: HANCESTRO:0558
+      HANCESTRO:0447:
+        text: HANCESTRO:0447
+        description: Omani
+        meaning: HANCESTRO:0447
+      HANCESTRO:0563:
+        text: HANCESTRO:0563
+        description: South Tyrolean
+        meaning: HANCESTRO:0563
+      HANCESTRO:0481:
+        text: HANCESTRO:0481
+        description: Tongan
+        meaning: HANCESTRO:0481
+      HANCESTRO:0515:
+        text: HANCESTRO:0515
+        description: Senegalese
+        meaning: HANCESTRO:0515
+      HANCESTRO:0523:
+        text: HANCESTRO:0523
+        description: Beninese
+        meaning: HANCESTRO:0523
+      HANCESTRO:0336:
+        text: HANCESTRO:0336
+        description: Haitian
+        meaning: HANCESTRO:0336
+      HANCESTRO:0585:
+        text: HANCESTRO:0585
+        description: Tatar
+        meaning: HANCESTRO:0585
+      HANCESTRO:0345:
+        text: HANCESTRO:0345
+        description: Andorran
+        meaning: HANCESTRO:0345
+      HANCESTRO:0540:
+        text: HANCESTRO:0540
+        description: Malawian
+        meaning: HANCESTRO:0540
+      HANCESTRO:0574:
+        text: HANCESTRO:0574
+        description: Pacific Islander
+        meaning: HANCESTRO:0574
+      HANCESTRO:0406:
+        text: HANCESTRO:0406
+        description: Dominican
+        meaning: HANCESTRO:0406
+      HANCESTRO:0024:
+        text: HANCESTRO:0024
+        description: Macanese
+        meaning: HANCESTRO:0024
+      HANCESTRO:0470:
+        text: HANCESTRO:0470
+        description: Marshallese
+        meaning: HANCESTRO:0470
+      HANCESTRO:0397:
+        text: HANCESTRO:0397
+        description: Argentine
+        meaning: HANCESTRO:0397
+      HANCESTRO:0352:
+        text: HANCESTRO:0352
+        description: Brazilian
+        meaning: HANCESTRO:0352
+      HANCESTRO:0370:
+        text: HANCESTRO:0370
+        description: Manx
+        meaning: HANCESTRO:0370
+      HANCESTRO:0357:
+        text: HANCESTRO:0357
+        description: Croatian
+        meaning: HANCESTRO:0357
+      HANCESTRO:0027:
+        text: HANCESTRO:0027
+        description: Han Chinese
+        meaning: HANCESTRO:0027
+      HANCESTRO:0552:
+        text: HANCESTRO:0552
+        description: Aboriginal Australian
+        meaning: HANCESTRO:0552
+      HANCESTRO:0353:
+        text: HANCESTRO:0353
+        description: Bulgarian
+        meaning: HANCESTRO:0353
+      HANCESTRO:0417:
+        text: HANCESTRO:0417
+        description: Nicaraguan
+        meaning: HANCESTRO:0417
+      HANCESTRO:0321:
+        text: HANCESTRO:0321
+        description: Finnish
+        meaning: HANCESTRO:0321
+      HANCESTRO:0508:
+        text: HANCESTRO:0508
+        description: Liberian
+        meaning: HANCESTRO:0508
+      HANCESTRO:0565:
+        text: HANCESTRO:0565
+        description: Split founder
+        meaning: HANCESTRO:0565
+      HANCESTRO:0475:
+        text: HANCESTRO:0475
+        description: Palauan
+        meaning: HANCESTRO:0475
+      HANCESTRO:0520:
+        text: HANCESTRO:0520
+        description: St. Helenian
+        meaning: HANCESTRO:0520
+      HANCESTRO:0421:
+        text: HANCESTRO:0421
+        description: Puerto Rican
+        meaning: HANCESTRO:0421
+      HANCESTRO:0435:
+        text: HANCESTRO:0435
+        description: Cypriote
+        meaning: HANCESTRO:0435
+      HANCESTRO:0333:
+        text: HANCESTRO:0333
+        description: Anguillan
+        meaning: HANCESTRO:0333
+      HANCESTRO:0410:
+        text: HANCESTRO:0410
+        description: Grenadian
+        meaning: HANCESTRO:0410
+      HANCESTRO:0477:
+        text: HANCESTRO:0477
+        description: Pitcairn Islander
+        meaning: HANCESTRO:0477
+      HANCESTRO:0586:
+        text: HANCESTRO:0586
+        description: Bashkir
+        meaning: HANCESTRO:0586
+      HANCESTRO:0394:
+        text: HANCESTRO:0394
+        description: Swiss
+        meaning: HANCESTRO:0394
+      HANCESTRO:0489:
+        text: HANCESTRO:0489
+        description: Nepalese
+        meaning: HANCESTRO:0489
+      HANCESTRO:0320:
+        text: HANCESTRO:0320
+        description: Dutch
+        meaning: HANCESTRO:0320
+      HANCESTRO:0373:
+        text: HANCESTRO:0373
+        description: Lithuanian
+        meaning: HANCESTRO:0373
+      HANCESTRO:0390:
+        text: HANCESTRO:0390
+        description: Slovak
+        meaning: HANCESTRO:0390
+      HANCESTRO:0362:
+        text: HANCESTRO:0362
+        description: Falkland Islander
+        meaning: HANCESTRO:0362
+      HANCESTRO:0013:
+        text: HANCESTRO:0013
+        description: Native American
+        meaning: HANCESTRO:0013
+      HANCESTRO:0354:
+        text: HANCESTRO:0354
+        description: Canadian
+        meaning: HANCESTRO:0354
+      HANCESTRO:0380:
+        text: HANCESTRO:0380
+        description: Norwegian
+        meaning: HANCESTRO:0380
+      HANCESTRO:0376:
+        text: HANCESTRO:0376
+        description: Monegasque
+        meaning: HANCESTRO:0376
+      HANCESTRO:0594:
+        text: HANCESTRO:0594
+        description: Mende
+        meaning: HANCESTRO:0594
+      HANCESTRO:0560:
+        text: HANCESTRO:0560
+        description: Northern Finnish founder
+        meaning: HANCESTRO:0560
+      HANCESTRO:0322:
+        text: HANCESTRO:0322
+        description: Finnish founder
+        meaning: HANCESTRO:0322
+      HANCESTRO:0575:
+        text: HANCESTRO:0575
+        description: Yoruban
+        meaning: HANCESTRO:0575
+      HANCESTRO:0014:
+        text: HANCESTRO:0014
+        description: Hispanic or Latin American
+        meaning: HANCESTRO:0014
+      HANCESTRO:0531:
+        text: HANCESTRO:0531
+        description: Djiboutian
+        meaning: HANCESTRO:0531
+      HANCESTRO:0525:
+        text: HANCESTRO:0525
+        description: Burkinabe
+        meaning: HANCESTRO:0525
+      HANCESTRO:0433:
+        text: HANCESTRO:0433
+        description: Azerbaijani
+        meaning: HANCESTRO:0433
+      HANCESTRO:0566:
+        text: HANCESTRO:0566
+        description: undefined ancestry population
+        meaning: HANCESTRO:0566
+      HANCESTRO:0378:
+        text: HANCESTRO:0378
+        description: New Zealandish
+        meaning: HANCESTRO:0378
+      HANCESTRO:0442:
+        text: HANCESTRO:0442
+        description: Kuwaiti
+        meaning: HANCESTRO:0442
+      HANCESTRO:0331:
+        text: HANCESTRO:0331
+        description: Sudanese
+        meaning: HANCESTRO:0331
+      HANCESTRO:0591:
+        text: HANCESTRO:0591
+        description: Esan
+        meaning: HANCESTRO:0591
+      HANCESTRO:0364:
+        text: HANCESTRO:0364
+        description: German
+        meaning: HANCESTRO:0364
+classes:
+  EthnicityOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: Version number in major.minor.patch format.
+      text:
+        description: The ethnicity of the human donor.
+        title: Ethnicity
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Ethnicity ontology ID
+        range: EthnicityOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Ethnicity ontology label

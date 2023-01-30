@@ -1,0 +1,38 @@
+name: Target_pathway_ontology
+id: https://example.org/Target-pathway-ontology
+imports:
+- linkml:types
+prefixes:
+  Target_pathway_ontology: https://example.org/Target-pathway-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Target_pathway_ontology
+enums:
+  TargetPathwayOntology_ontology_options:
+    reachable_from:
+      source_ontology: obo:hcao
+      source_nodes:
+      - GO:0050789
+      relationship_types:
+      - rdfs:subClassOf
+      is_direct: false
+      include_self: false
+classes:
+  TargetPathwayOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of the treatment target pathway.
+        title: Target pathway
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Target pathway ontology ID
+        range: TargetPathwayOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Target pathway ontology label

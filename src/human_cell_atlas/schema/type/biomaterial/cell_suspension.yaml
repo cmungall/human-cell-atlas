@@ -1,0 +1,67 @@
+name: Cell_suspension
+id: https://example.org/Cell-suspension
+imports:
+- linkml:types
+- system/provenance
+- core/biomaterial/biomaterial_core
+- module/biomaterial/cell_morphology
+- module/biomaterial/growth_conditions
+- module/ontology/species_ontology
+- module/ontology/cell_type_ontology
+- module/process/sequencing/plate_based_sequencing
+- module/biomaterial/timecourse
+prefixes:
+  Cell_suspension: https://example.org/Cell-suspension
+  linkml: https://w3id.org/linkml/
+default_prefix: Cell_suspension
+enums:
+  CellSuspension_schema_type_options:
+    permissible_values:
+      biomaterial: {}
+classes:
+  CellSuspension:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: CellSuspension_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      biomaterial_core:
+        description: Core biomaterial-level information.
+        title: Biomaterial core
+        range: BiomaterialCore
+        required: true
+      cell_morphology:
+        description: Features relating to the morphology of cells in a biomaterial.
+        title: Cell morphology
+        range: CellMorphology
+      growth_conditions:
+        description: Features relating to the growth and/or maintenance of a biomaterial.
+        title: Growth conditions
+        range: GrowthConditions
+      genus_species:
+        multivalued: true
+        range: SpeciesOntology
+      selected_cell_types:
+        multivalued: true
+        range: CellTypeOntology
+      estimated_cell_count:
+        description: Estimated number of cells in the suspension.
+        title: Estimated cell count
+        range: integer
+      plate_based_sequencing:
+        description: Fields specific for plate-based sequencing experiments.
+        title: Plate-based sequencing
+        range: PlateBasedSequencing
+      timecourse:
+        description: Information relating to a timecourse associated with this cell
+          suspension.
+        title: Timecourse
+        range: Timecourse

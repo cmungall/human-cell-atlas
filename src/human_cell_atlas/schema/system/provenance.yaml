@@ -1,0 +1,43 @@
+name: Provenance
+id: https://example.org/Provenance
+imports:
+- linkml:types
+prefixes:
+  Provenance: https://example.org/Provenance
+  linkml: https://w3id.org/linkml/
+default_prefix: Provenance
+classes:
+  Provenance:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_major_version:
+        description: The major version number of the schema.
+        title: Schema major version
+        range: integer
+      schema_minor_version:
+        description: The minor version number of the schema.
+        title: Schema minor version
+        range: integer
+      submission_date:
+        description: When project was first submitted to database.
+        title: Submission date
+        required: true
+      submitter_id:
+        description: ID of individual who first submitted project.
+        title: Submitter ID
+      update_date:
+        description: When project was last updated.
+        title: Update date
+      updater_id:
+        description: ID of individual who last updated project.
+        title: Updater ID
+      document_id:
+        description: Identifier for document.
+        title: Document ID
+        required: true
+      accession:
+        description: A unique accession for this entity, provided by the broker.
+        title: Accession

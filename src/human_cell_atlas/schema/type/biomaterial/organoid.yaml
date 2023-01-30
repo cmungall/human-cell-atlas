@@ -1,0 +1,86 @@
+name: Organoid
+id: https://example.org/Organoid
+imports:
+- linkml:types
+- system/provenance
+- core/biomaterial/biomaterial_core
+- module/ontology/species_ontology
+- module/ontology/organ_ontology
+- module/ontology/organ_part_ontology
+- module/ontology/time_unit_ontology
+- module/ontology/length_unit_ontology
+prefixes:
+  Organoid: https://example.org/Organoid
+  linkml: https://w3id.org/linkml/
+default_prefix: Organoid
+enums:
+  Organoid_schema_type_options:
+    permissible_values:
+      biomaterial: {}
+classes:
+  Organoid:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: Organoid_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      biomaterial_core:
+        description: Core biomaterial-level information.
+        title: Biomaterial core
+        range: BiomaterialCore
+        required: true
+      genus_species:
+        multivalued: true
+        range: SpeciesOntology
+      model_organ:
+        description: Organ for which this organoid is a model system.
+        title: Organ model
+        range: OrganOntology
+        required: true
+      model_organ_part:
+        description: Organ part for which this organoid is a model system.
+        title: Organ part model
+        range: OrganPartOntology
+      age:
+        description: Age of the organoid in Organoid age unit measured from when cell
+          aggregates started differentiating to desired organoid model.
+        title: Organoid age
+        range: float
+      age_unit:
+        description: The unit in which Organoid age is expressed.
+        title: Organoid age unit
+        range: TimeUnitOntology
+      size:
+        description: Size of the organoid in Organoid size unit.
+        title: Organoid size
+        range: float
+      size_unit:
+        description: The unit in which the Organoid size is expressed.
+        title: Organoid size unit
+        range: LengthUnitOntology
+      morphology:
+        description: General description of the organoid morphology.
+        title: Organoid morphology
+      embedded_in_matrigel:
+        description: Whether the organoid is embedded in a matrigel.
+        title: Embeddded in matrigel
+        range: boolean
+      growth_environment:
+        description: Growth environment in which the organoid is grown.
+        title: Growth environment
+      input_aggregate_cell_count:
+        description: Estimated number of cells per input cell aggregate.
+        title: Input aggregate cell count
+        range: float
+      stored_oxygen_levels:
+        description: Percent oxygen level organoid was stored in prior to sequencing.
+        title: Stored oxygen level
+        range: float

@@ -1,0 +1,98 @@
+name: Imaging_Protocol
+id: https://example.org/Imaging-Protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+- module/ontology/microscopy_ontology
+- module/protocol/channel
+- module/protocol/probe
+prefixes:
+  Imaging_Protocol: https://example.org/Imaging-Protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: Imaging_Protocol
+enums:
+  ImagingProtocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+  ImagingProtocol_overlapping_tiles_options:
+    permissible_values:
+      'yes': {}
+      'no': {}
+classes:
+  ImagingProtocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: ImagingProtocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      microscope_setup_description:
+        description: Description of the microscope setup.
+        title: Microscope setup description
+      microscopy_technique:
+        description: The type of microscopy.
+        title: Microscopy technique
+        range: MicroscopyOntology
+        required: true
+      magnification:
+        description: Magnification of the objective used for imaging.
+        title: Magnification
+        required: true
+      numerical_aperture:
+        description: Numerical aperture of the objective.
+        title: Numerical aperture
+        range: float
+      immersion_medium_type:
+        description: Immersion medium used for imaging.
+        title: Immersion medium
+      immersion_medium_refractive_index:
+        description: Refractive index of the immersion medium used for imaging.
+        title: Refractive index of the immersion medium
+        range: float
+      pixel_size:
+        description: Pixel size in nanometers.
+        title: Pixel size
+        range: float
+      number_of_tiles:
+        description: Number of XY tiles in the experiment.
+        title: Number of tiles
+        range: integer
+      tile_size_y:
+        description: Y size of the tile in micrometers.
+        title: Tile size Y
+        range: float
+      tile_size_x:
+        description: X size of the tile in micrometers.
+        title: Tile size X
+        range: float
+      z_stack_step_size:
+        description: Z-stack step size in nanometers.
+        title: Z stack step size
+        range: float
+      number_of_z_steps:
+        description: Number of steps in a Z stack.
+        title: Number of Z steps
+        range: integer
+      overlapping_tiles:
+        description: Whether tiles were collected with overlap.
+        title: Overlapping tiles
+        range: ImagingProtocol_overlapping_tiles_options
+      channel:
+        multivalued: true
+        range: Channel
+      probe:
+        multivalued: true
+        range: Probe

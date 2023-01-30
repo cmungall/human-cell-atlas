@@ -1,0 +1,65 @@
+name: Differentiation_protocol
+id: https://example.org/Differentiation-protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+- module/process/purchased_reagents
+prefixes:
+  Differentiation_protocol: https://example.org/Differentiation-protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: Differentiation_protocol
+enums:
+  DifferentiationProtocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+classes:
+  DifferentiationProtocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: DifferentiationProtocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      method:
+        description: Method applied to cell culture to induce a specific differentiation
+          response.
+        title: Differentiation method
+        required: true
+      media:
+        description: Culture media used to induce a specific differentiation response.
+        title: Differentiation media
+      small_molecules:
+        description: Small molecules added to stem cell medium to induce a specific
+          differentiation response.
+        title: Small molecules
+      target_cell_yield:
+        description: Percent of target cells obtained after directed differentiation
+          of origin cell.
+        title: Percent target cell yield
+        range: float
+      reagents:
+        multivalued: true
+        range: PurchasedReagents
+      target_pathway:
+        description: Targeted pathway for specific differentiation response.
+        title: Target pathway
+      validation_method:
+        description: Method used to validate origin cell successfully differentiated
+          to target cell.
+        title: Differentiation validation method
+      validation_result:
+        description: Result confirming successful differentiation to target cell type.
+        title: Validation result

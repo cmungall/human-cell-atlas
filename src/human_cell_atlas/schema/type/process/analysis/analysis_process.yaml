@@ -1,0 +1,122 @@
+name: Analysis_process
+id: https://example.org/Analysis-process
+imports:
+- linkml:types
+- system/provenance
+- core/process/process_core
+- module/ontology/process_type_ontology
+prefixes:
+  Analysis_process: https://example.org/Analysis-process
+  linkml: https://w3id.org/linkml/
+default_prefix: Analysis_process
+enums:
+  AnalysisProcess_schema_type_options:
+    permissible_values:
+      process: {}
+  AnalysisProcess_analysis_run_type_options:
+    permissible_values:
+      run: {}
+      copy-forward: {}
+classes:
+  Task:
+    attributes:
+      disk_size:
+        description: Name of the disk volume mounted to the VM for the task.
+        title: Disk name
+        required: true
+      task_name:
+        description: Name of the task.
+        title: Task name
+        required: true
+      zone:
+        description: Name of the Google Cloud zone where the task was run.
+        title: Zone
+        required: true
+      log_err:
+        description: Path where standard error is logged.
+        title: Log error
+      start_time:
+        description: Date and time when the task started.
+        title: Start time
+        required: true
+      cpus:
+        description: Number of CPUs used to run this task.
+        title: CPUs
+        range: integer
+        required: true
+      log_out:
+        description: Path where standard output is logged.
+        title: Log out
+      stop_time:
+        description: Date and time when the task finished.
+        title: Stop time
+        required: true
+      memory:
+        description: Amount of memory allocated for this task.
+        title: Memory
+        required: true
+      docker_image:
+        description: Name of docker image where the task is stored and executed.
+        title: Docker image
+        required: true
+  Parameter:
+    attributes:
+      checksum:
+        description: MD5 checksum of the file.
+        title: Checksum
+      parameter_name:
+        description: Name of parameter.
+        title: Parameter name
+        required: true
+      parameter_value:
+        description: Path to file for or value of parameter.
+        title: Parameter value
+        required: true
+  AnalysisProcess:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: AnalysisProcess_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      process_core:
+        description: Core process-level information.
+        title: Process core
+        range: ProcessCore
+        required: true
+      type:
+        description: The type of process.
+        title: Process type
+        range: ProcessTypeOntology
+        required: true
+      inputs:
+        multivalued: true
+        range: Parameter
+        required: true
+      tasks:
+        multivalued: true
+        range: Task
+        required: true
+      timestamp_start_utc:
+        description: Initial start time of the full pipeline in UTC.
+        title: Start timestamp (UTC)
+        required: true
+      timestamp_stop_utc:
+        description: Terminal stop time of the full pipeline in UTC.
+        title: Stop timestamp (UTC)
+        required: true
+      analysis_run_type:
+        description: Whether the analysis was run or was copied forward as an optimization.
+        title: Analysis run type
+        range: AnalysisProcess_analysis_run_type_options
+        required: true
+      reference_files:
+        multivalued: true
+        required: true

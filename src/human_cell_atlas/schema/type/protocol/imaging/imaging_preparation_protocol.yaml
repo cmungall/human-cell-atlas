@@ -1,0 +1,85 @@
+name: Imaging_preparation_protocol
+id: https://example.org/Imaging-preparation-protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+- module/ontology/time_unit_ontology
+- module/biomaterial/preservation_storage
+prefixes:
+  Imaging_preparation_protocol: https://example.org/Imaging-preparation-protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: Imaging_preparation_protocol
+enums:
+  ImagingPreparationProtocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+classes:
+  ImagingPreparationProtocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: ImagingPreparationProtocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      fresh_slicing_method:
+        description: The method by which fresh tissue was sliced.
+        title: Fresh slicing method
+      imaged_slice_thickness:
+        description: Thickness of the imaged slice in micrometres.
+        title: Imaged slice thickness
+        range: float
+      final_slicing_method:
+        description: The method by which the final slice was obtained.
+        title: Final slicing method
+      post_resection_interval:
+        description: Length of time between surgical resection and fresh slicing of
+          tissue.
+        title: Time between resection and fresh slicing
+        range: float
+      post_resection_interval_unit:
+        description: The unit of time in which the post resection interval is expressed.
+        title: Post resection interval time unit
+        range: TimeUnitOntology
+      pre_final_slice_preservation_method:
+        description: Tissue preservation method used prior to final slicing.
+        title: Pre-final slice preservation method
+        range: PreservationStorage
+      post_final_slicing_interval:
+        description: Length of time between secondary slicing and hybridization.
+        title: Post final slicing interval
+        range: float
+      post_final_slicing_interval_unit:
+        description: The unit of time in which the post final slicing interval is
+          expressed.
+        title: Post final slicing interval time unit
+        range: TimeUnitOntology
+      fiducial_marker:
+        description: Fiducial markers for the alignment of images taken across multiple
+          rounds of imaging.
+        title: Fiducial marker
+      expansion_factor:
+        description: Factor by which the imaged tissue was expanded in one dimension.
+        title: Expansion factor
+        range: float
+      permeabilisation_time:
+        description: The permeabilisation time in time units that the tissue was exposed
+          to.
+        title: Permeabilisation time
+        range: float
+      permeabilisation_time_unit:
+        description: The unit in which permeabilisation time is expressed.
+        title: Permeabilisation time unit
+        range: TimeUnitOntology

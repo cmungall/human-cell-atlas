@@ -1,0 +1,26 @@
+name: Funder
+id: https://example.org/Funder
+imports:
+- linkml:types
+prefixes:
+  Funder: https://example.org/Funder
+  linkml: https://w3id.org/linkml/
+default_prefix: Funder
+classes:
+  Funder:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      grant_title:
+        description: The name of the grant funding the project.
+        title: Grant title
+      grant_id:
+        description: The unique grant identifier or reference.
+        title: Grant ID
+        required: true
+      organization:
+        description: The name of the funding organization.
+        title: Funding organization
+        required: true

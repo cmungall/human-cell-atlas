@@ -1,0 +1,61 @@
+name: Disease_ontology
+id: https://example.org/Disease-ontology
+imports:
+- linkml:types
+prefixes:
+  Disease_ontology: https://example.org/Disease-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Disease_ontology
+enums:
+  DiseaseOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:mondo
+        source_nodes:
+        - MONDO:0000001
+        - PATO:0000461
+        - HP:0000118
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: true
+    - reachable_from:
+        source_ontology: obo:efo
+        source_nodes:
+        - MONDO:0000001
+        - PATO:0000461
+        - HP:0000118
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: true
+    - reachable_from:
+        source_ontology: obo:hp
+        source_nodes:
+        - MONDO:0000001
+        - PATO:0000461
+        - HP:0000118
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: true
+classes:
+  DiseaseOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: Version number in major.minor.patch format.
+      text:
+        description: The text for the term as the user provides it.
+        title: Disease
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Disease ontology ID
+        range: DiseaseOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Disease ontology label

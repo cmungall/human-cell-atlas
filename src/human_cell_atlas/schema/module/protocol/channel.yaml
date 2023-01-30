@@ -1,0 +1,48 @@
+name: Channel
+id: https://example.org/Channel
+imports:
+- linkml:types
+prefixes:
+  Channel: https://example.org/Channel
+  linkml: https://w3id.org/linkml/
+default_prefix: Channel
+enums:
+  Channel_multiplexed_options:
+    permissible_values:
+      'yes': {}
+      'no': {}
+classes:
+  Channel:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      channel_id:
+        description: User given ID.  If there is an accompanying codebook, this name
+          should correspond to the channel id used in the codebook.
+        title: Channel ID
+        required: true
+      excitation_wavelength:
+        description: Excitation wavelength of the lightsource in nanometers.
+        title: Excitation wavelength
+        range: float
+        required: true
+      filter_range:
+        description: Emission filter in nanometers.
+        title: Filter range
+        required: true
+      multiplexed:
+        description: Whether multiple targets were detected simultaneously in this
+          channel.
+        title: Multiplexed experiment
+        range: Channel_multiplexed_options
+        required: true
+      target_fluorophore:
+        description: The name of the fluorophore this channel is designed to assay.
+        title: Target fluorophore
+      exposure_time:
+        description: Acquisition time for a single image per channel, in milliseconds.
+        title: Exposure time
+        range: float
+        required: true

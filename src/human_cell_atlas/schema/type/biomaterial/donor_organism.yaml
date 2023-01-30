@@ -1,0 +1,131 @@
+name: Donor_organism
+id: https://example.org/Donor-organism
+imports:
+- linkml:types
+- system/provenance
+- core/biomaterial/biomaterial_core
+- module/biomaterial/human_specific
+- module/biomaterial/mouse_specific
+- module/ontology/species_ontology
+- module/ontology/time_unit_ontology
+- module/ontology/development_stage_ontology
+- module/ontology/disease_ontology
+- module/biomaterial/death
+- module/biomaterial/familial_relationship
+- module/biomaterial/medical_history
+- module/ontology/length_unit_ontology
+- module/ontology/mass_unit_ontology
+- module/biomaterial/timecourse
+prefixes:
+  Donor_organism: https://example.org/Donor-organism
+  linkml: https://w3id.org/linkml/
+default_prefix: Donor_organism
+enums:
+  DonorOrganism_schema_type_options:
+    permissible_values:
+      biomaterial: {}
+  DonorOrganism_sex_options:
+    permissible_values:
+      female: {}
+      male: {}
+      mixed: {}
+      unknown: {}
+  DonorOrganism_is_living_options:
+    permissible_values:
+      'yes': {}
+      'no': {}
+      unknown: {}
+      not applicable: {}
+classes:
+  DonorOrganism:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: DonorOrganism_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      biomaterial_core:
+        description: Core biomaterial-level information.
+        title: Biomaterial core
+        range: BiomaterialCore
+        required: true
+      human_specific:
+        description: Fields specific to human (homo sapiens) organisms.
+        title: Human-specific
+        range: HumanSpecific
+      mouse_specific:
+        description: Fields specific to mouse (mus musculus) organisms.
+        title: Mouse-specific
+        range: MouseSpecific
+      genus_species:
+        multivalued: true
+        range: SpeciesOntology
+      sex:
+        description: The biological sex of the organism.
+        title: Biological sex
+        range: DonorOrganism_sex_options
+        required: true
+      is_living:
+        description: Whether organism was alive at time of biomaterial collection.
+        title: Alive at collection
+        range: DonorOrganism_is_living_options
+        required: true
+      organism_age:
+        description: Age of organism in Age units measured since birth.
+        title: Age
+      organism_age_unit:
+        description: The unit in which Age is expressed.
+        title: Age unit
+        range: TimeUnitOntology
+      development_stage:
+        description: A classification of the developmental stage of the organism.
+        title: Development stage
+        range: DevelopmentStageOntology
+        required: true
+      diseases:
+        multivalued: true
+        range: DiseaseOntology
+      death:
+        description: Information about conditions of death of the organism.
+        title: Death conditions
+        range: Death
+      familial_relationships:
+        multivalued: true
+        range: FamilialRelationship
+      medical_history:
+        description: Information about the medical history of the organism.
+        title: Medical history
+        range: MedicalHistory
+      gestational_age:
+        description: Gestational age of pregnancy in Gestational age units measured
+          from the last menstrual period.
+        title: Gestational age
+      gestational_age_unit:
+        description: The unit in which Gestational age is expressed.
+        title: Gestational age unit
+        range: TimeUnitOntology
+      height:
+        description: Height of organism in Height unit.
+        title: Height
+      height_unit:
+        description: The unit in which Height is expressed.
+        title: Height unit
+        range: LengthUnitOntology
+      weight:
+        description: Weight of organism in Weight unit.
+        title: Weight
+      weight_unit:
+        description: The unit in which Weight is expressed.
+        title: Weight unit
+        range: MassUnitOntology
+      timecourse:
+        description: Information relating to a timecourse associated with this biomaterial.
+        title: Timecourse
+        range: Timecourse

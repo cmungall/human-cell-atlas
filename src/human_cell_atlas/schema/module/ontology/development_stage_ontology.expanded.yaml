@@ -1,0 +1,2040 @@
+name: Development_stage_ontology
+id: https://example.org/Development-stage-ontology
+imports:
+- linkml:types
+prefixes:
+  Development_stage_ontology: https://example.org/Development-stage-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Development_stage_ontology
+enums:
+  DevelopmentStageOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:efo
+        source_nodes:
+        - EFO:0000399
+        - HsapDv:0000000
+        - UBERON:0000105
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:hcao
+        source_nodes:
+        - EFO:0000399
+        - HsapDv:0000000
+        - UBERON:0000105
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    permissible_values:
+      PO:0007089:
+        text: PO:0007089
+        description: stem elongation stage
+        meaning: PO:0007089
+      PO:0007080:
+        text: PO:0007080
+        description: 2.03 main shoot and axillary shoots visible at three nodes stage
+        meaning: PO:0007080
+      PO:0007081:
+        text: PO:0007081
+        description: early rosette growth stage
+        meaning: PO:0007081
+      PO:0007082:
+        text: PO:0007082
+        description: LP.20 twenty or more leaves whorls visible stage
+        meaning: PO:0007082
+      PO:0007083:
+        text: PO:0007083
+        description: LP.13 thirteen leaves visible stage
+        meaning: PO:0007083
+      PO:0007085:
+        text: PO:0007085
+        description: LP.14 fourteen leaves visible stage
+        meaning: PO:0007085
+      PO:0007094:
+        text: PO:0007094
+        description: LP.01 one leaf visible stage
+        meaning: PO:0007094
+      PO:0007095:
+        text: PO:0007095
+        description: LP.08 eight leaves visible stage
+        meaning: PO:0007095
+      PO:0007098:
+        text: PO:0007098
+        description: LP.02 two leaves visible stage
+        meaning: PO:0007098
+      FBdv:00005331:
+        text: FBdv:00005331
+        description: dorsal closure stage
+        meaning: FBdv:00005331
+      EFO:0005505:
+        text: EFO:0005505
+        description: enclosing embryo Ce
+        meaning: EFO:0005505
+      PO:0007047:
+        text: PO:0007047
+        description: 3 inflorescence detectable stage
+        meaning: PO:0007047
+      EFO:0005504:
+        text: EFO:0005504
+        description: fully-elongated embryo Ce
+        meaning: EFO:0005504
+      EFO:0005507:
+        text: EFO:0005507
+        description: dauer larva
+        meaning: EFO:0005507
+      PO:0007049:
+        text: PO:0007049
+        description: cotyledon emergence stage
+        meaning: PO:0007049
+      EFO:0005506:
+        text: EFO:0005506
+        description: elongating embryo Ce
+        meaning: EFO:0005506
+      EFO:0005509:
+        text: EFO:0005509
+        description: L4 larva
+        meaning: EFO:0005509
+      EFO:0005508:
+        text: EFO:0005508
+        description: L1 larva
+        meaning: EFO:0005508
+      PO:0007041:
+        text: PO:0007041
+        description: inflorescence emergence stage
+        meaning: PO:0007041
+      PO:0007042:
+        text: PO:0007042
+        description: whole plant fruit formation stage
+        meaning: PO:0007042
+      EFO:0005501:
+        text: EFO:0005501
+        description: proliferating embryo Ce
+        meaning: EFO:0005501
+      PO:0007043:
+        text: PO:0007043
+        description: hypocotyl emergence stage
+        meaning: PO:0007043
+      EFO:0005500:
+        text: EFO:0005500
+        description: 4-cell embryo Ce
+        meaning: EFO:0005500
+      EFO:0005503:
+        text: EFO:0005503
+        description: gastrulating embryo Ce
+        meaning: EFO:0005503
+      PO:0007045:
+        text: PO:0007045
+        description: coleoptile emergence stage
+        meaning: PO:0007045
+      EFO:0005502:
+        text: EFO:0005502
+        description: late cleavage stage embryo Ce
+        meaning: EFO:0005502
+      EFO:0005511:
+        text: EFO:0005511
+        description: post dauer stage
+        meaning: EFO:0005511
+      PO:0007053:
+        text: PO:0007053
+        description: FL.02 1/2 of flowers open stage
+        meaning: PO:0007053
+      EFO:0005510:
+        text: EFO:0005510
+        description: L2d-dauer molt
+        meaning: EFO:0005510
+      PO:0007057:
+        text: PO:0007057
+        description: 0 seed germination stage
+        meaning: PO:0007057
+      PO:0007063:
+        text: PO:0007063
+        description: LP.07 seven leaves visible stage
+        meaning: PO:0007063
+      PO:0007064:
+        text: PO:0007064
+        description: LP.12 twelve leaves visible stage
+        meaning: PO:0007064
+      PO:0007065:
+        text: PO:0007065
+        description: LP.05 five leaves visible stage
+        meaning: PO:0007065
+      PO:0007067:
+        text: PO:0007067
+        description: LP.17 seventeen leaves visible stage
+        meaning: PO:0007067
+      PO:0007068:
+        text: PO:0007068
+        description: mid rosette growth stage
+        meaning: PO:0007068
+      PO:0007076:
+        text: PO:0007076
+        description: late rosette growth stage
+        meaning: PO:0007076
+      PO:0007078:
+        text: PO:0007078
+        description: rosette growth complete stage
+        meaning: PO:0007078
+      PO:0007079:
+        text: PO:0007079
+        description: SE.00 stem elongation begins stage
+        meaning: PO:0007079
+      EFO:0005793:
+        text: EFO:0005793
+        description: FL.01 1/4 of flowers open stage
+        meaning: EFO:0005793
+      PO:0007072:
+        text: PO:0007072
+        description: LP.18 eighteen leaves visible stage
+        meaning: PO:0007072
+      PO:0007073:
+        text: PO:0007073
+        description: 2 formation of axillary shoot stage
+        meaning: PO:0007073
+      PO:0004506:
+        text: PO:0004506
+        description: developing seed stage
+        meaning: PO:0004506
+      PO:0004505:
+        text: PO:0004505
+        description: fertilized ovule stage
+        meaning: PO:0004505
+      PO:0001170:
+        text: PO:0001170
+        description: seed development stage
+        meaning: PO:0001170
+      PO:0007001:
+        text: PO:0007001
+        description: early whole plant fruit ripening stage
+        meaning: PO:0007001
+      UBERON:0000107:
+        text: UBERON:0000107
+        description: cleavage stage
+        meaning: UBERON:0000107
+      UBERON:0000109:
+        text: UBERON:0000109
+        description: gastrula stage
+        meaning: UBERON:0000109
+      UBERON:0000108:
+        text: UBERON:0000108
+        description: blastula stage
+        meaning: UBERON:0000108
+      PO:0007006:
+        text: PO:0007006
+        description: IL.00 inflorescence just visible stage
+        meaning: PO:0007006
+      PO:0007014:
+        text: PO:0007014
+        description: booting stage
+        meaning: PO:0007014
+      PO:0007015:
+        text: PO:0007015
+        description: radicle emergence
+        meaning: PO:0007015
+      PO:0007016:
+        text: PO:0007016
+        description: whole plant flowering stage
+        meaning: PO:0007016
+      PO:0007017:
+        text: PO:0007017
+        description: sporophyte senescent stage
+        meaning: PO:0007017
+      UBERON:0000112:
+        text: UBERON:0000112
+        description: sexually immature stage
+        meaning: UBERON:0000112
+      PO:0007010:
+        text: PO:0007010
+        description: whole plant fruit ripening stage
+        meaning: PO:0007010
+      PO:0007024:
+        text: PO:0007024
+        description: FL.04 end of flowering stage
+        meaning: PO:0007024
+      PO:0007026:
+        text: PO:0007026
+        description: FL.00 first flower(s) open stage
+        meaning: PO:0007026
+      PO:0007027:
+        text: PO:0007027
+        description: whole plant fruit formation stage 70% to final size
+        meaning: PO:0007027
+      PO:0007029:
+        text: PO:0007029
+        description: whole plant fruit formation stage 30 to 50%
+        meaning: PO:0007029
+      PO:0007022:
+        text: PO:0007022
+        description: seed imbibition stage
+        meaning: PO:0007022
+      PO:0007036:
+        text: PO:0007036
+        description: beginning of whole plant fruit ripening stage
+        meaning: PO:0007036
+      PO:0007038:
+        text: PO:0007038
+        description: whole plant fruit ripening complete stage
+        meaning: PO:0007038
+      EFO:0007712:
+        text: EFO:0007712
+        description: cercarium
+        meaning: EFO:0007712
+      EFO:0007713:
+        text: EFO:0007713
+        description: 3 hr schistosomulum
+        meaning: EFO:0007713
+      EFO:0007711:
+        text: EFO:0007711
+        description: Platyhelminthes life stage
+        meaning: EFO:0007711
+      PO:0007031:
+        text: PO:0007031
+        description: mid whole plant fruit ripening stage
+        meaning: PO:0007031
+      EFO:0007714:
+        text: EFO:0007714
+        description: 24 hr schistosomulum
+        meaning: EFO:0007714
+      EFO:0007715:
+        text: EFO:0007715
+        description: Platyhelminthes adult
+        meaning: EFO:0007715
+      EFO:0004390:
+        text: EFO:0004390
+        description: mouse postnatal
+        meaning: EFO:0004390
+      EFO:0004391:
+        text: EFO:0004391
+        description: Theiler stage 27
+        meaning: EFO:0004391
+      EFO:0004394:
+        text: EFO:0004394
+        description: Theiler stage 2
+        meaning: EFO:0004394
+      EFO:0004395:
+        text: EFO:0004395
+        description: Theiler stage 3
+        meaning: EFO:0004395
+      EFO:0004393:
+        text: EFO:0004393
+        description: Theiler stage 1
+        meaning: EFO:0004393
+      EFO:0004397:
+        text: EFO:0004397
+        description: Theiler stage 5
+        meaning: EFO:0004397
+      EFO:0004396:
+        text: EFO:0004396
+        description: Theiler stage 4
+        meaning: EFO:0004396
+      EFO:0007725:
+        text: EFO:0007725
+        description: embryo stage
+        meaning: EFO:0007725
+      EFO:0004399:
+        text: EFO:0004399
+        description: Theiler stage 7
+        meaning: EFO:0004399
+      EFO:0004398:
+        text: EFO:0004398
+        description: Theiler stage 6
+        meaning: EFO:0004398
+      UBERON:0000070:
+        text: UBERON:0000070
+        description: pupal stage
+        meaning: UBERON:0000070
+      UBERON:0000069:
+        text: UBERON:0000069
+        description: larval stage
+        meaning: UBERON:0000069
+      UBERON:0034919:
+        text: UBERON:0034919
+        description: juvenile stage
+        meaning: UBERON:0034919
+      EFO:0002682:
+        text: EFO:0002682
+        description: third instar larva stage
+        meaning: EFO:0002682
+      EFO:0002683:
+        text: EFO:0002683
+        description: floral transition
+        meaning: EFO:0002683
+      WBls:0000003:
+        text: WBls:0000003
+        description: embryo Ce
+        meaning: WBls:0000003
+      EFO:0008562:
+        text: EFO:0008562
+        description: postpartum
+        meaning: EFO:0008562
+      EFO:0001273:
+        text: EFO:0001273
+        description: blastula 128-cell
+        meaning: EFO:0001273
+      EFO:0001274:
+        text: EFO:0001274
+        description: blastula 1k-cell
+        meaning: EFO:0001274
+      EFO:0001276:
+        text: EFO:0001276
+        description: blastula 256-cell
+        meaning: EFO:0001276
+      EFO:0001277:
+        text: EFO:0001277
+        description: blastula 30%-epiboly
+        meaning: EFO:0001277
+      EFO:0001278:
+        text: EFO:0001278
+        description: blastula 512-cell
+        meaning: EFO:0001278
+      EFO:0001279:
+        text: EFO:0001279
+        description: blastula dome
+        meaning: EFO:0001279
+      EFO:0001272:
+        text: EFO:0001272
+        description: adult
+        meaning: EFO:0001272
+      PO:0009012:
+        text: PO:0009012
+        description: plant structure development stage
+        meaning: PO:0009012
+      EFO:0001285:
+        text: EFO:0001285
+        description: cleavage 2-cell
+        meaning: EFO:0001285
+      EFO:0001286:
+        text: EFO:0001286
+        description: cleavage 32-cell
+        meaning: EFO:0001286
+      EFO:0001287:
+        text: EFO:0001287
+        description: cleavage 4-cell
+        meaning: EFO:0001287
+      EFO:0001288:
+        text: EFO:0001288
+        description: cleavage 64-cell
+        meaning: EFO:0001288
+      EFO:0001289:
+        text: EFO:0001289
+        description: cleavage 8-cell
+        meaning: EFO:0001289
+      EFO:0001280:
+        text: EFO:0001280
+        description: blastula high
+        meaning: EFO:0001280
+      EFO:0001281:
+        text: EFO:0001281
+        description: blastula oblong
+        meaning: EFO:0001281
+      EFO:0001283:
+        text: EFO:0001283
+        description: blastula sphere
+        meaning: EFO:0001283
+      EFO:0001284:
+        text: EFO:0001284
+        description: cleavage 16-cell
+        meaning: EFO:0001284
+      EFO:0001297:
+        text: EFO:0001297
+        description: gastrula shield
+        meaning: EFO:0001297
+      EFO:0001298:
+        text: EFO:0001298
+        description: hatching stage
+        meaning: EFO:0001298
+      EFO:0001299:
+        text: EFO:0001299
+        description: hatching pec-fin
+        meaning: EFO:0001299
+      EFO:0001291:
+        text: EFO:0001291
+        description: gastrula 50%-epiboly
+        meaning: EFO:0001291
+      EFO:0001292:
+        text: EFO:0001292
+        description: gastrula 75%-epiboly
+        meaning: EFO:0001292
+      EFO:0001293:
+        text: EFO:0001293
+        description: gastrula 90%-epiboly
+        meaning: EFO:0001293
+      EFO:0001294:
+        text: EFO:0001294
+        description: gastrula bud
+        meaning: EFO:0001294
+      EFO:0001295:
+        text: EFO:0001295
+        description: gastrula germ-ring
+        meaning: EFO:0001295
+      EFO:0005858:
+        text: EFO:0005858
+        description: C. elegans embryo stage
+        meaning: EFO:0005858
+      EFO:0005857:
+        text: EFO:0005857
+        description: mouse embryo stage
+        meaning: EFO:0005857
+      EFO:0005859:
+        text: EFO:0005859
+        description: Drosophila embryo stage
+        meaning: EFO:0005859
+      EFO:0005868:
+        text: EFO:0005868
+        description: embryonic stage 8
+        meaning: EFO:0005868
+      EFO:0004404:
+        text: EFO:0004404
+        description: Theiler stage 13
+        meaning: EFO:0004404
+      EFO:0004403:
+        text: EFO:0004403
+        description: Theiler stage 12
+        meaning: EFO:0004403
+      EFO:0004406:
+        text: EFO:0004406
+        description: Theiler stage 15
+        meaning: EFO:0004406
+      EFO:0005869:
+        text: EFO:0005869
+        description: embryonic stage 9
+        meaning: EFO:0005869
+      EFO:0004405:
+        text: EFO:0004405
+        description: Theiler stage 14
+        meaning: EFO:0004405
+      EFO:0004408:
+        text: EFO:0004408
+        description: Theiler stage 18
+        meaning: EFO:0004408
+      EFO:0004407:
+        text: EFO:0004407
+        description: Theiler stage 16
+        meaning: EFO:0004407
+      EFO:0004409:
+        text: EFO:0004409
+        description: Theiler stage 19
+        meaning: EFO:0004409
+      EFO:0005860:
+        text: EFO:0005860
+        description: embryonic stage 1
+        meaning: EFO:0005860
+      EFO:0005862:
+        text: EFO:0005862
+        description: embryonic stage 3
+        meaning: EFO:0005862
+      EFO:0005861:
+        text: EFO:0005861
+        description: embryonic stage 2
+        meaning: EFO:0005861
+      EFO:0005864:
+        text: EFO:0005864
+        description: embryonic stage 5
+        meaning: EFO:0005864
+      EFO:0004400:
+        text: EFO:0004400
+        description: Theiler stage 8
+        meaning: EFO:0004400
+      EFO:0005863:
+        text: EFO:0005863
+        description: embryonic stage 4
+        meaning: EFO:0005863
+      EFO:0005866:
+        text: EFO:0005866
+        description: embryonic stage 7
+        meaning: EFO:0005866
+      EFO:0004402:
+        text: EFO:0004402
+        description: Theiler stage 10
+        meaning: EFO:0004402
+      EFO:0005865:
+        text: EFO:0005865
+        description: embryonic stage 6
+        meaning: EFO:0005865
+      EFO:0004401:
+        text: EFO:0004401
+        description: Theiler stage 9
+        meaning: EFO:0004401
+      EFO:0005872:
+        text: EFO:0005872
+        description: embryonic stage 12
+        meaning: EFO:0005872
+      EFO:0005871:
+        text: EFO:0005871
+        description: embryonic stage 11
+        meaning: EFO:0005871
+      EFO:0005874:
+        text: EFO:0005874
+        description: embryonic stage 14
+        meaning: EFO:0005874
+      EFO:0004410:
+        text: EFO:0004410
+        description: Theiler stage 20
+        meaning: EFO:0004410
+      EFO:0005873:
+        text: EFO:0005873
+        description: embryonic stage 13
+        meaning: EFO:0005873
+      EFO:0005876:
+        text: EFO:0005876
+        description: embryonic stage 16
+        meaning: EFO:0005876
+      EFO:0004412:
+        text: EFO:0004412
+        description: Theiler stage 25
+        meaning: EFO:0004412
+      EFO:0005875:
+        text: EFO:0005875
+        description: embryonic stage 15
+        meaning: EFO:0005875
+      EFO:0004411:
+        text: EFO:0004411
+        description: Theiler stage 23
+        meaning: EFO:0004411
+      EFO:0005877:
+        text: EFO:0005877
+        description: embryonic stage 17
+        meaning: EFO:0005877
+      EFO:0005870:
+        text: EFO:0005870
+        description: embryonic stage 10
+        meaning: EFO:0005870
+      PO:0001083:
+        text: PO:0001083
+        description: inflorescence development stage
+        meaning: PO:0001083
+      EFO:0005651:
+        text: EFO:0005651
+        description: drosophila developmental stage
+        meaning: EFO:0005651
+      PO:0007133:
+        text: PO:0007133
+        description: leaf production stage
+        meaning: PO:0007133
+      PO:0007134:
+        text: PO:0007134
+        description: sporophyte vegetative stage
+        meaning: PO:0007134
+      PO:0007131:
+        text: PO:0007131
+        description: seedling development stage
+        meaning: PO:0007131
+      EFO:0002948:
+        text: EFO:0002948
+        description: postnatal
+        meaning: EFO:0002948
+      PO:0007104:
+        text: PO:0007104
+        description: LP.15 fifteen leaves visible stage
+        meaning: PO:0007104
+      PO:0007106:
+        text: PO:0007106
+        description: LP.03 three leaves visible stage
+        meaning: PO:0007106
+      PO:0007109:
+        text: PO:0007109
+        description: SE.99 maximum stem length reached stage
+        meaning: PO:0007109
+      PO:0007101:
+        text: PO:0007101
+        description: LP.09 nine leaves visible
+        meaning: PO:0007101
+      PO:0007103:
+        text: PO:0007103
+        description: LP.10 ten leaves visible stage
+        meaning: PO:0007103
+      PO:0025475:
+        text: PO:0025475
+        description: coleorhiza emergence stage
+        meaning: PO:0025475
+      PO:0001002:
+        text: PO:0001002
+        description: fruit development stage
+        meaning: PO:0001002
+      PO:0007116:
+        text: PO:0007116
+        description: LP.11 eleven leaves visible stage
+        meaning: PO:0007116
+      PO:0007117:
+        text: PO:0007117
+        description: SE.02 two nodes or internodes visible stage
+        meaning: PO:0007117
+      PO:0007119:
+        text: PO:0007119
+        description: LP.16 sixteen leaves visible stage
+        meaning: PO:0007119
+      EFO:0002720:
+        text: EFO:0002720
+        description: L3 larva
+        meaning: EFO:0002720
+      EFO:0002721:
+        text: EFO:0002721
+        description: postmenopausal
+        meaning: EFO:0002721
+      PO:0007112:
+        text: PO:0007112
+        description: 1 main shoot growth stage
+        meaning: PO:0007112
+      PO:0007113:
+        text: PO:0007113
+        description: rosette growth stage
+        meaning: PO:0007113
+      PO:0007115:
+        text: PO:0007115
+        description: LP.04 four leaves visible stage
+        meaning: PO:0007115
+      EFO:0002718:
+        text: EFO:0002718
+        description: hatching long-pec
+        meaning: EFO:0002718
+      EFO:0002719:
+        text: EFO:0002719
+        description: L2 larva
+        meaning: EFO:0002719
+      EFO:0005498:
+        text: EFO:0005498
+        description: newly molted young adult hermaphrodite
+        meaning: EFO:0005498
+      CL:0000365:
+        text: CL:0000365
+        description: animal zygote
+        meaning: CL:0000365
+      PO:0007120:
+        text: PO:0007120
+        description: LP.19 nineteen leaves visible stage
+        meaning: PO:0007120
+      PO:0007123:
+        text: PO:0007123
+        description: LP.06 six leaves visible stage
+        meaning: PO:0007123
+      EFO:0007640:
+        text: EFO:0007640
+        description: embryonic day 12
+        meaning: EFO:0007640
+      UBERON:0007220:
+        text: UBERON:0007220
+        description: late embryonic stage
+        meaning: UBERON:0007220
+      EFO:0005499:
+        text: EFO:0005499
+        description: 3-fold embryo Ce
+        meaning: EFO:0005499
+      EFO:0007643:
+        text: EFO:0007643
+        description: embryonic day 10.5
+        meaning: EFO:0007643
+      EFO:0007644:
+        text: EFO:0007644
+        description: embryonic day 9
+        meaning: EFO:0007644
+      EFO:0007641:
+        text: EFO:0007641
+        description: embryonic day 9.5
+        meaning: EFO:0007641
+      EFO:0007642:
+        text: EFO:0007642
+        description: embryonic day 13
+        meaning: EFO:0007642
+      EFO:0001302:
+        text: EFO:0001302
+        description: juvenile days 45-89
+        meaning: EFO:0001302
+      EFO:0001304:
+        text: EFO:0001304
+        description: larval day 4
+        meaning: EFO:0001304
+      EFO:0001305:
+        text: EFO:0001305
+        description: larval day 5
+        meaning: EFO:0001305
+      EFO:0001306:
+        text: EFO:0001306
+        description: larval day 6
+        meaning: EFO:0001306
+      EFO:0001307:
+        text: EFO:0001307
+        description: larval day 14-20
+        meaning: EFO:0001307
+      EFO:0001308:
+        text: EFO:0001308
+        description: larval day 21-29
+        meaning: EFO:0001308
+      EFO:0001309:
+        text: EFO:0001309
+        description: larval day 7-13
+        meaning: EFO:0001309
+      EFO:0001301:
+        text: EFO:0001301
+        description: juvenile days 30-44
+        meaning: EFO:0001301
+      EFO:0001314:
+        text: EFO:0001314
+        description: pharyngula prim-5
+        meaning: EFO:0001314
+      EFO:0001315:
+        text: EFO:0001315
+        description: segmentation stage
+        meaning: EFO:0001315
+      EFO:0001316:
+        text: EFO:0001316
+        description: segmentation 1-4 somites
+        meaning: EFO:0001316
+      EFO:0001317:
+        text: EFO:0001317
+        description: segmentation 5-9 somites
+        meaning: EFO:0001317
+      EFO:0001318:
+        text: EFO:0001318
+        description: segmentation 10-13 somites
+        meaning: EFO:0001318
+      EFO:0001319:
+        text: EFO:0001319
+        description: segmentation 14-19 somites
+        meaning: EFO:0001319
+      EFO:0001311:
+        text: EFO:0001311
+        description: pharyngula high-pec
+        meaning: EFO:0001311
+      EFO:0001312:
+        text: EFO:0001312
+        description: pharyngula prim-15
+        meaning: EFO:0001312
+      EFO:0001313:
+        text: EFO:0001313
+        description: pharyngula prim-25
+        meaning: EFO:0001313
+      PO:0025585:
+        text: PO:0025585
+        description: floral organ formation stage
+        meaning: PO:0025585
+      EFO:0001320:
+        text: EFO:0001320
+        description: segmentation 20-25 somites
+        meaning: EFO:0001320
+      EFO:0001321:
+        text: EFO:0001321
+        description: segmentation 26+ somites
+        meaning: EFO:0001321
+      EFO:0001322:
+        text: EFO:0001322
+        description: fertilized egg stage
+        meaning: EFO:0001322
+      EFO:0007695:
+        text: EFO:0007695
+        description: Danio rerio larval stage
+        meaning: EFO:0007695
+      EFO:0007694:
+        text: EFO:0007694
+        description: Caenorhabditis elegans larval stage
+        meaning: EFO:0007694
+      EFO:0007696:
+        text: EFO:0007696
+        description: larval protruding mouth
+        meaning: EFO:0007696
+      EFO:0002543:
+        text: EFO:0002543
+        description: mouse prenatal
+        meaning: EFO:0002543
+      EFO:0002544:
+        text: EFO:0002544
+        description: plasmodium parasite stage
+        meaning: EFO:0002544
+      UBERON:0004707:
+        text: UBERON:0004707
+        description: pharyngula stage
+        meaning: UBERON:0004707
+      EFO:0001355:
+        text: EFO:0001355
+        description: infant
+        meaning: EFO:0001355
+      EFO:0002564:
+        text: EFO:0002564
+        description: embryonic day 13.5
+        meaning: EFO:0002564
+      EFO:0002565:
+        text: EFO:0002565
+        description: embryonic day 14.5
+        meaning: EFO:0002565
+      EFO:0002566:
+        text: EFO:0002566
+        description: embryonic day 15.5
+        meaning: EFO:0002566
+      EFO:0002567:
+        text: EFO:0002567
+        description: embryonic day 16.5
+        meaning: EFO:0002567
+      EFO:0002568:
+        text: EFO:0002568
+        description: embryonic day 17.5
+        meaning: EFO:0002568
+      EFO:0002569:
+        text: EFO:0002569
+        description: embryonic day 18
+        meaning: EFO:0002569
+      EFO:0002560:
+        text: EFO:0002560
+        description: gastrula 80%-epiboly
+        meaning: EFO:0002560
+      EFO:0002561:
+        text: EFO:0002561
+        description: embryonic day 8.25
+        meaning: EFO:0002561
+      EFO:0002562:
+        text: EFO:0002562
+        description: embryonic day 11.5
+        meaning: EFO:0002562
+      EFO:0002563:
+        text: EFO:0002563
+        description: embryonic day 12.5
+        meaning: EFO:0002563
+      PO:0007613:
+        text: PO:0007613
+        description: stamen primordium visible stage
+        meaning: PO:0007613
+      PO:0007611:
+        text: PO:0007611
+        description: petal differentiation and expansion stage
+        meaning: PO:0007611
+      PO:0007615:
+        text: PO:0007615
+        description: flower development stage
+        meaning: PO:0007615
+      PO:0007632:
+        text: PO:0007632
+        description: seed maturation stage
+        meaning: PO:0007632
+      PO:0007631:
+        text: PO:0007631
+        description: plant embryo development stage
+        meaning: PO:0007631
+      EFO:0002570:
+        text: EFO:0002570
+        description: embryonic day 18.5
+        meaning: EFO:0002570
+      EFO:0001372:
+        text: EFO:0001372
+        description: neonate
+        meaning: EFO:0001372
+      EFO:0002588:
+        text: EFO:0002588
+        description: Theiler stage 28
+        meaning: EFO:0002588
+      EFO:0002589:
+        text: EFO:0002589
+        description: hepatic schizont
+        meaning: EFO:0002589
+      EFO:0002582:
+        text: EFO:0002582
+        description: Theiler stage 11
+        meaning: EFO:0002582
+      EFO:0002583:
+        text: EFO:0002583
+        description: Theiler stage 17
+        meaning: EFO:0002583
+      EFO:0002584:
+        text: EFO:0002584
+        description: Theiler stage 21
+        meaning: EFO:0002584
+      EFO:0002585:
+        text: EFO:0002585
+        description: Theiler stage 22
+        meaning: EFO:0002585
+      EFO:0002586:
+        text: EFO:0002586
+        description: Theiler stage 24
+        meaning: EFO:0002586
+      EFO:0002587:
+        text: EFO:0002587
+        description: Theiler stage 26
+        meaning: EFO:0002587
+      PO:0025502:
+        text: PO:0025502
+        description: fruit ripening stage
+        meaning: PO:0025502
+      PO:0025501:
+        text: PO:0025501
+        description: fruit formation stage
+        meaning: PO:0025501
+      PO:0025506:
+        text: PO:0025506
+        description: fruit size 30 to 50% stage
+        meaning: PO:0025506
+      PO:0025504:
+        text: PO:0025504
+        description: fruit size up to 10% stage
+        meaning: PO:0025504
+      PO:0025508:
+        text: PO:0025508
+        description: fruit size 70% to final size stage
+        meaning: PO:0025508
+      PO:0025507:
+        text: PO:0025507
+        description: fruit size 50 to 70% stage
+        meaning: PO:0025507
+      PO:0028002:
+        text: PO:0028002
+        description: sporophyte development stage
+        meaning: PO:0028002
+      EFO:0002592:
+        text: EFO:0002592
+        description: trophozoite
+        meaning: EFO:0002592
+      EFO:0002591:
+        text: EFO:0002591
+        description: erythrocytic schizont
+        meaning: EFO:0002591
+      EFO:0002590:
+        text: EFO:0002590
+        description: ring stage trophozoite
+        meaning: EFO:0002590
+      PO:0007607:
+        text: PO:0007607
+        description: sepal primordium visible stage
+        meaning: PO:0007607
+      PO:0007606:
+        text: PO:0007606
+        description: gynoecium development stage
+        meaning: PO:0007606
+      PO:0007600:
+        text: PO:0007600
+        description: floral organ differentiation stage
+        meaning: PO:0007600
+      PO:0007603:
+        text: PO:0007603
+        description: calyx development stage
+        meaning: PO:0007603
+      PO:0007601:
+        text: PO:0007601
+        description: floral organ meristem development stage
+        meaning: PO:0007601
+      PO:0007605:
+        text: PO:0007605
+        description: androecium development stage
+        meaning: PO:0007605
+      PO:0007604:
+        text: PO:0007604
+        description: corolla development stage
+        meaning: PO:0007604
+      HsapDv:0000125:
+        text: HsapDv:0000125
+        description: 31-year-old human stage
+        meaning: HsapDv:0000125
+      HsapDv:0000016:
+        text: HsapDv:0000016
+        description: Carnegie stage 09
+        meaning: HsapDv:0000016
+      HsapDv:0000081:
+        text: HsapDv:0000081
+        description: child stage
+        meaning: HsapDv:0000081
+      HsapDv:0000115:
+        text: HsapDv:0000115
+        description: 21-year-old human stage
+        meaning: HsapDv:0000115
+      HsapDv:0000132:
+        text: HsapDv:0000132
+        description: 38-year-old human stage
+        meaning: HsapDv:0000132
+      HsapDv:0000138:
+        text: HsapDv:0000138
+        description: 44-year-old human stage
+        meaning: HsapDv:0000138
+      HsapDv:0000194:
+        text: HsapDv:0000194
+        description: 21-month-old human stage
+        meaning: HsapDv:0000194
+      HsapDv:0000120:
+        text: HsapDv:0000120
+        description: 26-year-old human stage
+        meaning: HsapDv:0000120
+      HsapDv:0000140:
+        text: HsapDv:0000140
+        description: 46-year-old human stage
+        meaning: HsapDv:0000140
+      HsapDv:0000177:
+        text: HsapDv:0000177
+        description: 4-month-old human stage
+        meaning: HsapDv:0000177
+      HsapDv:0000229:
+        text: HsapDv:0000229
+        description: 101-year-old human stage
+        meaning: HsapDv:0000229
+      HsapDv:0000027:
+        text: HsapDv:0000027
+        description: Carnegie stage 20
+        meaning: HsapDv:0000027
+      HsapDv:0000074:
+        text: HsapDv:0000074
+        description: 37th week post-fertilization human stage
+        meaning: HsapDv:0000074
+      HsapDv:0000104:
+        text: HsapDv:0000104
+        description: 10-year-old human stage
+        meaning: HsapDv:0000104
+      HsapDv:0000023:
+        text: HsapDv:0000023
+        description: Carnegie stage 16
+        meaning: HsapDv:0000023
+      HsapDv:0000252:
+        text: HsapDv:0000252
+        description: 111-year-old human stage
+        meaning: HsapDv:0000252
+      HsapDv:0000061:
+        text: HsapDv:0000061
+        description: 24th week post-fertilization human stage
+        meaning: HsapDv:0000061
+      HsapDv:0000181:
+        text: HsapDv:0000181
+        description: 8-month-old human stage
+        meaning: HsapDv:0000181
+      HsapDv:0000155:
+        text: HsapDv:0000155
+        description: 61-year-old human stage
+        meaning: HsapDv:0000155
+      HsapDv:0000189:
+        text: HsapDv:0000189
+        description: 16-month-old human stage
+        meaning: HsapDv:0000189
+      HsapDv:0000045:
+        text: HsapDv:0000045
+        description: prenatal stage
+        meaning: HsapDv:0000045
+      HsapDv:0000152:
+        text: HsapDv:0000152
+        description: 58-year-old human stage
+        meaning: HsapDv:0000152
+      HsapDv:0000075:
+        text: HsapDv:0000075
+        description: 38th week post-fertilization and over human stage
+        meaning: HsapDv:0000075
+      HsapDv:0000110:
+        text: HsapDv:0000110
+        description: 16-year-old human stage
+        meaning: HsapDv:0000110
+      HsapDv:0000205:
+        text: HsapDv:0000205
+        description: morula stage
+        meaning: HsapDv:0000205
+      HsapDv:0000238:
+        text: HsapDv:0000238
+        description: fourth decade human stage
+        meaning: HsapDv:0000238
+      HsapDv:0000093:
+        text: HsapDv:0000093
+        description: human aged stage
+        meaning: HsapDv:0000093
+      HsapDv:0000013:
+        text: HsapDv:0000013
+        description: Carnegie stage 07
+        meaning: HsapDv:0000013
+      HsapDv:0000214:
+        text: HsapDv:0000214
+        description: 88-year-old human stage
+        meaning: HsapDv:0000214
+      HsapDv:0000109:
+        text: HsapDv:0000109
+        description: 15-year-old human stage
+        meaning: HsapDv:0000109
+      HsapDv:0000019:
+        text: HsapDv:0000019
+        description: Carnegie stage 12
+        meaning: HsapDv:0000019
+      HsapDv:0000249:
+        text: HsapDv:0000249
+        description: 108-year-old human stage
+        meaning: HsapDv:0000249
+      HsapDv:0000034:
+        text: HsapDv:0000034
+        description: Carnegie stage 06a
+        meaning: HsapDv:0000034
+      HsapDv:0000225:
+        text: HsapDv:0000225
+        description: 99-year-old human stage
+        meaning: HsapDv:0000225
+      HsapDv:0000092:
+        text: HsapDv:0000092
+        description: human middle aged stage
+        meaning: HsapDv:0000092
+      HsapDv:0000122:
+        text: HsapDv:0000122
+        description: 28-year-old human stage
+        meaning: HsapDv:0000122
+      HsapDv:0000117:
+        text: HsapDv:0000117
+        description: 23-year-old human stage
+        meaning: HsapDv:0000117
+      HsapDv:0000060:
+        text: HsapDv:0000060
+        description: 23rd week post-fertilization human stage
+        meaning: HsapDv:0000060
+      HsapDv:0000211:
+        text: HsapDv:0000211
+        description: 85-year-old human stage
+        meaning: HsapDv:0000211
+      HsapDv:0000215:
+        text: HsapDv:0000215
+        description: 89-year-old human stage
+        meaning: HsapDv:0000215
+      HsapDv:0000184:
+        text: HsapDv:0000184
+        description: 11-month-old human stage
+        meaning: HsapDv:0000184
+      HsapDv:0000141:
+        text: HsapDv:0000141
+        description: 47-year-old human stage
+        meaning: HsapDv:0000141
+      HsapDv:0000086:
+        text: HsapDv:0000086
+        description: adolescent stage
+        meaning: HsapDv:0000086
+      HsapDv:0000159:
+        text: HsapDv:0000159
+        description: 65-year-old human stage
+        meaning: HsapDv:0000159
+      HsapDv:0000244:
+        text: HsapDv:0000244
+        description: tenth decade human stage
+        meaning: HsapDv:0000244
+      HsapDv:0000149:
+        text: HsapDv:0000149
+        description: 55-year-old human stage
+        meaning: HsapDv:0000149
+      HsapDv:0000134:
+        text: HsapDv:0000134
+        description: 40-year-old human stage
+        meaning: HsapDv:0000134
+      HsapDv:0000002:
+        text: HsapDv:0000002
+        description: embryonic human stage
+        meaning: HsapDv:0000002
+      HsapDv:0000057:
+        text: HsapDv:0000057
+        description: 20th week post-fertilization human stage
+        meaning: HsapDv:0000057
+      HsapDv:0000101:
+        text: HsapDv:0000101
+        description: 7-year-old human stage
+        meaning: HsapDv:0000101
+      HsapDv:0000170:
+        text: HsapDv:0000170
+        description: 76-year-old human stage
+        meaning: HsapDv:0000170
+      HsapDv:0000007:
+        text: HsapDv:0000007
+        description: Carnegie stage 03
+        meaning: HsapDv:0000007
+      HsapDv:0000106:
+        text: HsapDv:0000106
+        description: 12-year-old human stage
+        meaning: HsapDv:0000106
+      HsapDv:0000046:
+        text: HsapDv:0000046
+        description: 9th week post-fertilization human stage
+        meaning: HsapDv:0000046
+      HsapDv:0000255:
+        text: HsapDv:0000255
+        description: 114-year-old human stage
+        meaning: HsapDv:0000255
+      HsapDv:0000178:
+        text: HsapDv:0000178
+        description: 5-month-old human stage
+        meaning: HsapDv:0000178
+      HsapDv:0000118:
+        text: HsapDv:0000118
+        description: 24-year-old human stage
+        meaning: HsapDv:0000118
+      HsapDv:0000148:
+        text: HsapDv:0000148
+        description: 54-year-old human stage
+        meaning: HsapDv:0000148
+      HsapDv:0000163:
+        text: HsapDv:0000163
+        description: 69-year-old human stage
+        meaning: HsapDv:0000163
+      HsapDv:0000001:
+        text: HsapDv:0000001
+        description: human life cycle
+        meaning: HsapDv:0000001
+      HsapDv:0000031:
+        text: HsapDv:0000031
+        description: Carnegie stage 05a
+        meaning: HsapDv:0000031
+      HsapDv:0000051:
+        text: HsapDv:0000051
+        description: 14th week post-fertilization human stage
+        meaning: HsapDv:0000051
+      HsapDv:0000103:
+        text: HsapDv:0000103
+        description: 9-year-old human stage
+        meaning: HsapDv:0000103
+      HsapDv:0000240:
+        text: HsapDv:0000240
+        description: sixth decade human stage
+        meaning: HsapDv:0000240
+      HsapDv:0000055:
+        text: HsapDv:0000055
+        description: 18th week post-fertilization human stage
+        meaning: HsapDv:0000055
+      HsapDv:0000028:
+        text: HsapDv:0000028
+        description: Carnegie stage 21
+        meaning: HsapDv:0000028
+      HsapDv:0000235:
+        text: HsapDv:0000235
+        description: first decade human stage
+        meaning: HsapDv:0000235
+      HsapDv:0000112:
+        text: HsapDv:0000112
+        description: 18-year-old human stage
+        meaning: HsapDv:0000112
+      HsapDv:0000014:
+        text: HsapDv:0000014
+        description: Carnegie stage 08
+        meaning: HsapDv:0000014
+      HsapDv:0000083:
+        text: HsapDv:0000083
+        description: infant stage
+        meaning: HsapDv:0000083
+      HsapDv:0000251:
+        text: HsapDv:0000251
+        description: 110-year-old human stage
+        meaning: HsapDv:0000251
+      HsapDv:0000188:
+        text: HsapDv:0000188
+        description: 15-month-old human stage
+        meaning: HsapDv:0000188
+      HsapDv:0000088:
+        text: HsapDv:0000088
+        description: human early adulthood stage
+        meaning: HsapDv:0000088
+      HsapDv:0000137:
+        text: HsapDv:0000137
+        description: 43-year-old human stage
+        meaning: HsapDv:0000137
+      HsapDv:0000058:
+        text: HsapDv:0000058
+        description: 21st week post-fertilization human stage
+        meaning: HsapDv:0000058
+      HsapDv:0000008:
+        text: HsapDv:0000008
+        description: Carnegie stage 04
+        meaning: HsapDv:0000008
+      HsapDv:0000217:
+        text: HsapDv:0000217
+        description: 91-year-old human stage
+        meaning: HsapDv:0000217
+      HsapDv:0000129:
+        text: HsapDv:0000129
+        description: 35-year-old human stage
+        meaning: HsapDv:0000129
+      HsapDv:0000021:
+        text: HsapDv:0000021
+        description: Carnegie stage 14
+        meaning: HsapDv:0000021
+      HsapDv:0000150:
+        text: HsapDv:0000150
+        description: 56-year-old human stage
+        meaning: HsapDv:0000150
+      HsapDv:0000111:
+        text: HsapDv:0000111
+        description: 17-year-old human stage
+        meaning: HsapDv:0000111
+      HsapDv:0000237:
+        text: HsapDv:0000237
+        description: third decade human stage
+        meaning: HsapDv:0000237
+      HsapDv:0000254:
+        text: HsapDv:0000254
+        description: 113-year-old human stage
+        meaning: HsapDv:0000254
+      HsapDv:0000095:
+        text: HsapDv:0000095
+        description: 80 year-old and over human stage
+        meaning: HsapDv:0000095
+      HsapDv:0000094:
+        text: HsapDv:0000094
+        description: 65-79 year-old human stage
+        meaning: HsapDv:0000094
+      HsapDv:0000153:
+        text: HsapDv:0000153
+        description: 59-year-old human stage
+        meaning: HsapDv:0000153
+      HsapDv:0000100:
+        text: HsapDv:0000100
+        description: 6-year-old human stage
+        meaning: HsapDv:0000100
+      HsapDv:0000220:
+        text: HsapDv:0000220
+        description: 94-year-old human stage
+        meaning: HsapDv:0000220
+      HsapDv:0000037:
+        text: HsapDv:0000037
+        description: fetal stage
+        meaning: HsapDv:0000037
+      HsapDv:0000224:
+        text: HsapDv:0000224
+        description: 98-year-old human stage
+        meaning: HsapDv:0000224
+      HsapDv:0000246:
+        text: HsapDv:0000246
+        description: 1-year-old human stage
+        meaning: HsapDv:0000246
+      HsapDv:0000206:
+        text: HsapDv:0000206
+        description: 80-year-old human stage
+        meaning: HsapDv:0000206
+      HsapDv:0000161:
+        text: HsapDv:0000161
+        description: 67-year-old human stage
+        meaning: HsapDv:0000161
+      HsapDv:0000020:
+        text: HsapDv:0000020
+        description: Carnegie stage 13
+        meaning: HsapDv:0000020
+      HsapDv:0000169:
+        text: HsapDv:0000169
+        description: 75-year-old human stage
+        meaning: HsapDv:0000169
+      HsapDv:0000212:
+        text: HsapDv:0000212
+        description: 86-year-old human stage
+        meaning: HsapDv:0000212
+      HsapDv:0000069:
+        text: HsapDv:0000069
+        description: 32nd week post-fertilization human stage
+        meaning: HsapDv:0000069
+      HsapDv:0000080:
+        text: HsapDv:0000080
+        description: immature stage
+        meaning: HsapDv:0000080
+      HsapDv:0000032:
+        text: HsapDv:0000032
+        description: Carnegie stage 05b
+        meaning: HsapDv:0000032
+      HsapDv:0000176:
+        text: HsapDv:0000176
+        description: 3-month-old human stage
+        meaning: HsapDv:0000176
+      HsapDv:0000026:
+        text: HsapDv:0000026
+        description: Carnegie stage 19
+        meaning: HsapDv:0000026
+      HsapDv:0000164:
+        text: HsapDv:0000164
+        description: 70-year-old human stage
+        meaning: HsapDv:0000164
+      HsapDv:0000182:
+        text: HsapDv:0000182
+        description: 9-month-old human stage
+        meaning: HsapDv:0000182
+      HsapDv:0000190:
+        text: HsapDv:0000190
+        description: 17-month-old human stage
+        meaning: HsapDv:0000190
+      HsapDv:0000162:
+        text: HsapDv:0000162
+        description: 68-year-old human stage
+        meaning: HsapDv:0000162
+      HsapDv:0000208:
+        text: HsapDv:0000208
+        description: 82-year-old human stage
+        meaning: HsapDv:0000208
+      HsapDv:0000187:
+        text: HsapDv:0000187
+        description: 14-month-old human stage
+        meaning: HsapDv:0000187
+      HsapDv:0000216:
+        text: HsapDv:0000216
+        description: 90-year-old human stage
+        meaning: HsapDv:0000216
+      HsapDv:0000136:
+        text: HsapDv:0000136
+        description: 42-year-old human stage
+        meaning: HsapDv:0000136
+      HsapDv:0000116:
+        text: HsapDv:0000116
+        description: 22-year-old human stage
+        meaning: HsapDv:0000116
+      HsapDv:0000223:
+        text: HsapDv:0000223
+        description: 97-year-old human stage
+        meaning: HsapDv:0000223
+      HsapDv:0000126:
+        text: HsapDv:0000126
+        description: 32-year-old human stage
+        meaning: HsapDv:0000126
+      HsapDv:0000245:
+        text: HsapDv:0000245
+        description: eleventh decade human stage
+        meaning: HsapDv:0000245
+      HsapDv:0000147:
+        text: HsapDv:0000147
+        description: 53-year-old human stage
+        meaning: HsapDv:0000147
+      HsapDv:0000113:
+        text: HsapDv:0000113
+        description: 19-year-old human stage
+        meaning: HsapDv:0000113
+      HsapDv:0000234:
+        text: HsapDv:0000234
+        description: 106-year-old human stage
+        meaning: HsapDv:0000234
+      HsapDv:0000124:
+        text: HsapDv:0000124
+        description: 30-year-old human stage
+        meaning: HsapDv:0000124
+      HsapDv:0000135:
+        text: HsapDv:0000135
+        description: 41-year-old human stage
+        meaning: HsapDv:0000135
+      HsapDv:0000207:
+        text: HsapDv:0000207
+        description: 81-year-old human stage
+        meaning: HsapDv:0000207
+      HsapDv:0000228:
+        text: HsapDv:0000228
+        description: 100-year-old human stage
+        meaning: HsapDv:0000228
+      HsapDv:0000175:
+        text: HsapDv:0000175
+        description: 2-month-old human stage
+        meaning: HsapDv:0000175
+      HsapDv:0000127:
+        text: HsapDv:0000127
+        description: 33-year-old human stage
+        meaning: HsapDv:0000127
+      HsapDv:0000070:
+        text: HsapDv:0000070
+        description: 33rd week post-fertilization human stage
+        meaning: HsapDv:0000070
+      HsapDv:0000247:
+        text: HsapDv:0000247
+        description: centenarian human stage
+        meaning: HsapDv:0000247
+      HsapDv:0000250:
+        text: HsapDv:0000250
+        description: 109-year-old human stage
+        meaning: HsapDv:0000250
+      HsapDv:0000256:
+        text: HsapDv:0000256
+        description: under-1-year-old human stage
+        meaning: HsapDv:0000256
+      HsapDv:0000062:
+        text: HsapDv:0000062
+        description: 25th week post-fertilization human stage
+        meaning: HsapDv:0000062
+      HsapDv:0000202:
+        text: HsapDv:0000202
+        description: eighth LMP month human stage
+        meaning: HsapDv:0000202
+      HsapDv:0000085:
+        text: HsapDv:0000085
+        description: 6-12 year-old child stage
+        meaning: HsapDv:0000085
+      HsapDv:0000017:
+        text: HsapDv:0000017
+        description: Carnegie stage 10
+        meaning: HsapDv:0000017
+      HsapDv:0000218:
+        text: HsapDv:0000218
+        description: 92-year-old human stage
+        meaning: HsapDv:0000218
+      HsapDv:0000035:
+        text: HsapDv:0000035
+        description: Carnegie stage 06b
+        meaning: HsapDv:0000035
+      HsapDv:0000096:
+        text: HsapDv:0000096
+        description: 2-year-old human stage
+        meaning: HsapDv:0000096
+      HsapDv:0000130:
+        text: HsapDv:0000130
+        description: 36-year-old human stage
+        meaning: HsapDv:0000130
+      HsapDv:0000241:
+        text: HsapDv:0000241
+        description: seventh decade human stage
+        meaning: HsapDv:0000241
+      HsapDv:0000053:
+        text: HsapDv:0000053
+        description: 16th week post-fertilization human stage
+        meaning: HsapDv:0000053
+      HsapDv:0000185:
+        text: HsapDv:0000185
+        description: 12-month-old human stage
+        meaning: HsapDv:0000185
+      HsapDv:0000024:
+        text: HsapDv:0000024
+        description: Carnegie stage 17
+        meaning: HsapDv:0000024
+      HsapDv:0000121:
+        text: HsapDv:0000121
+        description: 27-year-old human stage
+        meaning: HsapDv:0000121
+      HsapDv:0000090:
+        text: HsapDv:0000090
+        description: 25-44 year-old human stage
+        meaning: HsapDv:0000090
+      HsapDv:0000231:
+        text: HsapDv:0000231
+        description: 103-year-old human stage
+        meaning: HsapDv:0000231
+      HsapDv:0000012:
+        text: HsapDv:0000012
+        description: neurula stage
+        meaning: HsapDv:0000012
+      HsapDv:0000151:
+        text: HsapDv:0000151
+        description: 57-year-old human stage
+        meaning: HsapDv:0000151
+      HsapDv:0000068:
+        text: HsapDv:0000068
+        description: 31st week post-fertilization human stage
+        meaning: HsapDv:0000068
+      HsapDv:0000082:
+        text: HsapDv:0000082
+        description: newborn human stage
+        meaning: HsapDv:0000082
+      HsapDv:0000203:
+        text: HsapDv:0000203
+        description: ninth LMP month human stage
+        meaning: HsapDv:0000203
+      HsapDv:0000253:
+        text: HsapDv:0000253
+        description: 112-year-old human stage
+        meaning: HsapDv:0000253
+      HsapDv:0000156:
+        text: HsapDv:0000156
+        description: 62-year-old human stage
+        meaning: HsapDv:0000156
+      HsapDv:0000236:
+        text: HsapDv:0000236
+        description: second decade human stage
+        meaning: HsapDv:0000236
+      HsapDv:0000210:
+        text: HsapDv:0000210
+        description: 84-year-old human stage
+        meaning: HsapDv:0000210
+      HsapDv:0000144:
+        text: HsapDv:0000144
+        description: 50-year-old human stage
+        meaning: HsapDv:0000144
+      HsapDv:0000221:
+        text: HsapDv:0000221
+        description: 95-year-old human stage
+        meaning: HsapDv:0000221
+      HsapDv:0000071:
+        text: HsapDv:0000071
+        description: 34th week post-fertilization human stage
+        meaning: HsapDv:0000071
+      HsapDv:0000197:
+        text: HsapDv:0000197
+        description: third LMP month human stage
+        meaning: HsapDv:0000197
+      HsapDv:0000049:
+        text: HsapDv:0000049
+        description: 12th week post-fertilization human stage
+        meaning: HsapDv:0000049
+      HsapDv:0000173:
+        text: HsapDv:0000173
+        description: 79-year-old human stage
+        meaning: HsapDv:0000173
+      HsapDv:0000030:
+        text: HsapDv:0000030
+        description: Carnegie stage 23
+        meaning: HsapDv:0000030
+      HsapDv:0000174:
+        text: HsapDv:0000174
+        description: 1-month-old human stage
+        meaning: HsapDv:0000174
+      HsapDv:0000018:
+        text: HsapDv:0000018
+        description: Carnegie stage 11
+        meaning: HsapDv:0000018
+      HsapDv:0000199:
+        text: HsapDv:0000199
+        description: fifth LMP month human stage
+        meaning: HsapDv:0000199
+      HsapDv:0000056:
+        text: HsapDv:0000056
+        description: 19th week post-fertilization human stage
+        meaning: HsapDv:0000056
+      HsapDv:0000107:
+        text: HsapDv:0000107
+        description: 13-year-old human stage
+        meaning: HsapDv:0000107
+      HsapDv:0000239:
+        text: HsapDv:0000239
+        description: fifth decade human stage
+        meaning: HsapDv:0000239
+      HsapDv:0000123:
+        text: HsapDv:0000123
+        description: 29-year-old human stage
+        meaning: HsapDv:0000123
+      HsapDv:0000201:
+        text: HsapDv:0000201
+        description: seventh LMP month human stage
+        meaning: HsapDv:0000201
+      HsapDv:0000191:
+        text: HsapDv:0000191
+        description: 18-month-old human stage
+        meaning: HsapDv:0000191
+      HsapDv:0000222:
+        text: HsapDv:0000222
+        description: 96-year-old human stage
+        meaning: HsapDv:0000222
+      HsapDv:0000209:
+        text: HsapDv:0000209
+        description: 83-year-old human stage
+        meaning: HsapDv:0000209
+      HsapDv:0000233:
+        text: HsapDv:0000233
+        description: 105-year-old human stage
+        meaning: HsapDv:0000233
+      HsapDv:0000067:
+        text: HsapDv:0000067
+        description: 30th week post-fertilization human stage
+        meaning: HsapDv:0000067
+      HsapDv:0000097:
+        text: HsapDv:0000097
+        description: 3-year-old human stage
+        meaning: HsapDv:0000097
+      HsapDv:0000050:
+        text: HsapDv:0000050
+        description: 13th week post-fertilization human stage
+        meaning: HsapDv:0000050
+      HsapDv:0000167:
+        text: HsapDv:0000167
+        description: 73-year-old human stage
+        meaning: HsapDv:0000167
+      HsapDv:0000022:
+        text: HsapDv:0000022
+        description: Carnegie stage 15
+        meaning: HsapDv:0000022
+      HsapDv:0000145:
+        text: HsapDv:0000145
+        description: 51-year-old human stage
+        meaning: HsapDv:0000145
+      HsapDv:0000195:
+        text: HsapDv:0000195
+        description: 22-month-old human stage
+        meaning: HsapDv:0000195
+      HsapDv:0000059:
+        text: HsapDv:0000059
+        description: 22nd week post-fertilization human stage
+        meaning: HsapDv:0000059
+      HsapDv:0000066:
+        text: HsapDv:0000066
+        description: 29th week post-fertilization human stage
+        meaning: HsapDv:0000066
+      HsapDv:0000193:
+        text: HsapDv:0000193
+        description: 20-month-old human stage
+        meaning: HsapDv:0000193
+      HsapDv:0000165:
+        text: HsapDv:0000165
+        description: 71-year-old human stage
+        meaning: HsapDv:0000165
+      HsapDv:0000143:
+        text: HsapDv:0000143
+        description: 49-year-old human stage
+        meaning: HsapDv:0000143
+      HsapDv:0000102:
+        text: HsapDv:0000102
+        description: 8-year-old human stage
+        meaning: HsapDv:0000102
+      HsapDv:0000064:
+        text: HsapDv:0000064
+        description: 27th week post-fertilization human stage
+        meaning: HsapDv:0000064
+      HsapDv:0000131:
+        text: HsapDv:0000131
+        description: 37-year-old human stage
+        meaning: HsapDv:0000131
+      HsapDv:0000011:
+        text: HsapDv:0000011
+        description: Carnegie stage 06
+        meaning: HsapDv:0000011
+      HsapDv:0000128:
+        text: HsapDv:0000128
+        description: 34-year-old human stage
+        meaning: HsapDv:0000128
+      HsapDv:0000139:
+        text: HsapDv:0000139
+        description: 45-year-old human stage
+        meaning: HsapDv:0000139
+      HsapDv:0000073:
+        text: HsapDv:0000073
+        description: 36th week post-fertilization human stage
+        meaning: HsapDv:0000073
+      HsapDv:0000048:
+        text: HsapDv:0000048
+        description: 11th week post-fertilization human stage
+        meaning: HsapDv:0000048
+      HsapDv:0000084:
+        text: HsapDv:0000084
+        description: 2-5 year-old child stage
+        meaning: HsapDv:0000084
+      HsapDv:0000114:
+        text: HsapDv:0000114
+        description: 20-year-old human stage
+        meaning: HsapDv:0000114
+      HsapDv:0000029:
+        text: HsapDv:0000029
+        description: Carnegie stage 22
+        meaning: HsapDv:0000029
+      HsapDv:0000154:
+        text: HsapDv:0000154
+        description: 60-year-old human stage
+        meaning: HsapDv:0000154
+      HsapDv:0000232:
+        text: HsapDv:0000232
+        description: 104-year-old human stage
+        meaning: HsapDv:0000232
+      HsapDv:0000072:
+        text: HsapDv:0000072
+        description: 35th week post-fertilization human stage
+        meaning: HsapDv:0000072
+      HsapDv:0000204:
+        text: HsapDv:0000204
+        description: mature stage
+        meaning: HsapDv:0000204
+      HsapDv:0000219:
+        text: HsapDv:0000219
+        description: 93-year-old human stage
+        meaning: HsapDv:0000219
+      HsapDv:0000166:
+        text: HsapDv:0000166
+        description: 72-year-old human stage
+        meaning: HsapDv:0000166
+      HsapDv:0000033:
+        text: HsapDv:0000033
+        description: Carnegie stage 05c
+        meaning: HsapDv:0000033
+      HsapDv:0000010:
+        text: HsapDv:0000010
+        description: gastrula stage
+        meaning: HsapDv:0000010
+      HsapDv:0000133:
+        text: HsapDv:0000133
+        description: 39-year-old human stage
+        meaning: HsapDv:0000133
+      HsapDv:0000157:
+        text: HsapDv:0000157
+        description: 63-year-old human stage
+        meaning: HsapDv:0000157
+      HsapDv:0000243:
+        text: HsapDv:0000243
+        description: ninth decade human stage
+        meaning: HsapDv:0000243
+      HsapDv:0000025:
+        text: HsapDv:0000025
+        description: Carnegie stage 18
+        meaning: HsapDv:0000025
+      HsapDv:0000248:
+        text: HsapDv:0000248
+        description: 107-year-old human stage
+        meaning: HsapDv:0000248
+      HsapDv:0000089:
+        text: HsapDv:0000089
+        description: young adult stage
+        meaning: HsapDv:0000089
+      HsapDv:0000192:
+        text: HsapDv:0000192
+        description: 19-month-old human stage
+        meaning: HsapDv:0000192
+      HsapDv:0000065:
+        text: HsapDv:0000065
+        description: 28th week post-fertilization human stage
+        meaning: HsapDv:0000065
+      HsapDv:0000213:
+        text: HsapDv:0000213
+        description: 87-year-old human stage
+        meaning: HsapDv:0000213
+      HsapDv:0000105:
+        text: HsapDv:0000105
+        description: 11-year-old human stage
+        meaning: HsapDv:0000105
+      HsapDv:0000004:
+        text: HsapDv:0000004
+        description: cleavage stage
+        meaning: HsapDv:0000004
+      HsapDv:0000183:
+        text: HsapDv:0000183
+        description: 10-month-old human stage
+        meaning: HsapDv:0000183
+      HsapDv:0000099:
+        text: HsapDv:0000099
+        description: 5-year-old human stage
+        meaning: HsapDv:0000099
+      HsapDv:0000186:
+        text: HsapDv:0000186
+        description: 13-month-old human stage
+        meaning: HsapDv:0000186
+      HsapDv:0000200:
+        text: HsapDv:0000200
+        description: sixth LMP month human stage
+        meaning: HsapDv:0000200
+      HsapDv:0000180:
+        text: HsapDv:0000180
+        description: 7-month-old human stage
+        meaning: HsapDv:0000180
+      HsapDv:0000047:
+        text: HsapDv:0000047
+        description: 10th week post-fertilization human stage
+        meaning: HsapDv:0000047
+      HsapDv:0000172:
+        text: HsapDv:0000172
+        description: 78-year-old human stage
+        meaning: HsapDv:0000172
+      HsapDv:0000119:
+        text: HsapDv:0000119
+        description: 25-year-old human stage
+        meaning: HsapDv:0000119
+      HsapDv:0000052:
+        text: HsapDv:0000052
+        description: 15th week post-fertilization human stage
+        meaning: HsapDv:0000052
+      HsapDv:0000015:
+        text: HsapDv:0000015
+        description: organogenesis stage
+        meaning: HsapDv:0000015
+      HsapDv:0000006:
+        text: HsapDv:0000006
+        description: blastula stage
+        meaning: HsapDv:0000006
+      HsapDv:0000142:
+        text: HsapDv:0000142
+        description: 48-year-old human stage
+        meaning: HsapDv:0000142
+      HsapDv:0000230:
+        text: HsapDv:0000230
+        description: 102-year-old human stage
+        meaning: HsapDv:0000230
+      HsapDv:0000003:
+        text: HsapDv:0000003
+        description: Carnegie stage 01
+        meaning: HsapDv:0000003
+      HsapDv:0000091:
+        text: HsapDv:0000091
+        description: human late adulthood stage
+        meaning: HsapDv:0000091
+      HsapDv:0000242:
+        text: HsapDv:0000242
+        description: eighth decade human stage
+        meaning: HsapDv:0000242
+      HsapDv:0000054:
+        text: HsapDv:0000054
+        description: 17th week post-fertilization human stage
+        meaning: HsapDv:0000054
+      HsapDv:0000160:
+        text: HsapDv:0000160
+        description: 66-year-old human stage
+        meaning: HsapDv:0000160
+      HsapDv:0000146:
+        text: HsapDv:0000146
+        description: 52-year-old human stage
+        meaning: HsapDv:0000146
+      HsapDv:0000196:
+        text: HsapDv:0000196
+        description: 23-month-old human stage
+        meaning: HsapDv:0000196
+      HsapDv:0000005:
+        text: HsapDv:0000005
+        description: Carnegie stage 02
+        meaning: HsapDv:0000005
+      HsapDv:0000168:
+        text: HsapDv:0000168
+        description: 74-year-old human stage
+        meaning: HsapDv:0000168
+      HsapDv:0000108:
+        text: HsapDv:0000108
+        description: 14-year-old human stage
+        meaning: HsapDv:0000108
+      HsapDv:0000098:
+        text: HsapDv:0000098
+        description: 4-year-old human stage
+        meaning: HsapDv:0000098
+      HsapDv:0000087:
+        text: HsapDv:0000087
+        description: human adult stage
+        meaning: HsapDv:0000087
+      HsapDv:0000198:
+        text: HsapDv:0000198
+        description: fourth LMP month human stage
+        meaning: HsapDv:0000198
+      HsapDv:0000009:
+        text: HsapDv:0000009
+        description: Carnegie stage 05
+        meaning: HsapDv:0000009
+      HsapDv:0000171:
+        text: HsapDv:0000171
+        description: 77-year-old human stage
+        meaning: HsapDv:0000171
+      HsapDv:0000063:
+        text: HsapDv:0000063
+        description: 26th week post-fertilization human stage
+        meaning: HsapDv:0000063
+      HsapDv:0000158:
+        text: HsapDv:0000158
+        description: 64-year-old human stage
+        meaning: HsapDv:0000158
+      HsapDv:0000179:
+        text: HsapDv:0000179
+        description: 6-month-old human stage
+        meaning: HsapDv:0000179
+      UBERON:0000092:
+        text: UBERON:0000092
+        description: post-embryonic stage
+        meaning: UBERON:0000092
+      UBERON:0000113:
+        text: UBERON:0000113
+        description: post-juvenile adult stage
+        meaning: UBERON:0000113
+      UBERON:0000110:
+        text: UBERON:0000110
+        description: neurula stage
+        meaning: UBERON:0000110
+      UBERON:0000111:
+        text: UBERON:0000111
+        description: organogenesis stage
+        meaning: UBERON:0000111
+      UBERON:0000071:
+        text: UBERON:0000071
+        description: death stage
+        meaning: UBERON:0000071
+      UBERON:0000068:
+        text: UBERON:0000068
+        description: embryo stage
+        meaning: UBERON:0000068
+      UBERON:0000106:
+        text: UBERON:0000106
+        description: zygote stage
+        meaning: UBERON:0000106
+      UBERON:0000066:
+        text: UBERON:0000066
+        description: fully formed stage
+        meaning: UBERON:0000066
+classes:
+  DevelopmentStageOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: Version number in major.minor.patch format.
+      text:
+        description: The name of the development stage of the organism.
+        title: Development stage
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Development stage ontology ID
+        range: DevelopmentStageOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Development stage ontology label

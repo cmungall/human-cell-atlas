@@ -1,0 +1,80 @@
+name: iPSC_induction_protocol
+id: https://example.org/iPSC-induction-protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+- module/process/purchased_reagents
+prefixes:
+  iPSC_induction_protocol: https://example.org/iPSC-induction-protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: iPSC_induction_protocol
+enums:
+  IpscInductionProtocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+  IpscInductionProtocol_method_options:
+    permissible_values:
+      lentivirus: {}
+      sendai virus: {}
+      Gun particle: {}
+      piggyBac transposon: {}
+      miRNA viral: {}
+      adenovirus: {}
+      cre-loxP: {}
+      plasmid: {}
+      retroviral: {}
+  IpscInductionProtocol_pluripotency_vector_removed_options:
+    permissible_values:
+      'yes': {}
+      'no': {}
+      unknown: {}
+classes:
+  IpscInductionProtocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: IpscInductionProtocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      method:
+        description: Induction method applied to primary cell culture to induce pluripotent
+          stem cell generation.
+        title: Induction method
+        range: IpscInductionProtocol_method_options
+        required: true
+      reprogramming_factors:
+        description: Reprogramming factors added to primary cell culture to induce
+          pluripotency.
+        title: Reprogramming factors
+      ipsc_induction_kit:
+        description: Kit used to induce pluripotent stem cell generation.
+        title: Induction kit
+        range: PurchasedReagents
+      pluripotency_test:
+        description: Description of how pluripotency was tested in induced pluripotent
+          stem cells.
+        title: Pluripotency test
+      percent_pluripotency:
+        description: Percent of iPSCs that passed the pluripotency test.
+        title: Percent pluripotency
+        range: float
+      pluripotency_vector_removed:
+        description: Whether a viral vector was removed after induction.
+        title: Pluripotent vector removed
+        range: IpscInductionProtocol_pluripotency_vector_removed_options
+      reagents:
+        multivalued: true
+        range: PurchasedReagents

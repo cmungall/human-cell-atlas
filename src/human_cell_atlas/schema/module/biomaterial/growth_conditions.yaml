@@ -1,0 +1,84 @@
+name: Growth_conditions
+id: https://example.org/Growth-conditions
+imports:
+- linkml:types
+prefixes:
+  Growth_conditions: https://example.org/Growth-conditions
+  linkml: https://w3id.org/linkml/
+default_prefix: Growth_conditions
+enums:
+  GrowthConditions_mycoplasma_testing_method_options:
+    permissible_values:
+      Direct DNA stain: {}
+      Indirect DNA stain: {}
+      Broth and agar culture: {}
+      PCR: {}
+      Nested PCR: {}
+      ELISA: {}
+      Autoradiography: {}
+      Immunostaining: {}
+      Cell-based assay: {}
+      Microbiological assay: {}
+  GrowthConditions_mycoplasma_testing_results_options:
+    permissible_values:
+      pass: {}
+      fail: {}
+  GrowthConditions_feeder_layer_type_options:
+    permissible_values:
+      feeder-free: {}
+      feeder-dependent, JK1 feeder cells: {}
+      feeder-dependent, SNL 76/7 feeder cells: {}
+      feeder-dependent, human marrow stromal cells: {}
+      feeder-dependent, bovine embryonic fibroblast cells: {}
+      feeder-dependent, mouse embryonic fibroblast cells: {}
+      feeder-dependent, mouse fibroblast STO cells: {}
+      feeder-dependent, mouse bone marrow stromal cells: {}
+      feeder-dependent, mouse yolk sac-derived endothelial cells: {}
+      feeder-dependent, human foreskin fibroblast cells: {}
+      feeder-dependent, human newborn fibroblast cells: {}
+      feeder-dependent, human fetal lung fibroblast cells: {}
+      feeder-dependent, human uterine endometrial cells: {}
+      feeder-dependent, human breast parenchymal cells: {}
+      feeder-dependent, human embryonic fibroblast cells: {}
+      feeder-dependent, human adipose stromal cells: {}
+      feeder-dependent, human amniotic epithelial cells: {}
+      feeder-dependent, human placental fibroblast cells: {}
+      feeder-dependent, human umbilical cord stromal cells: {}
+      feeder-dependent, human fetal muscle cells: {}
+      feeder-dependent, human fetal skin cells: {}
+      feeder-dependent, human fetal liver stromal cells: {}
+      feeder-dependent, human fallopian tubal epithelial cells: {}
+      feeder-dependent, human amniotic mesenchymal cells: {}
+classes:
+  GrowthConditions:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      passage_number:
+        description: The number of passages that the biomaterial has been through.
+        title: Passage number
+        range: integer
+      growth_medium:
+        description: The solid, liquid, or semi-solid medium used to support growth.
+        title: Growth medium
+      culture_environment:
+        description: Cell culture environment in which cells are grown.
+        title: Culture environment
+      mycoplasma_testing_method:
+        description: The method by which the biomaterial was tested for mycoplasma
+          contamination.
+        title: Mycoplasma testing method
+        range: GrowthConditions_mycoplasma_testing_method_options
+      mycoplasma_testing_results:
+        description: Whether the biomaterial passed or failed the mycoplasma test.
+        title: Mycoplasma testing results
+        range: GrowthConditions_mycoplasma_testing_results_options
+      drug_treatment:
+        description: Description of drugs added to the growth medium.
+        title: Drug treatment
+      feeder_layer_type:
+        description: Type of feeder layer cells on which biomaterial was grown.
+        title: Feeder layer type
+        range: GrowthConditions_feeder_layer_type_options

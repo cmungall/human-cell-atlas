@@ -1,0 +1,49 @@
+name: Cell_cycle_ontology
+id: https://example.org/Cell-cycle-ontology
+imports:
+- linkml:types
+prefixes:
+  Cell_cycle_ontology: https://example.org/Cell-cycle-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Cell_cycle_ontology
+enums:
+  CellCycleOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:hcao
+        source_nodes:
+        - GO:0007049
+        - GO:0022403
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:go
+        source_nodes:
+        - GO:0007049
+        - GO:0022403
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+classes:
+  CellCycleOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: Version number in major.minor.patch format.
+      text:
+        description: The name of a cell cycle of the cells in the specimen.
+        title: Cell cycle
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Cell cycle ontology ID
+        range: CellCycleOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Cell cycle ontology label

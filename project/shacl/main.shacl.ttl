@@ -1,0 +1,4213 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<Aggregate_generation_protocol:AggregateGenerationProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Aggregate_generation_protocol:schema_type> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Aggregate_generation_protocol:provenance> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Aggregate_generation_protocol:describedBy> ],
+        [ sh:description "Method used to form cell aggregates." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Aggregate formation method" ;
+            sh:order 5 ;
+            sh:path <Aggregate_generation_protocol:formation_method> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Aggregate_generation_protocol:schema_version> ],
+        [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Aggregate_generation_protocol:protocol_core> ],
+        [ sh:description "Description of the cell aggregates uniformity after formation." ;
+            sh:maxCount 1 ;
+            sh:name "Aggregate cell uniformity" ;
+            sh:order 6 ;
+            sh:path <Aggregate_generation_protocol:cell_uniformity> ] ;
+    sh:targetClass <Aggregate_generation_protocol:AggregateGenerationProtocol> .
+
+<Analysis_file:AnalysisFile> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Analysis_file:schema_version> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Analysis_file:provenance> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Analysis_file:describedBy> ],
+        [ sh:description "Number of cells analyzed in a matrix file." ;
+            sh:maxCount 1 ;
+            sh:name "Matrix cell count" ;
+            sh:order 5 ;
+            sh:path <Analysis_file:matrix_cell_count> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "file" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Analysis_file:schema_type> ],
+        [ sh:class <File_core:FileCore> ;
+            sh:description "Core file-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "File core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Analysis_file:file_core> ] ;
+    sh:targetClass <Analysis_file:AnalysisFile> .
+
+<Analysis_protocol:AnalysisProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <https://example.org/Process-type-ontologyProcessTypeOntology> ;
+            sh:description "The type of protocol." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol type" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Analysis_protocol:type> ],
+        [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Analysis_protocol:protocol_core> ],
+        [ sh:class <Matrix:Matrix> ;
+            sh:description "Information related to protocols that output a matrix." ;
+            sh:maxCount 1 ;
+            sh:name "Matrix" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <Analysis_protocol:matrix> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Analysis_protocol:provenance> ],
+        [ sh:description "A URI to a versioned workflow and versioned execution environment in a GA4GH-compliant repository." ;
+            sh:maxCount 1 ;
+            sh:name "Computational method" ;
+            sh:order 6 ;
+            sh:path <Analysis_protocol:computational_method> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Analysis_protocol:schema_type> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Analysis_protocol:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Analysis_protocol:schema_version> ] ;
+    sh:targetClass <Analysis_protocol:AnalysisProtocol> .
+
+<Cell_line:CellLine> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Species_ontology:SpeciesOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 20 ;
+            sh:path <Cell_line:genus_species> ],
+        [ sh:description "Date when the cell line was established." ;
+            sh:maxCount 1 ;
+            sh:name "Date established" ;
+            sh:order 18 ;
+            sh:path <Cell_line:date_established> ],
+        [ sh:description "The supplier of the cell line." ;
+            sh:maxCount 1 ;
+            sh:name "Supplier" ;
+            sh:order 5 ;
+            sh:path <Cell_line:supplier> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Cell_line:provenance> ],
+        [ sh:description "The supplier lot or batch number for the cell line." ;
+            sh:maxCount 1 ;
+            sh:name "Lot/batch number" ;
+            sh:order 7 ;
+            sh:path <Cell_line:lot_number> ],
+        [ sh:class <Cell_morphology:CellMorphology> ;
+            sh:description "Features relating to the morphology of the cells." ;
+            sh:maxCount 1 ;
+            sh:name "Cell morphology" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 12 ;
+            sh:path <Cell_line:cell_morphology> ],
+        [ sh:class <Timecourse:Timecourse> ;
+            sh:description "Information relating to a timecourse associated with this cell line." ;
+            sh:maxCount 1 ;
+            sh:name "Timecourse" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 22 ;
+            sh:path <Cell_line:timecourse> ],
+        [ sh:class <Growth_conditions:GrowthConditions> ;
+            sh:description "Features relating to the growth and/or maintenance of the cell lines." ;
+            sh:maxCount 1 ;
+            sh:name "Growth conditions" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 13 ;
+            sh:path <Cell_line:growth_conditions> ],
+        [ sh:description "The karyotype of the cell line." ;
+            sh:maxCount 1 ;
+            sh:name "Karyotype" ;
+            sh:order 16 ;
+            sh:path <Cell_line:karyotype> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Cell_line:schema_version> ],
+        [ sh:description "The supplier catalogue URL for the cell line." ;
+            sh:maxCount 1 ;
+            sh:name "Catalog URL" ;
+            sh:order 8 ;
+            sh:path <Cell_line:catalog_url> ],
+        [ sh:class <Disease_ontology:DiseaseOntology> ;
+            sh:description "Short description of any disease association to the cell type." ;
+            sh:maxCount 1 ;
+            sh:name "Disease" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 19 ;
+            sh:path <Cell_line:disease> ],
+        [ sh:description "The percent a plate surface is covered by cells." ;
+            sh:maxCount 1 ;
+            sh:name "Percent confluency" ;
+            sh:order 14 ;
+            sh:path <Cell_line:confluency> ],
+        [ sh:description "The supplier catalogue number for the cell line." ;
+            sh:maxCount 1 ;
+            sh:name "Catalog number" ;
+            sh:order 6 ;
+            sh:path <Cell_line:catalog_number> ],
+        [ sh:class <Cell_type_ontology:CellTypeOntology> ;
+            sh:description "The cell type that the cell line represents." ;
+            sh:maxCount 1 ;
+            sh:name "Cell type" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 15 ;
+            sh:path <Cell_line:cell_type> ],
+        [ sh:class <Cell_cycle_ontology:CellCycleOntology> ;
+            sh:description "The cell cycle phase if the cell line is synchronized growing cells or the phase is known." ;
+            sh:maxCount 1 ;
+            sh:name "Cell cycle" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path <Cell_line:cell_cycle> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "biomaterial" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Cell_line:schema_type> ],
+        [ sh:description "The type of cell line." ;
+            sh:in ( "primary" "immortalized" "stem cell" "stem cell-derived" "induced pluripotent" "synthetic" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Cell line type" ;
+            sh:order 10 ;
+            sh:path <Cell_line:type> ],
+        [ sh:class <Publication:Publication> ;
+            sh:description "A publication that cites the cell line creation." ;
+            sh:maxCount 1 ;
+            sh:name "Publication" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 21 ;
+            sh:path <Cell_line:publication> ],
+        [ sh:class <Organ_part_ontology:OrganPartOntology> ;
+            sh:description "The tissue that the cell line was derived from." ;
+            sh:maxCount 1 ;
+            sh:name "Tissue" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 17 ;
+            sh:path <Cell_line:tissue> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Cell_line:describedBy> ],
+        [ sh:class <Biomaterial_core:BiomaterialCore> ;
+            sh:description "Core biomaterial-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Biomaterial core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Cell_line:biomaterial_core> ],
+        [ sh:class <Organ_ontology:OrganOntology> ;
+            sh:description "Organ for which this cell line is a model." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Organ model" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path <Cell_line:model_organ> ] ;
+    sh:targetClass <Cell_line:CellLine> .
+
+<Cell_suspension:CellSuspension> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Growth_conditions:GrowthConditions> ;
+            sh:description "Features relating to the growth and/or maintenance of a biomaterial." ;
+            sh:maxCount 1 ;
+            sh:name "Growth conditions" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path <Cell_suspension:growth_conditions> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Cell_suspension:schema_version> ],
+        [ sh:description "Estimated number of cells in the suspension." ;
+            sh:maxCount 1 ;
+            sh:name "Estimated cell count" ;
+            sh:order 9 ;
+            sh:path <Cell_suspension:estimated_cell_count> ],
+        [ sh:class <Biomaterial_core:BiomaterialCore> ;
+            sh:description "Core biomaterial-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Biomaterial core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Cell_suspension:biomaterial_core> ],
+        [ sh:class <Cell_type_ontology:CellTypeOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path <Cell_suspension:selected_cell_types> ],
+        [ sh:class <Plate_based_sequencing:PlateBasedSequencing> ;
+            sh:description "Fields specific for plate-based sequencing experiments." ;
+            sh:maxCount 1 ;
+            sh:name "Plate-based sequencing" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 10 ;
+            sh:path <Cell_suspension:plate_based_sequencing> ],
+        [ sh:class <Cell_morphology:CellMorphology> ;
+            sh:description "Features relating to the morphology of cells in a biomaterial." ;
+            sh:maxCount 1 ;
+            sh:name "Cell morphology" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Cell_suspension:cell_morphology> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Cell_suspension:describedBy> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Cell_suspension:provenance> ],
+        [ sh:class <Timecourse:Timecourse> ;
+            sh:description "Information relating to a timecourse associated with this cell suspension." ;
+            sh:maxCount 1 ;
+            sh:name "Timecourse" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path <Cell_suspension:timecourse> ],
+        [ sh:class <Species_ontology:SpeciesOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <Cell_suspension:genus_species> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "biomaterial" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Cell_suspension:schema_type> ] ;
+    sh:targetClass <Cell_suspension:CellSuspension> .
+
+<Collection_protocol:CollectionProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Collection_protocol:provenance> ],
+        [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Collection_protocol:protocol_core> ],
+        [ sh:class <https://example.org/Process-type-ontologyProcessTypeOntology> ;
+            sh:description "Method used to collect the biomaterial." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Collection method" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Collection_protocol:method> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Collection_protocol:describedBy> ],
+        [ sh:class <Purchased_reagents:PurchasedReagents> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path <Collection_protocol:reagents> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Collection_protocol:schema_type> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Collection_protocol:schema_version> ] ;
+    sh:targetClass <Collection_protocol:CollectionProtocol> .
+
+<Differentiation_protocol:DifferentiationProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Differentiation_protocol:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Differentiation_protocol:describedBy> ],
+        [ sh:description "Percent of target cells obtained after directed differentiation of origin cell." ;
+            sh:maxCount 1 ;
+            sh:name "Percent target cell yield" ;
+            sh:order 8 ;
+            sh:path <Differentiation_protocol:target_cell_yield> ],
+        [ sh:description "Method applied to cell culture to induce a specific differentiation response." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Differentiation method" ;
+            sh:order 5 ;
+            sh:path <Differentiation_protocol:method> ],
+        [ sh:class <Purchased_reagents:PurchasedReagents> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path <Differentiation_protocol:reagents> ],
+        [ sh:description "Result confirming successful differentiation to target cell type." ;
+            sh:maxCount 1 ;
+            sh:name "Validation result" ;
+            sh:order 12 ;
+            sh:path <Differentiation_protocol:validation_result> ],
+        [ sh:description "Culture media used to induce a specific differentiation response." ;
+            sh:maxCount 1 ;
+            sh:name "Differentiation media" ;
+            sh:order 6 ;
+            sh:path <Differentiation_protocol:media> ],
+        [ sh:description "Targeted pathway for specific differentiation response." ;
+            sh:maxCount 1 ;
+            sh:name "Target pathway" ;
+            sh:order 10 ;
+            sh:path <Differentiation_protocol:target_pathway> ],
+        [ sh:description "Method used to validate origin cell successfully differentiated to target cell." ;
+            sh:maxCount 1 ;
+            sh:name "Differentiation validation method" ;
+            sh:order 11 ;
+            sh:path <Differentiation_protocol:validation_method> ],
+        [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Differentiation_protocol:protocol_core> ],
+        [ sh:description "Small molecules added to stem cell medium to induce a specific differentiation response." ;
+            sh:maxCount 1 ;
+            sh:name "Small molecules" ;
+            sh:order 7 ;
+            sh:path <Differentiation_protocol:small_molecules> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Differentiation_protocol:schema_type> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Differentiation_protocol:provenance> ] ;
+    sh:targetClass <Differentiation_protocol:DifferentiationProtocol> .
+
+<Dissociation_protocol:DissociationProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Dissociation_protocol:protocol_core> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Dissociation_protocol:schema_type> ],
+        [ sh:class <https://example.org/Process-type-ontologyProcessTypeOntology> ;
+            sh:description "How cells or organelles were dissociated." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Dissociation method" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Dissociation_protocol:method> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Dissociation_protocol:schema_version> ],
+        [ sh:class <Purchased_reagents:PurchasedReagents> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path <Dissociation_protocol:reagents> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Dissociation_protocol:provenance> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Dissociation_protocol:describedBy> ] ;
+    sh:targetClass <Dissociation_protocol:DissociationProtocol> .
+
+<Donor_organism:DonorOrganism> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Death:Death> ;
+            sh:description "Information about conditions of death of the organism." ;
+            sh:maxCount 1 ;
+            sh:name "Death conditions" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 14 ;
+            sh:path <Donor_organism:death> ],
+        [ sh:class <Mouse_specific:MouseSpecific> ;
+            sh:description "Fields specific to mouse (mus musculus) organisms." ;
+            sh:maxCount 1 ;
+            sh:name "Mouse-specific" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path <Donor_organism:mouse_specific> ],
+        [ sh:class <Development_stage_ontology:DevelopmentStageOntology> ;
+            sh:description "A classification of the developmental stage of the organism." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Development stage" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 12 ;
+            sh:path <Donor_organism:development_stage> ],
+        [ sh:class <Species_ontology:SpeciesOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <Donor_organism:genus_species> ],
+        [ sh:class <Familial_relationship:FamilialRelationship> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 15 ;
+            sh:path <Donor_organism:familial_relationships> ],
+        [ sh:class <Time_unit_ontology:TimeUnitOntology> ;
+            sh:description "The unit in which Age is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Age unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path <Donor_organism:organism_age_unit> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "biomaterial" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Donor_organism:schema_type> ],
+        [ sh:class <Human_specific:HumanSpecific> ;
+            sh:description "Fields specific to human (homo sapiens) organisms." ;
+            sh:maxCount 1 ;
+            sh:name "Human-specific" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Donor_organism:human_specific> ],
+        [ sh:class <Mass_unit_ontology:MassUnitOntology> ;
+            sh:description "The unit in which Weight is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Weight unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 22 ;
+            sh:path <Donor_organism:weight_unit> ],
+        [ sh:description "Gestational age of pregnancy in Gestational age units measured from the last menstrual period." ;
+            sh:maxCount 1 ;
+            sh:name "Gestational age" ;
+            sh:order 17 ;
+            sh:path <Donor_organism:gestational_age> ],
+        [ sh:class <Length_unit_ontology:LengthUnitOntology> ;
+            sh:description "The unit in which Height is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Height unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 20 ;
+            sh:path <Donor_organism:height_unit> ],
+        [ sh:class <Biomaterial_core:BiomaterialCore> ;
+            sh:description "Core biomaterial-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Biomaterial core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Donor_organism:biomaterial_core> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Donor_organism:schema_version> ],
+        [ sh:class <Timecourse:Timecourse> ;
+            sh:description "Information relating to a timecourse associated with this biomaterial." ;
+            sh:maxCount 1 ;
+            sh:name "Timecourse" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 23 ;
+            sh:path <Donor_organism:timecourse> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Donor_organism:provenance> ],
+        [ sh:description "The biological sex of the organism." ;
+            sh:in ( "female" "male" "mixed" "unknown" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Biological sex" ;
+            sh:order 8 ;
+            sh:path <Donor_organism:sex> ],
+        [ sh:class <Medical_history:MedicalHistory> ;
+            sh:description "Information about the medical history of the organism." ;
+            sh:maxCount 1 ;
+            sh:name "Medical history" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 16 ;
+            sh:path <Donor_organism:medical_history> ],
+        [ sh:description "Weight of organism in Weight unit." ;
+            sh:maxCount 1 ;
+            sh:name "Weight" ;
+            sh:order 21 ;
+            sh:path <Donor_organism:weight> ],
+        [ sh:class <Time_unit_ontology:TimeUnitOntology> ;
+            sh:description "The unit in which Gestational age is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Gestational age unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 18 ;
+            sh:path <Donor_organism:gestational_age_unit> ],
+        [ sh:description "Whether organism was alive at time of biomaterial collection." ;
+            sh:in ( "yes" "no" "unknown" "not applicable" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Alive at collection" ;
+            sh:order 9 ;
+            sh:path <Donor_organism:is_living> ],
+        [ sh:class <Disease_ontology:DiseaseOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 13 ;
+            sh:path <Donor_organism:diseases> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Donor_organism:describedBy> ],
+        [ sh:description "Height of organism in Height unit." ;
+            sh:maxCount 1 ;
+            sh:name "Height" ;
+            sh:order 19 ;
+            sh:path <Donor_organism:height> ],
+        [ sh:description "Age of organism in Age units measured since birth." ;
+            sh:maxCount 1 ;
+            sh:name "Age" ;
+            sh:order 10 ;
+            sh:path <Donor_organism:organism_age> ] ;
+    sh:targetClass <Donor_organism:DonorOrganism> .
+
+<Enrichment_ontology:EnrichmentOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Enrichment_ontology:describedBy> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Enrichment ontology label" ;
+            sh:order 4 ;
+            sh:path <Enrichment_ontology:ontology_label> ],
+        [ sh:description "The name of an enrichment approach being used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Enrichment" ;
+            sh:order 2 ;
+            sh:path <Enrichment_ontology:text> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Enrichment ontology ID" ;
+            sh:order 3 ;
+            sh:path <Enrichment_ontology:ontology> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Enrichment_ontology:schema_version> ] ;
+    sh:targetClass <Enrichment_ontology:EnrichmentOntology> .
+
+<Enrichment_protocol:EnrichmentProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <https://example.org/Process-type-ontologyProcessTypeOntology> ;
+            sh:description "The method by which enrichment was achieved." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Enrichment method" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Enrichment_protocol:method> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Enrichment_protocol:provenance> ],
+        [ sh:description "Minimum cell or organelle size passing selection, in microns." ;
+            sh:maxCount 1 ;
+            sh:name "Minimum size selected" ;
+            sh:order 7 ;
+            sh:path <Enrichment_protocol:minimum_size> ],
+        [ sh:description "Maximum cell or organelle size passing selection, in microns." ;
+            sh:maxCount 1 ;
+            sh:name "Maximum size selected" ;
+            sh:order 8 ;
+            sh:path <Enrichment_protocol:maximum_size> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Enrichment_protocol:schema_version> ],
+        [ sh:description "A list of markers used to enrich for or against certain cells." ;
+            sh:maxCount 1 ;
+            sh:name "Markers" ;
+            sh:order 6 ;
+            sh:path <Enrichment_protocol:markers> ],
+        [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Enrichment_protocol:protocol_core> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Enrichment_protocol:describedBy> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Enrichment_protocol:schema_type> ] ;
+    sh:targetClass <Enrichment_protocol:EnrichmentProtocol> .
+
+<File_descriptor:FileDescriptor> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <File_descriptor:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <File_descriptor:schema_version> ],
+        [ sh:description "An AWS S3 ETag of this file" ;
+            sh:maxCount 1 ;
+            sh:name "S3 ETag" ;
+            sh:order 11 ;
+            sh:path <File_descriptor:s3_etag> ],
+        [ sh:description "The size of the file in bytes." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Size" ;
+            sh:order 7 ;
+            sh:path <File_descriptor:size> ],
+        [ sh:description "The version of the file given in date time format" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "File version" ;
+            sh:order 5 ;
+            sh:path <File_descriptor:file_version> ],
+        [ sh:description "The CRC-32C code generated for this file." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "CRC32C" ;
+            sh:order 9 ;
+            sh:path <File_descriptor:crc32c> ],
+        [ sh:description "The SHA-256 hash of the file." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SHA-256" ;
+            sh:order 8 ;
+            sh:path <File_descriptor:sha256> ],
+        [ sh:description "The SHA-1 hash of the file." ;
+            sh:maxCount 1 ;
+            sh:name "SHA-1" ;
+            sh:order 10 ;
+            sh:path <File_descriptor:sha1> ],
+        [ sh:description "The object name of the data file relative to the staging area's `data/` directory" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Staging file name" ;
+            sh:order 3 ;
+            sh:path <File_descriptor:file_name> ],
+        [ sh:description "An appropriate MIME type for this file." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Content type" ;
+            sh:order 6 ;
+            sh:path <File_descriptor:content_type> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "file_descriptor" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <File_descriptor:schema_type> ],
+        [ sh:description "UUID that uniquely identifies each data file in its source" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "File UUID" ;
+            sh:order 4 ;
+            sh:path <File_descriptor:file_id> ] ;
+    sh:targetClass <File_descriptor:FileDescriptor> .
+
+<File_format_ontology:FileFormatOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The name of the file format." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "File format" ;
+            sh:order 2 ;
+            sh:path <File_format_ontology:text> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "File format ontology label" ;
+            sh:order 4 ;
+            sh:path <File_format_ontology:ontology_label> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "File format ontology ID" ;
+            sh:order 3 ;
+            sh:path <File_format_ontology:ontology> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <File_format_ontology:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <File_format_ontology:schema_version> ] ;
+    sh:targetClass <File_format_ontology:FileFormatOntology> .
+
+<Image_file:ImageFile> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "file" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Image_file:schema_type> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Image_file:provenance> ],
+        [ sh:class <File_core:FileCore> ;
+            sh:description "Core file-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "File core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Image_file:file_core> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Image_file:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Image_file:describedBy> ] ;
+    sh:targetClass <Image_file:ImageFile> .
+
+<Imaged_specimen:ImagedSpecimen> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:order 5 ;
+            sh:path <Imaged_specimen:overview_images> ],
+        [ sh:description "Thickness of the imaged slice in micrometres." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Imaged slice thickness" ;
+            sh:order 6 ;
+            sh:path <Imaged_specimen:slice_thickness> ],
+        [ sh:class <Organ_part_ontology:OrganPartOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <Imaged_specimen:internal_anatomical_structures> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Imaged_specimen:provenance> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "biomaterial" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Imaged_specimen:schema_type> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Imaged_specimen:describedBy> ],
+        [ sh:class <Biomaterial_core:BiomaterialCore> ;
+            sh:description "Core biomaterial-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Biomaterial core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Imaged_specimen:biomaterial_core> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Imaged_specimen:schema_version> ] ;
+    sh:targetClass <Imaged_specimen:ImagedSpecimen> .
+
+<Imaging_Protocol:ImagingProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Refractive index of the immersion medium used for imaging." ;
+            sh:maxCount 1 ;
+            sh:name "Refractive index of the immersion medium" ;
+            sh:order 10 ;
+            sh:path <Imaging_Protocol:immersion_medium_refractive_index> ],
+        [ sh:description "Magnification of the objective used for imaging." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Magnification" ;
+            sh:order 7 ;
+            sh:path <Imaging_Protocol:magnification> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Imaging_Protocol:describedBy> ],
+        [ sh:class <Microscopy_ontology:MicroscopyOntology> ;
+            sh:description "The type of microscopy." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Microscopy technique" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path <Imaging_Protocol:microscopy_technique> ],
+        [ sh:description "Whether tiles were collected with overlap." ;
+            sh:in ( "yes" "no" ) ;
+            sh:maxCount 1 ;
+            sh:name "Overlapping tiles" ;
+            sh:order 17 ;
+            sh:path <Imaging_Protocol:overlapping_tiles> ],
+        [ sh:description "Immersion medium used for imaging." ;
+            sh:maxCount 1 ;
+            sh:name "Immersion medium" ;
+            sh:order 9 ;
+            sh:path <Imaging_Protocol:immersion_medium_type> ],
+        [ sh:description "Number of XY tiles in the experiment." ;
+            sh:maxCount 1 ;
+            sh:name "Number of tiles" ;
+            sh:order 12 ;
+            sh:path <Imaging_Protocol:number_of_tiles> ],
+        [ sh:description "Y size of the tile in micrometers." ;
+            sh:maxCount 1 ;
+            sh:name "Tile size Y" ;
+            sh:order 13 ;
+            sh:path <Imaging_Protocol:tile_size_y> ],
+        [ sh:description "X size of the tile in micrometers." ;
+            sh:maxCount 1 ;
+            sh:name "Tile size X" ;
+            sh:order 14 ;
+            sh:path <Imaging_Protocol:tile_size_x> ],
+        [ sh:description "Number of steps in a Z stack." ;
+            sh:maxCount 1 ;
+            sh:name "Number of Z steps" ;
+            sh:order 16 ;
+            sh:path <Imaging_Protocol:number_of_z_steps> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Imaging_Protocol:provenance> ],
+        [ sh:description "Z-stack step size in nanometers." ;
+            sh:maxCount 1 ;
+            sh:name "Z stack step size" ;
+            sh:order 15 ;
+            sh:path <Imaging_Protocol:z_stack_step_size> ],
+        [ sh:class <Probe:Probe> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 19 ;
+            sh:path <Imaging_Protocol:probe> ],
+        [ sh:class <Channel:Channel> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 18 ;
+            sh:path <Imaging_Protocol:channel> ],
+        [ sh:description "Description of the microscope setup." ;
+            sh:maxCount 1 ;
+            sh:name "Microscope setup description" ;
+            sh:order 5 ;
+            sh:path <Imaging_Protocol:microscope_setup_description> ],
+        [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Imaging_Protocol:protocol_core> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Imaging_Protocol:schema_version> ],
+        [ sh:description "Pixel size in nanometers." ;
+            sh:maxCount 1 ;
+            sh:name "Pixel size" ;
+            sh:order 11 ;
+            sh:path <Imaging_Protocol:pixel_size> ],
+        [ sh:description "Numerical aperture of the objective." ;
+            sh:maxCount 1 ;
+            sh:name "Numerical aperture" ;
+            sh:order 8 ;
+            sh:path <Imaging_Protocol:numerical_aperture> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Imaging_Protocol:schema_type> ] ;
+    sh:targetClass <Imaging_Protocol:ImagingProtocol> .
+
+<Imaging_preparation_protocol:ImagingPreparationProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Time_unit_ontology:TimeUnitOntology> ;
+            sh:description "The unit in which permeabilisation time is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Permeabilisation time unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 16 ;
+            sh:path <Imaging_preparation_protocol:permeabilisation_time_unit> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Imaging_preparation_protocol:schema_version> ],
+        [ sh:description "The method by which fresh tissue was sliced." ;
+            sh:maxCount 1 ;
+            sh:name "Fresh slicing method" ;
+            sh:order 5 ;
+            sh:path <Imaging_preparation_protocol:fresh_slicing_method> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Imaging_preparation_protocol:describedBy> ],
+        [ sh:class <Preservation_and_storage:PreservationStorage> ;
+            sh:description "Tissue preservation method used prior to final slicing." ;
+            sh:maxCount 1 ;
+            sh:name "Pre-final slice preservation method" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 10 ;
+            sh:path <Imaging_preparation_protocol:pre_final_slice_preservation_method> ],
+        [ sh:class <Time_unit_ontology:TimeUnitOntology> ;
+            sh:description "The unit of time in which the post resection interval is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Post resection interval time unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path <Imaging_preparation_protocol:post_resection_interval_unit> ],
+        [ sh:description "Fiducial markers for the alignment of images taken across multiple rounds of imaging." ;
+            sh:maxCount 1 ;
+            sh:name "Fiducial marker" ;
+            sh:order 13 ;
+            sh:path <Imaging_preparation_protocol:fiducial_marker> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Imaging_preparation_protocol:schema_type> ],
+        [ sh:description "The method by which the final slice was obtained." ;
+            sh:maxCount 1 ;
+            sh:name "Final slicing method" ;
+            sh:order 7 ;
+            sh:path <Imaging_preparation_protocol:final_slicing_method> ],
+        [ sh:description "Length of time between surgical resection and fresh slicing of tissue." ;
+            sh:maxCount 1 ;
+            sh:name "Time between resection and fresh slicing" ;
+            sh:order 8 ;
+            sh:path <Imaging_preparation_protocol:post_resection_interval> ],
+        [ sh:description "Length of time between secondary slicing and hybridization." ;
+            sh:maxCount 1 ;
+            sh:name "Post final slicing interval" ;
+            sh:order 11 ;
+            sh:path <Imaging_preparation_protocol:post_final_slicing_interval> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Imaging_preparation_protocol:provenance> ],
+        [ sh:class <Time_unit_ontology:TimeUnitOntology> ;
+            sh:description "The unit of time in which the post final slicing interval is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Post final slicing interval time unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 12 ;
+            sh:path <Imaging_preparation_protocol:post_final_slicing_interval_unit> ],
+        [ sh:description "Factor by which the imaged tissue was expanded in one dimension." ;
+            sh:maxCount 1 ;
+            sh:name "Expansion factor" ;
+            sh:order 14 ;
+            sh:path <Imaging_preparation_protocol:expansion_factor> ],
+        [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Imaging_preparation_protocol:protocol_core> ],
+        [ sh:description "The permeabilisation time in time units that the tissue was exposed to." ;
+            sh:maxCount 1 ;
+            sh:name "Permeabilisation time" ;
+            sh:order 15 ;
+            sh:path <Imaging_preparation_protocol:permeabilisation_time> ],
+        [ sh:description "Thickness of the imaged slice in micrometres." ;
+            sh:maxCount 1 ;
+            sh:name "Imaged slice thickness" ;
+            sh:order 6 ;
+            sh:path <Imaging_preparation_protocol:imaged_slice_thickness> ] ;
+    sh:targetClass <Imaging_preparation_protocol:ImagingPreparationProtocol> .
+
+<Library_preparation_protocol:LibraryPreparationProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The type of tag or end bias the library has." ;
+            sh:in ( "3 prime tag" "3 prime end bias" "5 prime tag" "5 prime end bias" "full length" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "End bias" ;
+            sh:order 12 ;
+            sh:path <Library_preparation_protocol:end_bias> ],
+        [ sh:class <Library_amplification_ontology:LibraryAmplificationOntology> ;
+            sh:description "The method used to amplify cDNA library prior to sequencing." ;
+            sh:maxCount 1 ;
+            sh:name "cDNA library amplification method" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 19 ;
+            sh:path <Library_preparation_protocol:cdna_library_amplification_method> ],
+        [ sh:description "Dilution of spike-in." ;
+            sh:maxCount 1 ;
+            sh:name "Spike-in dilution" ;
+            sh:order 16 ;
+            sh:path <Library_preparation_protocol:spike_in_dilution> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Library_preparation_protocol:describedBy> ],
+        [ sh:description "Library strandedness." ;
+            sh:in ( "first" "second" "unstranded" "not provided" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Strand" ;
+            sh:order 14 ;
+            sh:path <Library_preparation_protocol:strand> ],
+        [ sh:class <Library_amplification_ontology:LibraryAmplificationOntology> ;
+            sh:description "The method used to amplify RNA prior to adaptor ligation." ;
+            sh:maxCount 1 ;
+            sh:name "Library pre-amplification method" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 18 ;
+            sh:path <Library_preparation_protocol:library_preamplification_method> ],
+        [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Library_preparation_protocol:protocol_core> ],
+        [ sh:class <Barcode:Barcode> ;
+            sh:description "Information about spatial barcodes." ;
+            sh:maxCount 1 ;
+            sh:name "Spatial barcode" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path <Library_preparation_protocol:spatial_barcode> ],
+        [ sh:description "Average (insert) size of the fragments being sequenced." ;
+            sh:maxCount 1 ;
+            sh:name "Nominal length" ;
+            sh:order 20 ;
+            sh:path <Library_preparation_protocol:nominal_length> ],
+        [ sh:class <Purchased_reagents:PurchasedReagents> ;
+            sh:description "Name of kit used to convert RNA to DNA for sequencing." ;
+            sh:maxCount 1 ;
+            sh:name "Nucleic acid conversion kit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path <Library_preparation_protocol:nucleic_acid_conversion_kit> ],
+        [ sh:class <Purchased_reagents:PurchasedReagents> ;
+            sh:description "Information about a spike-in kit." ;
+            sh:maxCount 1 ;
+            sh:name "Spike-in kit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 15 ;
+            sh:path <Library_preparation_protocol:spike_in_kit> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Library_preparation_protocol:schema_type> ],
+        [ sh:description "Source cells or organelles from which nucleic acid molecules were collected." ;
+            sh:in ( "bulk cell" "single cell" "single nucleus" "bulk nuclei" "mitochondria" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Nucleic acid source" ;
+            sh:order 8 ;
+            sh:path <Library_preparation_protocol:nucleic_acid_source> ],
+        [ sh:class <Biological_macromolecule_ontology:BiologicalMacromoleculeOntology> ;
+            sh:description "Starting nucleic acid molecule isolated for sequencing." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Input nucleic acid molecule" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <Library_preparation_protocol:input_nucleic_acid_molecule> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Library_preparation_protocol:provenance> ],
+        [ sh:class <Barcode:Barcode> ;
+            sh:description "Information about unique molecular identifier (UMI) barcodes." ;
+            sh:maxCount 1 ;
+            sh:name "UMI barcode" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 17 ;
+            sh:path <Library_preparation_protocol:umi_barcode> ],
+        [ sh:description "Primer used for cDNA synthesis from RNA." ;
+            sh:in ( "poly-dT" "random" ) ;
+            sh:maxCount 1 ;
+            sh:name "Primer" ;
+            sh:order 13 ;
+            sh:path <Library_preparation_protocol:primer> ],
+        [ sh:description "Standard deviation of the (insert) size of the fragments being sequenced." ;
+            sh:maxCount 1 ;
+            sh:name "Nominal standard deviation" ;
+            sh:order 21 ;
+            sh:path <Library_preparation_protocol:nominal_sdev> ],
+        [ sh:class <Purchased_reagents:PurchasedReagents> ;
+            sh:description "Name of kit used to construct the sequencing library." ;
+            sh:maxCount 1 ;
+            sh:name "Library construction kit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 10 ;
+            sh:path <Library_preparation_protocol:library_construction_kit> ],
+        [ sh:class <Barcode:Barcode> ;
+            sh:description "Information about cell identifier barcodes." ;
+            sh:maxCount 1 ;
+            sh:name "Cell barcode" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Library_preparation_protocol:cell_barcode> ],
+        [ sh:class <Library_construction_ontology:LibraryConstructionOntology> ;
+            sh:description "The general method for sequencing library construction." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Library construction method" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path <Library_preparation_protocol:library_construction_method> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Library_preparation_protocol:schema_version> ] ;
+    sh:targetClass <Library_preparation_protocol:LibraryPreparationProtocol> .
+
+<License:License> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "URL of the license under which this data is available." ;
+            sh:maxCount 1 ;
+            sh:name "License URL" ;
+            sh:order 4 ;
+            sh:path <License:url> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <License:schema_version> ],
+        [ sh:description "Full name of the license under which this dataset is made available." ;
+            sh:maxCount 1 ;
+            sh:name "License description" ;
+            sh:order 3 ;
+            sh:path <License:full_name> ],
+        [ sh:description "Identifier of the license under which this dataset is made available." ;
+            sh:maxCount 1 ;
+            sh:name "License identifier" ;
+            sh:order 2 ;
+            sh:path <License:identifier> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <License:describedBy> ] ;
+    sh:targetClass <License:License> .
+
+<Links:Links> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Links:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Links:describedBy> ],
+        [ sh:minCount 1 ;
+            sh:order 3 ;
+            sh:path <Links:links> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "links" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Links:schema_type> ] ;
+    sh:targetClass <Links:Links> .
+
+<Links:ProcessLink> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Links:ProtocolReference> ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Links:protocols> ],
+        [ sh:description "UUID of the process described by this link." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Process entity UUID" ;
+            sh:order 1 ;
+            sh:path <Links:process_id> ],
+        [ sh:class <Links:Output> ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Links:outputs> ],
+        [ sh:description "The concrete type of the process described by this link." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Process type" ;
+            sh:order 0 ;
+            sh:path <Links:process_type> ],
+        [ sh:description "The type of this link." ;
+            sh:in ( "process_link" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 5 ;
+            sh:path <Links:link_type> ],
+        [ sh:class <Links:Input> ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path <Links:inputs> ] ;
+    sh:targetClass <Links:ProcessLink> .
+
+<Links:SupplementaryFileEntity> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "concrete type of this supplementary file entity" ;
+            sh:in ( "supplementary_file" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path <Links:file_type> ],
+        [ sh:description "ID for this supplementary file entity" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Links:file_id> ] ;
+    sh:targetClass <Links:SupplementaryFileEntity> .
+
+<Links:SupplementaryFileLink> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The type of this link." ;
+            sh:in ( "supplementary_file_link" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Links:link_type> ],
+        [ sh:class <Links:Entity> ;
+            sh:description "An entity that refers to this supplementary file" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path <Links:entity> ],
+        [ sh:class <Supplementary_file:SupplementaryFile> ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path <Links:files> ] ;
+    sh:targetClass <Links:SupplementaryFileLink> .
+
+<Organoid:Organoid> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "biomaterial" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Organoid:schema_type> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Organoid:schema_version> ],
+        [ sh:class <Species_ontology:SpeciesOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Organoid:genus_species> ],
+        [ sh:description "Estimated number of cells per input cell aggregate." ;
+            sh:maxCount 1 ;
+            sh:name "Input aggregate cell count" ;
+            sh:order 15 ;
+            sh:path <Organoid:input_aggregate_cell_count> ],
+        [ sh:description "Age of the organoid in Organoid age unit measured from when cell aggregates started differentiating to desired organoid model." ;
+            sh:maxCount 1 ;
+            sh:name "Organoid age" ;
+            sh:order 8 ;
+            sh:path <Organoid:age> ],
+        [ sh:class <Organ_ontology:OrganOntology> ;
+            sh:description "Organ for which this organoid is a model system." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Organ model" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path <Organoid:model_organ> ],
+        [ sh:description "Percent oxygen level organoid was stored in prior to sequencing." ;
+            sh:maxCount 1 ;
+            sh:name "Stored oxygen level" ;
+            sh:order 16 ;
+            sh:path <Organoid:stored_oxygen_levels> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Organoid:provenance> ],
+        [ sh:description "Whether the organoid is embedded in a matrigel." ;
+            sh:maxCount 1 ;
+            sh:name "Embeddded in matrigel" ;
+            sh:order 13 ;
+            sh:path <Organoid:embedded_in_matrigel> ],
+        [ sh:description "Size of the organoid in Organoid size unit." ;
+            sh:maxCount 1 ;
+            sh:name "Organoid size" ;
+            sh:order 10 ;
+            sh:path <Organoid:size> ],
+        [ sh:description "General description of the organoid morphology." ;
+            sh:maxCount 1 ;
+            sh:name "Organoid morphology" ;
+            sh:order 12 ;
+            sh:path <Organoid:morphology> ],
+        [ sh:class <Length_unit_ontology:LengthUnitOntology> ;
+            sh:description "The unit in which the Organoid size is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Organoid size unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path <Organoid:size_unit> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Organoid:describedBy> ],
+        [ sh:class <Biomaterial_core:BiomaterialCore> ;
+            sh:description "Core biomaterial-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Biomaterial core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Organoid:biomaterial_core> ],
+        [ sh:description "Growth environment in which the organoid is grown." ;
+            sh:maxCount 1 ;
+            sh:name "Growth environment" ;
+            sh:order 14 ;
+            sh:path <Organoid:growth_environment> ],
+        [ sh:class <Time_unit_ontology:TimeUnitOntology> ;
+            sh:description "The unit in which Organoid age is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Organoid age unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path <Organoid:age_unit> ],
+        [ sh:class <Organ_part_ontology:OrganPartOntology> ;
+            sh:description "Organ part for which this organoid is a model system." ;
+            sh:maxCount 1 ;
+            sh:name "Organ part model" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <Organoid:model_organ_part> ] ;
+    sh:targetClass <Organoid:Organoid> .
+
+<Process:Process> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Length of time the process took to execute in Length of time unit." ;
+            sh:maxCount 1 ;
+            sh:name "Length of time" ;
+            sh:order 7 ;
+            sh:path <Process:length_of_time> ],
+        [ sh:class <INSDC_experiment:InsdcExperiment> ;
+            sh:description "An International Nucleotide Sequence Database Collaboration (INSDC) experiment accession." ;
+            sh:maxCount 1 ;
+            sh:name "INSDC experiment accession" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path <Process:insdc_experiment> ],
+        [ sh:description "Date and time the process started." ;
+            sh:maxCount 1 ;
+            sh:name "Start time" ;
+            sh:order 5 ;
+            sh:path <Process:start_time> ],
+        [ sh:description "Date and time the process ended." ;
+            sh:maxCount 1 ;
+            sh:name "End time" ;
+            sh:order 6 ;
+            sh:path <Process:end_time> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "process" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Process:schema_type> ],
+        [ sh:class <Time_unit_ontology:TimeUnitOntology> ;
+            sh:description "The unit in which Length of time is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Length of time unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path <Process:length_of_time_unit> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Process:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Process:schema_version> ],
+        [ sh:class <https://example.org/Process-type-ontologyProcessTypeOntology> ;
+            sh:description "The type of process." ;
+            sh:maxCount 1 ;
+            sh:name "Process type" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path <Process:type> ],
+        [ sh:class <Process_core:ProcessCore> ;
+            sh:description "Core process-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Process core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Process:process_core> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Process:provenance> ],
+        [ sh:description "A deviation from the protocol provided." ;
+            sh:maxCount 1 ;
+            sh:name "Deviation from protocol" ;
+            sh:order 10 ;
+            sh:path <Process:deviation_from_protocol> ] ;
+    sh:targetClass <Process:Process> .
+
+<Project:Project> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:order 14 ;
+            sh:path <Project:biostudies_accessions> ],
+        [ sh:order 13 ;
+            sh:path <Project:insdc_study_accessions> ],
+        [ sh:order 12 ;
+            sh:path <Project:array_express_accessions> ],
+        [ sh:order 9 ;
+            sh:path <Project:ega_accessions> ],
+        [ sh:class <Publication:Publication> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <Project:publications> ],
+        [ sh:class <Contact:Contact> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Project:contributors> ],
+        [ sh:order 11 ;
+            sh:path <Project:geo_series_accessions> ],
+        [ sh:order 8 ;
+            sh:path <Project:insdc_project_accessions> ],
+        [ sh:order 10 ;
+            sh:path <Project:dbgap_accessions> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Project:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Project:describedBy> ],
+        [ sh:description "An estimated number of cells in this project" ;
+            sh:maxCount 1 ;
+            sh:name "Estimated cell count" ;
+            sh:order 16 ;
+            sh:path <Project:estimated_cell_count> ],
+        [ sh:order 6 ;
+            sh:path <Project:supplementary_links> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Project:provenance> ],
+        [ sh:class <Project_core:ProjectCore> ;
+            sh:description "Core project-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Project core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Project:project_core> ],
+        [ sh:class <Funder:Funder> ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 15 ;
+            sh:path <Project:funders> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "project" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Project:schema_type> ] ;
+    sh:targetClass <Project:Project> .
+
+<Protocol:Protocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Protocol:protocol_core> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Protocol:provenance> ],
+        [ sh:class <https://example.org/Process-type-ontologyProcessTypeOntology> ;
+            sh:description "The type of protocol." ;
+            sh:maxCount 1 ;
+            sh:name "Protocol type" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Protocol:type> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Protocol:describedBy> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Protocol:schema_type> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Protocol:schema_version> ] ;
+    sh:targetClass <Protocol:Protocol> .
+
+<Protocol_type_ontology:ProtocolTypeOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The name of a protocol type used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol type" ;
+            sh:order 2 ;
+            sh:path <Protocol_type_ontology:text> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Protocol_type_ontology:schema_version> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Protocol type ontology label" ;
+            sh:order 4 ;
+            sh:path <Protocol_type_ontology:ontology_label> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Protocol type ontology ID" ;
+            sh:order 3 ;
+            sh:path <Protocol_type_ontology:ontology> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Protocol_type_ontology:describedBy> ] ;
+    sh:targetClass <Protocol_type_ontology:ProtocolTypeOntology> .
+
+<Reference_file:ReferenceFile> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Reference_file:provenance> ],
+        [ sh:class <File_core:FileCore> ;
+            sh:description "Core file-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "File core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Reference_file:file_core> ],
+        [ sh:description "The assembly type of the genome reference file." ;
+            sh:in ( "primary assembly" "complete assembly" "patch assembly" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Genome assembly type" ;
+            sh:order 8 ;
+            sh:path <Reference_file:assembly_type> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Reference_file:describedBy> ],
+        [ sh:description "A taxonomy ID (taxonID) from NCBI." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "NCBI taxon ID" ;
+            sh:order 5 ;
+            sh:path <Reference_file:ncbi_taxon_id> ],
+        [ sh:description "The type of the reference file." ;
+            sh:in ( "genome sequence" "transcriptome sequence" "annotation reference" "transcriptome index" "genome sequence index" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Reference type" ;
+            sh:order 7 ;
+            sh:path <Reference_file:reference_type> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "file" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Reference_file:schema_type> ],
+        [ sh:description "The genome version of the reference file." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Reference version" ;
+            sh:order 9 ;
+            sh:path <Reference_file:reference_version> ],
+        [ sh:class <Species_ontology:SpeciesOntology> ;
+            sh:description "The scientific binomial name for the species of this reference." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Genus species" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path <Reference_file:genus_species> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Reference_file:schema_version> ] ;
+    sh:targetClass <Reference_file:ReferenceFile> .
+
+<Sequence_file:SequenceFile> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Sequence_file:provenance> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "file" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Sequence_file:schema_type> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Sequence_file:schema_version> ],
+        [ sh:order 8 ;
+            sh:path <Sequence_file:insdc_run_accessions> ],
+        [ sh:class <File_core:FileCore> ;
+            sh:description "Core file-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "File core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Sequence_file:file_core> ],
+        [ sh:description "The sequencing read this file represents." ;
+            sh:in ( "read1" "read2" "read3" "read4" "index1" "index2" "single-end, non-indexed" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Read index" ;
+            sh:order 5 ;
+            sh:path <Sequence_file:read_index> ],
+        [ sh:description "The lane that this file was sequenced from." ;
+            sh:maxCount 1 ;
+            sh:name "Lane index" ;
+            sh:order 6 ;
+            sh:path <Sequence_file:lane_index> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Sequence_file:describedBy> ],
+        [ sh:description "A unique ID for the library preparation." ;
+            sh:maxCount 1 ;
+            sh:name "Library preparation ID" ;
+            sh:order 9 ;
+            sh:path <Sequence_file:library_prep_id> ],
+        [ sh:description "The length of a sequenced read in this file, in nucleotides." ;
+            sh:maxCount 1 ;
+            sh:name "Read length" ;
+            sh:order 7 ;
+            sh:path <Sequence_file:read_length> ] ;
+    sh:targetClass <Sequence_file:SequenceFile> .
+
+<Sequencing_protocol:SequencingProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Sequencing_protocol:provenance> ],
+        [ sh:class <Sequencing_ontology:SequencingOntology> ;
+            sh:description "The general method for sequencing." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Sequencing method" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path <Sequencing_protocol:method> ],
+        [ sh:description "Whether the sequenced molecule was sequenced from both ends." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Paired end" ;
+            sh:order 7 ;
+            sh:path <Sequencing_protocol:paired_end> ],
+        [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Sequencing_protocol:protocol_core> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Sequencing_protocol:schema_version> ],
+        [ sh:class <S10x:S10x> ;
+            sh:description "Fields specific for 10x experiments." ;
+            sh:maxCount 1 ;
+            sh:name "10x-specific" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path <Sequencing_protocol:s10x> ],
+        [ sh:class <Instrument_ontology:InstrumentOntology> ;
+            sh:description "The manufacturer and model of the sequencer." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Instrument manufacturer and model" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Sequencing_protocol:instrument_manufacturer_model> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Sequencing_protocol:describedBy> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Sequencing_protocol:schema_type> ],
+        [ sh:description "Local name for the particular machine used for sequencing." ;
+            sh:maxCount 1 ;
+            sh:name "Local machine name" ;
+            sh:order 6 ;
+            sh:path <Sequencing_protocol:local_machine_name> ] ;
+    sh:targetClass <Sequencing_protocol:SequencingProtocol> .
+
+<Specimen_from_organism:SpecimenFromOrganism> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Disease_ontology:DiseaseOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path <Specimen_from_organism:diseases> ],
+        [ sh:class <Preservation_and_storage:PreservationStorage> ;
+            sh:description "Information about how a specimen was preserved and/or stored over a period of time." ;
+            sh:maxCount 1 ;
+            sh:name "Preservation/Storage" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 10 ;
+            sh:path <Specimen_from_organism:preservation_storage> ],
+        [ sh:description "When the biomaterial was collected." ;
+            sh:maxCount 1 ;
+            sh:name "Time of collection" ;
+            sh:order 11 ;
+            sh:path <Specimen_from_organism:collection_time> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Specimen_from_organism:provenance> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "biomaterial" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Specimen_from_organism:schema_type> ],
+        [ sh:class <Species_ontology:SpeciesOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Specimen_from_organism:genus_species> ],
+        [ sh:class <Organ_part_ontology:OrganPartOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <Specimen_from_organism:organ_parts> ],
+        [ sh:class <Organ_ontology:OrganOntology> ;
+            sh:description "The organ that the biomaterial came from." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Organ" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path <Specimen_from_organism:organ> ],
+        [ sh:class <State_of_specimen:StateOfSpecimen> ;
+            sh:description "State of the specimen at the time of collection." ;
+            sh:maxCount 1 ;
+            sh:name "State of specimen" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path <Specimen_from_organism:state_of_specimen> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Specimen_from_organism:schema_version> ],
+        [ sh:class <Biomaterial_core:BiomaterialCore> ;
+            sh:description "Core biomaterial-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Biomaterial core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Specimen_from_organism:biomaterial_core> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Specimen_from_organism:describedBy> ],
+        [ sh:class <Purchased_reagents:PurchasedReagents> ;
+            sh:description "Information about a purchased specimen." ;
+            sh:maxCount 1 ;
+            sh:name "Purchased specimen" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 12 ;
+            sh:path <Specimen_from_organism:purchased_specimen> ] ;
+    sh:targetClass <Specimen_from_organism:SpecimenFromOrganism> .
+
+<Treatment_protocol:TreatmentProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Target_pathway_ontology:TargetPathwayOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path <Treatment_protocol:target_pathway> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Treatment_protocol:schema_version> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Treatment_protocol:schema_type> ],
+        [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Treatment_protocol:protocol_core> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Treatment_protocol:provenance> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Treatment_protocol:describedBy> ],
+        [ sh:class <Purchased_reagents:PurchasedReagents> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <Treatment_protocol:reagents> ],
+        [ sh:description "Culture media used to induce a specific treatment response." ;
+            sh:maxCount 1 ;
+            sh:name "Treatment media" ;
+            sh:order 6 ;
+            sh:path <Treatment_protocol:media> ],
+        [ sh:class <Treatment_method_ontology:TreatmentMethodOntology> ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <Treatment_protocol:method> ] ;
+    sh:targetClass <Treatment_protocol:TreatmentProtocol> .
+
+<https://example.org/Analysis-processAnalysisProcess> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Process_core:ProcessCore> ;
+            sh:description "Core process-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Process core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <https://example.org/Analysis-processprocess_core> ],
+        [ sh:class <https://example.org/Analysis-processParameter> ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 6 ;
+            sh:path <https://example.org/Analysis-processinputs> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <https://example.org/Analysis-processprovenance> ],
+        [ sh:description "Terminal stop time of the full pipeline in UTC." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Stop timestamp (UTC)" ;
+            sh:order 9 ;
+            sh:path <https://example.org/Analysis-processtimestamp_stop_utc> ],
+        [ sh:minCount 1 ;
+            sh:order 11 ;
+            sh:path <https://example.org/Analysis-processreference_files> ],
+        [ sh:class <https://example.org/Process-type-ontologyProcessTypeOntology> ;
+            sh:description "The type of process." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Process type" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 5 ;
+            sh:path <https://example.org/Analysis-processtype> ],
+        [ sh:description "Whether the analysis was run or was copied forward as an optimization." ;
+            sh:in ( "run" "copy-forward" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Analysis run type" ;
+            sh:order 10 ;
+            sh:path <https://example.org/Analysis-processanalysis_run_type> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "process" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <https://example.org/Analysis-processschema_type> ],
+        [ sh:class <https://example.org/Analysis-processTask> ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <https://example.org/Analysis-processtasks> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <https://example.org/Analysis-processschema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <https://example.org/Analysis-processdescribedBy> ],
+        [ sh:description "Initial start time of the full pipeline in UTC." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Start timestamp (UTC)" ;
+            sh:order 8 ;
+            sh:path <https://example.org/Analysis-processtimestamp_start_utc> ] ;
+    sh:targetClass <https://example.org/Analysis-processAnalysisProcess> .
+
+<iPSC_induction_protocol:IpscInductionProtocol> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Purchased_reagents:PurchasedReagents> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 11 ;
+            sh:path <iPSC_induction_protocol:reagents> ],
+        [ sh:description "Induction method applied to primary cell culture to induce pluripotent stem cell generation." ;
+            sh:in ( "lentivirus" "sendai virus" "Gun particle" "piggyBac transposon" "miRNA viral" "adenovirus" "cre-loxP" "plasmid" "retroviral" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Induction method" ;
+            sh:order 5 ;
+            sh:path <iPSC_induction_protocol:method> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <iPSC_induction_protocol:schema_version> ],
+        [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <iPSC_induction_protocol:provenance> ],
+        [ sh:description "Description of how pluripotency was tested in induced pluripotent stem cells." ;
+            sh:maxCount 1 ;
+            sh:name "Pluripotency test" ;
+            sh:order 8 ;
+            sh:path <iPSC_induction_protocol:pluripotency_test> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <iPSC_induction_protocol:schema_type> ],
+        [ sh:description "Percent of iPSCs that passed the pluripotency test." ;
+            sh:maxCount 1 ;
+            sh:name "Percent pluripotency" ;
+            sh:order 9 ;
+            sh:path <iPSC_induction_protocol:percent_pluripotency> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <iPSC_induction_protocol:describedBy> ],
+        [ sh:description "Reprogramming factors added to primary cell culture to induce pluripotency." ;
+            sh:maxCount 1 ;
+            sh:name "Reprogramming factors" ;
+            sh:order 6 ;
+            sh:path <iPSC_induction_protocol:reprogramming_factors> ],
+        [ sh:class <Purchased_reagents:PurchasedReagents> ;
+            sh:description "Kit used to induce pluripotent stem cell generation." ;
+            sh:maxCount 1 ;
+            sh:name "Induction kit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <iPSC_induction_protocol:ipsc_induction_kit> ],
+        [ sh:description "Whether a viral vector was removed after induction." ;
+            sh:in ( "yes" "no" "unknown" ) ;
+            sh:maxCount 1 ;
+            sh:name "Pluripotent vector removed" ;
+            sh:order 10 ;
+            sh:path <iPSC_induction_protocol:pluripotency_vector_removed> ],
+        [ sh:class <Protocol_core:ProtocolCore> ;
+            sh:description "Core protocol-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <iPSC_induction_protocol:protocol_core> ] ;
+    sh:targetClass <iPSC_induction_protocol:IpscInductionProtocol> .
+
+<Biological_macromolecule_ontology:BiologicalMacromoleculeOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Biological_macromolecule_ontology:describedBy> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Biological macromolecule ontology ID" ;
+            sh:order 3 ;
+            sh:path <Biological_macromolecule_ontology:ontology> ],
+        [ sh:description "The name of the biological macromolecule being used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Biological macromolecule" ;
+            sh:order 2 ;
+            sh:path <Biological_macromolecule_ontology:text> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Biological_macromolecule_ontology:schema_version> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Biological macromolecule ontology label" ;
+            sh:order 4 ;
+            sh:path <Biological_macromolecule_ontology:ontology_label> ] ;
+    sh:targetClass <Biological_macromolecule_ontology:BiologicalMacromoleculeOntology> .
+
+<Cell_cycle_ontology:CellCycleOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Version number in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Cell_cycle_ontology:schema_version> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Cell cycle ontology ID" ;
+            sh:order 3 ;
+            sh:path <Cell_cycle_ontology:ontology> ],
+        [ sh:description "The name of a cell cycle of the cells in the specimen." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Cell cycle" ;
+            sh:order 2 ;
+            sh:path <Cell_cycle_ontology:text> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Cell_cycle_ontology:describedBy> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Cell cycle ontology label" ;
+            sh:order 4 ;
+            sh:path <Cell_cycle_ontology:ontology_label> ] ;
+    sh:targetClass <Cell_cycle_ontology:CellCycleOntology> .
+
+<Cellular_component_ontology:CellularComponentOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The name of a subcellular structure." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Subcellular structure" ;
+            sh:order 2 ;
+            sh:path <Cellular_component_ontology:text> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Subcellular structure ontology ID" ;
+            sh:order 3 ;
+            sh:path <Cellular_component_ontology:ontology> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Cellular_component_ontology:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Cellular_component_ontology:describedBy> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Subcellular structure ontology label" ;
+            sh:order 4 ;
+            sh:path <Cellular_component_ontology:ontology_label> ] ;
+    sh:targetClass <Cellular_component_ontology:CellularComponentOntology> .
+
+<Channel:Channel> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Channel:describedBy> ],
+        [ sh:description "The name of the fluorophore this channel is designed to assay." ;
+            sh:maxCount 1 ;
+            sh:name "Target fluorophore" ;
+            sh:order 6 ;
+            sh:path <Channel:target_fluorophore> ],
+        [ sh:description "Whether multiple targets were detected simultaneously in this channel." ;
+            sh:in ( "yes" "no" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Multiplexed experiment" ;
+            sh:order 5 ;
+            sh:path <Channel:multiplexed> ],
+        [ sh:description "Excitation wavelength of the lightsource in nanometers." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Excitation wavelength" ;
+            sh:order 3 ;
+            sh:path <Channel:excitation_wavelength> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Channel:schema_version> ],
+        [ sh:description "Acquisition time for a single image per channel, in milliseconds." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Exposure time" ;
+            sh:order 7 ;
+            sh:path <Channel:exposure_time> ],
+        [ sh:description "User given ID.  If there is an accompanying codebook, this name should correspond to the channel id used in the codebook." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Channel ID" ;
+            sh:order 2 ;
+            sh:path <Channel:channel_id> ],
+        [ sh:description "Emission filter in nanometers." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Filter range" ;
+            sh:order 4 ;
+            sh:path <Channel:filter_range> ] ;
+    sh:targetClass <Channel:Channel> .
+
+<Contact:Contact> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The individual's ORCID ID linked to previous work." ;
+            sh:maxCount 1 ;
+            sh:name "ORCID ID" ;
+            sh:order 10 ;
+            sh:path <Contact:orcid_id> ],
+        [ sh:description "Phone number of the individual or their lab." ;
+            sh:maxCount 1 ;
+            sh:name "Phone number" ;
+            sh:order 3 ;
+            sh:path <Contact:phone> ],
+        [ sh:description "Email address for the individual." ;
+            sh:maxCount 1 ;
+            sh:name "Email address" ;
+            sh:order 2 ;
+            sh:path <Contact:email> ],
+        [ sh:description "Country where the individual works." ;
+            sh:maxCount 1 ;
+            sh:name "Country" ;
+            sh:order 7 ;
+            sh:path <Contact:country> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Contact:describedBy> ],
+        [ sh:description "Whether the individual is a primary point of contact for the project." ;
+            sh:maxCount 1 ;
+            sh:name "Corresponding contributor" ;
+            sh:order 8 ;
+            sh:path <Contact:corresponding_contributor> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Contact:schema_version> ],
+        [ sh:description "Name of lab or department within the institute where the individual works." ;
+            sh:maxCount 1 ;
+            sh:name "Laboratory/Department" ;
+            sh:order 5 ;
+            sh:path <Contact:laboratory> ],
+        [ sh:description "Name of primary institute where the individual works." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Institute" ;
+            sh:order 4 ;
+            sh:path <Contact:institution> ],
+        [ sh:description "Street address where the individual works." ;
+            sh:maxCount 1 ;
+            sh:name "Street address" ;
+            sh:order 6 ;
+            sh:path <Contact:address> ],
+        [ sh:class <Contributor_role_ontology:ContributorRoleOntology> ;
+            sh:description "Primary role of the individual in the project." ;
+            sh:maxCount 1 ;
+            sh:name "Project role" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path <Contact:project_role> ] ;
+    sh:targetClass <Contact:Contact> .
+
+<Contributor_role_ontology:ContributorRoleOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Contributor role ontology ID" ;
+            sh:order 3 ;
+            sh:path <Contributor_role_ontology:ontology> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Contributor role ontology label" ;
+            sh:order 4 ;
+            sh:path <Contributor_role_ontology:ontology_label> ],
+        [ sh:description "The primary role of the contributor in the project." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Contributor role" ;
+            sh:order 2 ;
+            sh:path <Contributor_role_ontology:text> ],
+        [ sh:description "Version number in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Contributor_role_ontology:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Contributor_role_ontology:describedBy> ] ;
+    sh:targetClass <Contributor_role_ontology:ContributorRoleOntology> .
+
+<Death:Death> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Number of days on ventilator before death occurred." ;
+            sh:maxCount 1 ;
+            sh:name "Number of days on ventilator" ;
+            sh:order 4 ;
+            sh:path <Death:days_on_ventilator> ],
+        [ sh:description "Type of death preceding organ donation." ;
+            sh:in ( "Donation after circulatory death (DCD)" "Donation after brainstem death (DBD)" ) ;
+            sh:maxCount 1 ;
+            sh:name "Organ donation death type" ;
+            sh:order 7 ;
+            sh:path <Death:organ_donation_death_type> ],
+        [ sh:description "Value on 4-point Hardy scale cause of death classification." ;
+            sh:maxCount 1 ;
+            sh:name "Value on Hardy scale" ;
+            sh:order 5 ;
+            sh:path <Death:hardy_scale> ],
+        [ sh:description "Whether perfusion with cold fluid was used to help preserve tissues before heart stopped." ;
+            sh:maxCount 1 ;
+            sh:name "Cold perfused" ;
+            sh:order 3 ;
+            sh:path <Death:cold_perfused> ],
+        [ sh:description "Whether entire body was perfused with warm oxygenated blood." ;
+            sh:in ( "yes" "no" "unknown" ) ;
+            sh:maxCount 1 ;
+            sh:name "Normothermic regional perfusion" ;
+            sh:order 8 ;
+            sh:path <Death:normothermic_regional_perfusion> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Death:describedBy> ],
+        [ sh:description "Conditions resulting in death." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Cause of death" ;
+            sh:order 2 ;
+            sh:path <Death:cause_of_death> ],
+        [ sh:description "Date and time when death was declared." ;
+            sh:maxCount 1 ;
+            sh:name "Time of death" ;
+            sh:order 6 ;
+            sh:path <Death:time_of_death> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Death:schema_version> ] ;
+    sh:targetClass <Death:Death> .
+
+<Development_stage_ontology:DevelopmentStageOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Version number in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Development_stage_ontology:schema_version> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Development stage ontology ID" ;
+            sh:order 3 ;
+            sh:path <Development_stage_ontology:ontology> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Development stage ontology label" ;
+            sh:order 4 ;
+            sh:path <Development_stage_ontology:ontology_label> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Development_stage_ontology:describedBy> ],
+        [ sh:description "The name of the development stage of the organism." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Development stage" ;
+            sh:order 2 ;
+            sh:path <Development_stage_ontology:text> ] ;
+    sh:targetClass <Development_stage_ontology:DevelopmentStageOntology> .
+
+<Ethnicity_ontology:EthnicityOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Ethnicity ontology label" ;
+            sh:order 4 ;
+            sh:path <Ethnicity_ontology:ontology_label> ],
+        [ sh:description "The ethnicity of the human donor." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Ethnicity" ;
+            sh:order 2 ;
+            sh:path <Ethnicity_ontology:text> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Ethnicity ontology ID" ;
+            sh:order 3 ;
+            sh:path <Ethnicity_ontology:ontology> ],
+        [ sh:description "Version number in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Ethnicity_ontology:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Ethnicity_ontology:describedBy> ] ;
+    sh:targetClass <Ethnicity_ontology:EthnicityOntology> .
+
+<Familial_relationship:FamilialRelationship> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The individual's child." ;
+            sh:maxCount 1 ;
+            sh:name "Child" ;
+            sh:order 3 ;
+            sh:path <Familial_relationship:child> ],
+        [ sh:description "The individual's parent." ;
+            sh:maxCount 1 ;
+            sh:name "Parent" ;
+            sh:order 2 ;
+            sh:path <Familial_relationship:parent> ],
+        [ sh:description "The individual's sibling." ;
+            sh:maxCount 1 ;
+            sh:name "Sibling" ;
+            sh:order 4 ;
+            sh:path <Familial_relationship:sibling> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Familial_relationship:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Familial_relationship:describedBy> ] ;
+    sh:targetClass <Familial_relationship:FamilialRelationship> .
+
+<File_content_ontology:FileContentOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Content description ontology label" ;
+            sh:order 4 ;
+            sh:path <File_content_ontology:ontology_label> ],
+        [ sh:description "General description of the contents of the file." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Content description" ;
+            sh:order 2 ;
+            sh:path <File_content_ontology:text> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Content description ontology ID" ;
+            sh:order 3 ;
+            sh:path <File_content_ontology:ontology> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <File_content_ontology:describedBy> ],
+        [ sh:description "Version number in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <File_content_ontology:schema_version> ] ;
+    sh:targetClass <File_content_ontology:FileContentOntology> .
+
+<Funder:Funder> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The name of the grant funding the project." ;
+            sh:maxCount 1 ;
+            sh:name "Grant title" ;
+            sh:order 2 ;
+            sh:path <Funder:grant_title> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Funder:schema_version> ],
+        [ sh:description "The name of the funding organization." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Funding organization" ;
+            sh:order 4 ;
+            sh:path <Funder:organization> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Funder:describedBy> ],
+        [ sh:description "The unique grant identifier or reference." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Grant ID" ;
+            sh:order 3 ;
+            sh:path <Funder:grant_id> ] ;
+    sh:targetClass <Funder:Funder> .
+
+<Human_specific:HumanSpecific> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Human_specific:schema_version> ],
+        [ sh:class <Ethnicity_ontology:EthnicityOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Human_specific:ethnicity> ],
+        [ sh:description "The body mass index of the donor." ;
+            sh:maxCount 1 ;
+            sh:name "Body mass index" ;
+            sh:order 2 ;
+            sh:path <Human_specific:body_mass_index> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Human_specific:describedBy> ] ;
+    sh:targetClass <Human_specific:HumanSpecific> .
+
+<INSDC_experiment:InsdcExperiment> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "An International Nucleotide Sequence Database Collaboration (INSDC) experiment accession." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "INSDC experiment accession" ;
+            sh:order 2 ;
+            sh:path <INSDC_experiment:insdc_experiment_accession> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <INSDC_experiment:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <INSDC_experiment:describedBy> ] ;
+    sh:targetClass <INSDC_experiment:InsdcExperiment> .
+
+<Instrument_ontology:InstrumentOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Instrument_ontology:describedBy> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Instrument ontology ID" ;
+            sh:order 3 ;
+            sh:path <Instrument_ontology:ontology> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Instrument ontology label" ;
+            sh:order 4 ;
+            sh:path <Instrument_ontology:ontology_label> ],
+        [ sh:description "The full name of the instrument used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Instrument" ;
+            sh:order 2 ;
+            sh:path <Instrument_ontology:text> ],
+        [ sh:description "Version number in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Instrument_ontology:schema_version> ] ;
+    sh:targetClass <Instrument_ontology:InstrumentOntology> .
+
+<Library_construction_ontology:LibraryConstructionOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Library construction ontology label" ;
+            sh:order 4 ;
+            sh:path <Library_construction_ontology:ontology_label> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Library_construction_ontology:schema_version> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Library construction ontology ID" ;
+            sh:order 3 ;
+            sh:path <Library_construction_ontology:ontology> ],
+        [ sh:description "The name of a library construction approach being used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Library construction" ;
+            sh:order 2 ;
+            sh:path <Library_construction_ontology:text> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Library_construction_ontology:describedBy> ] ;
+    sh:targetClass <Library_construction_ontology:LibraryConstructionOntology> .
+
+<Links:Entity> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "ID of this entity" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Links:entity_id> ],
+        [ sh:description "The concrete type of this entity" ;
+            sh:in ( "project" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path <Links:entity_type> ] ;
+    sh:targetClass <Links:Entity> .
+
+<Links:Input> a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "An input to a process" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "UUID of the input entity." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Input entity UUID" ;
+            sh:order 1 ;
+            sh:path <Links:input_id> ],
+        [ sh:description "The concrete type of the input entity." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Input type" ;
+            sh:order 0 ;
+            sh:path <Links:input_type> ] ;
+    sh:targetClass <Links:Input> .
+
+<Links:Output> a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "An output from a process" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The concrete type of the output entity." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Output type" ;
+            sh:order 0 ;
+            sh:path <Links:output_type> ],
+        [ sh:description "UUID of the output entity." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Output entity UUID" ;
+            sh:order 1 ;
+            sh:path <Links:output_id> ] ;
+    sh:targetClass <Links:Output> .
+
+<Links:ProtocolReference> a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A protocol used in a process" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The concrete type of protocol entity." ;
+            sh:in ( "analysis_protocol" "aggregate_generation_protocol" "collection_protocol" "differentiation_protocol" "dissociation_protocol" "enrichment_protocol" "ipsc_induction_protocol" "imaging_preparation_protocol" "imaging_protocol" "library_preparation_protocol" "sequencing_protocol" "treatment_protocol" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol type" ;
+            sh:order 0 ;
+            sh:path <Links:protocol_type> ],
+        [ sh:description "UUID of the protocol entity." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol entity UUID" ;
+            sh:order 1 ;
+            sh:path <Links:protocol_id> ] ;
+    sh:targetClass <Links:ProtocolReference> .
+
+<Mass_unit_ontology:MassUnitOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The name of a mass unit being used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Mass unit" ;
+            sh:order 2 ;
+            sh:path <Mass_unit_ontology:text> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Mass_unit_ontology:describedBy> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Mass unit ontology label" ;
+            sh:order 4 ;
+            sh:path <Mass_unit_ontology:ontology_label> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Mass unit ontology ID" ;
+            sh:order 3 ;
+            sh:path <Mass_unit_ontology:ontology> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Mass_unit_ontology:schema_version> ] ;
+    sh:targetClass <Mass_unit_ontology:MassUnitOntology> .
+
+<Matrix:Matrix> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Matrix:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Matrix:describedBy> ],
+        [ sh:in ( "CPM (counts per million)" "TPM (transcripts per kilobase million)" "RPKM (reads per kilobase of exon per million reads mapped)" "FPKM (fragments per kilobase of exon per million fragments mapped)" "DESeq2's median of ratios" "TMM (EdgeR's trimmed mean of M values)" "SF (size factor)" "UQ (Upper quartile)" "Downsampling" "other" "unknown" ) ;
+            sh:order 2 ;
+            sh:path <Matrix:data_normalization_methods> ],
+        [ sh:in ( "alignment" "quantification" "peak calling" "peak annotation" "gene filtering" "cell filtering" "merging" "cell calling" "ambient RNA correction" "doublet removal" "batch correction" "depth normalization" "other" ) ;
+            sh:order 3 ;
+            sh:path <Matrix:derivation_process> ] ;
+    sh:targetClass <Matrix:Matrix> .
+
+<Medical_history:MedicalHistory> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Estimated amount of alcohol consumed per day." ;
+            sh:maxCount 1 ;
+            sh:name "Alcohol history" ;
+            sh:order 2 ;
+            sh:path <Medical_history:alcohol_history> ],
+        [ sh:description "Results from medical tests performed on the individual." ;
+            sh:maxCount 1 ;
+            sh:name "Test results" ;
+            sh:order 6 ;
+            sh:path <Medical_history:test_results> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Medical_history:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Medical_history:describedBy> ],
+        [ sh:description "Estimated number of cigarettes smoked per day." ;
+            sh:maxCount 1 ;
+            sh:name "Smoking history" ;
+            sh:order 4 ;
+            sh:path <Medical_history:smoking_history> ],
+        [ sh:description "Nutritional state of individual at time of biomaterial collection." ;
+            sh:in ( "normal" "fasting" "feeding tube removed" ) ;
+            sh:maxCount 1 ;
+            sh:name "Nutritional state" ;
+            sh:order 5 ;
+            sh:path <Medical_history:nutritional_state> ],
+        [ sh:description "Treatments the individual has undergone prior to biomaterial collection." ;
+            sh:maxCount 1 ;
+            sh:name "Treatments" ;
+            sh:order 7 ;
+            sh:path <Medical_history:treatment> ],
+        [ sh:description "Medications the individual was taking at time of biomaterial collection." ;
+            sh:maxCount 1 ;
+            sh:name "Medications" ;
+            sh:order 3 ;
+            sh:path <Medical_history:medication> ] ;
+    sh:targetClass <Medical_history:MedicalHistory> .
+
+<Microscopy_ontology:MicroscopyOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Microscopy ontology ID" ;
+            sh:order 3 ;
+            sh:path <Microscopy_ontology:ontology> ],
+        [ sh:description "The name of the type of microscopy used in an imaging experiment." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Microscopy" ;
+            sh:order 2 ;
+            sh:path <Microscopy_ontology:text> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Microscopy ontology label" ;
+            sh:order 4 ;
+            sh:path <Microscopy_ontology:ontology_label> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Microscopy_ontology:describedBy> ],
+        [ sh:description "Version number in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Microscopy_ontology:schema_version> ] ;
+    sh:targetClass <Microscopy_ontology:MicroscopyOntology> .
+
+<Mouse_specific:MouseSpecific> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Mouse_specific:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Mouse_specific:describedBy> ],
+        [ sh:class <Strain_ontology:StrainOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path <Mouse_specific:strain> ] ;
+    sh:targetClass <Mouse_specific:MouseSpecific> .
+
+<Plate_based_sequencing:PlateBasedSequencing> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A label or name for the plate on which the well is located." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Plate label" ;
+            sh:order 2 ;
+            sh:path <Plate_based_sequencing:plate_label> ],
+        [ sh:description "A label or name for the well in which the cell is located." ;
+            sh:maxCount 1 ;
+            sh:name "Well label" ;
+            sh:order 3 ;
+            sh:path <Plate_based_sequencing:well_label> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Plate_based_sequencing:schema_version> ],
+        [ sh:description "Quality of well if imaged before sequencing." ;
+            sh:in ( "OK" "control, 2-cell well" "control, empty well" "low quality cell" ) ;
+            sh:maxCount 1 ;
+            sh:name "Well quality" ;
+            sh:order 4 ;
+            sh:path <Plate_based_sequencing:well_quality> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Plate_based_sequencing:describedBy> ] ;
+    sh:targetClass <Plate_based_sequencing:PlateBasedSequencing> .
+
+<Probe:Probe> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Sequence of a probe used to detect target." ;
+            sh:maxCount 1 ;
+            sh:name "Probe sequence" ;
+            sh:order 3 ;
+            sh:path <Probe:probe_sequence> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Probe:schema_version> ],
+        [ sh:class <Purchased_reagents:PurchasedReagents> ;
+            sh:description "Name of reagents used to construct the probe." ;
+            sh:maxCount 1 ;
+            sh:name "Probe construction reagents" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path <Probe:probe_reagents> ],
+        [ sh:description "The name of the target molecule." ;
+            sh:maxCount 1 ;
+            sh:name "Target name" ;
+            sh:order 4 ;
+            sh:path <Probe:target_name> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Probe:describedBy> ],
+        [ sh:description "An identifier for the target molecule." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Target label" ;
+            sh:order 6 ;
+            sh:path <Probe:target_label> ],
+        [ sh:description "The label of a probe used to detect target in this experiment." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Probe label" ;
+            sh:order 2 ;
+            sh:path <Probe:probe_label> ],
+        [ sh:class <Cellular_component_ontology:CellularComponentOntology> ;
+            sh:description "Target subcellular structure." ;
+            sh:maxCount 1 ;
+            sh:name "Target subcellular structure" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 7 ;
+            sh:path <Probe:subcellular_structure> ],
+        [ sh:description "A label used in the codebook for the target." ;
+            sh:maxCount 1 ;
+            sh:name "Target label in codebook" ;
+            sh:order 5 ;
+            sh:path <Probe:target_codebook_label> ],
+        [ sh:order 11 ;
+            sh:path <Probe:channel_label> ],
+        [ sh:order 10 ;
+            sh:path <Probe:fluorophore> ],
+        [ sh:class <https://example.org/Process-type-ontologyProcessTypeOntology> ;
+            sh:description "Type of assay used to detect target." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Assay type" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 9 ;
+            sh:path <Probe:assay_type> ] ;
+    sh:targetClass <Probe:Probe> .
+
+<Project_core:ProjectCore> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Project_core:schema_version> ],
+        [ sh:description "An official title for the project." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Project title" ;
+            sh:order 3 ;
+            sh:path <Project_core:project_title> ],
+        [ sh:description "A longer description of the project which includes research goals and experimental approach." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Project description" ;
+            sh:order 4 ;
+            sh:path <Project_core:project_description> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Project_core:describedBy> ],
+        [ sh:description "A short name for the project." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Project label" ;
+            sh:order 2 ;
+            sh:path <Project_core:project_short_name> ] ;
+    sh:targetClass <Project_core:ProjectCore> .
+
+<S10x:S10x> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The number of channels pooled within a sequencing lane." ;
+            sh:maxCount 1 ;
+            sh:name "Pooled channels" ;
+            sh:order 4 ;
+            sh:path <S10x:pooled_channels> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <S10x:describedBy> ],
+        [ sh:description "Whether drop uniformity was achieved as a result of visual inspection of emulsion after a 10x run." ;
+            sh:maxCount 1 ;
+            sh:name "Drop uniformity" ;
+            sh:order 5 ;
+            sh:path <S10x:drop_uniformity> ],
+        [ sh:description "Version of the program used for fastq generation." ;
+            sh:maxCount 1 ;
+            sh:name "Fastq creation method version" ;
+            sh:order 3 ;
+            sh:path <S10x:fastq_method_version> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <S10x:schema_version> ],
+        [ sh:description "Method used for the generation of fastq files from bcl files." ;
+            sh:maxCount 1 ;
+            sh:name "Fastq creation method" ;
+            sh:order 2 ;
+            sh:path <S10x:fastq_method> ] ;
+    sh:targetClass <S10x:S10x> .
+
+<Sequencing_ontology:SequencingOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The name of a sequencing approach being used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Sequencing approach" ;
+            sh:order 2 ;
+            sh:path <Sequencing_ontology:text> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Sequencing_ontology:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Sequencing_ontology:schema_version> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Sequencing approach ontology label" ;
+            sh:order 4 ;
+            sh:path <Sequencing_ontology:ontology_label> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Sequencing approach ontology ID" ;
+            sh:order 3 ;
+            sh:path <Sequencing_ontology:ontology> ] ;
+    sh:targetClass <Sequencing_ontology:SequencingOntology> .
+
+<State_of_specimen:StateOfSpecimen> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Duration of time between when death was declared and when the specimen was preserved or processed." ;
+            sh:maxCount 1 ;
+            sh:name "Post-mortem interval" ;
+            sh:order 9 ;
+            sh:path <State_of_specimen:postmortem_interval> ],
+        [ sh:order 4 ;
+            sh:path <State_of_specimen:gross_images> ],
+        [ sh:description "Duration of time, in seconds, between when the specimen stopped receiving oxygen and when it was preserved or processed." ;
+            sh:maxCount 1 ;
+            sh:name "Ischemic time" ;
+            sh:order 6 ;
+            sh:path <State_of_specimen:ischemic_time> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <State_of_specimen:schema_version> ],
+        [ sh:description "How the specimen looks under the microscope and how it compares with normal cells." ;
+            sh:maxCount 1 ;
+            sh:name "Microscopic description" ;
+            sh:order 7 ;
+            sh:path <State_of_specimen:microscopic_description> ],
+        [ sh:description "Whether specimen experienced warm or cold ischemia." ;
+            sh:in ( "warm" "cold" ) ;
+            sh:maxCount 1 ;
+            sh:name "Ischemic temperature" ;
+            sh:order 5 ;
+            sh:path <State_of_specimen:ischemic_temperature> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <State_of_specimen:describedBy> ],
+        [ sh:description "Color, size, and other aspects of specimen as visible to naked eye." ;
+            sh:maxCount 1 ;
+            sh:name "Gross description" ;
+            sh:order 3 ;
+            sh:path <State_of_specimen:gross_description> ],
+        [ sh:description "State of tissue breakdown due to self-digestion." ;
+            sh:in ( "none" "mild" "moderate" ) ;
+            sh:maxCount 1 ;
+            sh:name "Autolysis score" ;
+            sh:order 2 ;
+            sh:path <State_of_specimen:autolysis_score> ],
+        [ sh:order 8 ;
+            sh:path <State_of_specimen:microscopic_images> ] ;
+    sh:targetClass <State_of_specimen:StateOfSpecimen> .
+
+<Strain_ontology:StrainOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Strain ontology label" ;
+            sh:order 4 ;
+            sh:path <Strain_ontology:ontology_label> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Strain ontology ID" ;
+            sh:order 3 ;
+            sh:path <Strain_ontology:ontology> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Strain_ontology:describedBy> ],
+        [ sh:description "The name of the strain to which the organism belongs." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Strain" ;
+            sh:order 2 ;
+            sh:path <Strain_ontology:text> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Strain_ontology:schema_version> ] ;
+    sh:targetClass <Strain_ontology:StrainOntology> .
+
+<Supplementary_file:SupplementaryFile> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class <Provenance:Provenance> ;
+            sh:description "Provenance information provided by the system." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Supplementary_file:provenance> ],
+        [ sh:class <File_core:FileCore> ;
+            sh:description "Core file-level information." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "File core" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Supplementary_file:file_core> ],
+        [ sh:description "A short description of the file contents." ;
+            sh:maxCount 1 ;
+            sh:name "File description" ;
+            sh:order 5 ;
+            sh:path <Supplementary_file:file_description> ],
+        [ sh:description "The type of the metadata schema entity." ;
+            sh:in ( "file" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Supplementary_file:schema_type> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <Supplementary_file:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Supplementary_file:schema_version> ] ;
+    sh:targetClass <Supplementary_file:SupplementaryFile> .
+
+<Target_pathway_ontology:TargetPathwayOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The name of the treatment target pathway." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Target pathway" ;
+            sh:order 2 ;
+            sh:path <Target_pathway_ontology:text> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Target_pathway_ontology:describedBy> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Target pathway ontology ID" ;
+            sh:order 3 ;
+            sh:path <Target_pathway_ontology:ontology> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Target_pathway_ontology:schema_version> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Target pathway ontology label" ;
+            sh:order 4 ;
+            sh:path <Target_pathway_ontology:ontology_label> ] ;
+    sh:targetClass <Target_pathway_ontology:TargetPathwayOntology> .
+
+<Treatment_method_ontology:TreatmentMethodOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Treatment_method_ontology:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Treatment_method_ontology:schema_version> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Treatment ontology label" ;
+            sh:order 4 ;
+            sh:path <Treatment_method_ontology:ontology_label> ],
+        [ sh:description "The name of a treatment method or approach being used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Treatment method" ;
+            sh:order 2 ;
+            sh:path <Treatment_method_ontology:text> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Treatment ontology ID" ;
+            sh:order 3 ;
+            sh:path <Treatment_method_ontology:ontology> ] ;
+    sh:targetClass <Treatment_method_ontology:TreatmentMethodOntology> .
+
+<https://example.org/Analysis-processParameter> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Name of parameter." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Parameter name" ;
+            sh:order 1 ;
+            sh:path <https://example.org/Analysis-processparameter_name> ],
+        [ sh:description "MD5 checksum of the file." ;
+            sh:maxCount 1 ;
+            sh:name "Checksum" ;
+            sh:order 0 ;
+            sh:path <https://example.org/Analysis-processchecksum> ],
+        [ sh:description "Path to file for or value of parameter." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Parameter value" ;
+            sh:order 2 ;
+            sh:path <https://example.org/Analysis-processparameter_value> ] ;
+    sh:targetClass <https://example.org/Analysis-processParameter> .
+
+<https://example.org/Analysis-processTask> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Path where standard error is logged." ;
+            sh:maxCount 1 ;
+            sh:name "Log error" ;
+            sh:order 3 ;
+            sh:path <https://example.org/Analysis-processlog_err> ],
+        [ sh:description "Date and time when the task finished." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Stop time" ;
+            sh:order 7 ;
+            sh:path <https://example.org/Analysis-processstop_time> ],
+        [ sh:description "Name of the Google Cloud zone where the task was run." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Zone" ;
+            sh:order 2 ;
+            sh:path <https://example.org/Analysis-processzone> ],
+        [ sh:description "Amount of memory allocated for this task." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Memory" ;
+            sh:order 8 ;
+            sh:path <https://example.org/Analysis-processmemory> ],
+        [ sh:description "Date and time when the task started." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Start time" ;
+            sh:order 4 ;
+            sh:path <https://example.org/Analysis-processstart_time> ],
+        [ sh:description "Name of the task." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Task name" ;
+            sh:order 1 ;
+            sh:path <https://example.org/Analysis-processtask_name> ],
+        [ sh:description "Name of docker image where the task is stored and executed." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Docker image" ;
+            sh:order 9 ;
+            sh:path <https://example.org/Analysis-processdocker_image> ],
+        [ sh:description "Number of CPUs used to run this task." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "CPUs" ;
+            sh:order 5 ;
+            sh:path <https://example.org/Analysis-processcpus> ],
+        [ sh:description "Name of the disk volume mounted to the VM for the task." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Disk name" ;
+            sh:order 0 ;
+            sh:path <https://example.org/Analysis-processdisk_size> ],
+        [ sh:description "Path where standard output is logged." ;
+            sh:maxCount 1 ;
+            sh:name "Log out" ;
+            sh:order 6 ;
+            sh:path <https://example.org/Analysis-processlog_out> ] ;
+    sh:targetClass <https://example.org/Analysis-processTask> .
+
+<Cell_morphology:CellMorphology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Cell_morphology:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Cell_morphology:describedBy> ],
+        [ sh:description "The method by which cell viability was determined." ;
+            sh:maxCount 1 ;
+            sh:name "Cell viability method" ;
+            sh:order 6 ;
+            sh:path <Cell_morphology:cell_viability_method> ],
+        [ sh:description "Percent of cells determined to be viable." ;
+            sh:maxCount 1 ;
+            sh:name "Percent cell viability" ;
+            sh:order 5 ;
+            sh:path <Cell_morphology:percent_cell_viability> ],
+        [ sh:description "General description of the morphology of cells." ;
+            sh:maxCount 1 ;
+            sh:name "Cell morphology" ;
+            sh:order 2 ;
+            sh:path <Cell_morphology:cell_morphology> ],
+        [ sh:description "Size of cells in Cell size unit." ;
+            sh:maxCount 1 ;
+            sh:name "Cell size" ;
+            sh:order 3 ;
+            sh:path <Cell_morphology:cell_size> ],
+        [ sh:description "Percent of cells identified to be necrotic." ;
+            sh:maxCount 1 ;
+            sh:name "Percent necrotic cells" ;
+            sh:order 8 ;
+            sh:path <Cell_morphology:percent_necrosis> ],
+        [ sh:description "Result of the cell viability test." ;
+            sh:in ( "pass" "fail" ) ;
+            sh:maxCount 1 ;
+            sh:name "Cell viability result" ;
+            sh:order 7 ;
+            sh:path <Cell_morphology:cell_viability_result> ],
+        [ sh:class <Length_unit_ontology:LengthUnitOntology> ;
+            sh:description "The unit in which the Cell size is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Cell size unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Cell_morphology:cell_size_unit> ] ;
+    sh:targetClass <Cell_morphology:CellMorphology> .
+
+<Cell_type_ontology:CellTypeOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The name of a cell type supplied by a user." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Cell type" ;
+            sh:order 2 ;
+            sh:path <Cell_type_ontology:text> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Cell_type_ontology:describedBy> ],
+        [ sh:description "Version number in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Cell_type_ontology:schema_version> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Cell type ontology label" ;
+            sh:order 4 ;
+            sh:path <Cell_type_ontology:ontology_label> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Cell type ontology ID" ;
+            sh:order 3 ;
+            sh:path <Cell_type_ontology:ontology> ] ;
+    sh:targetClass <Cell_type_ontology:CellTypeOntology> .
+
+<Growth_conditions:GrowthConditions> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The solid, liquid, or semi-solid medium used to support growth." ;
+            sh:maxCount 1 ;
+            sh:name "Growth medium" ;
+            sh:order 3 ;
+            sh:path <Growth_conditions:growth_medium> ],
+        [ sh:description "The number of passages that the biomaterial has been through." ;
+            sh:maxCount 1 ;
+            sh:name "Passage number" ;
+            sh:order 2 ;
+            sh:path <Growth_conditions:passage_number> ],
+        [ sh:description "Description of drugs added to the growth medium." ;
+            sh:maxCount 1 ;
+            sh:name "Drug treatment" ;
+            sh:order 7 ;
+            sh:path <Growth_conditions:drug_treatment> ],
+        [ sh:description "Cell culture environment in which cells are grown." ;
+            sh:maxCount 1 ;
+            sh:name "Culture environment" ;
+            sh:order 4 ;
+            sh:path <Growth_conditions:culture_environment> ],
+        [ sh:description "The method by which the biomaterial was tested for mycoplasma contamination." ;
+            sh:in ( "Direct DNA stain" "Indirect DNA stain" "Broth and agar culture" "PCR" "Nested PCR" "ELISA" "Autoradiography" "Immunostaining" "Cell-based assay" "Microbiological assay" ) ;
+            sh:maxCount 1 ;
+            sh:name "Mycoplasma testing method" ;
+            sh:order 5 ;
+            sh:path <Growth_conditions:mycoplasma_testing_method> ],
+        [ sh:description "Whether the biomaterial passed or failed the mycoplasma test." ;
+            sh:in ( "pass" "fail" ) ;
+            sh:maxCount 1 ;
+            sh:name "Mycoplasma testing results" ;
+            sh:order 6 ;
+            sh:path <Growth_conditions:mycoplasma_testing_results> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Growth_conditions:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Growth_conditions:schema_version> ],
+        [ sh:description "Type of feeder layer cells on which biomaterial was grown." ;
+            sh:in ( "feeder-free" "feeder-dependent, JK1 feeder cells" "feeder-dependent, SNL 76/7 feeder cells" "feeder-dependent, human marrow stromal cells" "feeder-dependent, bovine embryonic fibroblast cells" "feeder-dependent, mouse embryonic fibroblast cells" "feeder-dependent, mouse fibroblast STO cells" "feeder-dependent, mouse bone marrow stromal cells" "feeder-dependent, mouse yolk sac-derived endothelial cells" "feeder-dependent, human foreskin fibroblast cells" "feeder-dependent, human newborn fibroblast cells" "feeder-dependent, human fetal lung fibroblast cells" "feeder-dependent, human uterine endometrial cells" "feeder-dependent, human breast parenchymal cells" "feeder-dependent, human embryonic fibroblast cells" "feeder-dependent, human adipose stromal cells" "feeder-dependent, human amniotic epithelial cells" "feeder-dependent, human placental fibroblast cells" "feeder-dependent, human umbilical cord stromal cells" "feeder-dependent, human fetal muscle cells" "feeder-dependent, human fetal skin cells" "feeder-dependent, human fetal liver stromal cells" "feeder-dependent, human fallopian tubal epithelial cells" "feeder-dependent, human amniotic mesenchymal cells" ) ;
+            sh:maxCount 1 ;
+            sh:name "Feeder layer type" ;
+            sh:order 8 ;
+            sh:path <Growth_conditions:feeder_layer_type> ] ;
+    sh:targetClass <Growth_conditions:GrowthConditions> .
+
+<Library_amplification_ontology:LibraryAmplificationOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Library_amplification_ontology:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Library_amplification_ontology:describedBy> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Library amplification ontology ID" ;
+            sh:order 3 ;
+            sh:path <Library_amplification_ontology:ontology> ],
+        [ sh:description "The name of a library amplification approach being used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Library amplification" ;
+            sh:order 2 ;
+            sh:path <Library_amplification_ontology:text> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Library amplification ontology label" ;
+            sh:order 4 ;
+            sh:path <Library_amplification_ontology:ontology_label> ] ;
+    sh:targetClass <Library_amplification_ontology:LibraryAmplificationOntology> .
+
+<Preservation_and_storage:PreservationStorage> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The method by which a biomaterial was stored after preservation or before another protocol was used." ;
+            sh:in ( "ambient temperature" "cut slide" "fresh" "frozen at -70C" "frozen at -80C" "frozen at -150C" "frozen in liquid nitrogen" "frozen in vapor phase" "paraffin block" "RNAlater at 4C" "RNAlater at 25C" "RNAlater at -20C" ) ;
+            sh:maxCount 1 ;
+            sh:name "Storage method" ;
+            sh:order 2 ;
+            sh:path <Preservation_and_storage:storage_method> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Preservation_and_storage:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Preservation_and_storage:schema_version> ],
+        [ sh:description "Length of time the biomaterial was stored for in Storage time units." ;
+            sh:maxCount 1 ;
+            sh:name "Storage time" ;
+            sh:order 3 ;
+            sh:path <Preservation_and_storage:storage_time> ],
+        [ sh:class <Time_unit_ontology:TimeUnitOntology> ;
+            sh:description "The unit in which Storage time is expressed." ;
+            sh:maxCount 1 ;
+            sh:name "Storage time unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <Preservation_and_storage:storage_time_unit> ],
+        [ sh:description "The method by which a biomaterial was preserved through the use of chemicals, cold, or other means to prevent or retard biological or physical deterioration." ;
+            sh:in ( "cryopreservation in liquid nitrogen (dead tissue)" "cryopreservation in dry ice (dead tissue)" "cryopreservation of live cells in liquid nitrogen" "cryopreservation, other" "formalin fixed, unbuffered" "formalin fixed, buffered" "formalin fixed and paraffin embedded" "hypothermic preservation media at 2-8C" "fresh" ) ;
+            sh:maxCount 1 ;
+            sh:name "Preservation method" ;
+            sh:order 5 ;
+            sh:path <Preservation_and_storage:preservation_method> ] ;
+    sh:targetClass <Preservation_and_storage:PreservationStorage> .
+
+<Process_core:ProcessCore> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Location where the process took place." ;
+            sh:maxCount 1 ;
+            sh:name "Location" ;
+            sh:order 5 ;
+            sh:path <Process_core:location> ],
+        [ sh:description "A short, descriptive name for the process that need not be unique." ;
+            sh:maxCount 1 ;
+            sh:name "Process name" ;
+            sh:order 3 ;
+            sh:path <Process_core:process_name> ],
+        [ sh:description "A unique ID for the process." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Process ID" ;
+            sh:order 2 ;
+            sh:path <Process_core:process_id> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Process_core:describedBy> ],
+        [ sh:order 6 ;
+            sh:path <Process_core:operators> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Process_core:schema_version> ],
+        [ sh:description "A general description of the process." ;
+            sh:maxCount 1 ;
+            sh:name "Process description" ;
+            sh:order 4 ;
+            sh:path <Process_core:process_description> ] ;
+    sh:targetClass <Process_core:ProcessCore> .
+
+<Publication:Publication> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The publication digital object identifier (doi) of the publication." ;
+            sh:maxCount 1 ;
+            sh:name "Publication DOI" ;
+            sh:order 4 ;
+            sh:path <Publication:doi> ],
+        [ sh:description "Has the publication been accepted as an official HCA publication, according to the process described in https://www.humancellatlas.org/publications/ ?" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Official HCA Publication" ;
+            sh:order 7 ;
+            sh:path <Publication:official_hca_publication> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Publication:describedBy> ],
+        [ sh:description "A URL for the publication." ;
+            sh:maxCount 1 ;
+            sh:name "Publication URL" ;
+            sh:order 6 ;
+            sh:path <Publication:url> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Publication:schema_version> ],
+        [ sh:description "The title of the publication." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Publication title" ;
+            sh:order 3 ;
+            sh:path <Publication:title> ],
+        [ sh:description "The PubMed ID of the publication." ;
+            sh:maxCount 1 ;
+            sh:name "Publication PMID" ;
+            sh:order 5 ;
+            sh:path <Publication:pmid> ],
+        [ sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <Publication:authors> ] ;
+    sh:targetClass <Publication:Publication> .
+
+<Barcode:Barcode> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Barcode:describedBy> ],
+        [ sh:description "The 0-based offset of start of barcode in read." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Barcode offset" ;
+            sh:order 3 ;
+            sh:path <Barcode:barcode_offset> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Barcode:schema_version> ],
+        [ sh:description "Name of file containing legitimate barcode sequences." ;
+            sh:maxCount 1 ;
+            sh:name "White list barcode file" ;
+            sh:order 5 ;
+            sh:path <Barcode:white_list_file> ],
+        [ sh:description "Length of barcode in nucleotides." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Barcode length" ;
+            sh:order 4 ;
+            sh:path <Barcode:barcode_length> ],
+        [ sh:description "The read in which the barcode is found." ;
+            sh:in ( "Read 1" "Read 2" "Read 3" "Read 4" "i7 Index" "i5 Index" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Barcode-containing read" ;
+            sh:order 2 ;
+            sh:path <Barcode:barcode_read> ] ;
+    sh:targetClass <Barcode:Barcode> .
+
+<Disease_ontology:DiseaseOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Disease_ontology:describedBy> ],
+        [ sh:description "Version number in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Disease_ontology:schema_version> ],
+        [ sh:description "The text for the term as the user provides it." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Disease" ;
+            sh:order 2 ;
+            sh:path <Disease_ontology:text> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Disease ontology ID" ;
+            sh:order 3 ;
+            sh:path <Disease_ontology:ontology> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Disease ontology label" ;
+            sh:order 4 ;
+            sh:path <Disease_ontology:ontology_label> ] ;
+    sh:targetClass <Disease_ontology:DiseaseOntology> .
+
+<Length_unit_ontology:LengthUnitOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The name of a length unit being used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Length unit" ;
+            sh:order 2 ;
+            sh:path <Length_unit_ontology:text> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Length unit ontology label" ;
+            sh:order 4 ;
+            sh:path <Length_unit_ontology:ontology_label> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Length unit ontology ID" ;
+            sh:order 3 ;
+            sh:path <Length_unit_ontology:ontology> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Length_unit_ontology:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Length_unit_ontology:schema_version> ] ;
+    sh:targetClass <Length_unit_ontology:LengthUnitOntology> .
+
+<Organ_ontology:OrganOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Organ_ontology:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Organ_ontology:schema_version> ],
+        [ sh:description "The text for the term as the user provides it." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Organ" ;
+            sh:order 2 ;
+            sh:path <Organ_ontology:text> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Organ ontology label" ;
+            sh:order 4 ;
+            sh:path <Organ_ontology:ontology_label> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Organ ontology ID" ;
+            sh:order 3 ;
+            sh:path <Organ_ontology:ontology> ] ;
+    sh:targetClass <Organ_ontology:OrganOntology> .
+
+<Timecourse:Timecourse> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Timecourse:describedBy> ],
+        [ sh:class <Time_unit_ontology:TimeUnitOntology> ;
+            sh:description "The unit in which the Timecourse value is expressed." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Timecourse unit" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <Timecourse:unit> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Timecourse:schema_version> ],
+        [ sh:description "Relevance of the Timecourse value/unit to the experiment." ;
+            sh:maxCount 1 ;
+            sh:name "Timecourse relevance" ;
+            sh:order 4 ;
+            sh:path <Timecourse:relevance> ],
+        [ sh:description "The numerical value in Timecourse unit associated with a time interval used in the experiment." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Timecourse value" ;
+            sh:order 2 ;
+            sh:path <Timecourse:value> ] ;
+    sh:targetClass <Timecourse:Timecourse> .
+
+<Organ_part_ontology:OrganPartOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Organ part ontology ID" ;
+            sh:order 3 ;
+            sh:path <Organ_part_ontology:ontology> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Organ_part_ontology:schema_version> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Organ_part_ontology:describedBy> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Organ part ontology label" ;
+            sh:order 4 ;
+            sh:path <Organ_part_ontology:ontology_label> ],
+        [ sh:description "The text for the term as the user provides it." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Organ part" ;
+            sh:order 2 ;
+            sh:path <Organ_part_ontology:text> ] ;
+    sh:targetClass <Organ_part_ontology:OrganPartOntology> .
+
+<File_core:FileCore> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The name of the file." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "File name" ;
+            sh:order 2 ;
+            sh:path <File_core:file_name> ],
+        [ sh:description "The format of the file." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "File format" ;
+            sh:order 3 ;
+            sh:path <File_core:format> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <File_core:describedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <File_core:schema_version> ],
+        [ sh:description "The source of the file. This is typically an organisation, repository, person or dedicated process." ;
+            sh:in ( "DCP/2 Analysis" "Contributor" "ArrayExpress" "HCA Release" "GEO" "SCEA" "SCP" "DCP/1 Matrix Service" "LungMAP" "Zenodo" "Publication" "DCP/2 Ingest" ) ;
+            sh:maxCount 1 ;
+            sh:name "File source" ;
+            sh:order 6 ;
+            sh:path <File_core:file_source> ],
+        [ sh:class <File_content_ontology:FileContentOntology> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path <File_core:content_description> ],
+        [ sh:description "MD5 checksum of the file." ;
+            sh:maxCount 1 ;
+            sh:name "Checksum" ;
+            sh:order 5 ;
+            sh:path <File_core:checksum> ] ;
+    sh:targetClass <File_core:FileCore> .
+
+<Biomaterial_core:BiomaterialCore> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Biomaterial_core:schema_version> ],
+        [ sh:order 7 ;
+            sh:path <Biomaterial_core:supplementary_files> ],
+        [ sh:description "A unique ID for the biomaterial." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Biomaterial ID" ;
+            sh:order 2 ;
+            sh:path <Biomaterial_core:biomaterial_id> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Biomaterial_core:describedBy> ],
+        [ sh:description "A general description of the biomaterial." ;
+            sh:maxCount 1 ;
+            sh:name "Biomaterial description" ;
+            sh:order 4 ;
+            sh:path <Biomaterial_core:biomaterial_description> ],
+        [ sh:description "A short, descriptive name for the biomaterial that need not be unique." ;
+            sh:maxCount 1 ;
+            sh:name "Biomaterial name" ;
+            sh:order 3 ;
+            sh:path <Biomaterial_core:biomaterial_name> ],
+        [ sh:description "A BioSamples accession." ;
+            sh:maxCount 1 ;
+            sh:name "BioSamples accession" ;
+            sh:order 8 ;
+            sh:path <Biomaterial_core:biosamples_accession> ],
+        [ sh:minCount 1 ;
+            sh:order 5 ;
+            sh:path <Biomaterial_core:ncbi_taxon_id> ],
+        [ sh:description "Genotype of the biomaterial." ;
+            sh:maxCount 1 ;
+            sh:name "Genotype" ;
+            sh:order 6 ;
+            sh:path <Biomaterial_core:genotype> ],
+        [ sh:description "A Human Developmental Biology Resource (HDBR) sample accession." ;
+            sh:maxCount 1 ;
+            sh:name "HDBR accession" ;
+            sh:order 10 ;
+            sh:path <Biomaterial_core:HDBR_accession> ],
+        [ sh:description "An International Nucleotide Sequence Database Collaboration (INSDC) sample accession." ;
+            sh:maxCount 1 ;
+            sh:name "INSDC sample accession" ;
+            sh:order 9 ;
+            sh:path <Biomaterial_core:insdc_sample_accession> ] ;
+    sh:targetClass <Biomaterial_core:BiomaterialCore> .
+
+<Species_ontology:SpeciesOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Species ontology label" ;
+            sh:order 4 ;
+            sh:path <Species_ontology:ontology_label> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Species_ontology:describedBy> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Species ontology ID" ;
+            sh:order 3 ;
+            sh:path <Species_ontology:ontology> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Species_ontology:schema_version> ],
+        [ sh:description "The name of the species to which the organism belongs." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Species" ;
+            sh:order 2 ;
+            sh:path <Species_ontology:text> ] ;
+    sh:targetClass <Species_ontology:SpeciesOntology> .
+
+<https://example.org/Process-type-ontologyProcessTypeOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The name of a process type being used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Process type" ;
+            sh:order 2 ;
+            sh:path <https://example.org/Process-type-ontologytext> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Process type ontology ID" ;
+            sh:order 3 ;
+            sh:path <https://example.org/Process-type-ontologyontology> ],
+        [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Process type ontology label" ;
+            sh:order 4 ;
+            sh:path <https://example.org/Process-type-ontologyontology_label> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <https://example.org/Process-type-ontologydescribedBy> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <https://example.org/Process-type-ontologyschema_version> ] ;
+    sh:targetClass <https://example.org/Process-type-ontologyProcessTypeOntology> .
+
+<Time_unit_ontology:TimeUnitOntology> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field." ;
+            sh:maxCount 1 ;
+            sh:name "Time unit ontology label" ;
+            sh:order 4 ;
+            sh:path <Time_unit_ontology:ontology_label> ],
+        [ sh:description "The name of a time unit being used." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Time unit" ;
+            sh:order 2 ;
+            sh:path <Time_unit_ontology:text> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Time_unit_ontology:schema_version> ],
+        [ sh:description "An ontology term identifier in the form prefix:accession." ;
+            sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:name "Time unit ontology ID" ;
+            sh:order 3 ;
+            sh:path <Time_unit_ontology:ontology> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Time_unit_ontology:describedBy> ] ;
+    sh:targetClass <Time_unit_ontology:TimeUnitOntology> .
+
+<Purchased_reagents:PurchasedReagents> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The catalog number of the kit/reagent." ;
+            sh:maxCount 1 ;
+            sh:name "Catalog number" ;
+            sh:order 3 ;
+            sh:path <Purchased_reagents:catalog_number> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Purchased_reagents:schema_version> ],
+        [ sh:description "The manufacturer of the kit/reagent." ;
+            sh:maxCount 1 ;
+            sh:name "Manufacturer" ;
+            sh:order 4 ;
+            sh:path <Purchased_reagents:manufacturer> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Purchased_reagents:describedBy> ],
+        [ sh:description "The date of expiration for the kit/reagent." ;
+            sh:maxCount 1 ;
+            sh:name "Expiry date" ;
+            sh:order 6 ;
+            sh:path <Purchased_reagents:expiry_date> ],
+        [ sh:description "Appropriate titer and volume recommendations found in kit/reagent Certificate of Analysis." ;
+            sh:maxCount 1 ;
+            sh:name "Titer" ;
+            sh:order 7 ;
+            sh:path <Purchased_reagents:kit_titer> ],
+        [ sh:description "The retail name of the kit/reagent." ;
+            sh:maxCount 1 ;
+            sh:name "Retail name" ;
+            sh:order 2 ;
+            sh:path <Purchased_reagents:retail_name> ],
+        [ sh:description "The batch or lot number of the kit/reagent." ;
+            sh:maxCount 1 ;
+            sh:name "Batch/lot number" ;
+            sh:order 5 ;
+            sh:path <Purchased_reagents:lot_number> ] ;
+    sh:targetClass <Purchased_reagents:PurchasedReagents> .
+
+<Protocol_core:ProtocolCore> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Protocol_core:schema_version> ],
+        [ sh:description "A filename of a PDF document containing the details of the protocol." ;
+            sh:maxCount 1 ;
+            sh:name "Document filename" ;
+            sh:order 7 ;
+            sh:path <Protocol_core:document> ],
+        [ sh:description "A unique ID for the protocol." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Protocol ID" ;
+            sh:order 2 ;
+            sh:path <Protocol_core:protocol_id> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Protocol_core:describedBy> ],
+        [ sh:description "The protocols.io digital object identifier (doi) for the protocol." ;
+            sh:maxCount 1 ;
+            sh:name "protocols.io DOI" ;
+            sh:order 6 ;
+            sh:path <Protocol_core:protocols_io_doi> ],
+        [ sh:description "A general description of the protocol." ;
+            sh:maxCount 1 ;
+            sh:name "Protocol description" ;
+            sh:order 4 ;
+            sh:path <Protocol_core:protocol_description> ],
+        [ sh:description "A short name for the protocol." ;
+            sh:maxCount 1 ;
+            sh:name "Protocol name" ;
+            sh:order 3 ;
+            sh:path <Protocol_core:protocol_name> ],
+        [ sh:description "The publication digital object identifier (doi) for the protocol." ;
+            sh:maxCount 1 ;
+            sh:name "Publication DOI" ;
+            sh:order 5 ;
+            sh:path <Protocol_core:publication_doi> ] ;
+    sh:targetClass <Protocol_core:ProtocolCore> .
+
+<Provenance:Provenance> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "ID of individual who first submitted project." ;
+            sh:maxCount 1 ;
+            sh:name "Submitter ID" ;
+            sh:order 5 ;
+            sh:path <Provenance:submitter_id> ],
+        [ sh:description "The major version number of the schema." ;
+            sh:maxCount 1 ;
+            sh:name "Schema major version" ;
+            sh:order 2 ;
+            sh:path <Provenance:schema_major_version> ],
+        [ sh:description "The version number of the schema in major.minor.patch format." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <Provenance:schema_version> ],
+        [ sh:description "When project was first submitted to database." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Submission date" ;
+            sh:order 4 ;
+            sh:path <Provenance:submission_date> ],
+        [ sh:description "The minor version number of the schema." ;
+            sh:maxCount 1 ;
+            sh:name "Schema minor version" ;
+            sh:order 3 ;
+            sh:path <Provenance:schema_minor_version> ],
+        [ sh:description "When project was last updated." ;
+            sh:maxCount 1 ;
+            sh:name "Update date" ;
+            sh:order 6 ;
+            sh:path <Provenance:update_date> ],
+        [ sh:description "The URL reference to the schema." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <Provenance:describedBy> ],
+        [ sh:description "ID of individual who last updated project." ;
+            sh:maxCount 1 ;
+            sh:name "Updater ID" ;
+            sh:order 7 ;
+            sh:path <Provenance:updater_id> ],
+        [ sh:description "Identifier for document." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Document ID" ;
+            sh:order 8 ;
+            sh:path <Provenance:document_id> ],
+        [ sh:description "A unique accession for this entity, provided by the broker." ;
+            sh:maxCount 1 ;
+            sh:name "Accession" ;
+            sh:order 9 ;
+            sh:path <Provenance:accession> ] ;
+    sh:targetClass <Provenance:Provenance> .
+

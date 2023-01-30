@@ -1,0 +1,52 @@
+name: Probe
+id: https://example.org/Probe
+imports:
+- linkml:types
+- module/ontology/cellular_component_ontology
+- module/process/purchased_reagents
+- module/ontology/process_type_ontology
+prefixes:
+  Probe: https://example.org/Probe
+  linkml: https://w3id.org/linkml/
+default_prefix: Probe
+classes:
+  Probe:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      probe_label:
+        description: The label of a probe used to detect target in this experiment.
+        title: Probe label
+        required: true
+      probe_sequence:
+        description: Sequence of a probe used to detect target.
+        title: Probe sequence
+      target_name:
+        description: The name of the target molecule.
+        title: Target name
+      target_codebook_label:
+        description: A label used in the codebook for the target.
+        title: Target label in codebook
+      target_label:
+        description: An identifier for the target molecule.
+        title: Target label
+        required: true
+      subcellular_structure:
+        description: Target subcellular structure.
+        title: Target subcellular structure
+        range: CellularComponentOntology
+      probe_reagents:
+        description: Name of reagents used to construct the probe.
+        title: Probe construction reagents
+        range: PurchasedReagents
+      assay_type:
+        description: Type of assay used to detect target.
+        title: Assay type
+        range: ProcessTypeOntology
+        required: true
+      fluorophore:
+        multivalued: true
+      channel_label:
+        multivalued: true

@@ -1,0 +1,45 @@
+name: Imaged_specimen
+id: https://example.org/Imaged-specimen
+imports:
+- linkml:types
+- system/provenance
+- core/biomaterial/biomaterial_core
+- module/ontology/organ_part_ontology
+prefixes:
+  Imaged_specimen: https://example.org/Imaged-specimen
+  linkml: https://w3id.org/linkml/
+default_prefix: Imaged_specimen
+enums:
+  ImagedSpecimen_schema_type_options:
+    permissible_values:
+      biomaterial: {}
+classes:
+  ImagedSpecimen:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: ImagedSpecimen_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      biomaterial_core:
+        description: Core biomaterial-level information.
+        title: Biomaterial core
+        range: BiomaterialCore
+        required: true
+      overview_images:
+        multivalued: true
+      slice_thickness:
+        description: Thickness of the imaged slice in micrometres.
+        title: Imaged slice thickness
+        range: float
+        required: true
+      internal_anatomical_structures:
+        multivalued: true
+        range: OrganPartOntology

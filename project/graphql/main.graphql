@@ -1,0 +1,1074 @@
+type AggregateGenerationProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: AggregateGenerationProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    formationMethod: String!
+    cellUniformity: String
+  }
+
+type AnalysisFile
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: AnalysisFileSchemaTypeOptions!
+    provenance: Provenance
+    fileCore: FileCore!
+    matrixCellCount: Integer
+  }
+
+type AnalysisProcess
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: AnalysisProcessSchemaTypeOptions!
+    provenance: Provenance
+    processCore: ProcessCore!
+    type: ProcessTypeOntology!
+    inputs: [Parameter]!
+    tasks: [Task]!
+    timestampStartUtc: String!
+    timestampStopUtc: String!
+    analysisRunType: AnalysisProcessAnalysisRunTypeOptions!
+    referenceFiles: [String]!
+  }
+
+type AnalysisProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: AnalysisProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    type: ProcessTypeOntology!
+    computationalMethod: String
+    matrix: Matrix
+  }
+
+type Barcode
+  {
+    describedBy: String
+    schemaVersion: String
+    barcodeRead: BarcodeBarcodeReadOptions!
+    barcodeOffset: Integer!
+    barcodeLength: Integer!
+    whiteListFile: String
+  }
+
+type BiologicalMacromoleculeOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: BiologicalMacromoleculeOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type BiomaterialCore
+  {
+    describedBy: String
+    schemaVersion: String
+    biomaterialId: String!
+    biomaterialName: String
+    biomaterialDescription: String
+    ncbiTaxonId: [Integer]!
+    genotype: String
+    supplementaryFiles: [String]
+    biosamplesAccession: String
+    insdcSampleAccession: String
+    hDBRAccession: String
+  }
+
+type CellCycleOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: CellCycleOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type CellLine
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: CellLineSchemaTypeOptions!
+    provenance: Provenance
+    biomaterialCore: BiomaterialCore!
+    supplier: String
+    catalogNumber: String
+    lotNumber: String
+    catalogUrl: String
+    cellCycle: CellCycleOntology
+    type: CellLineTypeOptions!
+    modelOrgan: OrganOntology!
+    cellMorphology: CellMorphology
+    growthConditions: GrowthConditions
+    confluency: Float
+    cellType: CellTypeOntology
+    karyotype: String
+    tissue: OrganPartOntology
+    dateEstablished: String
+    disease: DiseaseOntology
+    genusSpecies: [SpeciesOntology]
+    publication: Publication
+    timecourse: Timecourse
+  }
+
+type CellMorphology
+  {
+    describedBy: String
+    schemaVersion: String
+    cellMorphology: String
+    cellSize: String
+    cellSizeUnit: LengthUnitOntology
+    percentCellViability: Float
+    cellViabilityMethod: String
+    cellViabilityResult: CellMorphologyCellViabilityResultOptions
+    percentNecrosis: Float
+  }
+
+type CellSuspension
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: CellSuspensionSchemaTypeOptions!
+    provenance: Provenance
+    biomaterialCore: BiomaterialCore!
+    cellMorphology: CellMorphology
+    growthConditions: GrowthConditions
+    genusSpecies: [SpeciesOntology]
+    selectedCellTypes: [CellTypeOntology]
+    estimatedCellCount: Integer
+    plateBasedSequencing: PlateBasedSequencing
+    timecourse: Timecourse
+  }
+
+type CellTypeOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: CellTypeOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type CellularComponentOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: CellularComponentOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type Channel
+  {
+    describedBy: String
+    schemaVersion: String
+    channelId: String!
+    excitationWavelength: Float!
+    filterRange: String!
+    multiplexed: ChannelMultiplexedOptions!
+    targetFluorophore: String
+    exposureTime: Float!
+  }
+
+type CollectionProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: CollectionProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    method: ProcessTypeOntology!
+    reagents: [PurchasedReagents]
+  }
+
+type Contact
+  {
+    describedBy: String
+    schemaVersion: String
+    email: String
+    phone: String
+    institution: String!
+    laboratory: String
+    address: String
+    country: String
+    correspondingContributor: Boolean
+    projectRole: ContributorRoleOntology
+    orcidId: String
+  }
+
+type ContributorRoleOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: ContributorRoleOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type Death
+  {
+    describedBy: String
+    schemaVersion: String
+    causeOfDeath: String!
+    coldPerfused: Boolean
+    daysOnVentilator: Float
+    hardyScale: Integer
+    timeOfDeath: String
+    organDonationDeathType: DeathOrganDonationDeathTypeOptions
+    normothermicRegionalPerfusion: DeathNormothermicRegionalPerfusionOptions
+  }
+
+type DevelopmentStageOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: DevelopmentStageOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type DifferentiationProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: DifferentiationProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    method: String!
+    media: String
+    smallMolecules: String
+    targetCellYield: Float
+    reagents: [PurchasedReagents]
+    targetPathway: String
+    validationMethod: String
+    validationResult: String
+  }
+
+type DiseaseOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: DiseaseOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type DissociationProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: DissociationProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    method: ProcessTypeOntology!
+    reagents: [PurchasedReagents]
+  }
+
+type DonorOrganism
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: DonorOrganismSchemaTypeOptions!
+    provenance: Provenance
+    biomaterialCore: BiomaterialCore!
+    humanSpecific: HumanSpecific
+    mouseSpecific: MouseSpecific
+    genusSpecies: [SpeciesOntology]
+    sex: DonorOrganismSexOptions!
+    isLiving: DonorOrganismIsLivingOptions!
+    organismAge: String
+    organismAgeUnit: TimeUnitOntology
+    developmentStage: DevelopmentStageOntology!
+    diseases: [DiseaseOntology]
+    death: Death
+    familialRelationships: [FamilialRelationship]
+    medicalHistory: MedicalHistory
+    gestationalAge: String
+    gestationalAgeUnit: TimeUnitOntology
+    height: String
+    heightUnit: LengthUnitOntology
+    weight: String
+    weightUnit: MassUnitOntology
+    timecourse: Timecourse
+  }
+
+type EnrichmentOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: EnrichmentOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type EnrichmentProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: EnrichmentProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    method: ProcessTypeOntology!
+    markers: String
+    minimumSize: Float
+    maximumSize: Float
+  }
+
+type Entity
+  {
+    entityId: String!
+    entityType: EntityEntityTypeOptions!
+  }
+
+type EthnicityOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: EthnicityOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type FamilialRelationship
+  {
+    describedBy: String
+    schemaVersion: String
+    parent: String
+    child: String
+    sibling: String
+  }
+
+type FileContentOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: FileContentOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type FileCore
+  {
+    describedBy: String
+    schemaVersion: String
+    fileName: String!
+    format: String!
+    contentDescription: [FileContentOntology]
+    checksum: String
+    fileSource: FileCoreFileSourceOptions
+  }
+
+type FileDescriptor
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: FileDescriptorSchemaTypeOptions!
+    fileName: String!
+    fileId: String!
+    fileVersion: String!
+    contentType: String!
+    size: Integer!
+    sha256: String!
+    crc32c: String!
+    sha1: String
+    s3Etag: String
+  }
+
+type FileFormatOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: FileFormatOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type Funder
+  {
+    describedBy: String
+    schemaVersion: String
+    grantTitle: String
+    grantId: String!
+    organization: String!
+  }
+
+type GrowthConditions
+  {
+    describedBy: String
+    schemaVersion: String
+    passageNumber: Integer
+    growthMedium: String
+    cultureEnvironment: String
+    mycoplasmaTestingMethod: GrowthConditionsMycoplasmaTestingMethodOptions
+    mycoplasmaTestingResults: GrowthConditionsMycoplasmaTestingResultsOptions
+    drugTreatment: String
+    feederLayerType: GrowthConditionsFeederLayerTypeOptions
+  }
+
+type HumanSpecific
+  {
+    describedBy: String
+    schemaVersion: String
+    bodyMassIndex: Float
+    ethnicity: [EthnicityOntology]
+  }
+
+type ImagedSpecimen
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: ImagedSpecimenSchemaTypeOptions!
+    provenance: Provenance
+    biomaterialCore: BiomaterialCore!
+    overviewImages: [String]
+    sliceThickness: Float!
+    internalAnatomicalStructures: [OrganPartOntology]
+  }
+
+type ImageFile
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: ImageFileSchemaTypeOptions!
+    provenance: Provenance
+    fileCore: FileCore!
+  }
+
+type ImagingPreparationProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: ImagingPreparationProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    freshSlicingMethod: String
+    imagedSliceThickness: Float
+    finalSlicingMethod: String
+    postResectionInterval: Float
+    postResectionIntervalUnit: TimeUnitOntology
+    preFinalSlicePreservationMethod: PreservationStorage
+    postFinalSlicingInterval: Float
+    postFinalSlicingIntervalUnit: TimeUnitOntology
+    fiducialMarker: String
+    expansionFactor: Float
+    permeabilisationTime: Float
+    permeabilisationTimeUnit: TimeUnitOntology
+  }
+
+type ImagingProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: ImagingProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    microscopeSetupDescription: String
+    microscopyTechnique: MicroscopyOntology!
+    magnification: String!
+    numericalAperture: Float
+    immersionMediumType: String
+    immersionMediumRefractiveIndex: Float
+    pixelSize: Float
+    numberOfTiles: Integer
+    tileSizeY: Float
+    tileSizeX: Float
+    zStackStepSize: Float
+    numberOfZSteps: Integer
+    overlappingTiles: ImagingProtocolOverlappingTilesOptions
+    channel: [Channel]
+    probe: [Probe]
+  }
+
+type Input
+  {
+    inputType: String!
+    inputId: String!
+  }
+
+type InsdcExperiment
+  {
+    describedBy: String
+    schemaVersion: String
+    insdcExperimentAccession: String!
+  }
+
+type InstrumentOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: InstrumentOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type IpscInductionProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: IpscInductionProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    method: IpscInductionProtocolMethodOptions!
+    reprogrammingFactors: String
+    ipscInductionKit: PurchasedReagents
+    pluripotencyTest: String
+    percentPluripotency: Float
+    pluripotencyVectorRemoved: IpscInductionProtocolPluripotencyVectorRemovedOptions
+    reagents: [PurchasedReagents]
+  }
+
+type LengthUnitOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: LengthUnitOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type LibraryAmplificationOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: LibraryAmplificationOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type LibraryConstructionOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: LibraryConstructionOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type LibraryPreparationProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: LibraryPreparationProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    cellBarcode: Barcode
+    spatialBarcode: Barcode
+    inputNucleicAcidMolecule: BiologicalMacromoleculeOntology!
+    nucleicAcidSource: LibraryPreparationProtocolNucleicAcidSourceOptions!
+    libraryConstructionMethod: LibraryConstructionOntology!
+    libraryConstructionKit: PurchasedReagents
+    nucleicAcidConversionKit: PurchasedReagents
+    endBias: LibraryPreparationProtocolEndBiasOptions!
+    primer: LibraryPreparationProtocolPrimerOptions
+    strand: LibraryPreparationProtocolStrandOptions!
+    spikeInKit: PurchasedReagents
+    spikeInDilution: Integer
+    umiBarcode: Barcode
+    libraryPreamplificationMethod: LibraryAmplificationOntology
+    cdnaLibraryAmplificationMethod: LibraryAmplificationOntology
+    nominalLength: Integer
+    nominalSdev: Integer
+  }
+
+type License
+  {
+    describedBy: String
+    schemaVersion: String
+    identifier: String
+    fullName: String
+    url: String
+  }
+
+type Links
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: LinksSchemaTypeOptions!
+    links: [String]!
+  }
+
+type MassUnitOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: MassUnitOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type Matrix
+  {
+    describedBy: String
+    schemaVersion: String
+    dataNormalizationMethods: [DataNormalizationMethodsOptions]
+    derivationProcess: [DerivationProcessOptions]
+  }
+
+type MedicalHistory
+  {
+    describedBy: String
+    schemaVersion: String
+    alcoholHistory: String
+    medication: String
+    smokingHistory: String
+    nutritionalState: MedicalHistoryNutritionalStateOptions
+    testResults: String
+    treatment: String
+  }
+
+type MicroscopyOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: MicroscopyOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type MouseSpecific
+  {
+    describedBy: String
+    schemaVersion: String
+    strain: [StrainOntology]
+  }
+
+type Organoid
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: OrganoidSchemaTypeOptions!
+    provenance: Provenance
+    biomaterialCore: BiomaterialCore!
+    genusSpecies: [SpeciesOntology]
+    modelOrgan: OrganOntology!
+    modelOrganPart: OrganPartOntology
+    age: Float
+    ageUnit: TimeUnitOntology
+    size: Float
+    sizeUnit: LengthUnitOntology
+    morphology: String
+    embeddedInMatrigel: Boolean
+    growthEnvironment: String
+    inputAggregateCellCount: Float
+    storedOxygenLevels: Float
+  }
+
+type OrganOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: OrganOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type OrganPartOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: OrganPartOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type Output
+  {
+    outputType: String!
+    outputId: String!
+  }
+
+type Parameter
+  {
+    checksum: String
+    parameterName: String!
+    parameterValue: String!
+  }
+
+type PlateBasedSequencing
+  {
+    describedBy: String
+    schemaVersion: String
+    plateLabel: String!
+    wellLabel: String
+    wellQuality: PlateBasedSequencingWellQualityOptions
+  }
+
+type PreservationStorage
+  {
+    describedBy: String
+    schemaVersion: String
+    storageMethod: PreservationStorageStorageMethodOptions
+    storageTime: Float
+    storageTimeUnit: TimeUnitOntology
+    preservationMethod: PreservationStoragePreservationMethodOptions
+  }
+
+type Probe
+  {
+    describedBy: String
+    schemaVersion: String
+    probeLabel: String!
+    probeSequence: String
+    targetName: String
+    targetCodebookLabel: String
+    targetLabel: String!
+    subcellularStructure: CellularComponentOntology
+    probeReagents: PurchasedReagents
+    assayType: ProcessTypeOntology!
+    fluorophore: [String]
+    channelLabel: [String]
+  }
+
+type Process
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: ProcessSchemaTypeOptions!
+    provenance: Provenance
+    processCore: ProcessCore!
+    startTime: String
+    endTime: String
+    lengthOfTime: String
+    lengthOfTimeUnit: TimeUnitOntology
+    type: ProcessTypeOntology
+    deviationFromProtocol: String
+    insdcExperiment: InsdcExperiment
+  }
+
+type ProcessCore
+  {
+    describedBy: String
+    schemaVersion: String
+    processId: String!
+    processName: String
+    processDescription: String
+    location: String
+    operators: [String]
+  }
+
+type ProcessLink
+  {
+    processType: String!
+    processId: String!
+    inputs: [Input]!
+    outputs: [Output]!
+    protocols: [ProtocolReference]!
+    linkType: ProcessLinkLinkTypeOptions!
+  }
+
+type ProcessTypeOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: ProcessTypeOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type Project
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: ProjectSchemaTypeOptions!
+    provenance: Provenance
+    projectCore: ProjectCore!
+    contributors: [Contact]
+    supplementaryLinks: [String]
+    publications: [Publication]
+    insdcProjectAccessions: [String]
+    egaAccessions: [String]
+    dbgapAccessions: [String]
+    geoSeriesAccessions: [String]
+    arrayExpressAccessions: [String]
+    insdcStudyAccessions: [String]
+    biostudiesAccessions: [String]
+    funders: [Funder]!
+    estimatedCellCount: Integer
+  }
+
+type ProjectCore
+  {
+    describedBy: String
+    schemaVersion: String
+    projectShortName: String!
+    projectTitle: String!
+    projectDescription: String!
+  }
+
+type Protocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: ProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    type: ProcessTypeOntology
+  }
+
+type ProtocolCore
+  {
+    describedBy: String
+    schemaVersion: String
+    protocolId: String!
+    protocolName: String
+    protocolDescription: String
+    publicationDoi: String
+    protocolsIoDoi: String
+    document: String
+  }
+
+type ProtocolReference
+  {
+    protocolType: ProtocolReferenceProtocolTypeOptions!
+    protocolId: String!
+  }
+
+type ProtocolTypeOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: ProtocolTypeOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type Provenance
+  {
+    describedBy: String
+    schemaVersion: String
+    schemaMajorVersion: Integer
+    schemaMinorVersion: Integer
+    submissionDate: String!
+    submitterId: String
+    updateDate: String
+    updaterId: String
+    documentId: String!
+    accession: String
+  }
+
+type Publication
+  {
+    describedBy: String
+    schemaVersion: String
+    authors: [String]!
+    title: String!
+    doi: String
+    pmid: Integer
+    url: String
+    officialHcaPublication: Boolean!
+  }
+
+type PurchasedReagents
+  {
+    describedBy: String
+    schemaVersion: String
+    retailName: String
+    catalogNumber: String
+    manufacturer: String
+    lotNumber: String
+    expiryDate: String
+    kitTiter: String
+  }
+
+type ReferenceFile
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: ReferenceFileSchemaTypeOptions!
+    provenance: Provenance
+    fileCore: FileCore!
+    ncbiTaxonId: Integer!
+    genusSpecies: SpeciesOntology!
+    referenceType: ReferenceFileReferenceTypeOptions!
+    assemblyType: ReferenceFileAssemblyTypeOptions!
+    referenceVersion: String!
+  }
+
+type S10x
+  {
+    describedBy: String
+    schemaVersion: String
+    fastqMethod: String
+    fastqMethodVersion: String
+    pooledChannels: Float
+    dropUniformity: Boolean
+  }
+
+type SequenceFile
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: SequenceFileSchemaTypeOptions!
+    provenance: Provenance
+    fileCore: FileCore!
+    readIndex: SequenceFileReadIndexOptions!
+    laneIndex: Integer
+    readLength: Integer
+    insdcRunAccessions: [String]
+    libraryPrepId: String
+  }
+
+type SequencingOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: SequencingOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type SequencingProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: SequencingProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    instrumentManufacturerModel: InstrumentOntology!
+    localMachineName: String
+    pairedEnd: Boolean!
+    method: SequencingOntology!
+    s10x: S10x
+  }
+
+type SpeciesOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: SpeciesOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type SpecimenFromOrganism
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: SpecimenFromOrganismSchemaTypeOptions!
+    provenance: Provenance
+    biomaterialCore: BiomaterialCore!
+    genusSpecies: [SpeciesOntology]
+    organ: OrganOntology!
+    organParts: [OrganPartOntology]
+    diseases: [DiseaseOntology]
+    stateOfSpecimen: StateOfSpecimen
+    preservationStorage: PreservationStorage
+    collectionTime: String
+    purchasedSpecimen: PurchasedReagents
+  }
+
+type StateOfSpecimen
+  {
+    describedBy: String
+    schemaVersion: String
+    autolysisScore: StateOfSpecimenAutolysisScoreOptions
+    grossDescription: String
+    grossImages: [String]
+    ischemicTemperature: StateOfSpecimenIschemicTemperatureOptions
+    ischemicTime: Integer
+    microscopicDescription: String
+    microscopicImages: [String]
+    postmortemInterval: Integer
+  }
+
+type StrainOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: StrainOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type SupplementaryFile
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: SupplementaryFileSchemaTypeOptions!
+    provenance: Provenance
+    fileCore: FileCore!
+    fileDescription: String
+  }
+
+type SupplementaryFileEntity
+  {
+    fileId: String!
+    fileType: SupplementaryFileEntityFileTypeOptions!
+  }
+
+type SupplementaryFileLink
+  {
+    entity: Entity!
+    files: [SupplementaryFile]!
+    linkType: SupplementaryFileLinkLinkTypeOptions!
+  }
+
+type TargetPathwayOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: TargetPathwayOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type Task
+  {
+    diskSize: String!
+    taskName: String!
+    zone: String!
+    logErr: String
+    startTime: String!
+    cpus: Integer!
+    logOut: String
+    stopTime: String!
+    memory: String!
+    dockerImage: String!
+  }
+
+type Timecourse
+  {
+    describedBy: String
+    schemaVersion: String
+    value: String!
+    unit: TimeUnitOntology!
+    relevance: String
+  }
+
+type TimeUnitOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: TimeUnitOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type TreatmentMethodOntology
+  {
+    describedBy: String
+    schemaVersion: String
+    text: String!
+    ontology: TreatmentMethodOntologyOntologyOptions
+    ontologyLabel: String
+  }
+
+type TreatmentProtocol
+  {
+    describedBy: String!
+    schemaVersion: String
+    schemaType: TreatmentProtocolSchemaTypeOptions!
+    provenance: Provenance
+    protocolCore: ProtocolCore!
+    method: [TreatmentMethodOntology]!
+    media: String
+    reagents: [PurchasedReagents]
+    targetPathway: [TargetPathwayOntology]
+  }
+

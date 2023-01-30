@@ -1,0 +1,62 @@
+name: Preservation_and_storage
+id: https://example.org/Preservation-and-storage
+imports:
+- linkml:types
+- module/ontology/time_unit_ontology
+prefixes:
+  Preservation_and_storage: https://example.org/Preservation-and-storage
+  linkml: https://w3id.org/linkml/
+default_prefix: Preservation_and_storage
+enums:
+  PreservationStorage_storage_method_options:
+    permissible_values:
+      ambient temperature: {}
+      cut slide: {}
+      fresh: {}
+      frozen at -70C: {}
+      frozen at -80C: {}
+      frozen at -150C: {}
+      frozen in liquid nitrogen: {}
+      frozen in vapor phase: {}
+      paraffin block: {}
+      RNAlater at 4C: {}
+      RNAlater at 25C: {}
+      RNAlater at -20C: {}
+  PreservationStorage_preservation_method_options:
+    permissible_values:
+      cryopreservation in liquid nitrogen (dead tissue): {}
+      cryopreservation in dry ice (dead tissue): {}
+      cryopreservation of live cells in liquid nitrogen: {}
+      cryopreservation, other: {}
+      formalin fixed, unbuffered: {}
+      formalin fixed, buffered: {}
+      formalin fixed and paraffin embedded: {}
+      hypothermic preservation media at 2-8C: {}
+      fresh: {}
+classes:
+  PreservationStorage:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      storage_method:
+        description: The method by which a biomaterial was stored after preservation
+          or before another protocol was used.
+        title: Storage method
+        range: PreservationStorage_storage_method_options
+      storage_time:
+        description: Length of time the biomaterial was stored for in Storage time
+          units.
+        title: Storage time
+        range: float
+      storage_time_unit:
+        description: The unit in which Storage time is expressed.
+        title: Storage time unit
+        range: TimeUnitOntology
+      preservation_method:
+        description: The method by which a biomaterial was preserved through the use
+          of chemicals, cold, or other means to prevent or retard biological or physical
+          deterioration.
+        title: Preservation method
+        range: PreservationStorage_preservation_method_options

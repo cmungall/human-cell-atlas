@@ -1,0 +1,47 @@
+name: Protocol_type_ontology
+id: https://example.org/Protocol-type-ontology
+imports:
+- linkml:types
+prefixes:
+  Protocol_type_ontology: https://example.org/Protocol-type-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Protocol_type_ontology
+enums:
+  ProtocolTypeOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:efo
+        source_nodes:
+        - OBI:0000272
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:obi
+        source_nodes:
+        - OBI:0000272
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+classes:
+  ProtocolTypeOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of a protocol type used.
+        title: Protocol type
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Protocol type ontology ID
+        range: ProtocolTypeOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Protocol type ontology label

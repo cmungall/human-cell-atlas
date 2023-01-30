@@ -1,0 +1,51 @@
+name: Enrichment_protocol
+id: https://example.org/Enrichment-protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+- module/ontology/process_type_ontology
+prefixes:
+  Enrichment_protocol: https://example.org/Enrichment-protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: Enrichment_protocol
+enums:
+  EnrichmentProtocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+classes:
+  EnrichmentProtocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: EnrichmentProtocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      method:
+        description: The method by which enrichment was achieved.
+        title: Enrichment method
+        range: ProcessTypeOntology
+        required: true
+      markers:
+        description: A list of markers used to enrich for or against certain cells.
+        title: Markers
+      minimum_size:
+        description: Minimum cell or organelle size passing selection, in microns.
+        title: Minimum size selected
+        range: float
+      maximum_size:
+        description: Maximum cell or organelle size passing selection, in microns.
+        title: Maximum size selected
+        range: float

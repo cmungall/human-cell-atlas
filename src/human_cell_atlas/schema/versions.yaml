@@ -1,0 +1,8 @@
+name: versions
+id: https://example.org/versions
+imports:
+- linkml:types
+prefixes:
+  versions: https://example.org/versions
+  linkml: https://w3id.org/linkml/
+default_prefix: versions

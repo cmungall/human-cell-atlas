@@ -1,0 +1,59 @@
+name: Sequencing_protocol
+id: https://example.org/Sequencing-protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+- module/ontology/instrument_ontology
+- module/ontology/sequencing_ontology
+- module/process/sequencing/S10x
+prefixes:
+  Sequencing_protocol: https://example.org/Sequencing-protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: Sequencing_protocol
+enums:
+  SequencingProtocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+classes:
+  SequencingProtocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: SequencingProtocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      instrument_manufacturer_model:
+        description: The manufacturer and model of the sequencer.
+        title: Instrument manufacturer and model
+        range: InstrumentOntology
+        required: true
+      local_machine_name:
+        description: Local name for the particular machine used for sequencing.
+        title: Local machine name
+      paired_end:
+        description: Whether the sequenced molecule was sequenced from both ends.
+        title: Paired end
+        range: boolean
+        required: true
+      method:
+        description: The general method for sequencing.
+        title: Sequencing method
+        range: SequencingOntology
+        required: true
+      s10x:
+        description: Fields specific for 10x experiments.
+        title: 10x-specific
+        range: S10x

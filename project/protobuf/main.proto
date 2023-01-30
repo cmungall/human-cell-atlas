@@ -1,0 +1,984 @@
+message AggregateGenerationProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  aggregateGenerationProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  string formationMethod = 0
+  string cellUniformity = 0
+ }
+message AnalysisFile
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  analysisFileSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  fileCore fileCore = 0
+  integer matrixCellCount = 0
+ }
+message AnalysisProcess
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  analysisProcessSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  processCore processCore = 0
+  processTypeOntology type = 0
+ repeated  parameter inputs = 0
+ repeated  task tasks = 0
+  string timestampStartUtc = 0
+  string timestampStopUtc = 0
+  analysisProcessAnalysisRunTypeOptions analysisRunType = 0
+ repeated  string referenceFiles = 0
+ }
+message AnalysisProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  analysisProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  processTypeOntology type = 0
+  string computationalMethod = 0
+  matrix matrix = 0
+ }
+message Barcode
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  barcodeBarcodeReadOptions barcodeRead = 0
+  integer barcodeOffset = 0
+  integer barcodeLength = 0
+  string whiteListFile = 0
+ }
+message BiologicalMacromoleculeOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  biologicalMacromoleculeOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message BiomaterialCore
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string biomaterialId = 0
+  string biomaterialName = 0
+  string biomaterialDescription = 0
+ repeated  integer ncbiTaxonId = 0
+  string genotype = 0
+ repeated  string supplementaryFiles = 0
+  string biosamplesAccession = 0
+  string insdcSampleAccession = 0
+  string hDBRAccession = 0
+ }
+message CellCycleOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  cellCycleOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message CellLine
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  cellLineSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  biomaterialCore biomaterialCore = 0
+  string supplier = 0
+  string catalogNumber = 0
+  string lotNumber = 0
+  string catalogUrl = 0
+  cellCycleOntology cellCycle = 0
+  cellLineTypeOptions type = 0
+  organOntology modelOrgan = 0
+  cellMorphology cellMorphology = 0
+  growthConditions growthConditions = 0
+  float confluency = 0
+  cellTypeOntology cellType = 0
+  string karyotype = 0
+  organPartOntology tissue = 0
+  string dateEstablished = 0
+  diseaseOntology disease = 0
+ repeated  speciesOntology genusSpecies = 0
+  publication publication = 0
+  timecourse timecourse = 0
+ }
+message CellMorphology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string cellMorphology = 0
+  string cellSize = 0
+  lengthUnitOntology cellSizeUnit = 0
+  float percentCellViability = 0
+  string cellViabilityMethod = 0
+  cellMorphologyCellViabilityResultOptions cellViabilityResult = 0
+  float percentNecrosis = 0
+ }
+message CellSuspension
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  cellSuspensionSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  biomaterialCore biomaterialCore = 0
+  cellMorphology cellMorphology = 0
+  growthConditions growthConditions = 0
+ repeated  speciesOntology genusSpecies = 0
+ repeated  cellTypeOntology selectedCellTypes = 0
+  integer estimatedCellCount = 0
+  plateBasedSequencing plateBasedSequencing = 0
+  timecourse timecourse = 0
+ }
+message CellTypeOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  cellTypeOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message CellularComponentOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  cellularComponentOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message Channel
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string channelId = 0
+  float excitationWavelength = 0
+  string filterRange = 0
+  channelMultiplexedOptions multiplexed = 0
+  string targetFluorophore = 0
+  float exposureTime = 0
+ }
+message CollectionProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  collectionProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  processTypeOntology method = 0
+ repeated  purchasedReagents reagents = 0
+ }
+message Contact
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string email = 0
+  string phone = 0
+  string institution = 0
+  string laboratory = 0
+  string address = 0
+  string country = 0
+  boolean correspondingContributor = 0
+  contributorRoleOntology projectRole = 0
+  string orcidId = 0
+ }
+message ContributorRoleOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  contributorRoleOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message Death
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string causeOfDeath = 0
+  boolean coldPerfused = 0
+  float daysOnVentilator = 0
+  integer hardyScale = 0
+  string timeOfDeath = 0
+  deathOrganDonationDeathTypeOptions organDonationDeathType = 0
+  deathNormothermicRegionalPerfusionOptions normothermicRegionalPerfusion = 0
+ }
+message DevelopmentStageOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  developmentStageOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message DifferentiationProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  differentiationProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  string method = 0
+  string media = 0
+  string smallMolecules = 0
+  float targetCellYield = 0
+ repeated  purchasedReagents reagents = 0
+  string targetPathway = 0
+  string validationMethod = 0
+  string validationResult = 0
+ }
+message DiseaseOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  diseaseOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message DissociationProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  dissociationProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  processTypeOntology method = 0
+ repeated  purchasedReagents reagents = 0
+ }
+message DonorOrganism
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  donorOrganismSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  biomaterialCore biomaterialCore = 0
+  humanSpecific humanSpecific = 0
+  mouseSpecific mouseSpecific = 0
+ repeated  speciesOntology genusSpecies = 0
+  donorOrganismSexOptions sex = 0
+  donorOrganismIsLivingOptions isLiving = 0
+  string organismAge = 0
+  timeUnitOntology organismAgeUnit = 0
+  developmentStageOntology developmentStage = 0
+ repeated  diseaseOntology diseases = 0
+  death death = 0
+ repeated  familialRelationship familialRelationships = 0
+  medicalHistory medicalHistory = 0
+  string gestationalAge = 0
+  timeUnitOntology gestationalAgeUnit = 0
+  string height = 0
+  lengthUnitOntology heightUnit = 0
+  string weight = 0
+  massUnitOntology weightUnit = 0
+  timecourse timecourse = 0
+ }
+message EnrichmentOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  enrichmentOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message EnrichmentProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  enrichmentProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  processTypeOntology method = 0
+  string markers = 0
+  float minimumSize = 0
+  float maximumSize = 0
+ }
+message Entity
+ {
+  string entityId = 0
+  entityEntityTypeOptions entityType = 0
+ }
+message EthnicityOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  ethnicityOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message FamilialRelationship
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string parent = 0
+  string child = 0
+  string sibling = 0
+ }
+message FileContentOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  fileContentOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message FileCore
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string fileName = 0
+  string format = 0
+ repeated  fileContentOntology contentDescription = 0
+  string checksum = 0
+  fileCoreFileSourceOptions fileSource = 0
+ }
+message FileDescriptor
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  fileDescriptorSchemaTypeOptions schemaType = 0
+  string fileName = 0
+  string fileId = 0
+  string fileVersion = 0
+  string contentType = 0
+  integer size = 0
+  string sha256 = 0
+  string crc32c = 0
+  string sha1 = 0
+  string s3Etag = 0
+ }
+message FileFormatOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  fileFormatOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message Funder
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string grantTitle = 0
+  string grantId = 0
+  string organization = 0
+ }
+message GrowthConditions
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  integer passageNumber = 0
+  string growthMedium = 0
+  string cultureEnvironment = 0
+  growthConditionsMycoplasmaTestingMethodOptions mycoplasmaTestingMethod = 0
+  growthConditionsMycoplasmaTestingResultsOptions mycoplasmaTestingResults = 0
+  string drugTreatment = 0
+  growthConditionsFeederLayerTypeOptions feederLayerType = 0
+ }
+message HumanSpecific
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  float bodyMassIndex = 0
+ repeated  ethnicityOntology ethnicity = 0
+ }
+message ImagedSpecimen
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  imagedSpecimenSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  biomaterialCore biomaterialCore = 0
+ repeated  string overviewImages = 0
+  float sliceThickness = 0
+ repeated  organPartOntology internalAnatomicalStructures = 0
+ }
+message ImageFile
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  imageFileSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  fileCore fileCore = 0
+ }
+message ImagingPreparationProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  imagingPreparationProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  string freshSlicingMethod = 0
+  float imagedSliceThickness = 0
+  string finalSlicingMethod = 0
+  float postResectionInterval = 0
+  timeUnitOntology postResectionIntervalUnit = 0
+  preservationStorage preFinalSlicePreservationMethod = 0
+  float postFinalSlicingInterval = 0
+  timeUnitOntology postFinalSlicingIntervalUnit = 0
+  string fiducialMarker = 0
+  float expansionFactor = 0
+  float permeabilisationTime = 0
+  timeUnitOntology permeabilisationTimeUnit = 0
+ }
+message ImagingProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  imagingProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  string microscopeSetupDescription = 0
+  microscopyOntology microscopyTechnique = 0
+  string magnification = 0
+  float numericalAperture = 0
+  string immersionMediumType = 0
+  float immersionMediumRefractiveIndex = 0
+  float pixelSize = 0
+  integer numberOfTiles = 0
+  float tileSizeY = 0
+  float tileSizeX = 0
+  float zStackStepSize = 0
+  integer numberOfZSteps = 0
+  imagingProtocolOverlappingTilesOptions overlappingTiles = 0
+ repeated  channel channel = 0
+ repeated  probe probe = 0
+ }
+// An input to a process
+message Input
+ {
+  string inputType = 0
+  string inputId = 0
+ }
+message InsdcExperiment
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string insdcExperimentAccession = 0
+ }
+message InstrumentOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  instrumentOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message IpscInductionProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  ipscInductionProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  ipscInductionProtocolMethodOptions method = 0
+  string reprogrammingFactors = 0
+  purchasedReagents ipscInductionKit = 0
+  string pluripotencyTest = 0
+  float percentPluripotency = 0
+  ipscInductionProtocolPluripotencyVectorRemovedOptions pluripotencyVectorRemoved = 0
+ repeated  purchasedReagents reagents = 0
+ }
+message LengthUnitOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  lengthUnitOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message LibraryAmplificationOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  libraryAmplificationOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message LibraryConstructionOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  libraryConstructionOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message LibraryPreparationProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  libraryPreparationProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  barcode cellBarcode = 0
+  barcode spatialBarcode = 0
+  biologicalMacromoleculeOntology inputNucleicAcidMolecule = 0
+  libraryPreparationProtocolNucleicAcidSourceOptions nucleicAcidSource = 0
+  libraryConstructionOntology libraryConstructionMethod = 0
+  purchasedReagents libraryConstructionKit = 0
+  purchasedReagents nucleicAcidConversionKit = 0
+  libraryPreparationProtocolEndBiasOptions endBias = 0
+  libraryPreparationProtocolPrimerOptions primer = 0
+  libraryPreparationProtocolStrandOptions strand = 0
+  purchasedReagents spikeInKit = 0
+  integer spikeInDilution = 0
+  barcode umiBarcode = 0
+  libraryAmplificationOntology libraryPreamplificationMethod = 0
+  libraryAmplificationOntology cdnaLibraryAmplificationMethod = 0
+  integer nominalLength = 0
+  integer nominalSdev = 0
+ }
+message License
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string identifier = 0
+  string fullName = 0
+  string url = 0
+ }
+message Links
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  linksSchemaTypeOptions schemaType = 0
+ repeated  string links = 0
+ }
+message MassUnitOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  massUnitOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message Matrix
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+ repeated  dataNormalizationMethodsOptions dataNormalizationMethods = 0
+ repeated  derivationProcessOptions derivationProcess = 0
+ }
+message MedicalHistory
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string alcoholHistory = 0
+  string medication = 0
+  string smokingHistory = 0
+  medicalHistoryNutritionalStateOptions nutritionalState = 0
+  string testResults = 0
+  string treatment = 0
+ }
+message MicroscopyOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  microscopyOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message MouseSpecific
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+ repeated  strainOntology strain = 0
+ }
+message Organoid
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  organoidSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  biomaterialCore biomaterialCore = 0
+ repeated  speciesOntology genusSpecies = 0
+  organOntology modelOrgan = 0
+  organPartOntology modelOrganPart = 0
+  float age = 0
+  timeUnitOntology ageUnit = 0
+  float size = 0
+  lengthUnitOntology sizeUnit = 0
+  string morphology = 0
+  boolean embeddedInMatrigel = 0
+  string growthEnvironment = 0
+  float inputAggregateCellCount = 0
+  float storedOxygenLevels = 0
+ }
+message OrganOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  organOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message OrganPartOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  organPartOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+// An output from a process
+message Output
+ {
+  string outputType = 0
+  string outputId = 0
+ }
+message Parameter
+ {
+  string checksum = 0
+  string parameterName = 0
+  string parameterValue = 0
+ }
+message PlateBasedSequencing
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string plateLabel = 0
+  string wellLabel = 0
+  plateBasedSequencingWellQualityOptions wellQuality = 0
+ }
+message PreservationStorage
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  preservationStorageStorageMethodOptions storageMethod = 0
+  float storageTime = 0
+  timeUnitOntology storageTimeUnit = 0
+  preservationStoragePreservationMethodOptions preservationMethod = 0
+ }
+message Probe
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string probeLabel = 0
+  string probeSequence = 0
+  string targetName = 0
+  string targetCodebookLabel = 0
+  string targetLabel = 0
+  cellularComponentOntology subcellularStructure = 0
+  purchasedReagents probeReagents = 0
+  processTypeOntology assayType = 0
+ repeated  string fluorophore = 0
+ repeated  string channelLabel = 0
+ }
+message Process
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  processSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  processCore processCore = 0
+  string startTime = 0
+  string endTime = 0
+  string lengthOfTime = 0
+  timeUnitOntology lengthOfTimeUnit = 0
+  processTypeOntology type = 0
+  string deviationFromProtocol = 0
+  insdcExperiment insdcExperiment = 0
+ }
+message ProcessCore
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string processId = 0
+  string processName = 0
+  string processDescription = 0
+  string location = 0
+ repeated  string operators = 0
+ }
+message ProcessLink
+ {
+  string processType = 0
+  string processId = 0
+ repeated  input inputs = 0
+ repeated  output outputs = 0
+ repeated  protocolReference protocols = 0
+  processLinkLinkTypeOptions linkType = 0
+ }
+message ProcessTypeOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  processTypeOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message Project
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  projectSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  projectCore projectCore = 0
+ repeated  contact contributors = 0
+ repeated  string supplementaryLinks = 0
+ repeated  publication publications = 0
+ repeated  string insdcProjectAccessions = 0
+ repeated  string egaAccessions = 0
+ repeated  string dbgapAccessions = 0
+ repeated  string geoSeriesAccessions = 0
+ repeated  string arrayExpressAccessions = 0
+ repeated  string insdcStudyAccessions = 0
+ repeated  string biostudiesAccessions = 0
+ repeated  funder funders = 0
+  integer estimatedCellCount = 0
+ }
+message ProjectCore
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string projectShortName = 0
+  string projectTitle = 0
+  string projectDescription = 0
+ }
+message Protocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  protocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  processTypeOntology type = 0
+ }
+message ProtocolCore
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string protocolId = 0
+  string protocolName = 0
+  string protocolDescription = 0
+  string publicationDoi = 0
+  string protocolsIoDoi = 0
+  string document = 0
+ }
+// A protocol used in a process
+message ProtocolReference
+ {
+  protocolReferenceProtocolTypeOptions protocolType = 0
+  string protocolId = 0
+ }
+message ProtocolTypeOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  protocolTypeOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message Provenance
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  integer schemaMajorVersion = 0
+  integer schemaMinorVersion = 0
+  string submissionDate = 0
+  string submitterId = 0
+  string updateDate = 0
+  string updaterId = 0
+  string documentId = 0
+  string accession = 0
+ }
+message Publication
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+ repeated  string authors = 0
+  string title = 0
+  string doi = 0
+  integer pmid = 0
+  string url = 0
+  boolean officialHcaPublication = 0
+ }
+message PurchasedReagents
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string retailName = 0
+  string catalogNumber = 0
+  string manufacturer = 0
+  string lotNumber = 0
+  string expiryDate = 0
+  string kitTiter = 0
+ }
+message ReferenceFile
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  referenceFileSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  fileCore fileCore = 0
+  integer ncbiTaxonId = 0
+  speciesOntology genusSpecies = 0
+  referenceFileReferenceTypeOptions referenceType = 0
+  referenceFileAssemblyTypeOptions assemblyType = 0
+  string referenceVersion = 0
+ }
+message S10x
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string fastqMethod = 0
+  string fastqMethodVersion = 0
+  float pooledChannels = 0
+  boolean dropUniformity = 0
+ }
+message SequenceFile
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  sequenceFileSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  fileCore fileCore = 0
+  sequenceFileReadIndexOptions readIndex = 0
+  integer laneIndex = 0
+  integer readLength = 0
+ repeated  string insdcRunAccessions = 0
+  string libraryPrepId = 0
+ }
+message SequencingOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  sequencingOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message SequencingProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  sequencingProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+  instrumentOntology instrumentManufacturerModel = 0
+  string localMachineName = 0
+  boolean pairedEnd = 0
+  sequencingOntology method = 0
+  s10x s10x = 0
+ }
+message SpeciesOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  speciesOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message SpecimenFromOrganism
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  specimenFromOrganismSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  biomaterialCore biomaterialCore = 0
+ repeated  speciesOntology genusSpecies = 0
+  organOntology organ = 0
+ repeated  organPartOntology organParts = 0
+ repeated  diseaseOntology diseases = 0
+  stateOfSpecimen stateOfSpecimen = 0
+  preservationStorage preservationStorage = 0
+  string collectionTime = 0
+  purchasedReagents purchasedSpecimen = 0
+ }
+message StateOfSpecimen
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  stateOfSpecimenAutolysisScoreOptions autolysisScore = 0
+  string grossDescription = 0
+ repeated  string grossImages = 0
+  stateOfSpecimenIschemicTemperatureOptions ischemicTemperature = 0
+  integer ischemicTime = 0
+  string microscopicDescription = 0
+ repeated  string microscopicImages = 0
+  integer postmortemInterval = 0
+ }
+message StrainOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  strainOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message SupplementaryFile
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  supplementaryFileSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  fileCore fileCore = 0
+  string fileDescription = 0
+ }
+message SupplementaryFileEntity
+ {
+  string fileId = 0
+  supplementaryFileEntityFileTypeOptions fileType = 0
+ }
+message SupplementaryFileLink
+ {
+  entity entity = 0
+ repeated  supplementaryFile files = 0
+  supplementaryFileLinkLinkTypeOptions linkType = 0
+ }
+message TargetPathwayOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  targetPathwayOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message Task
+ {
+  string diskSize = 0
+  string taskName = 0
+  string zone = 0
+  string logErr = 0
+  string startTime = 0
+  integer cpus = 0
+  string logOut = 0
+  string stopTime = 0
+  string memory = 0
+  string dockerImage = 0
+ }
+message Timecourse
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string value = 0
+  timeUnitOntology unit = 0
+  string relevance = 0
+ }
+message TimeUnitOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  timeUnitOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message TreatmentMethodOntology
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  string text = 0
+  treatmentMethodOntologyOntologyOptions ontology = 0
+  string ontologyLabel = 0
+ }
+message TreatmentProtocol
+ {
+  string describedBy = 0
+  string schemaVersion = 0
+  treatmentProtocolSchemaTypeOptions schemaType = 0
+  provenance provenance = 0
+  protocolCore protocolCore = 0
+ repeated  treatmentMethodOntology method = 0
+  string media = 0
+ repeated  purchasedReagents reagents = 0
+ repeated  targetPathwayOntology targetPathway = 0
+ }

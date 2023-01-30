@@ -1,0 +1,122 @@
+name: Cell_line
+id: https://example.org/Cell-line
+imports:
+- linkml:types
+- system/provenance
+- core/biomaterial/biomaterial_core
+- module/ontology/cell_cycle_ontology
+- module/ontology/organ_ontology
+- module/biomaterial/cell_morphology
+- module/biomaterial/growth_conditions
+- module/ontology/cell_type_ontology
+- module/ontology/organ_part_ontology
+- module/ontology/disease_ontology
+- module/ontology/species_ontology
+- module/project/publication
+- module/biomaterial/timecourse
+prefixes:
+  Cell_line: https://example.org/Cell-line
+  linkml: https://w3id.org/linkml/
+default_prefix: Cell_line
+enums:
+  CellLine_schema_type_options:
+    permissible_values:
+      biomaterial: {}
+  CellLine_type_options:
+    permissible_values:
+      primary: {}
+      immortalized: {}
+      stem cell: {}
+      stem cell-derived: {}
+      induced pluripotent: {}
+      synthetic: {}
+classes:
+  CellLine:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: CellLine_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      biomaterial_core:
+        description: Core biomaterial-level information.
+        title: Biomaterial core
+        range: BiomaterialCore
+        required: true
+      supplier:
+        description: The supplier of the cell line.
+        title: Supplier
+      catalog_number:
+        description: The supplier catalogue number for the cell line.
+        title: Catalog number
+      lot_number:
+        description: The supplier lot or batch number for the cell line.
+        title: Lot/batch number
+      catalog_url:
+        description: The supplier catalogue URL for the cell line.
+        title: Catalog URL
+      cell_cycle:
+        description: The cell cycle phase if the cell line is synchronized growing
+          cells or the phase is known.
+        title: Cell cycle
+        range: CellCycleOntology
+      type:
+        description: The type of cell line.
+        title: Cell line type
+        range: CellLine_type_options
+        required: true
+      model_organ:
+        description: Organ for which this cell line is a model.
+        title: Organ model
+        range: OrganOntology
+        required: true
+      cell_morphology:
+        description: Features relating to the morphology of the cells.
+        title: Cell morphology
+        range: CellMorphology
+      growth_conditions:
+        description: Features relating to the growth and/or maintenance of the cell
+          lines.
+        title: Growth conditions
+        range: GrowthConditions
+      confluency:
+        description: The percent a plate surface is covered by cells.
+        title: Percent confluency
+        range: float
+      cell_type:
+        description: The cell type that the cell line represents.
+        title: Cell type
+        range: CellTypeOntology
+      karyotype:
+        description: The karyotype of the cell line.
+        title: Karyotype
+      tissue:
+        description: The tissue that the cell line was derived from.
+        title: Tissue
+        range: OrganPartOntology
+      date_established:
+        description: Date when the cell line was established.
+        title: Date established
+      disease:
+        description: Short description of any disease association to the cell type.
+        title: Disease
+        range: DiseaseOntology
+      genus_species:
+        multivalued: true
+        range: SpeciesOntology
+      publication:
+        description: A publication that cites the cell line creation.
+        title: Publication
+        range: Publication
+      timecourse:
+        description: Information relating to a timecourse associated with this cell
+          line.
+        title: Timecourse
+        range: Timecourse

@@ -1,0 +1,39 @@
+name: Protocol
+id: https://example.org/Protocol
+imports:
+- linkml:types
+- system/provenance
+- core/protocol/protocol_core
+- module/ontology/process_type_ontology
+prefixes:
+  Protocol: https://example.org/Protocol
+  linkml: https://w3id.org/linkml/
+default_prefix: Protocol
+enums:
+  Protocol_schema_type_options:
+    permissible_values:
+      protocol: {}
+classes:
+  Protocol:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: Protocol_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      protocol_core:
+        description: Core protocol-level information.
+        title: Protocol core
+        range: ProtocolCore
+        required: true
+      type:
+        description: The type of protocol.
+        title: Protocol type
+        range: ProcessTypeOntology

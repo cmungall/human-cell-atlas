@@ -1,0 +1,8 @@
+name: property_migrations
+id: https://example.org/property_migrations
+imports:
+- linkml:types
+prefixes:
+  property_migrations: https://example.org/property_migrations
+  linkml: https://w3id.org/linkml/
+default_prefix: property_migrations

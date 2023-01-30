@@ -1,0 +1,4898 @@
+{
+    "$defs": {
+        "AggregateGenerationProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "cell_uniformity": {
+                    "description": "Description of the cell aggregates uniformity after formation.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "formation_method": {
+                    "description": "Method used to form cell aggregates.",
+                    "type": "string"
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/AggregateGenerationProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core",
+                "formation_method"
+            ],
+            "title": "AggregateGenerationProtocol",
+            "type": "object"
+        },
+        "AggregateGenerationProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "AggregateGenerationProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "AnalysisFile": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "file_core": {
+                    "$ref": "#/$defs/FileCore",
+                    "description": "Core file-level information."
+                },
+                "matrix_cell_count": {
+                    "description": "Number of cells analyzed in a matrix file.",
+                    "type": "integer"
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/AnalysisFileSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "file_core"
+            ],
+            "title": "AnalysisFile",
+            "type": "object"
+        },
+        "AnalysisFileSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "file"
+            ],
+            "title": "AnalysisFileSchemaTypeOptions",
+            "type": "string"
+        },
+        "AnalysisProcess": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "analysis_run_type": {
+                    "$ref": "#/$defs/AnalysisProcessAnalysisRunTypeOptions",
+                    "description": "Whether the analysis was run or was copied forward as an optimization."
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "inputs": {
+                    "items": {
+                        "$ref": "#/$defs/Parameter"
+                    },
+                    "type": "array"
+                },
+                "process_core": {
+                    "$ref": "#/$defs/ProcessCore",
+                    "description": "Core process-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "reference_files": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/AnalysisProcessSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "tasks": {
+                    "items": {
+                        "$ref": "#/$defs/Task"
+                    },
+                    "type": "array"
+                },
+                "timestamp_start_utc": {
+                    "description": "Initial start time of the full pipeline in UTC.",
+                    "type": "string"
+                },
+                "timestamp_stop_utc": {
+                    "description": "Terminal stop time of the full pipeline in UTC.",
+                    "type": "string"
+                },
+                "type": {
+                    "$ref": "#/$defs/ProcessTypeOntology",
+                    "description": "The type of process."
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "process_core",
+                "type",
+                "inputs",
+                "tasks",
+                "timestamp_start_utc",
+                "timestamp_stop_utc",
+                "analysis_run_type",
+                "reference_files"
+            ],
+            "title": "AnalysisProcess",
+            "type": "object"
+        },
+        "AnalysisProcessAnalysisRunTypeOptions": {
+            "description": "",
+            "enum": [
+                "run",
+                "copy-forward"
+            ],
+            "title": "AnalysisProcessAnalysisRunTypeOptions",
+            "type": "string"
+        },
+        "AnalysisProcessSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "process"
+            ],
+            "title": "AnalysisProcessSchemaTypeOptions",
+            "type": "string"
+        },
+        "AnalysisProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "computational_method": {
+                    "description": "A URI to a versioned workflow and versioned execution environment in a GA4GH-compliant repository.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "matrix": {
+                    "$ref": "#/$defs/Matrix",
+                    "description": "Information related to protocols that output a matrix."
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/AnalysisProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "type": {
+                    "$ref": "#/$defs/ProcessTypeOntology",
+                    "description": "The type of protocol."
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core",
+                "type"
+            ],
+            "title": "AnalysisProtocol",
+            "type": "object"
+        },
+        "AnalysisProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "AnalysisProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "Barcode": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "barcode_length": {
+                    "description": "Length of barcode in nucleotides.",
+                    "type": "integer"
+                },
+                "barcode_offset": {
+                    "description": "The 0-based offset of start of barcode in read.",
+                    "type": "integer"
+                },
+                "barcode_read": {
+                    "$ref": "#/$defs/BarcodeBarcodeReadOptions",
+                    "description": "The read in which the barcode is found."
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "white_list_file": {
+                    "description": "Name of file containing legitimate barcode sequences.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "barcode_read",
+                "barcode_offset",
+                "barcode_length"
+            ],
+            "title": "Barcode",
+            "type": "object"
+        },
+        "BarcodeBarcodeReadOptions": {
+            "description": "",
+            "enum": [
+                "Read 1",
+                "Read 2",
+                "Read 3",
+                "Read 4",
+                "i7 Index",
+                "i5 Index"
+            ],
+            "title": "BarcodeBarcodeReadOptions",
+            "type": "string"
+        },
+        "BiologicalMacromoleculeOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/BiologicalMacromoleculeOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of the biological macromolecule being used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "BiologicalMacromoleculeOntology",
+            "type": "object"
+        },
+        "BiologicalMacromoleculeOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "BiologicalMacromoleculeOntologyOntologyOptions",
+            "type": "string"
+        },
+        "BiomaterialCore": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "HDBR_accession": {
+                    "description": "A Human Developmental Biology Resource (HDBR) sample accession.",
+                    "type": "string"
+                },
+                "biomaterial_description": {
+                    "description": "A general description of the biomaterial.",
+                    "type": "string"
+                },
+                "biomaterial_id": {
+                    "description": "A unique ID for the biomaterial.",
+                    "type": "string"
+                },
+                "biomaterial_name": {
+                    "description": "A short, descriptive name for the biomaterial that need not be unique.",
+                    "type": "string"
+                },
+                "biosamples_accession": {
+                    "description": "A BioSamples accession.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "genotype": {
+                    "description": "Genotype of the biomaterial.",
+                    "type": "string"
+                },
+                "insdc_sample_accession": {
+                    "description": "An International Nucleotide Sequence Database Collaboration (INSDC) sample accession.",
+                    "type": "string"
+                },
+                "ncbi_taxon_id": {
+                    "items": {
+                        "type": "integer"
+                    },
+                    "type": "array"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "supplementary_files": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "biomaterial_id",
+                "ncbi_taxon_id"
+            ],
+            "title": "BiomaterialCore",
+            "type": "object"
+        },
+        "CellCycleOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/CellCycleOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "Version number in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a cell cycle of the cells in the specimen.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "CellCycleOntology",
+            "type": "object"
+        },
+        "CellCycleOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "CellCycleOntologyOntologyOptions",
+            "type": "string"
+        },
+        "CellLine": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "biomaterial_core": {
+                    "$ref": "#/$defs/BiomaterialCore",
+                    "description": "Core biomaterial-level information."
+                },
+                "catalog_number": {
+                    "description": "The supplier catalogue number for the cell line.",
+                    "type": "string"
+                },
+                "catalog_url": {
+                    "description": "The supplier catalogue URL for the cell line.",
+                    "type": "string"
+                },
+                "cell_cycle": {
+                    "$ref": "#/$defs/CellCycleOntology",
+                    "description": "The cell cycle phase if the cell line is synchronized growing cells or the phase is known."
+                },
+                "cell_morphology": {
+                    "$ref": "#/$defs/CellMorphology",
+                    "description": "Features relating to the morphology of the cells."
+                },
+                "cell_type": {
+                    "$ref": "#/$defs/CellTypeOntology",
+                    "description": "The cell type that the cell line represents."
+                },
+                "confluency": {
+                    "description": "The percent a plate surface is covered by cells.",
+                    "type": "number"
+                },
+                "date_established": {
+                    "description": "Date when the cell line was established.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "disease": {
+                    "$ref": "#/$defs/DiseaseOntology",
+                    "description": "Short description of any disease association to the cell type."
+                },
+                "genus_species": {
+                    "items": {
+                        "$ref": "#/$defs/SpeciesOntology"
+                    },
+                    "type": "array"
+                },
+                "growth_conditions": {
+                    "$ref": "#/$defs/GrowthConditions",
+                    "description": "Features relating to the growth and/or maintenance of the cell lines."
+                },
+                "karyotype": {
+                    "description": "The karyotype of the cell line.",
+                    "type": "string"
+                },
+                "lot_number": {
+                    "description": "The supplier lot or batch number for the cell line.",
+                    "type": "string"
+                },
+                "model_organ": {
+                    "$ref": "#/$defs/OrganOntology",
+                    "description": "Organ for which this cell line is a model."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "publication": {
+                    "$ref": "#/$defs/Publication",
+                    "description": "A publication that cites the cell line creation."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/CellLineSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "supplier": {
+                    "description": "The supplier of the cell line.",
+                    "type": "string"
+                },
+                "timecourse": {
+                    "$ref": "#/$defs/Timecourse",
+                    "description": "Information relating to a timecourse associated with this cell line."
+                },
+                "tissue": {
+                    "$ref": "#/$defs/OrganPartOntology",
+                    "description": "The tissue that the cell line was derived from."
+                },
+                "type": {
+                    "$ref": "#/$defs/CellLineTypeOptions",
+                    "description": "The type of cell line."
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "biomaterial_core",
+                "type",
+                "model_organ"
+            ],
+            "title": "CellLine",
+            "type": "object"
+        },
+        "CellLineSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "biomaterial"
+            ],
+            "title": "CellLineSchemaTypeOptions",
+            "type": "string"
+        },
+        "CellLineTypeOptions": {
+            "description": "",
+            "enum": [
+                "primary",
+                "immortalized",
+                "stem cell",
+                "stem cell-derived",
+                "induced pluripotent",
+                "synthetic"
+            ],
+            "title": "CellLineTypeOptions",
+            "type": "string"
+        },
+        "CellMorphology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "cell_morphology": {
+                    "description": "General description of the morphology of cells.",
+                    "type": "string"
+                },
+                "cell_size": {
+                    "description": "Size of cells in Cell size unit.",
+                    "type": "string"
+                },
+                "cell_size_unit": {
+                    "$ref": "#/$defs/LengthUnitOntology",
+                    "description": "The unit in which the Cell size is expressed."
+                },
+                "cell_viability_method": {
+                    "description": "The method by which cell viability was determined.",
+                    "type": "string"
+                },
+                "cell_viability_result": {
+                    "$ref": "#/$defs/CellMorphologyCellViabilityResultOptions",
+                    "description": "Result of the cell viability test."
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "percent_cell_viability": {
+                    "description": "Percent of cells determined to be viable.",
+                    "type": "number"
+                },
+                "percent_necrosis": {
+                    "description": "Percent of cells identified to be necrotic.",
+                    "type": "number"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "title": "CellMorphology",
+            "type": "object"
+        },
+        "CellMorphologyCellViabilityResultOptions": {
+            "description": "",
+            "enum": [
+                "pass",
+                "fail"
+            ],
+            "title": "CellMorphologyCellViabilityResultOptions",
+            "type": "string"
+        },
+        "CellSuspension": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "biomaterial_core": {
+                    "$ref": "#/$defs/BiomaterialCore",
+                    "description": "Core biomaterial-level information."
+                },
+                "cell_morphology": {
+                    "$ref": "#/$defs/CellMorphology",
+                    "description": "Features relating to the morphology of cells in a biomaterial."
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "estimated_cell_count": {
+                    "description": "Estimated number of cells in the suspension.",
+                    "type": "integer"
+                },
+                "genus_species": {
+                    "items": {
+                        "$ref": "#/$defs/SpeciesOntology"
+                    },
+                    "type": "array"
+                },
+                "growth_conditions": {
+                    "$ref": "#/$defs/GrowthConditions",
+                    "description": "Features relating to the growth and/or maintenance of a biomaterial."
+                },
+                "plate_based_sequencing": {
+                    "$ref": "#/$defs/PlateBasedSequencing",
+                    "description": "Fields specific for plate-based sequencing experiments."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/CellSuspensionSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "selected_cell_types": {
+                    "items": {
+                        "$ref": "#/$defs/CellTypeOntology"
+                    },
+                    "type": "array"
+                },
+                "timecourse": {
+                    "$ref": "#/$defs/Timecourse",
+                    "description": "Information relating to a timecourse associated with this cell suspension."
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "biomaterial_core"
+            ],
+            "title": "CellSuspension",
+            "type": "object"
+        },
+        "CellSuspensionSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "biomaterial"
+            ],
+            "title": "CellSuspensionSchemaTypeOptions",
+            "type": "string"
+        },
+        "CellTypeOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/CellTypeOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "Version number in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a cell type supplied by a user.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "CellTypeOntology",
+            "type": "object"
+        },
+        "CellTypeOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "CellTypeOntologyOntologyOptions",
+            "type": "string"
+        },
+        "CellularComponentOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/CellularComponentOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a subcellular structure.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "CellularComponentOntology",
+            "type": "object"
+        },
+        "CellularComponentOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "CellularComponentOntologyOntologyOptions",
+            "type": "string"
+        },
+        "Channel": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "channel_id": {
+                    "description": "User given ID.  If there is an accompanying codebook, this name should correspond to the channel id used in the codebook.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "excitation_wavelength": {
+                    "description": "Excitation wavelength of the lightsource in nanometers.",
+                    "type": "number"
+                },
+                "exposure_time": {
+                    "description": "Acquisition time for a single image per channel, in milliseconds.",
+                    "type": "number"
+                },
+                "filter_range": {
+                    "description": "Emission filter in nanometers.",
+                    "type": "string"
+                },
+                "multiplexed": {
+                    "$ref": "#/$defs/ChannelMultiplexedOptions",
+                    "description": "Whether multiple targets were detected simultaneously in this channel."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "target_fluorophore": {
+                    "description": "The name of the fluorophore this channel is designed to assay.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "channel_id",
+                "excitation_wavelength",
+                "filter_range",
+                "multiplexed",
+                "exposure_time"
+            ],
+            "title": "Channel",
+            "type": "object"
+        },
+        "ChannelMultiplexedOptions": {
+            "description": "",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "title": "ChannelMultiplexedOptions",
+            "type": "string"
+        },
+        "CollectionProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "method": {
+                    "$ref": "#/$defs/ProcessTypeOntology",
+                    "description": "Method used to collect the biomaterial."
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "reagents": {
+                    "items": {
+                        "$ref": "#/$defs/PurchasedReagents"
+                    },
+                    "type": "array"
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/CollectionProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core",
+                "method"
+            ],
+            "title": "CollectionProtocol",
+            "type": "object"
+        },
+        "CollectionProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "CollectionProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "Contact": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "address": {
+                    "description": "Street address where the individual works.",
+                    "type": "string"
+                },
+                "corresponding_contributor": {
+                    "description": "Whether the individual is a primary point of contact for the project.",
+                    "type": "boolean"
+                },
+                "country": {
+                    "description": "Country where the individual works.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "Email address for the individual.",
+                    "type": "string"
+                },
+                "institution": {
+                    "description": "Name of primary institute where the individual works.",
+                    "type": "string"
+                },
+                "laboratory": {
+                    "description": "Name of lab or department within the institute where the individual works.",
+                    "type": "string"
+                },
+                "orcid_id": {
+                    "description": "The individual's ORCID ID linked to previous work.",
+                    "type": "string"
+                },
+                "phone": {
+                    "description": "Phone number of the individual or their lab.",
+                    "type": "string"
+                },
+                "project_role": {
+                    "$ref": "#/$defs/ContributorRoleOntology",
+                    "description": "Primary role of the individual in the project."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "institution"
+            ],
+            "title": "Contact",
+            "type": "object"
+        },
+        "ContributorRoleOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/ContributorRoleOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "Version number in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The primary role of the contributor in the project.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "ContributorRoleOntology",
+            "type": "object"
+        },
+        "ContributorRoleOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "ContributorRoleOntologyOntologyOptions",
+            "type": "string"
+        },
+        "DataNormalizationMethodsOptions": {
+            "description": "",
+            "enum": [
+                "CPM (counts per million)",
+                "TPM (transcripts per kilobase million)",
+                "RPKM (reads per kilobase of exon per million reads mapped)",
+                "FPKM (fragments per kilobase of exon per million fragments mapped)",
+                "DESeq2's median of ratios",
+                "TMM (EdgeR's trimmed mean of M values)",
+                "SF (size factor)",
+                "UQ (Upper quartile)",
+                "Downsampling",
+                "other",
+                "unknown"
+            ],
+            "title": "DataNormalizationMethodsOptions",
+            "type": "string"
+        },
+        "Death": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "cause_of_death": {
+                    "description": "Conditions resulting in death.",
+                    "type": "string"
+                },
+                "cold_perfused": {
+                    "description": "Whether perfusion with cold fluid was used to help preserve tissues before heart stopped.",
+                    "type": "boolean"
+                },
+                "days_on_ventilator": {
+                    "description": "Number of days on ventilator before death occurred.",
+                    "type": "number"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "hardy_scale": {
+                    "description": "Value on 4-point Hardy scale cause of death classification.",
+                    "type": "integer"
+                },
+                "normothermic_regional_perfusion": {
+                    "$ref": "#/$defs/DeathNormothermicRegionalPerfusionOptions",
+                    "description": "Whether entire body was perfused with warm oxygenated blood."
+                },
+                "organ_donation_death_type": {
+                    "$ref": "#/$defs/DeathOrganDonationDeathTypeOptions",
+                    "description": "Type of death preceding organ donation."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "time_of_death": {
+                    "description": "Date and time when death was declared.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "cause_of_death"
+            ],
+            "title": "Death",
+            "type": "object"
+        },
+        "DeathNormothermicRegionalPerfusionOptions": {
+            "description": "",
+            "enum": [
+                "yes",
+                "no",
+                "unknown"
+            ],
+            "title": "DeathNormothermicRegionalPerfusionOptions",
+            "type": "string"
+        },
+        "DeathOrganDonationDeathTypeOptions": {
+            "description": "",
+            "enum": [
+                "Donation after circulatory death (DCD)",
+                "Donation after brainstem death (DBD)"
+            ],
+            "title": "DeathOrganDonationDeathTypeOptions",
+            "type": "string"
+        },
+        "DerivationProcessOptions": {
+            "description": "",
+            "enum": [
+                "alignment",
+                "quantification",
+                "peak calling",
+                "peak annotation",
+                "gene filtering",
+                "cell filtering",
+                "merging",
+                "cell calling",
+                "ambient RNA correction",
+                "doublet removal",
+                "batch correction",
+                "depth normalization",
+                "other"
+            ],
+            "title": "DerivationProcessOptions",
+            "type": "string"
+        },
+        "DevelopmentStageOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/DevelopmentStageOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "Version number in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of the development stage of the organism.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "DevelopmentStageOntology",
+            "type": "object"
+        },
+        "DevelopmentStageOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "DevelopmentStageOntologyOntologyOptions",
+            "type": "string"
+        },
+        "DifferentiationProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "media": {
+                    "description": "Culture media used to induce a specific differentiation response.",
+                    "type": "string"
+                },
+                "method": {
+                    "description": "Method applied to cell culture to induce a specific differentiation response.",
+                    "type": "string"
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "reagents": {
+                    "items": {
+                        "$ref": "#/$defs/PurchasedReagents"
+                    },
+                    "type": "array"
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/DifferentiationProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "small_molecules": {
+                    "description": "Small molecules added to stem cell medium to induce a specific differentiation response.",
+                    "type": "string"
+                },
+                "target_cell_yield": {
+                    "description": "Percent of target cells obtained after directed differentiation of origin cell.",
+                    "type": "number"
+                },
+                "target_pathway": {
+                    "description": "Targeted pathway for specific differentiation response.",
+                    "type": "string"
+                },
+                "validation_method": {
+                    "description": "Method used to validate origin cell successfully differentiated to target cell.",
+                    "type": "string"
+                },
+                "validation_result": {
+                    "description": "Result confirming successful differentiation to target cell type.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core",
+                "method"
+            ],
+            "title": "DifferentiationProtocol",
+            "type": "object"
+        },
+        "DifferentiationProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "DifferentiationProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "DiseaseOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/DiseaseOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "Version number in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The text for the term as the user provides it.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "DiseaseOntology",
+            "type": "object"
+        },
+        "DiseaseOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "DiseaseOntologyOntologyOptions",
+            "type": "string"
+        },
+        "DissociationProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "method": {
+                    "$ref": "#/$defs/ProcessTypeOntology",
+                    "description": "How cells or organelles were dissociated."
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "reagents": {
+                    "items": {
+                        "$ref": "#/$defs/PurchasedReagents"
+                    },
+                    "type": "array"
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/DissociationProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core",
+                "method"
+            ],
+            "title": "DissociationProtocol",
+            "type": "object"
+        },
+        "DissociationProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "DissociationProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "DonorOrganism": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "biomaterial_core": {
+                    "$ref": "#/$defs/BiomaterialCore",
+                    "description": "Core biomaterial-level information."
+                },
+                "death": {
+                    "$ref": "#/$defs/Death",
+                    "description": "Information about conditions of death of the organism."
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "development_stage": {
+                    "$ref": "#/$defs/DevelopmentStageOntology",
+                    "description": "A classification of the developmental stage of the organism."
+                },
+                "diseases": {
+                    "items": {
+                        "$ref": "#/$defs/DiseaseOntology"
+                    },
+                    "type": "array"
+                },
+                "familial_relationships": {
+                    "items": {
+                        "$ref": "#/$defs/FamilialRelationship"
+                    },
+                    "type": "array"
+                },
+                "genus_species": {
+                    "items": {
+                        "$ref": "#/$defs/SpeciesOntology"
+                    },
+                    "type": "array"
+                },
+                "gestational_age": {
+                    "description": "Gestational age of pregnancy in Gestational age units measured from the last menstrual period.",
+                    "type": "string"
+                },
+                "gestational_age_unit": {
+                    "$ref": "#/$defs/TimeUnitOntology",
+                    "description": "The unit in which Gestational age is expressed."
+                },
+                "height": {
+                    "description": "Height of organism in Height unit.",
+                    "type": "string"
+                },
+                "height_unit": {
+                    "$ref": "#/$defs/LengthUnitOntology",
+                    "description": "The unit in which Height is expressed."
+                },
+                "human_specific": {
+                    "$ref": "#/$defs/HumanSpecific",
+                    "description": "Fields specific to human (homo sapiens) organisms."
+                },
+                "is_living": {
+                    "$ref": "#/$defs/DonorOrganismIsLivingOptions",
+                    "description": "Whether organism was alive at time of biomaterial collection."
+                },
+                "medical_history": {
+                    "$ref": "#/$defs/MedicalHistory",
+                    "description": "Information about the medical history of the organism."
+                },
+                "mouse_specific": {
+                    "$ref": "#/$defs/MouseSpecific",
+                    "description": "Fields specific to mouse (mus musculus) organisms."
+                },
+                "organism_age": {
+                    "description": "Age of organism in Age units measured since birth.",
+                    "type": "string"
+                },
+                "organism_age_unit": {
+                    "$ref": "#/$defs/TimeUnitOntology",
+                    "description": "The unit in which Age is expressed."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/DonorOrganismSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "sex": {
+                    "$ref": "#/$defs/DonorOrganismSexOptions",
+                    "description": "The biological sex of the organism."
+                },
+                "timecourse": {
+                    "$ref": "#/$defs/Timecourse",
+                    "description": "Information relating to a timecourse associated with this biomaterial."
+                },
+                "weight": {
+                    "description": "Weight of organism in Weight unit.",
+                    "type": "string"
+                },
+                "weight_unit": {
+                    "$ref": "#/$defs/MassUnitOntology",
+                    "description": "The unit in which Weight is expressed."
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "biomaterial_core",
+                "sex",
+                "is_living",
+                "development_stage"
+            ],
+            "title": "DonorOrganism",
+            "type": "object"
+        },
+        "DonorOrganismIsLivingOptions": {
+            "description": "",
+            "enum": [
+                "yes",
+                "no",
+                "unknown",
+                "not applicable"
+            ],
+            "title": "DonorOrganismIsLivingOptions",
+            "type": "string"
+        },
+        "DonorOrganismSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "biomaterial"
+            ],
+            "title": "DonorOrganismSchemaTypeOptions",
+            "type": "string"
+        },
+        "DonorOrganismSexOptions": {
+            "description": "",
+            "enum": [
+                "female",
+                "male",
+                "mixed",
+                "unknown"
+            ],
+            "title": "DonorOrganismSexOptions",
+            "type": "string"
+        },
+        "EnrichmentOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/EnrichmentOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of an enrichment approach being used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "EnrichmentOntology",
+            "type": "object"
+        },
+        "EnrichmentOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "EnrichmentOntologyOntologyOptions",
+            "type": "string"
+        },
+        "EnrichmentProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "markers": {
+                    "description": "A list of markers used to enrich for or against certain cells.",
+                    "type": "string"
+                },
+                "maximum_size": {
+                    "description": "Maximum cell or organelle size passing selection, in microns.",
+                    "type": "number"
+                },
+                "method": {
+                    "$ref": "#/$defs/ProcessTypeOntology",
+                    "description": "The method by which enrichment was achieved."
+                },
+                "minimum_size": {
+                    "description": "Minimum cell or organelle size passing selection, in microns.",
+                    "type": "number"
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/EnrichmentProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core",
+                "method"
+            ],
+            "title": "EnrichmentProtocol",
+            "type": "object"
+        },
+        "EnrichmentProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "EnrichmentProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "Entity": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "entity_id": {
+                    "description": "ID of this entity",
+                    "type": "string"
+                },
+                "entity_type": {
+                    "$ref": "#/$defs/EntityEntityTypeOptions",
+                    "description": "The concrete type of this entity"
+                }
+            },
+            "required": [
+                "entity_id",
+                "entity_type"
+            ],
+            "title": "Entity",
+            "type": "object"
+        },
+        "EntityEntityTypeOptions": {
+            "description": "",
+            "enum": [
+                "project"
+            ],
+            "title": "EntityEntityTypeOptions",
+            "type": "string"
+        },
+        "EthnicityOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/EthnicityOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "Version number in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The ethnicity of the human donor.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "EthnicityOntology",
+            "type": "object"
+        },
+        "EthnicityOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "EthnicityOntologyOntologyOptions",
+            "type": "string"
+        },
+        "FamilialRelationship": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "child": {
+                    "description": "The individual's child.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "parent": {
+                    "description": "The individual's parent.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "sibling": {
+                    "description": "The individual's sibling.",
+                    "type": "string"
+                }
+            },
+            "title": "FamilialRelationship",
+            "type": "object"
+        },
+        "FileContentOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/FileContentOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "Version number in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "General description of the contents of the file.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "FileContentOntology",
+            "type": "object"
+        },
+        "FileContentOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "FileContentOntologyOntologyOptions",
+            "type": "string"
+        },
+        "FileCore": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "checksum": {
+                    "description": "MD5 checksum of the file.",
+                    "type": "string"
+                },
+                "content_description": {
+                    "items": {
+                        "$ref": "#/$defs/FileContentOntology"
+                    },
+                    "type": "array"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "file_name": {
+                    "description": "The name of the file.",
+                    "type": "string"
+                },
+                "file_source": {
+                    "$ref": "#/$defs/FileCoreFileSourceOptions",
+                    "description": "The source of the file. This is typically an organisation, repository, person or dedicated process."
+                },
+                "format": {
+                    "description": "The format of the file.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "file_name",
+                "format"
+            ],
+            "title": "FileCore",
+            "type": "object"
+        },
+        "FileCoreFileSourceOptions": {
+            "description": "",
+            "enum": [
+                "DCP/2 Analysis",
+                "Contributor",
+                "ArrayExpress",
+                "HCA Release",
+                "GEO",
+                "SCEA",
+                "SCP",
+                "DCP/1 Matrix Service",
+                "LungMAP",
+                "Zenodo",
+                "Publication",
+                "DCP/2 Ingest"
+            ],
+            "title": "FileCoreFileSourceOptions",
+            "type": "string"
+        },
+        "FileDescriptor": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "content_type": {
+                    "description": "An appropriate MIME type for this file.",
+                    "type": "string"
+                },
+                "crc32c": {
+                    "description": "The CRC-32C code generated for this file.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "file_id": {
+                    "description": "UUID that uniquely identifies each data file in its source",
+                    "type": "string"
+                },
+                "file_name": {
+                    "description": "The object name of the data file relative to the staging area's `data/` directory",
+                    "type": "string"
+                },
+                "file_version": {
+                    "description": "The version of the file given in date time format",
+                    "type": "string"
+                },
+                "s3_etag": {
+                    "description": "An AWS S3 ETag of this file",
+                    "type": "string"
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/FileDescriptorSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "sha1": {
+                    "description": "The SHA-1 hash of the file.",
+                    "type": "string"
+                },
+                "sha256": {
+                    "description": "The SHA-256 hash of the file.",
+                    "type": "string"
+                },
+                "size": {
+                    "description": "The size of the file in bytes.",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "file_name",
+                "file_id",
+                "file_version",
+                "content_type",
+                "size",
+                "sha256",
+                "crc32c"
+            ],
+            "title": "FileDescriptor",
+            "type": "object"
+        },
+        "FileDescriptorSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "file_descriptor"
+            ],
+            "title": "FileDescriptorSchemaTypeOptions",
+            "type": "string"
+        },
+        "FileFormatOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/FileFormatOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of the file format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "FileFormatOntology",
+            "type": "object"
+        },
+        "FileFormatOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "FileFormatOntologyOntologyOptions",
+            "type": "string"
+        },
+        "Funder": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "grant_id": {
+                    "description": "The unique grant identifier or reference.",
+                    "type": "string"
+                },
+                "grant_title": {
+                    "description": "The name of the grant funding the project.",
+                    "type": "string"
+                },
+                "organization": {
+                    "description": "The name of the funding organization.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "grant_id",
+                "organization"
+            ],
+            "title": "Funder",
+            "type": "object"
+        },
+        "GrowthConditions": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "culture_environment": {
+                    "description": "Cell culture environment in which cells are grown.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "drug_treatment": {
+                    "description": "Description of drugs added to the growth medium.",
+                    "type": "string"
+                },
+                "feeder_layer_type": {
+                    "$ref": "#/$defs/GrowthConditionsFeederLayerTypeOptions",
+                    "description": "Type of feeder layer cells on which biomaterial was grown."
+                },
+                "growth_medium": {
+                    "description": "The solid, liquid, or semi-solid medium used to support growth.",
+                    "type": "string"
+                },
+                "mycoplasma_testing_method": {
+                    "$ref": "#/$defs/GrowthConditionsMycoplasmaTestingMethodOptions",
+                    "description": "The method by which the biomaterial was tested for mycoplasma contamination."
+                },
+                "mycoplasma_testing_results": {
+                    "$ref": "#/$defs/GrowthConditionsMycoplasmaTestingResultsOptions",
+                    "description": "Whether the biomaterial passed or failed the mycoplasma test."
+                },
+                "passage_number": {
+                    "description": "The number of passages that the biomaterial has been through.",
+                    "type": "integer"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "title": "GrowthConditions",
+            "type": "object"
+        },
+        "GrowthConditionsFeederLayerTypeOptions": {
+            "description": "",
+            "enum": [
+                "feeder-free",
+                "feeder-dependent, JK1 feeder cells",
+                "feeder-dependent, SNL 76/7 feeder cells",
+                "feeder-dependent, human marrow stromal cells",
+                "feeder-dependent, bovine embryonic fibroblast cells",
+                "feeder-dependent, mouse embryonic fibroblast cells",
+                "feeder-dependent, mouse fibroblast STO cells",
+                "feeder-dependent, mouse bone marrow stromal cells",
+                "feeder-dependent, mouse yolk sac-derived endothelial cells",
+                "feeder-dependent, human foreskin fibroblast cells",
+                "feeder-dependent, human newborn fibroblast cells",
+                "feeder-dependent, human fetal lung fibroblast cells",
+                "feeder-dependent, human uterine endometrial cells",
+                "feeder-dependent, human breast parenchymal cells",
+                "feeder-dependent, human embryonic fibroblast cells",
+                "feeder-dependent, human adipose stromal cells",
+                "feeder-dependent, human amniotic epithelial cells",
+                "feeder-dependent, human placental fibroblast cells",
+                "feeder-dependent, human umbilical cord stromal cells",
+                "feeder-dependent, human fetal muscle cells",
+                "feeder-dependent, human fetal skin cells",
+                "feeder-dependent, human fetal liver stromal cells",
+                "feeder-dependent, human fallopian tubal epithelial cells",
+                "feeder-dependent, human amniotic mesenchymal cells"
+            ],
+            "title": "GrowthConditionsFeederLayerTypeOptions",
+            "type": "string"
+        },
+        "GrowthConditionsMycoplasmaTestingMethodOptions": {
+            "description": "",
+            "enum": [
+                "Direct DNA stain",
+                "Indirect DNA stain",
+                "Broth and agar culture",
+                "PCR",
+                "Nested PCR",
+                "ELISA",
+                "Autoradiography",
+                "Immunostaining",
+                "Cell-based assay",
+                "Microbiological assay"
+            ],
+            "title": "GrowthConditionsMycoplasmaTestingMethodOptions",
+            "type": "string"
+        },
+        "GrowthConditionsMycoplasmaTestingResultsOptions": {
+            "description": "",
+            "enum": [
+                "pass",
+                "fail"
+            ],
+            "title": "GrowthConditionsMycoplasmaTestingResultsOptions",
+            "type": "string"
+        },
+        "HumanSpecific": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "body_mass_index": {
+                    "description": "The body mass index of the donor.",
+                    "type": "number"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ethnicity": {
+                    "items": {
+                        "$ref": "#/$defs/EthnicityOntology"
+                    },
+                    "type": "array"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "title": "HumanSpecific",
+            "type": "object"
+        },
+        "ImageFile": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "file_core": {
+                    "$ref": "#/$defs/FileCore",
+                    "description": "Core file-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/ImageFileSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "file_core"
+            ],
+            "title": "ImageFile",
+            "type": "object"
+        },
+        "ImageFileSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "file"
+            ],
+            "title": "ImageFileSchemaTypeOptions",
+            "type": "string"
+        },
+        "ImagedSpecimen": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "biomaterial_core": {
+                    "$ref": "#/$defs/BiomaterialCore",
+                    "description": "Core biomaterial-level information."
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "internal_anatomical_structures": {
+                    "items": {
+                        "$ref": "#/$defs/OrganPartOntology"
+                    },
+                    "type": "array"
+                },
+                "overview_images": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/ImagedSpecimenSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "slice_thickness": {
+                    "description": "Thickness of the imaged slice in micrometres.",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "biomaterial_core",
+                "slice_thickness"
+            ],
+            "title": "ImagedSpecimen",
+            "type": "object"
+        },
+        "ImagedSpecimenSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "biomaterial"
+            ],
+            "title": "ImagedSpecimenSchemaTypeOptions",
+            "type": "string"
+        },
+        "ImagingPreparationProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "expansion_factor": {
+                    "description": "Factor by which the imaged tissue was expanded in one dimension.",
+                    "type": "number"
+                },
+                "fiducial_marker": {
+                    "description": "Fiducial markers for the alignment of images taken across multiple rounds of imaging.",
+                    "type": "string"
+                },
+                "final_slicing_method": {
+                    "description": "The method by which the final slice was obtained.",
+                    "type": "string"
+                },
+                "fresh_slicing_method": {
+                    "description": "The method by which fresh tissue was sliced.",
+                    "type": "string"
+                },
+                "imaged_slice_thickness": {
+                    "description": "Thickness of the imaged slice in micrometres.",
+                    "type": "number"
+                },
+                "permeabilisation_time": {
+                    "description": "The permeabilisation time in time units that the tissue was exposed to.",
+                    "type": "number"
+                },
+                "permeabilisation_time_unit": {
+                    "$ref": "#/$defs/TimeUnitOntology",
+                    "description": "The unit in which permeabilisation time is expressed."
+                },
+                "post_final_slicing_interval": {
+                    "description": "Length of time between secondary slicing and hybridization.",
+                    "type": "number"
+                },
+                "post_final_slicing_interval_unit": {
+                    "$ref": "#/$defs/TimeUnitOntology",
+                    "description": "The unit of time in which the post final slicing interval is expressed."
+                },
+                "post_resection_interval": {
+                    "description": "Length of time between surgical resection and fresh slicing of tissue.",
+                    "type": "number"
+                },
+                "post_resection_interval_unit": {
+                    "$ref": "#/$defs/TimeUnitOntology",
+                    "description": "The unit of time in which the post resection interval is expressed."
+                },
+                "pre_final_slice_preservation_method": {
+                    "$ref": "#/$defs/PreservationStorage",
+                    "description": "Tissue preservation method used prior to final slicing."
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/ImagingPreparationProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core"
+            ],
+            "title": "ImagingPreparationProtocol",
+            "type": "object"
+        },
+        "ImagingPreparationProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "ImagingPreparationProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "ImagingProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "channel": {
+                    "items": {
+                        "$ref": "#/$defs/Channel"
+                    },
+                    "type": "array"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "immersion_medium_refractive_index": {
+                    "description": "Refractive index of the immersion medium used for imaging.",
+                    "type": "number"
+                },
+                "immersion_medium_type": {
+                    "description": "Immersion medium used for imaging.",
+                    "type": "string"
+                },
+                "magnification": {
+                    "description": "Magnification of the objective used for imaging.",
+                    "type": "string"
+                },
+                "microscope_setup_description": {
+                    "description": "Description of the microscope setup.",
+                    "type": "string"
+                },
+                "microscopy_technique": {
+                    "$ref": "#/$defs/MicroscopyOntology",
+                    "description": "The type of microscopy."
+                },
+                "number_of_tiles": {
+                    "description": "Number of XY tiles in the experiment.",
+                    "type": "integer"
+                },
+                "number_of_z_steps": {
+                    "description": "Number of steps in a Z stack.",
+                    "type": "integer"
+                },
+                "numerical_aperture": {
+                    "description": "Numerical aperture of the objective.",
+                    "type": "number"
+                },
+                "overlapping_tiles": {
+                    "$ref": "#/$defs/ImagingProtocolOverlappingTilesOptions",
+                    "description": "Whether tiles were collected with overlap."
+                },
+                "pixel_size": {
+                    "description": "Pixel size in nanometers.",
+                    "type": "number"
+                },
+                "probe": {
+                    "items": {
+                        "$ref": "#/$defs/Probe"
+                    },
+                    "type": "array"
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/ImagingProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "tile_size_x": {
+                    "description": "X size of the tile in micrometers.",
+                    "type": "number"
+                },
+                "tile_size_y": {
+                    "description": "Y size of the tile in micrometers.",
+                    "type": "number"
+                },
+                "z_stack_step_size": {
+                    "description": "Z-stack step size in nanometers.",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core",
+                "microscopy_technique",
+                "magnification"
+            ],
+            "title": "ImagingProtocol",
+            "type": "object"
+        },
+        "ImagingProtocolOverlappingTilesOptions": {
+            "description": "",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "title": "ImagingProtocolOverlappingTilesOptions",
+            "type": "string"
+        },
+        "ImagingProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "ImagingProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "Input": {
+            "additionalProperties": false,
+            "description": "An input to a process",
+            "properties": {
+                "input_id": {
+                    "description": "UUID of the input entity.",
+                    "type": "string"
+                },
+                "input_type": {
+                    "description": "The concrete type of the input entity.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "input_type",
+                "input_id"
+            ],
+            "title": "Input",
+            "type": "object"
+        },
+        "InsdcExperiment": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "insdc_experiment_accession": {
+                    "description": "An International Nucleotide Sequence Database Collaboration (INSDC) experiment accession.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "insdc_experiment_accession"
+            ],
+            "title": "InsdcExperiment",
+            "type": "object"
+        },
+        "InstrumentOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/InstrumentOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "Version number in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The full name of the instrument used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "InstrumentOntology",
+            "type": "object"
+        },
+        "InstrumentOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "InstrumentOntologyOntologyOptions",
+            "type": "string"
+        },
+        "IpscInductionProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ipsc_induction_kit": {
+                    "$ref": "#/$defs/PurchasedReagents",
+                    "description": "Kit used to induce pluripotent stem cell generation."
+                },
+                "method": {
+                    "$ref": "#/$defs/IpscInductionProtocolMethodOptions",
+                    "description": "Induction method applied to primary cell culture to induce pluripotent stem cell generation."
+                },
+                "percent_pluripotency": {
+                    "description": "Percent of iPSCs that passed the pluripotency test.",
+                    "type": "number"
+                },
+                "pluripotency_test": {
+                    "description": "Description of how pluripotency was tested in induced pluripotent stem cells.",
+                    "type": "string"
+                },
+                "pluripotency_vector_removed": {
+                    "$ref": "#/$defs/IpscInductionProtocolPluripotencyVectorRemovedOptions",
+                    "description": "Whether a viral vector was removed after induction."
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "reagents": {
+                    "items": {
+                        "$ref": "#/$defs/PurchasedReagents"
+                    },
+                    "type": "array"
+                },
+                "reprogramming_factors": {
+                    "description": "Reprogramming factors added to primary cell culture to induce pluripotency.",
+                    "type": "string"
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/IpscInductionProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core",
+                "method"
+            ],
+            "title": "IpscInductionProtocol",
+            "type": "object"
+        },
+        "IpscInductionProtocolMethodOptions": {
+            "description": "",
+            "enum": [
+                "lentivirus",
+                "sendai virus",
+                "Gun particle",
+                "piggyBac transposon",
+                "miRNA viral",
+                "adenovirus",
+                "cre-loxP",
+                "plasmid",
+                "retroviral"
+            ],
+            "title": "IpscInductionProtocolMethodOptions",
+            "type": "string"
+        },
+        "IpscInductionProtocolPluripotencyVectorRemovedOptions": {
+            "description": "",
+            "enum": [
+                "yes",
+                "no",
+                "unknown"
+            ],
+            "title": "IpscInductionProtocolPluripotencyVectorRemovedOptions",
+            "type": "string"
+        },
+        "IpscInductionProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "IpscInductionProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "LengthUnitOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/LengthUnitOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a length unit being used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "LengthUnitOntology",
+            "type": "object"
+        },
+        "LengthUnitOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "LengthUnitOntologyOntologyOptions",
+            "type": "string"
+        },
+        "LibraryAmplificationOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/LibraryAmplificationOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a library amplification approach being used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "LibraryAmplificationOntology",
+            "type": "object"
+        },
+        "LibraryAmplificationOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "LibraryAmplificationOntologyOntologyOptions",
+            "type": "string"
+        },
+        "LibraryConstructionOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/LibraryConstructionOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a library construction approach being used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "LibraryConstructionOntology",
+            "type": "object"
+        },
+        "LibraryConstructionOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "LibraryConstructionOntologyOntologyOptions",
+            "type": "string"
+        },
+        "LibraryPreparationProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "cdna_library_amplification_method": {
+                    "$ref": "#/$defs/LibraryAmplificationOntology",
+                    "description": "The method used to amplify cDNA library prior to sequencing."
+                },
+                "cell_barcode": {
+                    "$ref": "#/$defs/Barcode",
+                    "description": "Information about cell identifier barcodes."
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "end_bias": {
+                    "$ref": "#/$defs/LibraryPreparationProtocolEndBiasOptions",
+                    "description": "The type of tag or end bias the library has."
+                },
+                "input_nucleic_acid_molecule": {
+                    "$ref": "#/$defs/BiologicalMacromoleculeOntology",
+                    "description": "Starting nucleic acid molecule isolated for sequencing."
+                },
+                "library_construction_kit": {
+                    "$ref": "#/$defs/PurchasedReagents",
+                    "description": "Name of kit used to construct the sequencing library."
+                },
+                "library_construction_method": {
+                    "$ref": "#/$defs/LibraryConstructionOntology",
+                    "description": "The general method for sequencing library construction."
+                },
+                "library_preamplification_method": {
+                    "$ref": "#/$defs/LibraryAmplificationOntology",
+                    "description": "The method used to amplify RNA prior to adaptor ligation."
+                },
+                "nominal_length": {
+                    "description": "Average (insert) size of the fragments being sequenced.",
+                    "type": "integer"
+                },
+                "nominal_sdev": {
+                    "description": "Standard deviation of the (insert) size of the fragments being sequenced.",
+                    "type": "integer"
+                },
+                "nucleic_acid_conversion_kit": {
+                    "$ref": "#/$defs/PurchasedReagents",
+                    "description": "Name of kit used to convert RNA to DNA for sequencing."
+                },
+                "nucleic_acid_source": {
+                    "$ref": "#/$defs/LibraryPreparationProtocolNucleicAcidSourceOptions",
+                    "description": "Source cells or organelles from which nucleic acid molecules were collected."
+                },
+                "primer": {
+                    "$ref": "#/$defs/LibraryPreparationProtocolPrimerOptions",
+                    "description": "Primer used for cDNA synthesis from RNA."
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/LibraryPreparationProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "spatial_barcode": {
+                    "$ref": "#/$defs/Barcode",
+                    "description": "Information about spatial barcodes."
+                },
+                "spike_in_dilution": {
+                    "description": "Dilution of spike-in.",
+                    "type": "integer"
+                },
+                "spike_in_kit": {
+                    "$ref": "#/$defs/PurchasedReagents",
+                    "description": "Information about a spike-in kit."
+                },
+                "strand": {
+                    "$ref": "#/$defs/LibraryPreparationProtocolStrandOptions",
+                    "description": "Library strandedness."
+                },
+                "umi_barcode": {
+                    "$ref": "#/$defs/Barcode",
+                    "description": "Information about unique molecular identifier (UMI) barcodes."
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core",
+                "input_nucleic_acid_molecule",
+                "nucleic_acid_source",
+                "library_construction_method",
+                "end_bias",
+                "strand"
+            ],
+            "title": "LibraryPreparationProtocol",
+            "type": "object"
+        },
+        "LibraryPreparationProtocolEndBiasOptions": {
+            "description": "",
+            "enum": [
+                "3 prime tag",
+                "3 prime end bias",
+                "5 prime tag",
+                "5 prime end bias",
+                "full length"
+            ],
+            "title": "LibraryPreparationProtocolEndBiasOptions",
+            "type": "string"
+        },
+        "LibraryPreparationProtocolNucleicAcidSourceOptions": {
+            "description": "",
+            "enum": [
+                "bulk cell",
+                "single cell",
+                "single nucleus",
+                "bulk nuclei",
+                "mitochondria"
+            ],
+            "title": "LibraryPreparationProtocolNucleicAcidSourceOptions",
+            "type": "string"
+        },
+        "LibraryPreparationProtocolPrimerOptions": {
+            "description": "",
+            "enum": [
+                "poly-dT",
+                "random"
+            ],
+            "title": "LibraryPreparationProtocolPrimerOptions",
+            "type": "string"
+        },
+        "LibraryPreparationProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "LibraryPreparationProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "LibraryPreparationProtocolStrandOptions": {
+            "description": "",
+            "enum": [
+                "first",
+                "second",
+                "unstranded",
+                "not provided"
+            ],
+            "title": "LibraryPreparationProtocolStrandOptions",
+            "type": "string"
+        },
+        "License": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "full_name": {
+                    "description": "Full name of the license under which this dataset is made available.",
+                    "type": "string"
+                },
+                "identifier": {
+                    "description": "Identifier of the license under which this dataset is made available.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "url": {
+                    "description": "URL of the license under which this data is available.",
+                    "type": "string"
+                }
+            },
+            "title": "License",
+            "type": "object"
+        },
+        "Links": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "links": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/LinksSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "links"
+            ],
+            "title": "Links",
+            "type": "object"
+        },
+        "LinksSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "links"
+            ],
+            "title": "LinksSchemaTypeOptions",
+            "type": "string"
+        },
+        "MassUnitOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/MassUnitOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a mass unit being used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "MassUnitOntology",
+            "type": "object"
+        },
+        "MassUnitOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "MassUnitOntologyOntologyOptions",
+            "type": "string"
+        },
+        "Matrix": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "data_normalization_methods": {
+                    "items": {
+                        "$ref": "#/$defs/DataNormalizationMethodsOptions"
+                    },
+                    "type": "array"
+                },
+                "derivation_process": {
+                    "items": {
+                        "$ref": "#/$defs/DerivationProcessOptions"
+                    },
+                    "type": "array"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "title": "Matrix",
+            "type": "object"
+        },
+        "MedicalHistory": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "alcohol_history": {
+                    "description": "Estimated amount of alcohol consumed per day.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "medication": {
+                    "description": "Medications the individual was taking at time of biomaterial collection.",
+                    "type": "string"
+                },
+                "nutritional_state": {
+                    "$ref": "#/$defs/MedicalHistoryNutritionalStateOptions",
+                    "description": "Nutritional state of individual at time of biomaterial collection."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "smoking_history": {
+                    "description": "Estimated number of cigarettes smoked per day.",
+                    "type": "string"
+                },
+                "test_results": {
+                    "description": "Results from medical tests performed on the individual.",
+                    "type": "string"
+                },
+                "treatment": {
+                    "description": "Treatments the individual has undergone prior to biomaterial collection.",
+                    "type": "string"
+                }
+            },
+            "title": "MedicalHistory",
+            "type": "object"
+        },
+        "MedicalHistoryNutritionalStateOptions": {
+            "description": "",
+            "enum": [
+                "normal",
+                "fasting",
+                "feeding tube removed"
+            ],
+            "title": "MedicalHistoryNutritionalStateOptions",
+            "type": "string"
+        },
+        "MicroscopyOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/MicroscopyOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "Version number in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of the type of microscopy used in an imaging experiment.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "MicroscopyOntology",
+            "type": "object"
+        },
+        "MicroscopyOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "MicroscopyOntologyOntologyOptions",
+            "type": "string"
+        },
+        "MouseSpecific": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "strain": {
+                    "items": {
+                        "$ref": "#/$defs/StrainOntology"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "MouseSpecific",
+            "type": "object"
+        },
+        "OrganOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/OrganOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The text for the term as the user provides it.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "OrganOntology",
+            "type": "object"
+        },
+        "OrganOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "OrganOntologyOntologyOptions",
+            "type": "string"
+        },
+        "OrganPartOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/OrganPartOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The text for the term as the user provides it.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "OrganPartOntology",
+            "type": "object"
+        },
+        "OrganPartOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "OrganPartOntologyOntologyOptions",
+            "type": "string"
+        },
+        "Organoid": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "age": {
+                    "description": "Age of the organoid in Organoid age unit measured from when cell aggregates started differentiating to desired organoid model.",
+                    "type": "number"
+                },
+                "age_unit": {
+                    "$ref": "#/$defs/TimeUnitOntology",
+                    "description": "The unit in which Organoid age is expressed."
+                },
+                "biomaterial_core": {
+                    "$ref": "#/$defs/BiomaterialCore",
+                    "description": "Core biomaterial-level information."
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "embedded_in_matrigel": {
+                    "description": "Whether the organoid is embedded in a matrigel.",
+                    "type": "boolean"
+                },
+                "genus_species": {
+                    "items": {
+                        "$ref": "#/$defs/SpeciesOntology"
+                    },
+                    "type": "array"
+                },
+                "growth_environment": {
+                    "description": "Growth environment in which the organoid is grown.",
+                    "type": "string"
+                },
+                "input_aggregate_cell_count": {
+                    "description": "Estimated number of cells per input cell aggregate.",
+                    "type": "number"
+                },
+                "model_organ": {
+                    "$ref": "#/$defs/OrganOntology",
+                    "description": "Organ for which this organoid is a model system."
+                },
+                "model_organ_part": {
+                    "$ref": "#/$defs/OrganPartOntology",
+                    "description": "Organ part for which this organoid is a model system."
+                },
+                "morphology": {
+                    "description": "General description of the organoid morphology.",
+                    "type": "string"
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/OrganoidSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "size": {
+                    "description": "Size of the organoid in Organoid size unit.",
+                    "type": "number"
+                },
+                "size_unit": {
+                    "$ref": "#/$defs/LengthUnitOntology",
+                    "description": "The unit in which the Organoid size is expressed."
+                },
+                "stored_oxygen_levels": {
+                    "description": "Percent oxygen level organoid was stored in prior to sequencing.",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "biomaterial_core",
+                "model_organ"
+            ],
+            "title": "Organoid",
+            "type": "object"
+        },
+        "OrganoidSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "biomaterial"
+            ],
+            "title": "OrganoidSchemaTypeOptions",
+            "type": "string"
+        },
+        "Output": {
+            "additionalProperties": false,
+            "description": "An output from a process",
+            "properties": {
+                "output_id": {
+                    "description": "UUID of the output entity.",
+                    "type": "string"
+                },
+                "output_type": {
+                    "description": "The concrete type of the output entity.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "output_type",
+                "output_id"
+            ],
+            "title": "Output",
+            "type": "object"
+        },
+        "Parameter": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "checksum": {
+                    "description": "MD5 checksum of the file.",
+                    "type": "string"
+                },
+                "parameter_name": {
+                    "description": "Name of parameter.",
+                    "type": "string"
+                },
+                "parameter_value": {
+                    "description": "Path to file for or value of parameter.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "parameter_name",
+                "parameter_value"
+            ],
+            "title": "Parameter",
+            "type": "object"
+        },
+        "PlateBasedSequencing": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "plate_label": {
+                    "description": "A label or name for the plate on which the well is located.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "well_label": {
+                    "description": "A label or name for the well in which the cell is located.",
+                    "type": "string"
+                },
+                "well_quality": {
+                    "$ref": "#/$defs/PlateBasedSequencingWellQualityOptions",
+                    "description": "Quality of well if imaged before sequencing."
+                }
+            },
+            "required": [
+                "plate_label"
+            ],
+            "title": "PlateBasedSequencing",
+            "type": "object"
+        },
+        "PlateBasedSequencingWellQualityOptions": {
+            "description": "",
+            "enum": [
+                "OK",
+                "control, 2-cell well",
+                "control, empty well",
+                "low quality cell"
+            ],
+            "title": "PlateBasedSequencingWellQualityOptions",
+            "type": "string"
+        },
+        "PreservationStorage": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "preservation_method": {
+                    "$ref": "#/$defs/PreservationStoragePreservationMethodOptions",
+                    "description": "The method by which a biomaterial was preserved through the use of chemicals, cold, or other means to prevent or retard biological or physical deterioration."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "storage_method": {
+                    "$ref": "#/$defs/PreservationStorageStorageMethodOptions",
+                    "description": "The method by which a biomaterial was stored after preservation or before another protocol was used."
+                },
+                "storage_time": {
+                    "description": "Length of time the biomaterial was stored for in Storage time units.",
+                    "type": "number"
+                },
+                "storage_time_unit": {
+                    "$ref": "#/$defs/TimeUnitOntology",
+                    "description": "The unit in which Storage time is expressed."
+                }
+            },
+            "title": "PreservationStorage",
+            "type": "object"
+        },
+        "PreservationStoragePreservationMethodOptions": {
+            "description": "",
+            "enum": [
+                "cryopreservation in liquid nitrogen (dead tissue)",
+                "cryopreservation in dry ice (dead tissue)",
+                "cryopreservation of live cells in liquid nitrogen",
+                "cryopreservation, other",
+                "formalin fixed, unbuffered",
+                "formalin fixed, buffered",
+                "formalin fixed and paraffin embedded",
+                "hypothermic preservation media at 2-8C",
+                "fresh"
+            ],
+            "title": "PreservationStoragePreservationMethodOptions",
+            "type": "string"
+        },
+        "PreservationStorageStorageMethodOptions": {
+            "description": "",
+            "enum": [
+                "ambient temperature",
+                "cut slide",
+                "fresh",
+                "frozen at -70C",
+                "frozen at -80C",
+                "frozen at -150C",
+                "frozen in liquid nitrogen",
+                "frozen in vapor phase",
+                "paraffin block",
+                "RNAlater at 4C",
+                "RNAlater at 25C",
+                "RNAlater at -20C"
+            ],
+            "title": "PreservationStorageStorageMethodOptions",
+            "type": "string"
+        },
+        "Probe": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "assay_type": {
+                    "$ref": "#/$defs/ProcessTypeOntology",
+                    "description": "Type of assay used to detect target."
+                },
+                "channel_label": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "fluorophore": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "probe_label": {
+                    "description": "The label of a probe used to detect target in this experiment.",
+                    "type": "string"
+                },
+                "probe_reagents": {
+                    "$ref": "#/$defs/PurchasedReagents",
+                    "description": "Name of reagents used to construct the probe."
+                },
+                "probe_sequence": {
+                    "description": "Sequence of a probe used to detect target.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "subcellular_structure": {
+                    "$ref": "#/$defs/CellularComponentOntology",
+                    "description": "Target subcellular structure."
+                },
+                "target_codebook_label": {
+                    "description": "A label used in the codebook for the target.",
+                    "type": "string"
+                },
+                "target_label": {
+                    "description": "An identifier for the target molecule.",
+                    "type": "string"
+                },
+                "target_name": {
+                    "description": "The name of the target molecule.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "probe_label",
+                "target_label",
+                "assay_type"
+            ],
+            "title": "Probe",
+            "type": "object"
+        },
+        "Process": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "deviation_from_protocol": {
+                    "description": "A deviation from the protocol provided.",
+                    "type": "string"
+                },
+                "end_time": {
+                    "description": "Date and time the process ended.",
+                    "type": "string"
+                },
+                "insdc_experiment": {
+                    "$ref": "#/$defs/InsdcExperiment",
+                    "description": "An International Nucleotide Sequence Database Collaboration (INSDC) experiment accession."
+                },
+                "length_of_time": {
+                    "description": "Length of time the process took to execute in Length of time unit.",
+                    "type": "string"
+                },
+                "length_of_time_unit": {
+                    "$ref": "#/$defs/TimeUnitOntology",
+                    "description": "The unit in which Length of time is expressed."
+                },
+                "process_core": {
+                    "$ref": "#/$defs/ProcessCore",
+                    "description": "Core process-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/ProcessSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "start_time": {
+                    "description": "Date and time the process started.",
+                    "type": "string"
+                },
+                "type": {
+                    "$ref": "#/$defs/ProcessTypeOntology",
+                    "description": "The type of process."
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "process_core"
+            ],
+            "title": "Process",
+            "type": "object"
+        },
+        "ProcessCore": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "location": {
+                    "description": "Location where the process took place.",
+                    "type": "string"
+                },
+                "operators": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "process_description": {
+                    "description": "A general description of the process.",
+                    "type": "string"
+                },
+                "process_id": {
+                    "description": "A unique ID for the process.",
+                    "type": "string"
+                },
+                "process_name": {
+                    "description": "A short, descriptive name for the process that need not be unique.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "process_id"
+            ],
+            "title": "ProcessCore",
+            "type": "object"
+        },
+        "ProcessLink": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "inputs": {
+                    "items": {
+                        "$ref": "#/$defs/Input"
+                    },
+                    "type": "array"
+                },
+                "link_type": {
+                    "$ref": "#/$defs/ProcessLinkLinkTypeOptions",
+                    "description": "The type of this link."
+                },
+                "outputs": {
+                    "items": {
+                        "$ref": "#/$defs/Output"
+                    },
+                    "type": "array"
+                },
+                "process_id": {
+                    "description": "UUID of the process described by this link.",
+                    "type": "string"
+                },
+                "process_type": {
+                    "description": "The concrete type of the process described by this link.",
+                    "type": "string"
+                },
+                "protocols": {
+                    "items": {
+                        "$ref": "#/$defs/ProtocolReference"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "process_type",
+                "process_id",
+                "inputs",
+                "outputs",
+                "protocols",
+                "link_type"
+            ],
+            "title": "ProcessLink",
+            "type": "object"
+        },
+        "ProcessLinkLinkTypeOptions": {
+            "description": "",
+            "enum": [
+                "process_link"
+            ],
+            "title": "ProcessLinkLinkTypeOptions",
+            "type": "string"
+        },
+        "ProcessSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "process"
+            ],
+            "title": "ProcessSchemaTypeOptions",
+            "type": "string"
+        },
+        "ProcessTypeOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/ProcessTypeOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a process type being used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "ProcessTypeOntology",
+            "type": "object"
+        },
+        "ProcessTypeOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "ProcessTypeOntologyOntologyOptions",
+            "type": "string"
+        },
+        "Project": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "array_express_accessions": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "biostudies_accessions": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "contributors": {
+                    "items": {
+                        "$ref": "#/$defs/Contact"
+                    },
+                    "type": "array"
+                },
+                "dbgap_accessions": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ega_accessions": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "estimated_cell_count": {
+                    "description": "An estimated number of cells in this project",
+                    "type": "integer"
+                },
+                "funders": {
+                    "items": {
+                        "$ref": "#/$defs/Funder"
+                    },
+                    "type": "array"
+                },
+                "geo_series_accessions": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "insdc_project_accessions": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "insdc_study_accessions": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "project_core": {
+                    "$ref": "#/$defs/ProjectCore",
+                    "description": "Core project-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "publications": {
+                    "items": {
+                        "$ref": "#/$defs/Publication"
+                    },
+                    "type": "array"
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/ProjectSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "supplementary_links": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "project_core",
+                "funders"
+            ],
+            "title": "Project",
+            "type": "object"
+        },
+        "ProjectCore": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "project_description": {
+                    "description": "A longer description of the project which includes research goals and experimental approach.",
+                    "type": "string"
+                },
+                "project_short_name": {
+                    "description": "A short name for the project.",
+                    "type": "string"
+                },
+                "project_title": {
+                    "description": "An official title for the project.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "project_short_name",
+                "project_title",
+                "project_description"
+            ],
+            "title": "ProjectCore",
+            "type": "object"
+        },
+        "ProjectSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "project"
+            ],
+            "title": "ProjectSchemaTypeOptions",
+            "type": "string"
+        },
+        "Protocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/ProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "type": {
+                    "$ref": "#/$defs/ProcessTypeOntology",
+                    "description": "The type of protocol."
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core"
+            ],
+            "title": "Protocol",
+            "type": "object"
+        },
+        "ProtocolCore": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "document": {
+                    "description": "A filename of a PDF document containing the details of the protocol.",
+                    "type": "string"
+                },
+                "protocol_description": {
+                    "description": "A general description of the protocol.",
+                    "type": "string"
+                },
+                "protocol_id": {
+                    "description": "A unique ID for the protocol.",
+                    "type": "string"
+                },
+                "protocol_name": {
+                    "description": "A short name for the protocol.",
+                    "type": "string"
+                },
+                "protocols_io_doi": {
+                    "description": "The protocols.io digital object identifier (doi) for the protocol.",
+                    "type": "string"
+                },
+                "publication_doi": {
+                    "description": "The publication digital object identifier (doi) for the protocol.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "protocol_id"
+            ],
+            "title": "ProtocolCore",
+            "type": "object"
+        },
+        "ProtocolReference": {
+            "additionalProperties": false,
+            "description": "A protocol used in a process",
+            "properties": {
+                "protocol_id": {
+                    "description": "UUID of the protocol entity.",
+                    "type": "string"
+                },
+                "protocol_type": {
+                    "$ref": "#/$defs/ProtocolReferenceProtocolTypeOptions",
+                    "description": "The concrete type of protocol entity."
+                }
+            },
+            "required": [
+                "protocol_type",
+                "protocol_id"
+            ],
+            "title": "ProtocolReference",
+            "type": "object"
+        },
+        "ProtocolReferenceProtocolTypeOptions": {
+            "description": "",
+            "enum": [
+                "analysis_protocol",
+                "aggregate_generation_protocol",
+                "collection_protocol",
+                "differentiation_protocol",
+                "dissociation_protocol",
+                "enrichment_protocol",
+                "ipsc_induction_protocol",
+                "imaging_preparation_protocol",
+                "imaging_protocol",
+                "library_preparation_protocol",
+                "sequencing_protocol",
+                "treatment_protocol"
+            ],
+            "title": "ProtocolReferenceProtocolTypeOptions",
+            "type": "string"
+        },
+        "ProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "ProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "ProtocolTypeOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/ProtocolTypeOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a protocol type used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "ProtocolTypeOntology",
+            "type": "object"
+        },
+        "ProtocolTypeOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "ProtocolTypeOntologyOntologyOptions",
+            "type": "string"
+        },
+        "Provenance": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "accession": {
+                    "description": "A unique accession for this entity, provided by the broker.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "document_id": {
+                    "description": "Identifier for document.",
+                    "type": "string"
+                },
+                "schema_major_version": {
+                    "description": "The major version number of the schema.",
+                    "type": "integer"
+                },
+                "schema_minor_version": {
+                    "description": "The minor version number of the schema.",
+                    "type": "integer"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "submission_date": {
+                    "description": "When project was first submitted to database.",
+                    "type": "string"
+                },
+                "submitter_id": {
+                    "description": "ID of individual who first submitted project.",
+                    "type": "string"
+                },
+                "update_date": {
+                    "description": "When project was last updated.",
+                    "type": "string"
+                },
+                "updater_id": {
+                    "description": "ID of individual who last updated project.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "submission_date",
+                "document_id"
+            ],
+            "title": "Provenance",
+            "type": "object"
+        },
+        "Publication": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "authors": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "doi": {
+                    "description": "The publication digital object identifier (doi) of the publication.",
+                    "type": "string"
+                },
+                "official_hca_publication": {
+                    "description": "Has the publication been accepted as an official HCA publication, according to the process described in https://www.humancellatlas.org/publications/ ?",
+                    "type": "boolean"
+                },
+                "pmid": {
+                    "description": "The PubMed ID of the publication.",
+                    "type": "integer"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "The title of the publication.",
+                    "type": "string"
+                },
+                "url": {
+                    "description": "A URL for the publication.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "authors",
+                "title",
+                "official_hca_publication"
+            ],
+            "title": "Publication",
+            "type": "object"
+        },
+        "PurchasedReagents": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "catalog_number": {
+                    "description": "The catalog number of the kit/reagent.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "expiry_date": {
+                    "description": "The date of expiration for the kit/reagent.",
+                    "type": "string"
+                },
+                "kit_titer": {
+                    "description": "Appropriate titer and volume recommendations found in kit/reagent Certificate of Analysis.",
+                    "type": "string"
+                },
+                "lot_number": {
+                    "description": "The batch or lot number of the kit/reagent.",
+                    "type": "string"
+                },
+                "manufacturer": {
+                    "description": "The manufacturer of the kit/reagent.",
+                    "type": "string"
+                },
+                "retail_name": {
+                    "description": "The retail name of the kit/reagent.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "title": "PurchasedReagents",
+            "type": "object"
+        },
+        "ReferenceFile": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "assembly_type": {
+                    "$ref": "#/$defs/ReferenceFileAssemblyTypeOptions",
+                    "description": "The assembly type of the genome reference file."
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "file_core": {
+                    "$ref": "#/$defs/FileCore",
+                    "description": "Core file-level information."
+                },
+                "genus_species": {
+                    "$ref": "#/$defs/SpeciesOntology",
+                    "description": "The scientific binomial name for the species of this reference."
+                },
+                "ncbi_taxon_id": {
+                    "description": "A taxonomy ID (taxonID) from NCBI.",
+                    "type": "integer"
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "reference_type": {
+                    "$ref": "#/$defs/ReferenceFileReferenceTypeOptions",
+                    "description": "The type of the reference file."
+                },
+                "reference_version": {
+                    "description": "The genome version of the reference file.",
+                    "type": "string"
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/ReferenceFileSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "file_core",
+                "ncbi_taxon_id",
+                "genus_species",
+                "reference_type",
+                "assembly_type",
+                "reference_version"
+            ],
+            "title": "ReferenceFile",
+            "type": "object"
+        },
+        "ReferenceFileAssemblyTypeOptions": {
+            "description": "",
+            "enum": [
+                "primary assembly",
+                "complete assembly",
+                "patch assembly"
+            ],
+            "title": "ReferenceFileAssemblyTypeOptions",
+            "type": "string"
+        },
+        "ReferenceFileReferenceTypeOptions": {
+            "description": "",
+            "enum": [
+                "genome sequence",
+                "transcriptome sequence",
+                "annotation reference",
+                "transcriptome index",
+                "genome sequence index"
+            ],
+            "title": "ReferenceFileReferenceTypeOptions",
+            "type": "string"
+        },
+        "ReferenceFileSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "file"
+            ],
+            "title": "ReferenceFileSchemaTypeOptions",
+            "type": "string"
+        },
+        "S10x": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "drop_uniformity": {
+                    "description": "Whether drop uniformity was achieved as a result of visual inspection of emulsion after a 10x run.",
+                    "type": "boolean"
+                },
+                "fastq_method": {
+                    "description": "Method used for the generation of fastq files from bcl files.",
+                    "type": "string"
+                },
+                "fastq_method_version": {
+                    "description": "Version of the program used for fastq generation.",
+                    "type": "string"
+                },
+                "pooled_channels": {
+                    "description": "The number of channels pooled within a sequencing lane.",
+                    "type": "number"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "title": "S10x",
+            "type": "object"
+        },
+        "SequenceFile": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "file_core": {
+                    "$ref": "#/$defs/FileCore",
+                    "description": "Core file-level information."
+                },
+                "insdc_run_accessions": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "lane_index": {
+                    "description": "The lane that this file was sequenced from.",
+                    "type": "integer"
+                },
+                "library_prep_id": {
+                    "description": "A unique ID for the library preparation.",
+                    "type": "string"
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "read_index": {
+                    "$ref": "#/$defs/SequenceFileReadIndexOptions",
+                    "description": "The sequencing read this file represents."
+                },
+                "read_length": {
+                    "description": "The length of a sequenced read in this file, in nucleotides.",
+                    "type": "integer"
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/SequenceFileSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "file_core",
+                "read_index"
+            ],
+            "title": "SequenceFile",
+            "type": "object"
+        },
+        "SequenceFileReadIndexOptions": {
+            "description": "",
+            "enum": [
+                "read1",
+                "read2",
+                "read3",
+                "read4",
+                "index1",
+                "index2",
+                "single-end, non-indexed"
+            ],
+            "title": "SequenceFileReadIndexOptions",
+            "type": "string"
+        },
+        "SequenceFileSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "file"
+            ],
+            "title": "SequenceFileSchemaTypeOptions",
+            "type": "string"
+        },
+        "SequencingOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/SequencingOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a sequencing approach being used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "SequencingOntology",
+            "type": "object"
+        },
+        "SequencingOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "SequencingOntologyOntologyOptions",
+            "type": "string"
+        },
+        "SequencingProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "instrument_manufacturer_model": {
+                    "$ref": "#/$defs/InstrumentOntology",
+                    "description": "The manufacturer and model of the sequencer."
+                },
+                "local_machine_name": {
+                    "description": "Local name for the particular machine used for sequencing.",
+                    "type": "string"
+                },
+                "method": {
+                    "$ref": "#/$defs/SequencingOntology",
+                    "description": "The general method for sequencing."
+                },
+                "paired_end": {
+                    "description": "Whether the sequenced molecule was sequenced from both ends.",
+                    "type": "boolean"
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "s10x": {
+                    "$ref": "#/$defs/S10x",
+                    "description": "Fields specific for 10x experiments."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/SequencingProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core",
+                "instrument_manufacturer_model",
+                "paired_end",
+                "method"
+            ],
+            "title": "SequencingProtocol",
+            "type": "object"
+        },
+        "SequencingProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "SequencingProtocolSchemaTypeOptions",
+            "type": "string"
+        },
+        "SpeciesOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/SpeciesOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of the species to which the organism belongs.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "SpeciesOntology",
+            "type": "object"
+        },
+        "SpeciesOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "SpeciesOntologyOntologyOptions",
+            "type": "string"
+        },
+        "SpecimenFromOrganism": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "biomaterial_core": {
+                    "$ref": "#/$defs/BiomaterialCore",
+                    "description": "Core biomaterial-level information."
+                },
+                "collection_time": {
+                    "description": "When the biomaterial was collected.",
+                    "type": "string"
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "diseases": {
+                    "items": {
+                        "$ref": "#/$defs/DiseaseOntology"
+                    },
+                    "type": "array"
+                },
+                "genus_species": {
+                    "items": {
+                        "$ref": "#/$defs/SpeciesOntology"
+                    },
+                    "type": "array"
+                },
+                "organ": {
+                    "$ref": "#/$defs/OrganOntology",
+                    "description": "The organ that the biomaterial came from."
+                },
+                "organ_parts": {
+                    "items": {
+                        "$ref": "#/$defs/OrganPartOntology"
+                    },
+                    "type": "array"
+                },
+                "preservation_storage": {
+                    "$ref": "#/$defs/PreservationStorage",
+                    "description": "Information about how a specimen was preserved and/or stored over a period of time."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "purchased_specimen": {
+                    "$ref": "#/$defs/PurchasedReagents",
+                    "description": "Information about a purchased specimen."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/SpecimenFromOrganismSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "state_of_specimen": {
+                    "$ref": "#/$defs/StateOfSpecimen",
+                    "description": "State of the specimen at the time of collection."
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "biomaterial_core",
+                "organ"
+            ],
+            "title": "SpecimenFromOrganism",
+            "type": "object"
+        },
+        "SpecimenFromOrganismSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "biomaterial"
+            ],
+            "title": "SpecimenFromOrganismSchemaTypeOptions",
+            "type": "string"
+        },
+        "StateOfSpecimen": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "autolysis_score": {
+                    "$ref": "#/$defs/StateOfSpecimenAutolysisScoreOptions",
+                    "description": "State of tissue breakdown due to self-digestion."
+                },
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "gross_description": {
+                    "description": "Color, size, and other aspects of specimen as visible to naked eye.",
+                    "type": "string"
+                },
+                "gross_images": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "ischemic_temperature": {
+                    "$ref": "#/$defs/StateOfSpecimenIschemicTemperatureOptions",
+                    "description": "Whether specimen experienced warm or cold ischemia."
+                },
+                "ischemic_time": {
+                    "description": "Duration of time, in seconds, between when the specimen stopped receiving oxygen and when it was preserved or processed.",
+                    "type": "integer"
+                },
+                "microscopic_description": {
+                    "description": "How the specimen looks under the microscope and how it compares with normal cells.",
+                    "type": "string"
+                },
+                "microscopic_images": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "postmortem_interval": {
+                    "description": "Duration of time between when death was declared and when the specimen was preserved or processed.",
+                    "type": "integer"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "title": "StateOfSpecimen",
+            "type": "object"
+        },
+        "StateOfSpecimenAutolysisScoreOptions": {
+            "description": "",
+            "enum": [
+                "none",
+                "mild",
+                "moderate"
+            ],
+            "title": "StateOfSpecimenAutolysisScoreOptions",
+            "type": "string"
+        },
+        "StateOfSpecimenIschemicTemperatureOptions": {
+            "description": "",
+            "enum": [
+                "warm",
+                "cold"
+            ],
+            "title": "StateOfSpecimenIschemicTemperatureOptions",
+            "type": "string"
+        },
+        "StrainOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/StrainOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of the strain to which the organism belongs.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "StrainOntology",
+            "type": "object"
+        },
+        "StrainOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "StrainOntologyOntologyOptions",
+            "type": "string"
+        },
+        "SupplementaryFile": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "file_core": {
+                    "$ref": "#/$defs/FileCore",
+                    "description": "Core file-level information."
+                },
+                "file_description": {
+                    "description": "A short description of the file contents.",
+                    "type": "string"
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/SupplementaryFileSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "file_core"
+            ],
+            "title": "SupplementaryFile",
+            "type": "object"
+        },
+        "SupplementaryFileEntity": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "file_id": {
+                    "description": "ID for this supplementary file entity",
+                    "type": "string"
+                },
+                "file_type": {
+                    "$ref": "#/$defs/SupplementaryFileEntityFileTypeOptions",
+                    "description": "concrete type of this supplementary file entity"
+                }
+            },
+            "required": [
+                "file_id",
+                "file_type"
+            ],
+            "title": "SupplementaryFileEntity",
+            "type": "object"
+        },
+        "SupplementaryFileEntityFileTypeOptions": {
+            "description": "",
+            "enum": [
+                "supplementary_file"
+            ],
+            "title": "SupplementaryFileEntityFileTypeOptions",
+            "type": "string"
+        },
+        "SupplementaryFileLink": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "entity": {
+                    "$ref": "#/$defs/Entity",
+                    "description": "An entity that refers to this supplementary file"
+                },
+                "files": {
+                    "items": {
+                        "$ref": "#/$defs/SupplementaryFile"
+                    },
+                    "type": "array"
+                },
+                "link_type": {
+                    "$ref": "#/$defs/SupplementaryFileLinkLinkTypeOptions",
+                    "description": "The type of this link."
+                }
+            },
+            "required": [
+                "entity",
+                "files",
+                "link_type"
+            ],
+            "title": "SupplementaryFileLink",
+            "type": "object"
+        },
+        "SupplementaryFileLinkLinkTypeOptions": {
+            "description": "",
+            "enum": [
+                "supplementary_file_link"
+            ],
+            "title": "SupplementaryFileLinkLinkTypeOptions",
+            "type": "string"
+        },
+        "SupplementaryFileSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "file"
+            ],
+            "title": "SupplementaryFileSchemaTypeOptions",
+            "type": "string"
+        },
+        "TargetPathwayOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/TargetPathwayOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of the treatment target pathway.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "TargetPathwayOntology",
+            "type": "object"
+        },
+        "TargetPathwayOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "TargetPathwayOntologyOntologyOptions",
+            "type": "string"
+        },
+        "Task": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "cpus": {
+                    "description": "Number of CPUs used to run this task.",
+                    "type": "integer"
+                },
+                "disk_size": {
+                    "description": "Name of the disk volume mounted to the VM for the task.",
+                    "type": "string"
+                },
+                "docker_image": {
+                    "description": "Name of docker image where the task is stored and executed.",
+                    "type": "string"
+                },
+                "log_err": {
+                    "description": "Path where standard error is logged.",
+                    "type": "string"
+                },
+                "log_out": {
+                    "description": "Path where standard output is logged.",
+                    "type": "string"
+                },
+                "memory": {
+                    "description": "Amount of memory allocated for this task.",
+                    "type": "string"
+                },
+                "start_time": {
+                    "description": "Date and time when the task started.",
+                    "type": "string"
+                },
+                "stop_time": {
+                    "description": "Date and time when the task finished.",
+                    "type": "string"
+                },
+                "task_name": {
+                    "description": "Name of the task.",
+                    "type": "string"
+                },
+                "zone": {
+                    "description": "Name of the Google Cloud zone where the task was run.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "disk_size",
+                "task_name",
+                "zone",
+                "start_time",
+                "cpus",
+                "stop_time",
+                "memory",
+                "docker_image"
+            ],
+            "title": "Task",
+            "type": "object"
+        },
+        "TimeUnitOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/TimeUnitOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a time unit being used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "TimeUnitOntology",
+            "type": "object"
+        },
+        "TimeUnitOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "TimeUnitOntologyOntologyOptions",
+            "type": "string"
+        },
+        "Timecourse": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "relevance": {
+                    "description": "Relevance of the Timecourse value/unit to the experiment.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "unit": {
+                    "$ref": "#/$defs/TimeUnitOntology",
+                    "description": "The unit in which the Timecourse value is expressed."
+                },
+                "value": {
+                    "description": "The numerical value in Timecourse unit associated with a time interval used in the experiment.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "value",
+                "unit"
+            ],
+            "title": "Timecourse",
+            "type": "object"
+        },
+        "TreatmentMethodOntology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "ontology": {
+                    "$ref": "#/$defs/TreatmentMethodOntologyOntologyOptions",
+                    "description": "An ontology term identifier in the form prefix:accession."
+                },
+                "ontology_label": {
+                    "description": "The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.",
+                    "type": "string"
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The name of a treatment method or approach being used.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "TreatmentMethodOntology",
+            "type": "object"
+        },
+        "TreatmentMethodOntologyOntologyOptions": {
+            "description": "",
+            "enum": [],
+            "title": "TreatmentMethodOntologyOntologyOptions",
+            "type": "string"
+        },
+        "TreatmentProtocol": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "describedBy": {
+                    "description": "The URL reference to the schema.",
+                    "type": "string"
+                },
+                "media": {
+                    "description": "Culture media used to induce a specific treatment response.",
+                    "type": "string"
+                },
+                "method": {
+                    "items": {
+                        "$ref": "#/$defs/TreatmentMethodOntology"
+                    },
+                    "type": "array"
+                },
+                "protocol_core": {
+                    "$ref": "#/$defs/ProtocolCore",
+                    "description": "Core protocol-level information."
+                },
+                "provenance": {
+                    "$ref": "#/$defs/Provenance",
+                    "description": "Provenance information provided by the system."
+                },
+                "reagents": {
+                    "items": {
+                        "$ref": "#/$defs/PurchasedReagents"
+                    },
+                    "type": "array"
+                },
+                "schema_type": {
+                    "$ref": "#/$defs/TreatmentProtocolSchemaTypeOptions",
+                    "description": "The type of the metadata schema entity."
+                },
+                "schema_version": {
+                    "description": "The version number of the schema in major.minor.patch format.",
+                    "type": "string"
+                },
+                "target_pathway": {
+                    "items": {
+                        "$ref": "#/$defs/TargetPathwayOntology"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "describedBy",
+                "schema_type",
+                "protocol_core",
+                "method"
+            ],
+            "title": "TreatmentProtocol",
+            "type": "object"
+        },
+        "TreatmentProtocolSchemaTypeOptions": {
+            "description": "",
+            "enum": [
+                "protocol"
+            ],
+            "title": "TreatmentProtocolSchemaTypeOptions",
+            "type": "string"
+        }
+    },
+    "$id": "http://example.org/hca",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": true,
+    "metamodel_version": "1.7.0",
+    "title": "hca",
+    "type": "object",
+    "version": null
+}

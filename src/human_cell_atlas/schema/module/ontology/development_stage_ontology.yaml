@@ -1,0 +1,51 @@
+name: Development_stage_ontology
+id: https://example.org/Development-stage-ontology
+imports:
+- linkml:types
+prefixes:
+  Development_stage_ontology: https://example.org/Development-stage-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Development_stage_ontology
+enums:
+  DevelopmentStageOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:efo
+        source_nodes:
+        - EFO:0000399
+        - HsapDv:0000000
+        - UBERON:0000105
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+    - reachable_from:
+        source_ontology: obo:hcao
+        source_nodes:
+        - EFO:0000399
+        - HsapDv:0000000
+        - UBERON:0000105
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: false
+classes:
+  DevelopmentStageOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: Version number in major.minor.patch format.
+      text:
+        description: The name of the development stage of the organism.
+        title: Development stage
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Development stage ontology ID
+        range: DevelopmentStageOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Development stage ontology label

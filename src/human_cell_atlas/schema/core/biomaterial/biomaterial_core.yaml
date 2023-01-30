@@ -1,0 +1,45 @@
+name: Biomaterial_core
+id: https://example.org/Biomaterial-core
+imports:
+- linkml:types
+prefixes:
+  Biomaterial_core: https://example.org/Biomaterial-core
+  linkml: https://w3id.org/linkml/
+default_prefix: Biomaterial_core
+classes:
+  BiomaterialCore:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      biomaterial_id:
+        description: A unique ID for the biomaterial.
+        title: Biomaterial ID
+        required: true
+      biomaterial_name:
+        description: A short, descriptive name for the biomaterial that need not be
+          unique.
+        title: Biomaterial name
+      biomaterial_description:
+        description: A general description of the biomaterial.
+        title: Biomaterial description
+      ncbi_taxon_id:
+        multivalued: true
+        range: integer
+        required: true
+      genotype:
+        description: Genotype of the biomaterial.
+        title: Genotype
+      supplementary_files:
+        multivalued: true
+      biosamples_accession:
+        description: A BioSamples accession.
+        title: BioSamples accession
+      insdc_sample_accession:
+        description: An International Nucleotide Sequence Database Collaboration (INSDC)
+          sample accession.
+        title: INSDC sample accession
+      HDBR_accession:
+        description: A Human Developmental Biology Resource (HDBR) sample accession.
+        title: HDBR accession

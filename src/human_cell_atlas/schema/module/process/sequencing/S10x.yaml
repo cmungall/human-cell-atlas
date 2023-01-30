@@ -1,0 +1,30 @@
+name: S10x
+id: https://example.org/S10x
+imports:
+- linkml:types
+prefixes:
+  S10x: https://example.org/S10x
+  linkml: https://w3id.org/linkml/
+default_prefix: S10x
+classes:
+  S10x:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      fastq_method:
+        description: Method used for the generation of fastq files from bcl files.
+        title: Fastq creation method
+      fastq_method_version:
+        description: Version of the program used for fastq generation.
+        title: Fastq creation method version
+      pooled_channels:
+        description: The number of channels pooled within a sequencing lane.
+        title: Pooled channels
+        range: float
+      drop_uniformity:
+        description: Whether drop uniformity was achieved as a result of visual inspection
+          of emulsion after a 10x run.
+        title: Drop uniformity
+        range: boolean

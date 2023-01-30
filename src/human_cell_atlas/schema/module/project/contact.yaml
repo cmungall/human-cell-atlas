@@ -1,0 +1,48 @@
+name: Contact
+id: https://example.org/Contact
+imports:
+- linkml:types
+- module/ontology/contributor_role_ontology
+prefixes:
+  Contact: https://example.org/Contact
+  linkml: https://w3id.org/linkml/
+default_prefix: Contact
+classes:
+  Contact:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      email:
+        description: Email address for the individual.
+        title: Email address
+      phone:
+        description: Phone number of the individual or their lab.
+        title: Phone number
+      institution:
+        description: Name of primary institute where the individual works.
+        title: Institute
+        required: true
+      laboratory:
+        description: Name of lab or department within the institute where the individual
+          works.
+        title: Laboratory/Department
+      address:
+        description: Street address where the individual works.
+        title: Street address
+      country:
+        description: Country where the individual works.
+        title: Country
+      corresponding_contributor:
+        description: Whether the individual is a primary point of contact for the
+          project.
+        title: Corresponding contributor
+        range: boolean
+      project_role:
+        description: Primary role of the individual in the project.
+        title: Project role
+        range: ContributorRoleOntology
+      orcid_id:
+        description: The individual's ORCID ID linked to previous work.
+        title: ORCID ID

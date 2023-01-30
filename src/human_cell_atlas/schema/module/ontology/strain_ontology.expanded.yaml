@@ -1,0 +1,568 @@
+name: Strain_ontology
+id: https://example.org/Strain-ontology
+imports:
+- linkml:types
+prefixes:
+  Strain_ontology: https://example.org/Strain-ontology
+  linkml: https://w3id.org/linkml/
+default_prefix: Strain_ontology
+enums:
+  StrainOntology_ontology_options:
+    include:
+    - reachable_from:
+        source_ontology: obo:efo
+        source_nodes:
+        - NCBITaxon:10090
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: true
+    - reachable_from:
+        source_ontology: obo:NCBITaxon
+        source_nodes:
+        - NCBITaxon:10090
+        relationship_types:
+        - rdfs:subClassOf
+        is_direct: false
+        include_self: true
+    permissible_values:
+      EFO:0000604:
+        text: EFO:0000604
+        description: C57BL/10
+        meaning: EFO:0000604
+      EFO:0000603:
+        text: EFO:0000603
+        description: BALB/cByJ
+        meaning: EFO:0000603
+      EFO:0000602:
+        text: EFO:0000602
+        description: BALB/c
+        meaning: EFO:0000602
+      EFO:0000601:
+        text: EFO:0000601
+        description: 129xC57BL/6
+        meaning: EFO:0000601
+      EFO:0000600:
+        text: EFO:0000600
+        description: 129X1/SvJ
+        meaning: EFO:0000600
+      EFO:0000606:
+        text: EFO:0000606
+        description: C57BL/6J
+        meaning: EFO:0000606
+      EFO:0007728:
+        text: EFO:0007728
+        description: FVB/NJ
+        meaning: EFO:0007728
+      EFO:0007729:
+        text: EFO:0007729
+        description: NZO/HlLtJ
+        meaning: EFO:0007729
+      EFO:0007726:
+        text: EFO:0007726
+        description: AKR/J
+        meaning: EFO:0007726
+      EFO:0007727:
+        text: EFO:0007727
+        description: CAST/EiJ
+        meaning: EFO:0007727
+      EFO:0007736:
+        text: EFO:0007736
+        description: NOD/ShiLtJ
+        meaning: EFO:0007736
+      EFO:0007735:
+        text: EFO:0007735
+        description: CBA/J
+        meaning: EFO:0007735
+      EFO:0007732:
+        text: EFO:0007732
+        description: C57BL/6NJ
+        meaning: EFO:0007732
+      EFO:0007733:
+        text: EFO:0007733
+        description: LP/J
+        meaning: EFO:0007733
+      EFO:0007730:
+        text: EFO:0007730
+        description: PWK/PhJ
+        meaning: EFO:0007730
+      EFO:0007731:
+        text: EFO:0007731
+        description: WSB/EiJ
+        meaning: EFO:0007731
+      EFO:0009917:
+        text: EFO:0009917
+        description: ICR/HaJ
+        meaning: EFO:0009917
+      EFO:0010081:
+        text: EFO:0010081
+        description: Afp-GFP
+        meaning: EFO:0010081
+      EFO:0011017:
+        text: EFO:0011017
+        description: B6-Ly5.1
+        meaning: EFO:0011017
+      EFO:0010946:
+        text: EFO:0010946
+        description: C57BL/6JxCAST/EiJ
+        meaning: EFO:0010946
+      EFO:0010945:
+        text: EFO:0010945
+        description: CAST/EiJxC57BL/6J
+        meaning: EFO:0010945
+      EFO:0011030:
+        text: EFO:0011030
+        description: C57BL/6NCrl
+        meaning: EFO:0011030
+      EFO:0005180:
+        text: EFO:0005180
+        description: CD1 mus strain
+        meaning: EFO:0005180
+      EFO:0005181:
+        text: EFO:0005181
+        description: C57BL
+        meaning: EFO:0005181
+      EFO:0005184:
+        text: EFO:0005184
+        description: DBA/2J
+        meaning: EFO:0005184
+      NCBITaxon:477815:
+        text: NCBITaxon:477815
+        description: Mus musculus musculus x M. m. domesticus
+        meaning: NCBITaxon:477815
+      EFO:0003003:
+        text: EFO:0003003
+        description: ILSXISS100/TejJ
+        meaning: EFO:0003003
+      EFO:0003004:
+        text: EFO:0003004
+        description: ILSXISS103/TejJ
+        meaning: EFO:0003004
+      EFO:0003005:
+        text: EFO:0003005
+        description: ILSXISS107/TejJ
+        meaning: EFO:0003005
+      EFO:0003006:
+        text: EFO:0003006
+        description: ILSXISS110/TejJ
+        meaning: EFO:0003006
+      EFO:0003007:
+        text: EFO:0003007
+        description: ILSXISS112/TejJ
+        meaning: EFO:0003007
+      EFO:0003008:
+        text: EFO:0003008
+        description: ILSXISS114/TejJ
+        meaning: EFO:0003008
+      EFO:0003009:
+        text: EFO:0003009
+        description: ILSXISS115/TejJ
+        meaning: EFO:0003009
+      EFO:0003000:
+        text: EFO:0003000
+        description: ILSXISS97/TejJ
+        meaning: EFO:0003000
+      EFO:0003001:
+        text: EFO:0003001
+        description: ILSXISS98/TejJ
+        meaning: EFO:0003001
+      EFO:0003002:
+        text: EFO:0003002
+        description: ILSXISS99/TejJ
+        meaning: EFO:0003002
+      EFO:0003018:
+        text: EFO:0003018
+        description: ILSXISS28/TejJ
+        meaning: EFO:0003018
+      EFO:0003019:
+        text: EFO:0003019
+        description: ILSXISS46/TejJ
+        meaning: EFO:0003019
+      EFO:0003010:
+        text: EFO:0003010
+        description: ILSXISS117/TejJ
+        meaning: EFO:0003010
+      EFO:0003011:
+        text: EFO:0003011
+        description: ILSXISS122/TejJ
+        meaning: EFO:0003011
+      EFO:0003012:
+        text: EFO:0003012
+        description: ILSXISS123/TejJ
+        meaning: EFO:0003012
+      EFO:0003013:
+        text: EFO:0003013
+        description: Mus musculus subspecies
+        meaning: EFO:0003013
+      EFO:0003020:
+        text: EFO:0003020
+        description: ILSXISS60/TejJ
+        meaning: EFO:0003020
+      EFO:0007833:
+        text: EFO:0007833
+        description: C3H/HeOuJ
+        meaning: EFO:0007833
+      EFO:0002972:
+        text: EFO:0002972
+        description: ILSXISS3/TejJ
+        meaning: EFO:0002972
+      EFO:0002973:
+        text: EFO:0002973
+        description: ILSXISS7/TejJ
+        meaning: EFO:0002973
+      EFO:0002974:
+        text: EFO:0002974
+        description: ILSXISS13/TejJ
+        meaning: EFO:0002974
+      EFO:0002975:
+        text: EFO:0002975
+        description: ILSXISS14/TejJ
+        meaning: EFO:0002975
+      EFO:0002976:
+        text: EFO:0002976
+        description: ILSXISS16/TejJ
+        meaning: EFO:0002976
+      EFO:0002977:
+        text: EFO:0002977
+        description: ILSXISS19/TejJ
+        meaning: EFO:0002977
+      EFO:0002978:
+        text: EFO:0002978
+        description: ILSXISS22/TejJ
+        meaning: EFO:0002978
+      EFO:0004010:
+        text: EFO:0004010
+        description: wild-derived inbred strain
+        meaning: EFO:0004010
+      EFO:0002979:
+        text: EFO:0002979
+        description: ILSXISS23/TejJ
+        meaning: EFO:0002979
+      NCBITaxon:10091:
+        text: NCBITaxon:10091
+        description: Mus musculus castaneus
+        meaning: NCBITaxon:10091
+      NCBITaxon:10090:
+        text: NCBITaxon:10090
+        description: Mus musculus
+        meaning: NCBITaxon:10090
+      NCBITaxon:10092:
+        text: NCBITaxon:10092
+        description: Mus musculus domesticus
+        meaning: NCBITaxon:10092
+      EFO:0002971:
+        text: EFO:0002971
+        description: ILSXISS#/Tej
+        meaning: EFO:0002971
+      EFO:0004008:
+        text: EFO:0004008
+        description: recombinant inbred strain
+        meaning: EFO:0004008
+      EFO:0004007:
+        text: EFO:0004007
+        description: recombinant congenic strain
+        meaning: EFO:0004007
+      EFO:0004009:
+        text: EFO:0004009
+        description: segregating inbred strain
+        meaning: EFO:0004009
+      EFO:0004000:
+        text: EFO:0004000
+        description: Mus musculus strain type
+        meaning: EFO:0004000
+      EFO:0004002:
+        text: EFO:0004002
+        description: coisogenic strain
+        meaning: EFO:0004002
+      EFO:0004001:
+        text: EFO:0004001
+        description: closed colony random bred strain
+        meaning: EFO:0004001
+      EFO:0004004:
+        text: EFO:0004004
+        description: consomic strain
+        meaning: EFO:0004004
+      EFO:0004003:
+        text: EFO:0004003
+        description: congenic strain
+        meaning: EFO:0004003
+      EFO:0004006:
+        text: EFO:0004006
+        description: mutant strain
+        meaning: EFO:0004006
+      EFO:0004005:
+        text: EFO:0004005
+        description: inbred Mus musculus strain
+        meaning: EFO:0004005
+      EFO:0002984:
+        text: EFO:0002984
+        description: ILSXISS48/TejJ
+        meaning: EFO:0002984
+      EFO:0002985:
+        text: EFO:0002985
+        description: ILSXISS49/TejJ
+        meaning: EFO:0002985
+      EFO:0002986:
+        text: EFO:0002986
+        description: ILSXISS50/TejJ
+        meaning: EFO:0002986
+      EFO:0002987:
+        text: EFO:0002987
+        description: ILSXISS51/TejJ
+        meaning: EFO:0002987
+      EFO:0002988:
+        text: EFO:0002988
+        description: ILSXISS52/TejJ
+        meaning: EFO:0002988
+      EFO:0002989:
+        text: EFO:0002989
+        description: ILSXISS56/TejJ
+        meaning: EFO:0002989
+      EFO:0002980:
+        text: EFO:0002980
+        description: ILSXISS24/TejJ
+        meaning: EFO:0002980
+      EFO:0002981:
+        text: EFO:0002981
+        description: ILSXISS25/TejJ
+        meaning: EFO:0002981
+      EFO:0002982:
+        text: EFO:0002982
+        description: ILSXISS26/TejJ
+        meaning: EFO:0002982
+      EFO:0002983:
+        text: EFO:0002983
+        description: ILSXISS41/TejJ
+        meaning: EFO:0002983
+      EFO:0004011:
+        text: EFO:0004011
+        description: major histocompatibility congenic strain
+        meaning: EFO:0004011
+      EFO:0000599:
+        text: EFO:0000599
+        description: 129/Sv
+        meaning: EFO:0000599
+      EFO:0002996:
+        text: EFO:0002996
+        description: ILSXISS89/TejJ
+        meaning: EFO:0002996
+      EFO:0002997:
+        text: EFO:0002997
+        description: ILSXISS90/TejJ
+        meaning: EFO:0002997
+      EFO:0000598:
+        text: EFO:0000598
+        description: 129S6
+        meaning: EFO:0000598
+      EFO:0000597:
+        text: EFO:0000597
+        description: 129 mouse strain
+        meaning: EFO:0000597
+      EFO:0002998:
+        text: EFO:0002998
+        description: ILSXISS92/TejJ
+        meaning: EFO:0002998
+      EFO:0002999:
+        text: EFO:0002999
+        description: ILSXISS94/TejJ
+        meaning: EFO:0002999
+      EFO:0002990:
+        text: EFO:0002990
+        description: ILSXISS62/TejJ
+        meaning: EFO:0002990
+      EFO:0002991:
+        text: EFO:0002991
+        description: ILSXISS66/TejJ
+        meaning: EFO:0002991
+      EFO:0002992:
+        text: EFO:0002992
+        description: ILSXISS79/TejJ
+        meaning: EFO:0002992
+      EFO:0002993:
+        text: EFO:0002993
+        description: ILSXISS80/TejJ
+        meaning: EFO:0002993
+      EFO:0002994:
+        text: EFO:0002994
+        description: ILSXISS84/TejJ
+        meaning: EFO:0002994
+      EFO:0002995:
+        text: EFO:0002995
+        description: ILSXISS86/TejJ
+        meaning: EFO:0002995
+      EFO:0002742:
+        text: EFO:0002742
+        description: B6.H2_g7
+        meaning: EFO:0002742
+      EFO:0002743:
+        text: EFO:0002743
+        description: C57BL/6-scid
+        meaning: EFO:0002743
+      EFO:0002744:
+        text: EFO:0002744
+        description: NOD.B10
+        meaning: EFO:0002744
+      EFO:0002745:
+        text: EFO:0002745
+        description: NOD.B6
+        meaning: EFO:0002745
+      EFO:0002746:
+        text: EFO:0002746
+        description: IR (lox/lox)
+        meaning: EFO:0002746
+      EFO:0002747:
+        text: EFO:0002747
+        description: ObOb
+        meaning: EFO:0002747
+      EFO:0002740:
+        text: EFO:0002740
+        description: NOD.scid
+        meaning: EFO:0002740
+      EFO:0002741:
+        text: EFO:0002741
+        description: B10.NOD_H2g7_Idd3
+        meaning: EFO:0002741
+      EFO:0002739:
+        text: EFO:0002739
+        description: B10.NOD_H2g7
+        meaning: EFO:0002739
+      EFO:0000368:
+        text: EFO:0000368
+        description: minor histocompatibility congenic strain
+        meaning: EFO:0000368
+      EFO:0005286:
+        text: EFO:0005286
+        description: BALB/cAnN
+        meaning: EFO:0005286
+      EFO:0001327:
+        text: EFO:0001327
+        description: A/J
+        meaning: EFO:0001327
+      EFO:0001328:
+        text: EFO:0001328
+        description: B6.Cg-Tg(SOD1-G93A)1Gur/J
+        meaning: EFO:0001328
+      EFO:0001329:
+        text: EFO:0001329
+        description: C3H/HeJ
+        meaning: EFO:0001329
+      EFO:0002522:
+        text: EFO:0002522
+        description: BTBR mouse
+        meaning: EFO:0002522
+      EFO:0001338:
+        text: EFO:0001338
+        description: TBP-71Q-16
+        meaning: EFO:0001338
+      EFO:0001339:
+        text: EFO:0001339
+        description: CB6F1
+        meaning: EFO:0001339
+      EFO:0001331:
+        text: EFO:0001331
+        description: 129P1/ReJ
+        meaning: EFO:0001331
+      EFO:0001332:
+        text: EFO:0001332
+        description: 129S1/SvImJ
+        meaning: EFO:0001332
+      EFO:0001336:
+        text: EFO:0001336
+        description: CBA/CaJ
+        meaning: EFO:0001336
+      EFO:0001337:
+        text: EFO:0001337
+        description: BDC2.5/NOD
+        meaning: EFO:0001337
+      EFO:0002547:
+        text: EFO:0002547
+        description: NOD mouse
+        meaning: EFO:0002547
+      EFO:0001340:
+        text: EFO:0001340
+        description: B6C3F1
+        meaning: EFO:0001340
+      EFO:0001341:
+        text: EFO:0001341
+        description: TBP-105Q
+        meaning: EFO:0001341
+      EFO:0030032:
+        text: EFO:0030032
+        description: B6.SJL-Slc6a3tm1.1(cre)Bkmn/J
+        meaning: EFO:0030032
+      NCBITaxon:39442:
+        text: NCBITaxon:39442
+        description: Mus musculus musculus
+        meaning: NCBITaxon:39442
+      EFO:0021426:
+        text: EFO:0021426
+        description: humanized mouse
+        meaning: EFO:0021426
+      NCBITaxon:46456:
+        text: NCBITaxon:46456
+        description: Mus musculus wagneri
+        meaning: NCBITaxon:46456
+      NCBITaxon:1643390:
+        text: NCBITaxon:1643390
+        description: Mus musculus helgolandicus
+        meaning: NCBITaxon:1643390
+      NCBITaxon:1266728:
+        text: NCBITaxon:1266728
+        description: Mus musculus domesticus x M. m. molossinus
+        meaning: NCBITaxon:1266728
+      NCBITaxon:80274:
+        text: NCBITaxon:80274
+        description: Mus musculus gentilulus
+        meaning: NCBITaxon:80274
+      NCBITaxon:57486:
+        text: NCBITaxon:57486
+        description: Mus musculus molossinus
+        meaning: NCBITaxon:57486
+      NCBITaxon:179238:
+        text: NCBITaxon:179238
+        description: Mus musculus homourus
+        meaning: NCBITaxon:179238
+      NCBITaxon:1879032:
+        text: NCBITaxon:1879032
+        description: Mus musculus isatissus
+        meaning: NCBITaxon:1879032
+      NCBITaxon:1385377:
+        text: NCBITaxon:1385377
+        description: Mus musculus gansuensis
+        meaning: NCBITaxon:1385377
+      NCBITaxon:477816:
+        text: NCBITaxon:477816
+        description: Mus musculus musculus x Mus musculus castaneus
+        meaning: NCBITaxon:477816
+      NCBITaxon:116058:
+        text: NCBITaxon:116058
+        description: Mus musculus brevirostris
+        meaning: NCBITaxon:116058
+      NCBITaxon:947985:
+        text: NCBITaxon:947985
+        description: Mus musculus albula
+        meaning: NCBITaxon:947985
+      NCBITaxon:35531:
+        text: NCBITaxon:35531
+        description: Mus musculus bactrianus
+        meaning: NCBITaxon:35531
+classes:
+  StrainOntology:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      text:
+        description: The name of the strain to which the organism belongs.
+        title: Strain
+        required: true
+      ontology:
+        description: An ontology term identifier in the form prefix:accession.
+        title: Strain ontology ID
+        range: StrainOntology_ontology_options
+      ontology_label:
+        description: The preferred label for the ontology term referred to in the
+          ontology field. This may differ from the user-supplied value in the text
+          field.
+        title: Strain ontology label

@@ -1,0 +1,1301 @@
+BASE <http://example.org/hca/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:dateTime
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+<https://example.org/Aggregate-generation-protocolAggregateGenerationProtocol> CLOSED {
+    (  $<https://example.org/Aggregate-generation-protocolAggregateGenerationProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Aggregate-generation-protocolAggregateGenerationProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <formation_method> @linkml:String ;
+          <cell_uniformity> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Aggregate-generation-protocolAggregateGenerationProtocol> ] ?
+    )
+}
+
+<https://example.org/Analysis-fileAnalysisFile> CLOSED {
+    (  $<https://example.org/Analysis-fileAnalysisFile_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Analysis-fileAnalysisFileSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <file_core> @<https://example.org/File-coreFileCore> ;
+          <matrix_cell_count> @linkml:Integer ?
+       ) ;
+       rdf:type [ <https://example.org/Analysis-fileAnalysisFile> ] ?
+    )
+}
+
+<https://example.org/Analysis-processAnalysisProcess> CLOSED {
+    (  $<https://example.org/Analysis-processAnalysisProcess_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Analysis-processAnalysisProcessSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <process_core> @<https://example.org/Process-coreProcessCore> ;
+          <type> @<https://example.org/Process-type-ontologyProcessTypeOntology> ;
+          <inputs> @<https://example.org/Analysis-processParameter> + ;
+          <tasks> @<https://example.org/Analysis-processTask> + ;
+          <timestamp_start_utc> @linkml:String ;
+          <timestamp_stop_utc> @linkml:String ;
+          <analysis_run_type> @<https://example.org/Analysis-processAnalysisProcessAnalysisRunTypeOptions> ;
+          <reference_files> @linkml:String +
+       ) ;
+       rdf:type [ <https://example.org/Analysis-processAnalysisProcess> ] ?
+    )
+}
+
+<https://example.org/Analysis-protocolAnalysisProtocol> CLOSED {
+    (  $<https://example.org/Analysis-protocolAnalysisProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Analysis-protocolAnalysisProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <type> @<https://example.org/Process-type-ontologyProcessTypeOntology> ;
+          <computational_method> @linkml:String ? ;
+          <matrix> @<https://example.org/MatrixMatrix> ?
+       ) ;
+       rdf:type [ <https://example.org/Analysis-protocolAnalysisProtocol> ] ?
+    )
+}
+
+<https://example.org/BarcodeBarcode> CLOSED {
+    (  $<https://example.org/BarcodeBarcode_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <barcode_read> @<https://example.org/BarcodeBarcodeBarcodeReadOptions> ;
+          <barcode_offset> @linkml:Integer ;
+          <barcode_length> @linkml:Integer ;
+          <white_list_file> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/BarcodeBarcode> ] ?
+    )
+}
+
+<https://example.org/Biological-macromolecule-ontologyBiologicalMacromoleculeOntology> CLOSED {
+    (  $<https://example.org/Biological-macromolecule-ontologyBiologicalMacromoleculeOntology_tes> (  <describedBy> @linkml:String
+          ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Biological-macromolecule-ontologyBiologicalMacromoleculeOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Biological-macromolecule-ontologyBiologicalMacromoleculeOntology> ] ?
+    )
+}
+
+<https://example.org/Biomaterial-coreBiomaterialCore> CLOSED {
+    (  $<https://example.org/Biomaterial-coreBiomaterialCore_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <biomaterial_id> @linkml:String ;
+          <biomaterial_name> @linkml:String ? ;
+          <biomaterial_description> @linkml:String ? ;
+          <ncbi_taxon_id> @linkml:Integer + ;
+          <genotype> @linkml:String ? ;
+          <supplementary_files> @linkml:String * ;
+          <biosamples_accession> @linkml:String ? ;
+          <insdc_sample_accession> @linkml:String ? ;
+          <HDBR_accession> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Biomaterial-coreBiomaterialCore> ] ?
+    )
+}
+
+<https://example.org/Cell-cycle-ontologyCellCycleOntology> CLOSED {
+    (  $<https://example.org/Cell-cycle-ontologyCellCycleOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Cell-cycle-ontologyCellCycleOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Cell-cycle-ontologyCellCycleOntology> ] ?
+    )
+}
+
+<https://example.org/Cell-lineCellLine> CLOSED {
+    (  $<https://example.org/Cell-lineCellLine_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Cell-lineCellLineSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <biomaterial_core> @<https://example.org/Biomaterial-coreBiomaterialCore> ;
+          <supplier> @linkml:String ? ;
+          <catalog_number> @linkml:String ? ;
+          <lot_number> @linkml:String ? ;
+          <catalog_url> @linkml:String ? ;
+          <cell_cycle> @<https://example.org/Cell-cycle-ontologyCellCycleOntology> ? ;
+          <type> @<https://example.org/Cell-lineCellLineTypeOptions> ;
+          <model_organ> @<https://example.org/Organ-ontologyOrganOntology> ;
+          <cell_morphology> @<https://example.org/Cell-morphologyCellMorphology> ? ;
+          <growth_conditions> @<https://example.org/Growth-conditionsGrowthConditions> ? ;
+          <confluency> @linkml:Float ? ;
+          <cell_type> @<https://example.org/Cell-type-ontologyCellTypeOntology> ? ;
+          <karyotype> @linkml:String ? ;
+          <tissue> @<https://example.org/Organ-part-ontologyOrganPartOntology> ? ;
+          <date_established> @linkml:String ? ;
+          <disease> @<https://example.org/Disease-ontologyDiseaseOntology> ? ;
+          <genus_species> @<https://example.org/Species-ontologySpeciesOntology> * ;
+          <publication> @<https://example.org/PublicationPublication> ? ;
+          <timecourse> @<https://example.org/TimecourseTimecourse> ?
+       ) ;
+       rdf:type [ <https://example.org/Cell-lineCellLine> ] ?
+    )
+}
+
+<https://example.org/Cell-morphologyCellMorphology> CLOSED {
+    (  $<https://example.org/Cell-morphologyCellMorphology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <cell_morphology> @linkml:String ? ;
+          <cell_size> @linkml:String ? ;
+          <cell_size_unit> @<https://example.org/Length-unit-ontologyLengthUnitOntology> ? ;
+          <percent_cell_viability> @linkml:Float ? ;
+          <cell_viability_method> @linkml:String ? ;
+          <cell_viability_result> @<https://example.org/Cell-morphologyCellMorphologyCellViabilityResultOptions> ? ;
+          <percent_necrosis> @linkml:Float ?
+       ) ;
+       rdf:type [ <https://example.org/Cell-morphologyCellMorphology> ] ?
+    )
+}
+
+<https://example.org/Cell-suspensionCellSuspension> CLOSED {
+    (  $<https://example.org/Cell-suspensionCellSuspension_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Cell-suspensionCellSuspensionSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <biomaterial_core> @<https://example.org/Biomaterial-coreBiomaterialCore> ;
+          <cell_morphology> @<https://example.org/Cell-morphologyCellMorphology> ? ;
+          <growth_conditions> @<https://example.org/Growth-conditionsGrowthConditions> ? ;
+          <genus_species> @<https://example.org/Species-ontologySpeciesOntology> * ;
+          <selected_cell_types> @<https://example.org/Cell-type-ontologyCellTypeOntology> * ;
+          <estimated_cell_count> @linkml:Integer ? ;
+          <plate_based_sequencing> @<https://example.org/Plate-based-sequencingPlateBasedSequencing> ? ;
+          <timecourse> @<https://example.org/TimecourseTimecourse> ?
+       ) ;
+       rdf:type [ <https://example.org/Cell-suspensionCellSuspension> ] ?
+    )
+}
+
+<https://example.org/Cell-type-ontologyCellTypeOntology> CLOSED {
+    (  $<https://example.org/Cell-type-ontologyCellTypeOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Cell-type-ontologyCellTypeOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Cell-type-ontologyCellTypeOntology> ] ?
+    )
+}
+
+<https://example.org/Cellular-component-ontologyCellularComponentOntology> CLOSED {
+    (  $<https://example.org/Cellular-component-ontologyCellularComponentOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Cellular-component-ontologyCellularComponentOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Cellular-component-ontologyCellularComponentOntology> ] ?
+    )
+}
+
+<https://example.org/ChannelChannel> CLOSED {
+    (  $<https://example.org/ChannelChannel_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <channel_id> @linkml:String ;
+          <excitation_wavelength> @linkml:Float ;
+          <filter_range> @linkml:String ;
+          <multiplexed> @<https://example.org/ChannelChannelMultiplexedOptions> ;
+          <target_fluorophore> @linkml:String ? ;
+          <exposure_time> @linkml:Float
+       ) ;
+       rdf:type [ <https://example.org/ChannelChannel> ] ?
+    )
+}
+
+<https://example.org/Collection-protocolCollectionProtocol> CLOSED {
+    (  $<https://example.org/Collection-protocolCollectionProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Collection-protocolCollectionProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <method> @<https://example.org/Process-type-ontologyProcessTypeOntology> ;
+          <reagents> @<https://example.org/Purchased-reagentsPurchasedReagents> *
+       ) ;
+       rdf:type [ <https://example.org/Collection-protocolCollectionProtocol> ] ?
+    )
+}
+
+<https://example.org/ContactContact> CLOSED {
+    (  $<https://example.org/ContactContact_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <email> @linkml:String ? ;
+          <phone> @linkml:String ? ;
+          <institution> @linkml:String ;
+          <laboratory> @linkml:String ? ;
+          <address> @linkml:String ? ;
+          <country> @linkml:String ? ;
+          <corresponding_contributor> @linkml:Boolean ? ;
+          <project_role> @<https://example.org/Contributor-role-ontologyContributorRoleOntology> ? ;
+          <orcid_id> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/ContactContact> ] ?
+    )
+}
+
+<https://example.org/Contributor-role-ontologyContributorRoleOntology> CLOSED {
+    (  $<https://example.org/Contributor-role-ontologyContributorRoleOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Contributor-role-ontologyContributorRoleOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Contributor-role-ontologyContributorRoleOntology> ] ?
+    )
+}
+
+<https://example.org/DeathDeath> CLOSED {
+    (  $<https://example.org/DeathDeath_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <cause_of_death> @linkml:String ;
+          <cold_perfused> @linkml:Boolean ? ;
+          <days_on_ventilator> @linkml:Float ? ;
+          <hardy_scale> @linkml:Integer ? ;
+          <time_of_death> @linkml:String ? ;
+          <organ_donation_death_type> @<https://example.org/DeathDeathOrganDonationDeathTypeOptions> ? ;
+          <normothermic_regional_perfusion> @<https://example.org/DeathDeathNormothermicRegionalPerfusionOptions> ?
+       ) ;
+       rdf:type [ <https://example.org/DeathDeath> ] ?
+    )
+}
+
+<https://example.org/Development-stage-ontologyDevelopmentStageOntology> CLOSED {
+    (  $<https://example.org/Development-stage-ontologyDevelopmentStageOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Development-stage-ontologyDevelopmentStageOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Development-stage-ontologyDevelopmentStageOntology> ] ?
+    )
+}
+
+<https://example.org/Differentiation-protocolDifferentiationProtocol> CLOSED {
+    (  $<https://example.org/Differentiation-protocolDifferentiationProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Differentiation-protocolDifferentiationProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <method> @linkml:String ;
+          <media> @linkml:String ? ;
+          <small_molecules> @linkml:String ? ;
+          <target_cell_yield> @linkml:Float ? ;
+          <reagents> @<https://example.org/Purchased-reagentsPurchasedReagents> * ;
+          <target_pathway> @linkml:String ? ;
+          <validation_method> @linkml:String ? ;
+          <validation_result> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Differentiation-protocolDifferentiationProtocol> ] ?
+    )
+}
+
+<https://example.org/Disease-ontologyDiseaseOntology> CLOSED {
+    (  $<https://example.org/Disease-ontologyDiseaseOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Disease-ontologyDiseaseOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Disease-ontologyDiseaseOntology> ] ?
+    )
+}
+
+<https://example.org/Dissociation-protocolDissociationProtocol> CLOSED {
+    (  $<https://example.org/Dissociation-protocolDissociationProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Dissociation-protocolDissociationProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <method> @<https://example.org/Process-type-ontologyProcessTypeOntology> ;
+          <reagents> @<https://example.org/Purchased-reagentsPurchasedReagents> *
+       ) ;
+       rdf:type [ <https://example.org/Dissociation-protocolDissociationProtocol> ] ?
+    )
+}
+
+<https://example.org/Donor-organismDonorOrganism> CLOSED {
+    (  $<https://example.org/Donor-organismDonorOrganism_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Donor-organismDonorOrganismSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <biomaterial_core> @<https://example.org/Biomaterial-coreBiomaterialCore> ;
+          <human_specific> @<https://example.org/Human-specificHumanSpecific> ? ;
+          <mouse_specific> @<https://example.org/Mouse-specificMouseSpecific> ? ;
+          <genus_species> @<https://example.org/Species-ontologySpeciesOntology> * ;
+          <sex> @<https://example.org/Donor-organismDonorOrganismSexOptions> ;
+          <is_living> @<https://example.org/Donor-organismDonorOrganismIsLivingOptions> ;
+          <organism_age> @linkml:String ? ;
+          <organism_age_unit> @<https://example.org/Time-unit-ontologyTimeUnitOntology> ? ;
+          <development_stage> @<https://example.org/Development-stage-ontologyDevelopmentStageOntology> ;
+          <diseases> @<https://example.org/Disease-ontologyDiseaseOntology> * ;
+          <death> @<https://example.org/DeathDeath> ? ;
+          <familial_relationships> @<https://example.org/Familial-relationshipFamilialRelationship> * ;
+          <medical_history> @<https://example.org/Medical-historyMedicalHistory> ? ;
+          <gestational_age> @linkml:String ? ;
+          <gestational_age_unit> @<https://example.org/Time-unit-ontologyTimeUnitOntology> ? ;
+          <height> @linkml:String ? ;
+          <height_unit> @<https://example.org/Length-unit-ontologyLengthUnitOntology> ? ;
+          <weight> @linkml:String ? ;
+          <weight_unit> @<https://example.org/Mass-unit-ontologyMassUnitOntology> ? ;
+          <timecourse> @<https://example.org/TimecourseTimecourse> ?
+       ) ;
+       rdf:type [ <https://example.org/Donor-organismDonorOrganism> ] ?
+    )
+}
+
+<https://example.org/Enrichment-ontologyEnrichmentOntology> CLOSED {
+    (  $<https://example.org/Enrichment-ontologyEnrichmentOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Enrichment-ontologyEnrichmentOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Enrichment-ontologyEnrichmentOntology> ] ?
+    )
+}
+
+<https://example.org/Enrichment-protocolEnrichmentProtocol> CLOSED {
+    (  $<https://example.org/Enrichment-protocolEnrichmentProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Enrichment-protocolEnrichmentProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <method> @<https://example.org/Process-type-ontologyProcessTypeOntology> ;
+          <markers> @linkml:String ? ;
+          <minimum_size> @linkml:Float ? ;
+          <maximum_size> @linkml:Float ?
+       ) ;
+       rdf:type [ <https://example.org/Enrichment-protocolEnrichmentProtocol> ] ?
+    )
+}
+
+<https://example.org/LinksEntity> CLOSED {
+    (  $<https://example.org/LinksEntity_tes> (  <entity_id> @linkml:String ;
+          <entity_type> @<https://example.org/LinksEntityEntityTypeOptions>
+       ) ;
+       rdf:type [ <https://example.org/LinksEntity> ] ?
+    )
+}
+
+<https://example.org/Ethnicity-ontologyEthnicityOntology> CLOSED {
+    (  $<https://example.org/Ethnicity-ontologyEthnicityOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Ethnicity-ontologyEthnicityOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Ethnicity-ontologyEthnicityOntology> ] ?
+    )
+}
+
+<https://example.org/Familial-relationshipFamilialRelationship> CLOSED {
+    (  $<https://example.org/Familial-relationshipFamilialRelationship_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <parent> @linkml:String ? ;
+          <child> @linkml:String ? ;
+          <sibling> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Familial-relationshipFamilialRelationship> ] ?
+    )
+}
+
+<https://example.org/File-content-ontologyFileContentOntology> CLOSED {
+    (  $<https://example.org/File-content-ontologyFileContentOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/File-content-ontologyFileContentOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/File-content-ontologyFileContentOntology> ] ?
+    )
+}
+
+<https://example.org/File-coreFileCore> CLOSED {
+    (  $<https://example.org/File-coreFileCore_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <file_name> @linkml:String ;
+          <format> @linkml:String ;
+          <content_description> @<https://example.org/File-content-ontologyFileContentOntology> * ;
+          <checksum> @linkml:String ? ;
+          <file_source> @<https://example.org/File-coreFileCoreFileSourceOptions> ?
+       ) ;
+       rdf:type [ <https://example.org/File-coreFileCore> ] ?
+    )
+}
+
+<https://example.org/File-descriptorFileDescriptor> CLOSED {
+    (  $<https://example.org/File-descriptorFileDescriptor_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/File-descriptorFileDescriptorSchemaTypeOptions> ;
+          <file_name> @linkml:String ;
+          <file_id> @linkml:String ;
+          <file_version> @linkml:String ;
+          <content_type> @linkml:String ;
+          <size> @linkml:Integer ;
+          <sha256> @linkml:String ;
+          <crc32c> @linkml:String ;
+          <sha1> @linkml:String ? ;
+          <s3_etag> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/File-descriptorFileDescriptor> ] ?
+    )
+}
+
+<https://example.org/File-format-ontologyFileFormatOntology> CLOSED {
+    (  $<https://example.org/File-format-ontologyFileFormatOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/File-format-ontologyFileFormatOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/File-format-ontologyFileFormatOntology> ] ?
+    )
+}
+
+<https://example.org/FunderFunder> CLOSED {
+    (  $<https://example.org/FunderFunder_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <grant_title> @linkml:String ? ;
+          <grant_id> @linkml:String ;
+          <organization> @linkml:String
+       ) ;
+       rdf:type [ <https://example.org/FunderFunder> ] ?
+    )
+}
+
+<https://example.org/Growth-conditionsGrowthConditions> CLOSED {
+    (  $<https://example.org/Growth-conditionsGrowthConditions_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <passage_number> @linkml:Integer ? ;
+          <growth_medium> @linkml:String ? ;
+          <culture_environment> @linkml:String ? ;
+          <mycoplasma_testing_method> @<https://example.org/Growth-conditionsGrowthConditionsMycoplasmaTestingMethodOptions> ? ;
+          <mycoplasma_testing_results> @<https://example.org/Growth-conditionsGrowthConditionsMycoplasmaTestingResultsOptions> ? ;
+          <drug_treatment> @linkml:String ? ;
+          <feeder_layer_type> @<https://example.org/Growth-conditionsGrowthConditionsFeederLayerTypeOptions> ?
+       ) ;
+       rdf:type [ <https://example.org/Growth-conditionsGrowthConditions> ] ?
+    )
+}
+
+<https://example.org/Human-specificHumanSpecific> CLOSED {
+    (  $<https://example.org/Human-specificHumanSpecific_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <body_mass_index> @linkml:Float ? ;
+          <ethnicity> @<https://example.org/Ethnicity-ontologyEthnicityOntology> *
+       ) ;
+       rdf:type [ <https://example.org/Human-specificHumanSpecific> ] ?
+    )
+}
+
+<https://example.org/Imaged-specimenImagedSpecimen> CLOSED {
+    (  $<https://example.org/Imaged-specimenImagedSpecimen_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Imaged-specimenImagedSpecimenSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <biomaterial_core> @<https://example.org/Biomaterial-coreBiomaterialCore> ;
+          <overview_images> @linkml:String * ;
+          <slice_thickness> @linkml:Float ;
+          <internal_anatomical_structures> @<https://example.org/Organ-part-ontologyOrganPartOntology> *
+       ) ;
+       rdf:type [ <https://example.org/Imaged-specimenImagedSpecimen> ] ?
+    )
+}
+
+<https://example.org/Image-fileImageFile> CLOSED {
+    (  $<https://example.org/Image-fileImageFile_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Image-fileImageFileSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <file_core> @<https://example.org/File-coreFileCore>
+       ) ;
+       rdf:type [ <https://example.org/Image-fileImageFile> ] ?
+    )
+}
+
+<https://example.org/Imaging-preparation-protocolImagingPreparationProtocol> CLOSED {
+    (  $<https://example.org/Imaging-preparation-protocolImagingPreparationProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Imaging-preparation-protocolImagingPreparationProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <fresh_slicing_method> @linkml:String ? ;
+          <imaged_slice_thickness> @linkml:Float ? ;
+          <final_slicing_method> @linkml:String ? ;
+          <post_resection_interval> @linkml:Float ? ;
+          <post_resection_interval_unit> @<https://example.org/Time-unit-ontologyTimeUnitOntology> ? ;
+          <pre_final_slice_preservation_method> @<https://example.org/Preservation-and-storagePreservationStorage> ? ;
+          <post_final_slicing_interval> @linkml:Float ? ;
+          <post_final_slicing_interval_unit> @<https://example.org/Time-unit-ontologyTimeUnitOntology> ? ;
+          <fiducial_marker> @linkml:String ? ;
+          <expansion_factor> @linkml:Float ? ;
+          <permeabilisation_time> @linkml:Float ? ;
+          <permeabilisation_time_unit> @<https://example.org/Time-unit-ontologyTimeUnitOntology> ?
+       ) ;
+       rdf:type [ <https://example.org/Imaging-preparation-protocolImagingPreparationProtocol> ] ?
+    )
+}
+
+<https://example.org/Imaging-ProtocolImagingProtocol> CLOSED {
+    (  $<https://example.org/Imaging-ProtocolImagingProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Imaging-ProtocolImagingProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <microscope_setup_description> @linkml:String ? ;
+          <microscopy_technique> @<https://example.org/Microscopy-ontologyMicroscopyOntology> ;
+          <magnification> @linkml:String ;
+          <numerical_aperture> @linkml:Float ? ;
+          <immersion_medium_type> @linkml:String ? ;
+          <immersion_medium_refractive_index> @linkml:Float ? ;
+          <pixel_size> @linkml:Float ? ;
+          <number_of_tiles> @linkml:Integer ? ;
+          <tile_size_y> @linkml:Float ? ;
+          <tile_size_x> @linkml:Float ? ;
+          <z_stack_step_size> @linkml:Float ? ;
+          <number_of_z_steps> @linkml:Integer ? ;
+          <overlapping_tiles> @<https://example.org/Imaging-ProtocolImagingProtocolOverlappingTilesOptions> ? ;
+          <channel> @<https://example.org/ChannelChannel> * ;
+          <probe> @<https://example.org/ProbeProbe> *
+       ) ;
+       rdf:type [ <https://example.org/Imaging-ProtocolImagingProtocol> ] ?
+    )
+}
+
+<https://example.org/LinksInput> CLOSED {
+    (  $<https://example.org/LinksInput_tes> (  <input_type> @linkml:String ;
+          <input_id> @linkml:String
+       ) ;
+       rdf:type [ <https://example.org/LinksInput> ] ?
+    )
+}
+
+<https://example.org/INSDC-experimentInsdcExperiment> CLOSED {
+    (  $<https://example.org/INSDC-experimentInsdcExperiment_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <insdc_experiment_accession> @linkml:String
+       ) ;
+       rdf:type [ <https://example.org/INSDC-experimentInsdcExperiment> ] ?
+    )
+}
+
+<https://example.org/Instrument-ontologyInstrumentOntology> CLOSED {
+    (  $<https://example.org/Instrument-ontologyInstrumentOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Instrument-ontologyInstrumentOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Instrument-ontologyInstrumentOntology> ] ?
+    )
+}
+
+<https://example.org/iPSC-induction-protocolIpscInductionProtocol> CLOSED {
+    (  $<https://example.org/iPSC-induction-protocolIpscInductionProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/iPSC-induction-protocolIpscInductionProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <method> @<https://example.org/iPSC-induction-protocolIpscInductionProtocolMethodOptions> ;
+          <reprogramming_factors> @linkml:String ? ;
+          <ipsc_induction_kit> @<https://example.org/Purchased-reagentsPurchasedReagents> ? ;
+          <pluripotency_test> @linkml:String ? ;
+          <percent_pluripotency> @linkml:Float ? ;
+          <pluripotency_vector_removed>
+          @<https://example.org/iPSC-induction-protocolIpscInductionProtocolPluripotencyVectorRemovedOptions> ? ;
+          <reagents> @<https://example.org/Purchased-reagentsPurchasedReagents> *
+       ) ;
+       rdf:type [ <https://example.org/iPSC-induction-protocolIpscInductionProtocol> ] ?
+    )
+}
+
+<https://example.org/Length-unit-ontologyLengthUnitOntology> CLOSED {
+    (  $<https://example.org/Length-unit-ontologyLengthUnitOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Length-unit-ontologyLengthUnitOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Length-unit-ontologyLengthUnitOntology> ] ?
+    )
+}
+
+<https://example.org/Library-amplification-ontologyLibraryAmplificationOntology> CLOSED {
+    (  $<https://example.org/Library-amplification-ontologyLibraryAmplificationOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Library-amplification-ontologyLibraryAmplificationOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Library-amplification-ontologyLibraryAmplificationOntology> ] ?
+    )
+}
+
+<https://example.org/Library-construction-ontologyLibraryConstructionOntology> CLOSED {
+    (  $<https://example.org/Library-construction-ontologyLibraryConstructionOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Library-construction-ontologyLibraryConstructionOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Library-construction-ontologyLibraryConstructionOntology> ] ?
+    )
+}
+
+<https://example.org/Library-preparation-protocolLibraryPreparationProtocol> CLOSED {
+    (  $<https://example.org/Library-preparation-protocolLibraryPreparationProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Library-preparation-protocolLibraryPreparationProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <cell_barcode> @<https://example.org/BarcodeBarcode> ? ;
+          <spatial_barcode> @<https://example.org/BarcodeBarcode> ? ;
+          <input_nucleic_acid_molecule> @<https://example.org/Biological-macromolecule-ontologyBiologicalMacromoleculeOntology> ;
+          <nucleic_acid_source>
+          @<https://example.org/Library-preparation-protocolLibraryPreparationProtocolNucleicAcidSourceOptions> ;
+          <library_construction_method> @<https://example.org/Library-construction-ontologyLibraryConstructionOntology> ;
+          <library_construction_kit> @<https://example.org/Purchased-reagentsPurchasedReagents> ? ;
+          <nucleic_acid_conversion_kit> @<https://example.org/Purchased-reagentsPurchasedReagents> ? ;
+          <end_bias> @<https://example.org/Library-preparation-protocolLibraryPreparationProtocolEndBiasOptions> ;
+          <primer> @<https://example.org/Library-preparation-protocolLibraryPreparationProtocolPrimerOptions> ? ;
+          <strand> @<https://example.org/Library-preparation-protocolLibraryPreparationProtocolStrandOptions> ;
+          <spike_in_kit> @<https://example.org/Purchased-reagentsPurchasedReagents> ? ;
+          <spike_in_dilution> @linkml:Integer ? ;
+          <umi_barcode> @<https://example.org/BarcodeBarcode> ? ;
+          <library_preamplification_method> @<https://example.org/Library-amplification-ontologyLibraryAmplificationOntology> ? ;
+          <cdna_library_amplification_method> @<https://example.org/Library-amplification-ontologyLibraryAmplificationOntology> ? ;
+          <nominal_length> @linkml:Integer ? ;
+          <nominal_sdev> @linkml:Integer ?
+       ) ;
+       rdf:type [ <https://example.org/Library-preparation-protocolLibraryPreparationProtocol> ] ?
+    )
+}
+
+<https://example.org/LicenseLicense> CLOSED {
+    (  $<https://example.org/LicenseLicense_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <identifier> @linkml:String ? ;
+          <full_name> @linkml:String ? ;
+          <url> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/LicenseLicense> ] ?
+    )
+}
+
+<https://example.org/LinksLinks> CLOSED {
+    (  $<https://example.org/LinksLinks_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/LinksLinksSchemaTypeOptions> ;
+          <links> @linkml:String +
+       ) ;
+       rdf:type [ <https://example.org/LinksLinks> ] ?
+    )
+}
+
+<https://example.org/Mass-unit-ontologyMassUnitOntology> CLOSED {
+    (  $<https://example.org/Mass-unit-ontologyMassUnitOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Mass-unit-ontologyMassUnitOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Mass-unit-ontologyMassUnitOntology> ] ?
+    )
+}
+
+<https://example.org/MatrixMatrix> CLOSED {
+    (  $<https://example.org/MatrixMatrix_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <data_normalization_methods> @<https://example.org/MatrixDataNormalizationMethodsOptions> * ;
+          <derivation_process> @<https://example.org/MatrixDerivationProcessOptions> *
+       ) ;
+       rdf:type [ <https://example.org/MatrixMatrix> ] ?
+    )
+}
+
+<https://example.org/Medical-historyMedicalHistory> CLOSED {
+    (  $<https://example.org/Medical-historyMedicalHistory_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <alcohol_history> @linkml:String ? ;
+          <medication> @linkml:String ? ;
+          <smoking_history> @linkml:String ? ;
+          <nutritional_state> @<https://example.org/Medical-historyMedicalHistoryNutritionalStateOptions> ? ;
+          <test_results> @linkml:String ? ;
+          <treatment> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Medical-historyMedicalHistory> ] ?
+    )
+}
+
+<https://example.org/Microscopy-ontologyMicroscopyOntology> CLOSED {
+    (  $<https://example.org/Microscopy-ontologyMicroscopyOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Microscopy-ontologyMicroscopyOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Microscopy-ontologyMicroscopyOntology> ] ?
+    )
+}
+
+<https://example.org/Mouse-specificMouseSpecific> CLOSED {
+    (  $<https://example.org/Mouse-specificMouseSpecific_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <strain> @<https://example.org/Strain-ontologyStrainOntology> *
+       ) ;
+       rdf:type [ <https://example.org/Mouse-specificMouseSpecific> ] ?
+    )
+}
+
+<https://example.org/OrganoidOrganoid> CLOSED {
+    (  $<https://example.org/OrganoidOrganoid_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/OrganoidOrganoidSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <biomaterial_core> @<https://example.org/Biomaterial-coreBiomaterialCore> ;
+          <genus_species> @<https://example.org/Species-ontologySpeciesOntology> * ;
+          <model_organ> @<https://example.org/Organ-ontologyOrganOntology> ;
+          <model_organ_part> @<https://example.org/Organ-part-ontologyOrganPartOntology> ? ;
+          <age> @linkml:Float ? ;
+          <age_unit> @<https://example.org/Time-unit-ontologyTimeUnitOntology> ? ;
+          <size> @linkml:Float ? ;
+          <size_unit> @<https://example.org/Length-unit-ontologyLengthUnitOntology> ? ;
+          <morphology> @linkml:String ? ;
+          <embedded_in_matrigel> @linkml:Boolean ? ;
+          <growth_environment> @linkml:String ? ;
+          <input_aggregate_cell_count> @linkml:Float ? ;
+          <stored_oxygen_levels> @linkml:Float ?
+       ) ;
+       rdf:type [ <https://example.org/OrganoidOrganoid> ] ?
+    )
+}
+
+<https://example.org/Organ-ontologyOrganOntology> CLOSED {
+    (  $<https://example.org/Organ-ontologyOrganOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Organ-ontologyOrganOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Organ-ontologyOrganOntology> ] ?
+    )
+}
+
+<https://example.org/Organ-part-ontologyOrganPartOntology> CLOSED {
+    (  $<https://example.org/Organ-part-ontologyOrganPartOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Organ-part-ontologyOrganPartOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Organ-part-ontologyOrganPartOntology> ] ?
+    )
+}
+
+<https://example.org/LinksOutput> CLOSED {
+    (  $<https://example.org/LinksOutput_tes> (  <output_type> @linkml:String ;
+          <output_id> @linkml:String
+       ) ;
+       rdf:type [ <https://example.org/LinksOutput> ] ?
+    )
+}
+
+<https://example.org/Analysis-processParameter> CLOSED {
+    (  $<https://example.org/Analysis-processParameter_tes> (  <checksum> @linkml:String ? ;
+          <parameter_name> @linkml:String ;
+          <parameter_value> @linkml:String
+       ) ;
+       rdf:type [ <https://example.org/Analysis-processParameter> ] ?
+    )
+}
+
+<https://example.org/Plate-based-sequencingPlateBasedSequencing> CLOSED {
+    (  $<https://example.org/Plate-based-sequencingPlateBasedSequencing_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <plate_label> @linkml:String ;
+          <well_label> @linkml:String ? ;
+          <well_quality> @<https://example.org/Plate-based-sequencingPlateBasedSequencingWellQualityOptions> ?
+       ) ;
+       rdf:type [ <https://example.org/Plate-based-sequencingPlateBasedSequencing> ] ?
+    )
+}
+
+<https://example.org/Preservation-and-storagePreservationStorage> CLOSED {
+    (  $<https://example.org/Preservation-and-storagePreservationStorage_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <storage_method> @<https://example.org/Preservation-and-storagePreservationStorageStorageMethodOptions> ? ;
+          <storage_time> @linkml:Float ? ;
+          <storage_time_unit> @<https://example.org/Time-unit-ontologyTimeUnitOntology> ? ;
+          <preservation_method> @<https://example.org/Preservation-and-storagePreservationStoragePreservationMethodOptions> ?
+       ) ;
+       rdf:type [ <https://example.org/Preservation-and-storagePreservationStorage> ] ?
+    )
+}
+
+<https://example.org/ProbeProbe> CLOSED {
+    (  $<https://example.org/ProbeProbe_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <probe_label> @linkml:String ;
+          <probe_sequence> @linkml:String ? ;
+          <target_name> @linkml:String ? ;
+          <target_codebook_label> @linkml:String ? ;
+          <target_label> @linkml:String ;
+          <subcellular_structure> @<https://example.org/Cellular-component-ontologyCellularComponentOntology> ? ;
+          <probe_reagents> @<https://example.org/Purchased-reagentsPurchasedReagents> ? ;
+          <assay_type> @<https://example.org/Process-type-ontologyProcessTypeOntology> ;
+          <fluorophore> @linkml:String * ;
+          <channel_label> @linkml:String *
+       ) ;
+       rdf:type [ <https://example.org/ProbeProbe> ] ?
+    )
+}
+
+<https://example.org/ProcessProcess> CLOSED {
+    (  $<https://example.org/ProcessProcess_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/ProcessProcessSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <process_core> @<https://example.org/Process-coreProcessCore> ;
+          <start_time> @linkml:String ? ;
+          <end_time> @linkml:String ? ;
+          <length_of_time> @linkml:String ? ;
+          <length_of_time_unit> @<https://example.org/Time-unit-ontologyTimeUnitOntology> ? ;
+          <type> @<https://example.org/Process-type-ontologyProcessTypeOntology> ? ;
+          <deviation_from_protocol> @linkml:String ? ;
+          <insdc_experiment> @<https://example.org/INSDC-experimentInsdcExperiment> ?
+       ) ;
+       rdf:type [ <https://example.org/ProcessProcess> ] ?
+    )
+}
+
+<https://example.org/Process-coreProcessCore> CLOSED {
+    (  $<https://example.org/Process-coreProcessCore_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <process_id> @linkml:String ;
+          <process_name> @linkml:String ? ;
+          <process_description> @linkml:String ? ;
+          <location> @linkml:String ? ;
+          <operators> @linkml:String *
+       ) ;
+       rdf:type [ <https://example.org/Process-coreProcessCore> ] ?
+    )
+}
+
+<https://example.org/LinksProcessLink> CLOSED {
+    (  $<https://example.org/LinksProcessLink_tes> (  <process_type> @linkml:String ;
+          <process_id> @linkml:String ;
+          <inputs> @<https://example.org/LinksInput> + ;
+          <outputs> @<https://example.org/LinksOutput> + ;
+          <protocols> @<https://example.org/LinksProtocolReference> + ;
+          <link_type> @<https://example.org/LinksProcessLinkLinkTypeOptions>
+       ) ;
+       rdf:type [ <https://example.org/LinksProcessLink> ] ?
+    )
+}
+
+<https://example.org/Process-type-ontologyProcessTypeOntology> CLOSED {
+    (  $<https://example.org/Process-type-ontologyProcessTypeOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Process-type-ontologyProcessTypeOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Process-type-ontologyProcessTypeOntology> ] ?
+    )
+}
+
+<https://example.org/ProjectProject> CLOSED {
+    (  $<https://example.org/ProjectProject_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/ProjectProjectSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <project_core> @<https://example.org/Project-coreProjectCore> ;
+          <contributors> @<https://example.org/ContactContact> * ;
+          <supplementary_links> @linkml:String * ;
+          <publications> @<https://example.org/PublicationPublication> * ;
+          <insdc_project_accessions> @linkml:String * ;
+          <ega_accessions> @linkml:String * ;
+          <dbgap_accessions> @linkml:String * ;
+          <geo_series_accessions> @linkml:String * ;
+          <array_express_accessions> @linkml:String * ;
+          <insdc_study_accessions> @linkml:String * ;
+          <biostudies_accessions> @linkml:String * ;
+          <funders> @<https://example.org/FunderFunder> + ;
+          <estimated_cell_count> @linkml:Integer ?
+       ) ;
+       rdf:type [ <https://example.org/ProjectProject> ] ?
+    )
+}
+
+<https://example.org/Project-coreProjectCore> CLOSED {
+    (  $<https://example.org/Project-coreProjectCore_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <project_short_name> @linkml:String ;
+          <project_title> @linkml:String ;
+          <project_description> @linkml:String
+       ) ;
+       rdf:type [ <https://example.org/Project-coreProjectCore> ] ?
+    )
+}
+
+<https://example.org/ProtocolProtocol> CLOSED {
+    (  $<https://example.org/ProtocolProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/ProtocolProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <type> @<https://example.org/Process-type-ontologyProcessTypeOntology> ?
+       ) ;
+       rdf:type [ <https://example.org/ProtocolProtocol> ] ?
+    )
+}
+
+<https://example.org/Protocol-coreProtocolCore> CLOSED {
+    (  $<https://example.org/Protocol-coreProtocolCore_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <protocol_id> @linkml:String ;
+          <protocol_name> @linkml:String ? ;
+          <protocol_description> @linkml:String ? ;
+          <publication_doi> @linkml:String ? ;
+          <protocols_io_doi> @linkml:String ? ;
+          <document> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Protocol-coreProtocolCore> ] ?
+    )
+}
+
+<https://example.org/LinksProtocolReference> CLOSED {
+    (  $<https://example.org/LinksProtocolReference_tes> (  <protocol_type>
+          @<https://example.org/LinksProtocolReferenceProtocolTypeOptions> ;
+          <protocol_id> @linkml:String
+       ) ;
+       rdf:type [ <https://example.org/LinksProtocolReference> ] ?
+    )
+}
+
+<https://example.org/Protocol-type-ontologyProtocolTypeOntology> CLOSED {
+    (  $<https://example.org/Protocol-type-ontologyProtocolTypeOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Protocol-type-ontologyProtocolTypeOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Protocol-type-ontologyProtocolTypeOntology> ] ?
+    )
+}
+
+<https://example.org/ProvenanceProvenance> CLOSED {
+    (  $<https://example.org/ProvenanceProvenance_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <schema_major_version> @linkml:Integer ? ;
+          <schema_minor_version> @linkml:Integer ? ;
+          <submission_date> @linkml:String ;
+          <submitter_id> @linkml:String ? ;
+          <update_date> @linkml:String ? ;
+          <updater_id> @linkml:String ? ;
+          <document_id> @linkml:String ;
+          <accession> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/ProvenanceProvenance> ] ?
+    )
+}
+
+<https://example.org/PublicationPublication> CLOSED {
+    (  $<https://example.org/PublicationPublication_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <authors> @linkml:String + ;
+          <title> @linkml:String ;
+          <doi> @linkml:String ? ;
+          <pmid> @linkml:Integer ? ;
+          <url> @linkml:String ? ;
+          <official_hca_publication> @linkml:Boolean
+       ) ;
+       rdf:type [ <https://example.org/PublicationPublication> ] ?
+    )
+}
+
+<https://example.org/Purchased-reagentsPurchasedReagents> CLOSED {
+    (  $<https://example.org/Purchased-reagentsPurchasedReagents_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <retail_name> @linkml:String ? ;
+          <catalog_number> @linkml:String ? ;
+          <manufacturer> @linkml:String ? ;
+          <lot_number> @linkml:String ? ;
+          <expiry_date> @linkml:String ? ;
+          <kit_titer> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Purchased-reagentsPurchasedReagents> ] ?
+    )
+}
+
+<https://example.org/Reference-fileReferenceFile> CLOSED {
+    (  $<https://example.org/Reference-fileReferenceFile_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Reference-fileReferenceFileSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <file_core> @<https://example.org/File-coreFileCore> ;
+          <ncbi_taxon_id> @linkml:Integer ;
+          <genus_species> @<https://example.org/Species-ontologySpeciesOntology> ;
+          <reference_type> @<https://example.org/Reference-fileReferenceFileReferenceTypeOptions> ;
+          <assembly_type> @<https://example.org/Reference-fileReferenceFileAssemblyTypeOptions> ;
+          <reference_version> @linkml:String
+       ) ;
+       rdf:type [ <https://example.org/Reference-fileReferenceFile> ] ?
+    )
+}
+
+<https://example.org/S10xS10x> CLOSED {
+    (  $<https://example.org/S10xS10x_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <fastq_method> @linkml:String ? ;
+          <fastq_method_version> @linkml:String ? ;
+          <pooled_channels> @linkml:Float ? ;
+          <drop_uniformity> @linkml:Boolean ?
+       ) ;
+       rdf:type [ <https://example.org/S10xS10x> ] ?
+    )
+}
+
+<https://example.org/Sequence-fileSequenceFile> CLOSED {
+    (  $<https://example.org/Sequence-fileSequenceFile_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Sequence-fileSequenceFileSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <file_core> @<https://example.org/File-coreFileCore> ;
+          <read_index> @<https://example.org/Sequence-fileSequenceFileReadIndexOptions> ;
+          <lane_index> @linkml:Integer ? ;
+          <read_length> @linkml:Integer ? ;
+          <insdc_run_accessions> @linkml:String * ;
+          <library_prep_id> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Sequence-fileSequenceFile> ] ?
+    )
+}
+
+<https://example.org/Sequencing-ontologySequencingOntology> CLOSED {
+    (  $<https://example.org/Sequencing-ontologySequencingOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Sequencing-ontologySequencingOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Sequencing-ontologySequencingOntology> ] ?
+    )
+}
+
+<https://example.org/Sequencing-protocolSequencingProtocol> CLOSED {
+    (  $<https://example.org/Sequencing-protocolSequencingProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Sequencing-protocolSequencingProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <instrument_manufacturer_model> @<https://example.org/Instrument-ontologyInstrumentOntology> ;
+          <local_machine_name> @linkml:String ? ;
+          <paired_end> @linkml:Boolean ;
+          <method> @<https://example.org/Sequencing-ontologySequencingOntology> ;
+          <s10x> @<https://example.org/S10xS10x> ?
+       ) ;
+       rdf:type [ <https://example.org/Sequencing-protocolSequencingProtocol> ] ?
+    )
+}
+
+<https://example.org/Species-ontologySpeciesOntology> CLOSED {
+    (  $<https://example.org/Species-ontologySpeciesOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Species-ontologySpeciesOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Species-ontologySpeciesOntology> ] ?
+    )
+}
+
+<https://example.org/Specimen-from-organismSpecimenFromOrganism> CLOSED {
+    (  $<https://example.org/Specimen-from-organismSpecimenFromOrganism_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Specimen-from-organismSpecimenFromOrganismSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <biomaterial_core> @<https://example.org/Biomaterial-coreBiomaterialCore> ;
+          <genus_species> @<https://example.org/Species-ontologySpeciesOntology> * ;
+          <organ> @<https://example.org/Organ-ontologyOrganOntology> ;
+          <organ_parts> @<https://example.org/Organ-part-ontologyOrganPartOntology> * ;
+          <diseases> @<https://example.org/Disease-ontologyDiseaseOntology> * ;
+          <state_of_specimen> @<https://example.org/State-of-specimenStateOfSpecimen> ? ;
+          <preservation_storage> @<https://example.org/Preservation-and-storagePreservationStorage> ? ;
+          <collection_time> @linkml:String ? ;
+          <purchased_specimen> @<https://example.org/Purchased-reagentsPurchasedReagents> ?
+       ) ;
+       rdf:type [ <https://example.org/Specimen-from-organismSpecimenFromOrganism> ] ?
+    )
+}
+
+<https://example.org/State-of-specimenStateOfSpecimen> CLOSED {
+    (  $<https://example.org/State-of-specimenStateOfSpecimen_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <autolysis_score> @<https://example.org/State-of-specimenStateOfSpecimenAutolysisScoreOptions> ? ;
+          <gross_description> @linkml:String ? ;
+          <gross_images> @linkml:String * ;
+          <ischemic_temperature> @<https://example.org/State-of-specimenStateOfSpecimenIschemicTemperatureOptions> ? ;
+          <ischemic_time> @linkml:Integer ? ;
+          <microscopic_description> @linkml:String ? ;
+          <microscopic_images> @linkml:String * ;
+          <postmortem_interval> @linkml:Integer ?
+       ) ;
+       rdf:type [ <https://example.org/State-of-specimenStateOfSpecimen> ] ?
+    )
+}
+
+<https://example.org/Strain-ontologyStrainOntology> CLOSED {
+    (  $<https://example.org/Strain-ontologyStrainOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Strain-ontologyStrainOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Strain-ontologyStrainOntology> ] ?
+    )
+}
+
+<https://example.org/Supplementary-fileSupplementaryFile> CLOSED {
+    (  $<https://example.org/Supplementary-fileSupplementaryFile_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Supplementary-fileSupplementaryFileSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <file_core> @<https://example.org/File-coreFileCore> ;
+          <file_description> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Supplementary-fileSupplementaryFile> ] ?
+    )
+}
+
+<https://example.org/LinksSupplementaryFileEntity> CLOSED {
+    (  $<https://example.org/LinksSupplementaryFileEntity_tes> (  <file_id> @linkml:String ;
+          <file_type> @<https://example.org/LinksSupplementaryFileEntityFileTypeOptions>
+       ) ;
+       rdf:type [ <https://example.org/LinksSupplementaryFileEntity> ] ?
+    )
+}
+
+<https://example.org/LinksSupplementaryFileLink> CLOSED {
+    (  $<https://example.org/LinksSupplementaryFileLink_tes> (  <entity> @<https://example.org/LinksEntity> ;
+          <files> @<https://example.org/Supplementary-fileSupplementaryFile> + ;
+          <link_type> @<https://example.org/LinksSupplementaryFileLinkLinkTypeOptions>
+       ) ;
+       rdf:type [ <https://example.org/LinksSupplementaryFileLink> ] ?
+    )
+}
+
+<https://example.org/Target-pathway-ontologyTargetPathwayOntology> CLOSED {
+    (  $<https://example.org/Target-pathway-ontologyTargetPathwayOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Target-pathway-ontologyTargetPathwayOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Target-pathway-ontologyTargetPathwayOntology> ] ?
+    )
+}
+
+<https://example.org/Analysis-processTask> CLOSED {
+    (  $<https://example.org/Analysis-processTask_tes> (  <disk_size> @linkml:String ;
+          <task_name> @linkml:String ;
+          <zone> @linkml:String ;
+          <log_err> @linkml:String ? ;
+          <start_time> @linkml:String ;
+          <cpus> @linkml:Integer ;
+          <log_out> @linkml:String ? ;
+          <stop_time> @linkml:String ;
+          <memory> @linkml:String ;
+          <docker_image> @linkml:String
+       ) ;
+       rdf:type [ <https://example.org/Analysis-processTask> ] ?
+    )
+}
+
+<https://example.org/TimecourseTimecourse> CLOSED {
+    (  $<https://example.org/TimecourseTimecourse_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <value> @linkml:String ;
+          <unit> @<https://example.org/Time-unit-ontologyTimeUnitOntology> ;
+          <relevance> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/TimecourseTimecourse> ] ?
+    )
+}
+
+<https://example.org/Time-unit-ontologyTimeUnitOntology> CLOSED {
+    (  $<https://example.org/Time-unit-ontologyTimeUnitOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Time-unit-ontologyTimeUnitOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Time-unit-ontologyTimeUnitOntology> ] ?
+    )
+}
+
+<https://example.org/Treatment-method-ontologyTreatmentMethodOntology> CLOSED {
+    (  $<https://example.org/Treatment-method-ontologyTreatmentMethodOntology_tes> (  <describedBy> @linkml:String ? ;
+          <schema_version> @linkml:String ? ;
+          <text> @linkml:String ;
+          <ontology> @<https://example.org/Treatment-method-ontologyTreatmentMethodOntologyOntologyOptions> ? ;
+          <ontology_label> @linkml:String ?
+       ) ;
+       rdf:type [ <https://example.org/Treatment-method-ontologyTreatmentMethodOntology> ] ?
+    )
+}
+
+<https://example.org/Treatment-protocolTreatmentProtocol> CLOSED {
+    (  $<https://example.org/Treatment-protocolTreatmentProtocol_tes> (  <describedBy> @linkml:String ;
+          <schema_version> @linkml:String ? ;
+          <schema_type> @<https://example.org/Treatment-protocolTreatmentProtocolSchemaTypeOptions> ;
+          <provenance> @<https://example.org/ProvenanceProvenance> ? ;
+          <protocol_core> @<https://example.org/Protocol-coreProtocolCore> ;
+          <method> @<https://example.org/Treatment-method-ontologyTreatmentMethodOntology> + ;
+          <media> @linkml:String ? ;
+          <reagents> @<https://example.org/Purchased-reagentsPurchasedReagents> * ;
+          <target_pathway> @<https://example.org/Target-pathway-ontologyTargetPathwayOntology> *
+       ) ;
+       rdf:type [ <https://example.org/Treatment-protocolTreatmentProtocol> ] ?
+    )
+}
+
+

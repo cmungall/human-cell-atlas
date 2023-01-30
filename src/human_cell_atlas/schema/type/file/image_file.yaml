@@ -1,0 +1,34 @@
+name: Image_file
+id: https://example.org/Image-file
+imports:
+- linkml:types
+- system/provenance
+- core/file/file_core
+prefixes:
+  Image_file: https://example.org/Image-file
+  linkml: https://w3id.org/linkml/
+default_prefix: Image_file
+enums:
+  ImageFile_schema_type_options:
+    permissible_values:
+      file: {}
+classes:
+  ImageFile:
+    attributes:
+      describedBy:
+        description: The URL reference to the schema.
+        required: true
+      schema_version:
+        description: The version number of the schema in major.minor.patch format.
+      schema_type:
+        description: The type of the metadata schema entity.
+        range: ImageFile_schema_type_options
+        required: true
+      provenance:
+        description: Provenance information provided by the system.
+        range: Provenance
+      file_core:
+        description: Core file-level information.
+        title: File core
+        range: FileCore
+        required: true
