@@ -21,11 +21,11 @@ jobs:
       uses: snok/install-poetry@v1.3
 
     - name: Install dependencies.
-      run: poetry install -E docs
+      run: poetry install --no-interaction
     
     - name: Build documentation.
       run: |
         mkdir -p docs
         touch docs/.nojekyll
-        poetry run gen-doc -d docs src/human_cell_atlas/schema/human_cell_atlas.yaml
+        make gendoc
         poetry run mkdocs gh-deploy
