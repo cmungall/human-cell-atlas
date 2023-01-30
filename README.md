@@ -119,37 +119,39 @@ These are included alongside as `<NAME>.expanded.yaml`
 
 File sizes:
 
-| Value Set | File Size |
-| --- | --- |
-| [enrichment_ontology](src/human_cell_atlas/schema/module/ontology/enrichment_ontology.expanded.yaml) | 4.0K|
-| [organ_ontology](src/human_cell_atlas/schema/module/ontology/organ_ontology.expanded.yaml) | 1.5M|
-| [cell_cycle_ontology](src/human_cell_atlas/schema/module/ontology/cell_cycle_ontology.expanded.yaml) | 8.0K|
-| [biological_macromolecule_ontology](src/human_cell_atlas/schema/module/ontology/biological_macromolecule_ontology.expanded.yaml) | 12K|
-| [sequencing_ontology](src/human_cell_atlas/schema/module/ontology/sequencing_ontology.expanded.yaml) | 60K|
-| [protocol_type_ontology](src/human_cell_atlas/schema/module/ontology/protocol_type_ontology.expanded.yaml) | 16K|
-| [species_ontology](src/human_cell_atlas/schema/module/ontology/species_ontology.expanded.yaml) | 224M|
-| [development_stage_ontology](src/human_cell_atlas/schema/module/ontology/development_stage_ontology.expanded.yaml) | 64K|
-| [target_pathway_ontology](src/human_cell_atlas/schema/module/ontology/target_pathway_ontology.expanded.yaml) | 108K|
-| [disease_ontology](src/human_cell_atlas/schema/module/ontology/disease_ontology.expanded.yaml) | 4.8M|
-| [strain_ontology](src/human_cell_atlas/schema/module/ontology/strain_ontology.expanded.yaml) | 16K|
-| [file_content_ontology](src/human_cell_atlas/schema/module/ontology/file_content_ontology.expanded.yaml) | 512K|
-| [library_construction_ontology](src/human_cell_atlas/schema/module/ontology/library_construction_ontology.expanded.yaml) | 12K|
-| [contributor_role_ontology](src/human_cell_atlas/schema/module/ontology/contributor_role_ontology.expanded.yaml) | 24K|
-| [mass_unit_ontology](src/human_cell_atlas/schema/module/ontology/mass_unit_ontology.expanded.yaml) | 8.0K|
-| [cell_type_ontology](src/human_cell_atlas/schema/module/ontology/cell_type_ontology.expanded.yaml) | 316K|
-| [library_amplification_ontology](src/human_cell_atlas/schema/module/ontology/library_amplification_ontology.expanded.yaml) | 4.0K|
-| [microscopy_ontology](src/human_cell_atlas/schema/module/ontology/microscopy_ontology.expanded.yaml) | 8.0K|
-| [ethnicity_ontology](src/human_cell_atlas/schema/module/ontology/ethnicity_ontology.expanded.yaml) | 36K|
-| [organ_part_ontology](src/human_cell_atlas/schema/module/ontology/organ_part_ontology.expanded.yaml) | 2.0M|
-| [treatment_method_ontology](src/human_cell_atlas/schema/module/ontology/treatment_method_ontology.expanded.yaml) | 296K|
-| [process_type_ontology](src/human_cell_atlas/schema/module/ontology/process_type_ontology.expanded.yaml) | 84K|
-| [time_unit_ontology](src/human_cell_atlas/schema/module/ontology/time_unit_ontology.expanded.yaml) | 4.0K|
-| [file_format_ontology](src/human_cell_atlas/schema/module/ontology/file_format_ontology.expanded.yaml) | 4.0K|
-| [instrument_ontology](src/human_cell_atlas/schema/module/ontology/instrument_ontology.expanded.yaml) | 12K|
-| [cellular_component_ontology](src/human_cell_atlas/schema/module/ontology/cellular_component_ontology.expanded.yaml) | 480K|
-| [length_unit_ontology](src/human_cell_atlas/schema/module/ontology/length_unit_ontology.expanded.yaml) | 8.0K|
+| Value Set| Expanded | File Size |
+| ---| --- | --- |
+| [enrichment_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [enrichment_ontology expanded](src/human_cell_atlas/schema/module/ontology/enrichment_ontology.expanded.yaml) | 4.0K|
+| [organ_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [organ_ontology expanded](src/human_cell_atlas/schema/module/ontology/organ_ontology.expanded.yaml) | 1.5M|
+| [cell_cycle_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [cell_cycle_ontology expanded](src/human_cell_atlas/schema/module/ontology/cell_cycle_ontology.expanded.yaml) | 8.0K|
+| [biological_macromolecule_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [biological_macromolecule_ontology expanded](src/human_cell_atlas/schema/module/ontology/biological_macromolecule_ontology.expanded.yaml) | 12K|
+| [sequencing_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [sequencing_ontology expanded](src/human_cell_atlas/schema/module/ontology/sequencing_ontology.expanded.yaml) | 60K|
+| [protocol_type_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [protocol_type_ontology expanded](src/human_cell_atlas/schema/module/ontology/protocol_type_ontology.expanded.yaml) | 16K|
+| [species_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [species_ontology expanded](src/human_cell_atlas/schema/module/ontology/species_ontology.expanded.yaml) | 215M|
+| [development_stage_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [development_stage_ontology expanded](src/human_cell_atlas/schema/module/ontology/development_stage_ontology.expanded.yaml) | 64K|
+| [target_pathway_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [target_pathway_ontology expanded](src/human_cell_atlas/schema/module/ontology/target_pathway_ontology.expanded.yaml) | 108K|
+| [disease_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [disease_ontology expanded](src/human_cell_atlas/schema/module/ontology/disease_ontology.expanded.yaml) | 4.8M|
+| [strain_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [strain_ontology expanded](src/human_cell_atlas/schema/module/ontology/strain_ontology.expanded.yaml) | 16K|
+| [file_content_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [file_content_ontology expanded](src/human_cell_atlas/schema/module/ontology/file_content_ontology.expanded.yaml) | 512K|
+| [library_construction_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [library_construction_ontology expanded](src/human_cell_atlas/schema/module/ontology/library_construction_ontology.expanded.yaml) | 12K|
+| [contributor_role_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [contributor_role_ontology expanded](src/human_cell_atlas/schema/module/ontology/contributor_role_ontology.expanded.yaml) | 24K|
+| [mass_unit_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [mass_unit_ontology expanded](src/human_cell_atlas/schema/module/ontology/mass_unit_ontology.expanded.yaml) | 8.0K|
+| [cell_type_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [cell_type_ontology expanded](src/human_cell_atlas/schema/module/ontology/cell_type_ontology.expanded.yaml) | 316K|
+| [library_amplification_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [library_amplification_ontology expanded](src/human_cell_atlas/schema/module/ontology/library_amplification_ontology.expanded.yaml) | 4.0K|
+| [microscopy_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [microscopy_ontology expanded](src/human_cell_atlas/schema/module/ontology/microscopy_ontology.expanded.yaml) | 8.0K|
+| [ethnicity_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [ethnicity_ontology expanded](src/human_cell_atlas/schema/module/ontology/ethnicity_ontology.expanded.yaml) | 36K|
+| [organ_part_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [organ_part_ontology expanded](src/human_cell_atlas/schema/module/ontology/organ_part_ontology.expanded.yaml) | 1.5M|
+| [treatment_method_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [treatment_method_ontology expanded](src/human_cell_atlas/schema/module/ontology/treatment_method_ontology.expanded.yaml) | 296K|
+| [process_type_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [process_type_ontology expanded](src/human_cell_atlas/schema/module/ontology/process_type_ontology.expanded.yaml) | 84K|
+| [time_unit_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [time_unit_ontology expanded](src/human_cell_atlas/schema/module/ontology/time_unit_ontology.expanded.yaml) | 4.0K|
+| [file_format_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [file_format_ontology expanded](src/human_cell_atlas/schema/module/ontology/file_format_ontology.expanded.yaml) | 4.0K|
+| [instrument_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [instrument_ontology expanded](src/human_cell_atlas/schema/module/ontology/instrument_ontology.expanded.yaml) | 12K|
+| [cellular_component_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [cellular_component_ontology expanded](src/human_cell_atlas/schema/module/ontology/cellular_component_ontology.expanded.yaml) | 480K|
+| [length_unit_ontology](src/human_cell_atlas/schema/module/ontology/.yaml) | [length_unit_ontology expanded](src/human_cell_atlas/schema/module/ontology/length_unit_ontology.expanded.yaml) | 8.0K|
 
 Note in particular that the species expanded subset in a quarter of a gigabyte...
+
+Some of the expanded sets may be empty due to a mismatch in how HCA and OAK use CURIEs for EDAM
 
 ## Repository Structure
 
