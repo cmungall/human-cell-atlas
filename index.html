@@ -1,0 +1,1439 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cmungall.github.io/human-cell-atlas/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>human-cell-atlas</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hca" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="human-cell-atlas" class="md-header__button md-logo" aria-label="human-cell-atlas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            human-cell-atlas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cmungall/human-cell-atlas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="human-cell-atlas" class="md-nav__button md-logo" aria-label="human-cell-atlas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    human-cell-atlas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cmungall/human-cell-atlas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Index
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Index
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixins" class="md-nav__link">
+    Mixins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    Slots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    Enums
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    Subsets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#built-in" class="md-nav__link">
+    Built in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined" class="md-nav__link">
+    Defined
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixins" class="md-nav__link">
+    Mixins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    Slots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    Enums
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    Subsets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#built-in" class="md-nav__link">
+    Built in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defined" class="md-nav__link">
+    Defined
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/cmungall/human-cell-atlas/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="hca">hca</h1>
+<p><strong>metamodel version:</strong> 1.7.0</p>
+<p><strong>version:</strong> None</p>
+<h3 id="classes">Classes</h3>
+<ul>
+<li><a href="AggregateGenerationProtocol/">AggregateGenerationProtocol</a></li>
+<li><a href="AnalysisFile/">AnalysisFile</a></li>
+<li><a href="AnalysisProcess/">AnalysisProcess</a></li>
+<li><a href="AnalysisProtocol/">AnalysisProtocol</a></li>
+<li><a href="Barcode/">Barcode</a></li>
+<li><a href="BiologicalMacromoleculeOntology/">BiologicalMacromoleculeOntology</a></li>
+<li><a href="BiomaterialCore/">BiomaterialCore</a></li>
+<li><a href="CellCycleOntology/">CellCycleOntology</a></li>
+<li><a href="CellLine/">CellLine</a></li>
+<li><a href="CellMorphology/">CellMorphology</a></li>
+<li><a href="CellSuspension/">CellSuspension</a></li>
+<li><a href="CellTypeOntology/">CellTypeOntology</a></li>
+<li><a href="CellularComponentOntology/">CellularComponentOntology</a></li>
+<li><a href="Channel/">Channel</a></li>
+<li><a href="CollectionProtocol/">CollectionProtocol</a></li>
+<li><a href="Contact/">Contact</a></li>
+<li><a href="ContributorRoleOntology/">ContributorRoleOntology</a></li>
+<li><a href="Death/">Death</a></li>
+<li><a href="DevelopmentStageOntology/">DevelopmentStageOntology</a></li>
+<li><a href="DifferentiationProtocol/">DifferentiationProtocol</a></li>
+<li><a href="DiseaseOntology/">DiseaseOntology</a></li>
+<li><a href="DissociationProtocol/">DissociationProtocol</a></li>
+<li><a href="DonorOrganism/">DonorOrganism</a></li>
+<li><a href="EnrichmentOntology/">EnrichmentOntology</a></li>
+<li><a href="EnrichmentProtocol/">EnrichmentProtocol</a></li>
+<li><a href="Entity/">Entity</a></li>
+<li><a href="EthnicityOntology/">EthnicityOntology</a></li>
+<li><a href="FamilialRelationship/">FamilialRelationship</a></li>
+<li><a href="FileContentOntology/">FileContentOntology</a></li>
+<li><a href="FileCore/">FileCore</a></li>
+<li><a href="FileDescriptor/">FileDescriptor</a></li>
+<li><a href="FileFormatOntology/">FileFormatOntology</a></li>
+<li><a href="Funder/">Funder</a></li>
+<li><a href="GrowthConditions/">GrowthConditions</a></li>
+<li><a href="HumanSpecific/">HumanSpecific</a></li>
+<li><a href="ImageFile/">ImageFile</a></li>
+<li><a href="ImagedSpecimen/">ImagedSpecimen</a></li>
+<li><a href="ImagingPreparationProtocol/">ImagingPreparationProtocol</a></li>
+<li><a href="ImagingProtocol/">ImagingProtocol</a></li>
+<li><a href="Input/">Input</a> - An input to a process</li>
+<li><a href="InsdcExperiment/">InsdcExperiment</a></li>
+<li><a href="InstrumentOntology/">InstrumentOntology</a></li>
+<li><a href="IpscInductionProtocol/">IpscInductionProtocol</a></li>
+<li><a href="LengthUnitOntology/">LengthUnitOntology</a></li>
+<li><a href="LibraryAmplificationOntology/">LibraryAmplificationOntology</a></li>
+<li><a href="LibraryConstructionOntology/">LibraryConstructionOntology</a></li>
+<li><a href="LibraryPreparationProtocol/">LibraryPreparationProtocol</a></li>
+<li><a href="License/">License</a></li>
+<li><a href="Links/">Links</a></li>
+<li><a href="MassUnitOntology/">MassUnitOntology</a></li>
+<li><a href="Matrix/">Matrix</a></li>
+<li><a href="MedicalHistory/">MedicalHistory</a></li>
+<li><a href="MicroscopyOntology/">MicroscopyOntology</a></li>
+<li><a href="MouseSpecific/">MouseSpecific</a></li>
+<li><a href="OrganOntology/">OrganOntology</a></li>
+<li><a href="OrganPartOntology/">OrganPartOntology</a></li>
+<li><a href="Organoid/">Organoid</a></li>
+<li><a href="Output/">Output</a> - An output from a process</li>
+<li><a href="Parameter/">Parameter</a></li>
+<li><a href="PlateBasedSequencing/">PlateBasedSequencing</a></li>
+<li><a href="PreservationStorage/">PreservationStorage</a></li>
+<li><a href="Probe/">Probe</a></li>
+<li><a href="Process/">Process</a></li>
+<li><a href="ProcessCore/">ProcessCore</a></li>
+<li><a href="ProcessLink/">ProcessLink</a></li>
+<li><a href="ProcessTypeOntology/">ProcessTypeOntology</a></li>
+<li><a href="Project/">Project</a></li>
+<li><a href="ProjectCore/">ProjectCore</a></li>
+<li><a href="Protocol/">Protocol</a></li>
+<li><a href="ProtocolCore/">ProtocolCore</a></li>
+<li><a href="ProtocolReference/">ProtocolReference</a> - A protocol used in a process</li>
+<li><a href="ProtocolTypeOntology/">ProtocolTypeOntology</a></li>
+<li><a href="Provenance/">Provenance</a></li>
+<li><a href="Publication/">Publication</a></li>
+<li><a href="PurchasedReagents/">PurchasedReagents</a></li>
+<li><a href="ReferenceFile/">ReferenceFile</a></li>
+<li><a href="S10x/">S10x</a></li>
+<li><a href="SequenceFile/">SequenceFile</a></li>
+<li><a href="SequencingOntology/">SequencingOntology</a></li>
+<li><a href="SequencingProtocol/">SequencingProtocol</a></li>
+<li><a href="SpeciesOntology/">SpeciesOntology</a></li>
+<li><a href="SpecimenFromOrganism/">SpecimenFromOrganism</a></li>
+<li><a href="StateOfSpecimen/">StateOfSpecimen</a></li>
+<li><a href="StrainOntology/">StrainOntology</a></li>
+<li><a href="SupplementaryFile/">SupplementaryFile</a></li>
+<li><a href="SupplementaryFileEntity/">SupplementaryFileEntity</a></li>
+<li><a href="SupplementaryFileLink/">SupplementaryFileLink</a></li>
+<li><a href="TargetPathwayOntology/">TargetPathwayOntology</a></li>
+<li><a href="Task/">Task</a></li>
+<li><a href="TimeUnitOntology/">TimeUnitOntology</a></li>
+<li><a href="Timecourse/">Timecourse</a></li>
+<li><a href="TreatmentMethodOntology/">TreatmentMethodOntology</a></li>
+<li><a href="TreatmentProtocol/">TreatmentProtocol</a></li>
+</ul>
+<h3 id="mixins">Mixins</h3>
+<h3 id="slots">Slots</h3>
+<ul>
+<li><a href="aggregateGenerationProtocol__cell_uniformity/">➞cell_uniformity</a> - Description of the cell aggregates uniformity after formation.</li>
+<li><a href="aggregateGenerationProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="aggregateGenerationProtocol__formation_method/">➞formation_method</a> - Method used to form cell aggregates.</li>
+<li><a href="aggregateGenerationProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="aggregateGenerationProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="aggregateGenerationProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="aggregateGenerationProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="analysisFile__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="analysisFile__file_core/">➞file_core</a> - Core file-level information.</li>
+<li><a href="analysisFile__matrix_cell_count/">➞matrix_cell_count</a> - Number of cells analyzed in a matrix file.</li>
+<li><a href="analysisFile__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="analysisFile__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="analysisFile__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="analysisProcess__analysis_run_type/">➞analysis_run_type</a> - Whether the analysis was run or was copied forward as an optimization.</li>
+<li><a href="analysisProcess__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="analysisProcess__inputs/">➞inputs</a></li>
+<li><a href="analysisProcess__process_core/">➞process_core</a> - Core process-level information.</li>
+<li><a href="analysisProcess__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="analysisProcess__reference_files/">➞reference_files</a></li>
+<li><a href="analysisProcess__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="analysisProcess__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="analysisProcess__tasks/">➞tasks</a></li>
+<li><a href="analysisProcess__timestamp_start_utc/">➞timestamp_start_utc</a> - Initial start time of the full pipeline in UTC.</li>
+<li><a href="analysisProcess__timestamp_stop_utc/">➞timestamp_stop_utc</a> - Terminal stop time of the full pipeline in UTC.</li>
+<li><a href="analysisProcess__type/">➞type</a> - The type of process.</li>
+<li><a href="analysisProtocol__computational_method/">➞computational_method</a> - A URI to a versioned workflow and versioned execution environment in a GA4GH-compliant repository.</li>
+<li><a href="analysisProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="analysisProtocol__matrix/">➞matrix</a> - Information related to protocols that output a matrix.</li>
+<li><a href="analysisProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="analysisProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="analysisProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="analysisProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="analysisProtocol__type/">➞type</a> - The type of protocol.</li>
+<li><a href="barcode__barcode_length/">➞barcode_length</a> - Length of barcode in nucleotides.</li>
+<li><a href="barcode__barcode_offset/">➞barcode_offset</a> - The 0-based offset of start of barcode in read.</li>
+<li><a href="barcode__barcode_read/">➞barcode_read</a> - The read in which the barcode is found.</li>
+<li><a href="barcode__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="barcode__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="barcode__white_list_file/">➞white_list_file</a> - Name of file containing legitimate barcode sequences.</li>
+<li><a href="biologicalMacromoleculeOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="biologicalMacromoleculeOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="biologicalMacromoleculeOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="biologicalMacromoleculeOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="biologicalMacromoleculeOntology__text/">➞text</a> - The name of the biological macromolecule being used.</li>
+<li><a href="biomaterialCore__HDBR_accession/">➞HDBR_accession</a> - A Human Developmental Biology Resource (HDBR) sample accession.</li>
+<li><a href="biomaterialCore__biomaterial_description/">➞biomaterial_description</a> - A general description of the biomaterial.</li>
+<li><a href="biomaterialCore__biomaterial_id/">➞biomaterial_id</a> - A unique ID for the biomaterial.</li>
+<li><a href="biomaterialCore__biomaterial_name/">➞biomaterial_name</a> - A short, descriptive name for the biomaterial that need not be unique.</li>
+<li><a href="biomaterialCore__biosamples_accession/">➞biosamples_accession</a> - A BioSamples accession.</li>
+<li><a href="biomaterialCore__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="biomaterialCore__genotype/">➞genotype</a> - Genotype of the biomaterial.</li>
+<li><a href="biomaterialCore__insdc_sample_accession/">➞insdc_sample_accession</a> - An International Nucleotide Sequence Database Collaboration (INSDC) sample accession.</li>
+<li><a href="biomaterialCore__ncbi_taxon_id/">➞ncbi_taxon_id</a></li>
+<li><a href="biomaterialCore__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="biomaterialCore__supplementary_files/">➞supplementary_files</a></li>
+<li><a href="cellCycleOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="cellCycleOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="cellCycleOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="cellCycleOntology__schema_version/">➞schema_version</a> - Version number in major.minor.patch format.</li>
+<li><a href="cellCycleOntology__text/">➞text</a> - The name of a cell cycle of the cells in the specimen.</li>
+<li><a href="cellLine__biomaterial_core/">➞biomaterial_core</a> - Core biomaterial-level information.</li>
+<li><a href="cellLine__catalog_number/">➞catalog_number</a> - The supplier catalogue number for the cell line.</li>
+<li><a href="cellLine__catalog_url/">➞catalog_url</a> - The supplier catalogue URL for the cell line.</li>
+<li><a href="cellLine__cell_cycle/">➞cell_cycle</a> - The cell cycle phase if the cell line is synchronized growing cells or the phase is known.</li>
+<li><a href="cellLine__cell_morphology/">➞cell_morphology</a> - Features relating to the morphology of the cells.</li>
+<li><a href="cellLine__cell_type/">➞cell_type</a> - The cell type that the cell line represents.</li>
+<li><a href="cellLine__confluency/">➞confluency</a> - The percent a plate surface is covered by cells.</li>
+<li><a href="cellLine__date_established/">➞date_established</a> - Date when the cell line was established.</li>
+<li><a href="cellLine__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="cellLine__disease/">➞disease</a> - Short description of any disease association to the cell type.</li>
+<li><a href="cellLine__genus_species/">➞genus_species</a></li>
+<li><a href="cellLine__growth_conditions/">➞growth_conditions</a> - Features relating to the growth and/or maintenance of the cell lines.</li>
+<li><a href="cellLine__karyotype/">➞karyotype</a> - The karyotype of the cell line.</li>
+<li><a href="cellLine__lot_number/">➞lot_number</a> - The supplier lot or batch number for the cell line.</li>
+<li><a href="cellLine__model_organ/">➞model_organ</a> - Organ for which this cell line is a model.</li>
+<li><a href="cellLine__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="cellLine__publication/">➞publication</a> - A publication that cites the cell line creation.</li>
+<li><a href="cellLine__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="cellLine__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="cellLine__supplier/">➞supplier</a> - The supplier of the cell line.</li>
+<li><a href="cellLine__timecourse/">➞timecourse</a> - Information relating to a timecourse associated with this cell line.</li>
+<li><a href="cellLine__tissue/">➞tissue</a> - The tissue that the cell line was derived from.</li>
+<li><a href="cellLine__type/">➞type</a> - The type of cell line.</li>
+<li><a href="cellMorphology__cell_morphology/">➞cell_morphology</a> - General description of the morphology of cells.</li>
+<li><a href="cellMorphology__cell_size/">➞cell_size</a> - Size of cells in Cell size unit.</li>
+<li><a href="cellMorphology__cell_size_unit/">➞cell_size_unit</a> - The unit in which the Cell size is expressed.</li>
+<li><a href="cellMorphology__cell_viability_method/">➞cell_viability_method</a> - The method by which cell viability was determined.</li>
+<li><a href="cellMorphology__cell_viability_result/">➞cell_viability_result</a> - Result of the cell viability test.</li>
+<li><a href="cellMorphology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="cellMorphology__percent_cell_viability/">➞percent_cell_viability</a> - Percent of cells determined to be viable.</li>
+<li><a href="cellMorphology__percent_necrosis/">➞percent_necrosis</a> - Percent of cells identified to be necrotic.</li>
+<li><a href="cellMorphology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="cellSuspension__biomaterial_core/">➞biomaterial_core</a> - Core biomaterial-level information.</li>
+<li><a href="cellSuspension__cell_morphology/">➞cell_morphology</a> - Features relating to the morphology of cells in a biomaterial.</li>
+<li><a href="cellSuspension__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="cellSuspension__estimated_cell_count/">➞estimated_cell_count</a> - Estimated number of cells in the suspension.</li>
+<li><a href="cellSuspension__genus_species/">➞genus_species</a></li>
+<li><a href="cellSuspension__growth_conditions/">➞growth_conditions</a> - Features relating to the growth and/or maintenance of a biomaterial.</li>
+<li><a href="cellSuspension__plate_based_sequencing/">➞plate_based_sequencing</a> - Fields specific for plate-based sequencing experiments.</li>
+<li><a href="cellSuspension__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="cellSuspension__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="cellSuspension__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="cellSuspension__selected_cell_types/">➞selected_cell_types</a></li>
+<li><a href="cellSuspension__timecourse/">➞timecourse</a> - Information relating to a timecourse associated with this cell suspension.</li>
+<li><a href="cellTypeOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="cellTypeOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="cellTypeOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="cellTypeOntology__schema_version/">➞schema_version</a> - Version number in major.minor.patch format.</li>
+<li><a href="cellTypeOntology__text/">➞text</a> - The name of a cell type supplied by a user.</li>
+<li><a href="cellularComponentOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="cellularComponentOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="cellularComponentOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="cellularComponentOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="cellularComponentOntology__text/">➞text</a> - The name of a subcellular structure.</li>
+<li><a href="channel__channel_id/">➞channel_id</a> - User given ID.  If there is an accompanying codebook, this name should correspond to the channel id used in the codebook.</li>
+<li><a href="channel__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="channel__excitation_wavelength/">➞excitation_wavelength</a> - Excitation wavelength of the lightsource in nanometers.</li>
+<li><a href="channel__exposure_time/">➞exposure_time</a> - Acquisition time for a single image per channel, in milliseconds.</li>
+<li><a href="channel__filter_range/">➞filter_range</a> - Emission filter in nanometers.</li>
+<li><a href="channel__multiplexed/">➞multiplexed</a> - Whether multiple targets were detected simultaneously in this channel.</li>
+<li><a href="channel__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="channel__target_fluorophore/">➞target_fluorophore</a> - The name of the fluorophore this channel is designed to assay.</li>
+<li><a href="collectionProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="collectionProtocol__method/">➞method</a> - Method used to collect the biomaterial.</li>
+<li><a href="collectionProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="collectionProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="collectionProtocol__reagents/">➞reagents</a></li>
+<li><a href="collectionProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="collectionProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="contact__address/">➞address</a> - Street address where the individual works.</li>
+<li><a href="contact__corresponding_contributor/">➞corresponding_contributor</a> - Whether the individual is a primary point of contact for the project.</li>
+<li><a href="contact__country/">➞country</a> - Country where the individual works.</li>
+<li><a href="contact__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="contact__email/">➞email</a> - Email address for the individual.</li>
+<li><a href="contact__institution/">➞institution</a> - Name of primary institute where the individual works.</li>
+<li><a href="contact__laboratory/">➞laboratory</a> - Name of lab or department within the institute where the individual works.</li>
+<li><a href="contact__orcid_id/">➞orcid_id</a> - The individual's ORCID ID linked to previous work.</li>
+<li><a href="contact__phone/">➞phone</a> - Phone number of the individual or their lab.</li>
+<li><a href="contact__project_role/">➞project_role</a> - Primary role of the individual in the project.</li>
+<li><a href="contact__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="contributorRoleOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="contributorRoleOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="contributorRoleOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="contributorRoleOntology__schema_version/">➞schema_version</a> - Version number in major.minor.patch format.</li>
+<li><a href="contributorRoleOntology__text/">➞text</a> - The primary role of the contributor in the project.</li>
+<li><a href="death__cause_of_death/">➞cause_of_death</a> - Conditions resulting in death.</li>
+<li><a href="death__cold_perfused/">➞cold_perfused</a> - Whether perfusion with cold fluid was used to help preserve tissues before heart stopped.</li>
+<li><a href="death__days_on_ventilator/">➞days_on_ventilator</a> - Number of days on ventilator before death occurred.</li>
+<li><a href="death__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="death__hardy_scale/">➞hardy_scale</a> - Value on 4-point Hardy scale cause of death classification.</li>
+<li><a href="death__normothermic_regional_perfusion/">➞normothermic_regional_perfusion</a> - Whether entire body was perfused with warm oxygenated blood.</li>
+<li><a href="death__organ_donation_death_type/">➞organ_donation_death_type</a> - Type of death preceding organ donation.</li>
+<li><a href="death__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="death__time_of_death/">➞time_of_death</a> - Date and time when death was declared.</li>
+<li><a href="developmentStageOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="developmentStageOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="developmentStageOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="developmentStageOntology__schema_version/">➞schema_version</a> - Version number in major.minor.patch format.</li>
+<li><a href="developmentStageOntology__text/">➞text</a> - The name of the development stage of the organism.</li>
+<li><a href="differentiationProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="differentiationProtocol__media/">➞media</a> - Culture media used to induce a specific differentiation response.</li>
+<li><a href="differentiationProtocol__method/">➞method</a> - Method applied to cell culture to induce a specific differentiation response.</li>
+<li><a href="differentiationProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="differentiationProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="differentiationProtocol__reagents/">➞reagents</a></li>
+<li><a href="differentiationProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="differentiationProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="differentiationProtocol__small_molecules/">➞small_molecules</a> - Small molecules added to stem cell medium to induce a specific differentiation response.</li>
+<li><a href="differentiationProtocol__target_cell_yield/">➞target_cell_yield</a> - Percent of target cells obtained after directed differentiation of origin cell.</li>
+<li><a href="differentiationProtocol__target_pathway/">➞target_pathway</a> - Targeted pathway for specific differentiation response.</li>
+<li><a href="differentiationProtocol__validation_method/">➞validation_method</a> - Method used to validate origin cell successfully differentiated to target cell.</li>
+<li><a href="differentiationProtocol__validation_result/">➞validation_result</a> - Result confirming successful differentiation to target cell type.</li>
+<li><a href="diseaseOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="diseaseOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="diseaseOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="diseaseOntology__schema_version/">➞schema_version</a> - Version number in major.minor.patch format.</li>
+<li><a href="diseaseOntology__text/">➞text</a> - The text for the term as the user provides it.</li>
+<li><a href="dissociationProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="dissociationProtocol__method/">➞method</a> - How cells or organelles were dissociated.</li>
+<li><a href="dissociationProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="dissociationProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="dissociationProtocol__reagents/">➞reagents</a></li>
+<li><a href="dissociationProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="dissociationProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="donorOrganism__biomaterial_core/">➞biomaterial_core</a> - Core biomaterial-level information.</li>
+<li><a href="donorOrganism__death/">➞death</a> - Information about conditions of death of the organism.</li>
+<li><a href="donorOrganism__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="donorOrganism__development_stage/">➞development_stage</a> - A classification of the developmental stage of the organism.</li>
+<li><a href="donorOrganism__diseases/">➞diseases</a></li>
+<li><a href="donorOrganism__familial_relationships/">➞familial_relationships</a></li>
+<li><a href="donorOrganism__genus_species/">➞genus_species</a></li>
+<li><a href="donorOrganism__gestational_age/">➞gestational_age</a> - Gestational age of pregnancy in Gestational age units measured from the last menstrual period.</li>
+<li><a href="donorOrganism__gestational_age_unit/">➞gestational_age_unit</a> - The unit in which Gestational age is expressed.</li>
+<li><a href="donorOrganism__height/">➞height</a> - Height of organism in Height unit.</li>
+<li><a href="donorOrganism__height_unit/">➞height_unit</a> - The unit in which Height is expressed.</li>
+<li><a href="donorOrganism__human_specific/">➞human_specific</a> - Fields specific to human (homo sapiens) organisms.</li>
+<li><a href="donorOrganism__is_living/">➞is_living</a> - Whether organism was alive at time of biomaterial collection.</li>
+<li><a href="donorOrganism__medical_history/">➞medical_history</a> - Information about the medical history of the organism.</li>
+<li><a href="donorOrganism__mouse_specific/">➞mouse_specific</a> - Fields specific to mouse (mus musculus) organisms.</li>
+<li><a href="donorOrganism__organism_age/">➞organism_age</a> - Age of organism in Age units measured since birth.</li>
+<li><a href="donorOrganism__organism_age_unit/">➞organism_age_unit</a> - The unit in which Age is expressed.</li>
+<li><a href="donorOrganism__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="donorOrganism__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="donorOrganism__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="donorOrganism__sex/">➞sex</a> - The biological sex of the organism.</li>
+<li><a href="donorOrganism__timecourse/">➞timecourse</a> - Information relating to a timecourse associated with this biomaterial.</li>
+<li><a href="donorOrganism__weight/">➞weight</a> - Weight of organism in Weight unit.</li>
+<li><a href="donorOrganism__weight_unit/">➞weight_unit</a> - The unit in which Weight is expressed.</li>
+<li><a href="enrichmentOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="enrichmentOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="enrichmentOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="enrichmentOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="enrichmentOntology__text/">➞text</a> - The name of an enrichment approach being used.</li>
+<li><a href="enrichmentProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="enrichmentProtocol__markers/">➞markers</a> - A list of markers used to enrich for or against certain cells.</li>
+<li><a href="enrichmentProtocol__maximum_size/">➞maximum_size</a> - Maximum cell or organelle size passing selection, in microns.</li>
+<li><a href="enrichmentProtocol__method/">➞method</a> - The method by which enrichment was achieved.</li>
+<li><a href="enrichmentProtocol__minimum_size/">➞minimum_size</a> - Minimum cell or organelle size passing selection, in microns.</li>
+<li><a href="enrichmentProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="enrichmentProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="enrichmentProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="enrichmentProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="entity__entity_id/">➞entity_id</a> - ID of this entity</li>
+<li><a href="entity__entity_type/">➞entity_type</a> - The concrete type of this entity</li>
+<li><a href="ethnicityOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="ethnicityOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="ethnicityOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="ethnicityOntology__schema_version/">➞schema_version</a> - Version number in major.minor.patch format.</li>
+<li><a href="ethnicityOntology__text/">➞text</a> - The ethnicity of the human donor.</li>
+<li><a href="familialRelationship__child/">➞child</a> - The individual's child.</li>
+<li><a href="familialRelationship__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="familialRelationship__parent/">➞parent</a> - The individual's parent.</li>
+<li><a href="familialRelationship__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="familialRelationship__sibling/">➞sibling</a> - The individual's sibling.</li>
+<li><a href="fileContentOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="fileContentOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="fileContentOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="fileContentOntology__schema_version/">➞schema_version</a> - Version number in major.minor.patch format.</li>
+<li><a href="fileContentOntology__text/">➞text</a> - General description of the contents of the file.</li>
+<li><a href="fileCore__checksum/">➞checksum</a> - MD5 checksum of the file.</li>
+<li><a href="fileCore__content_description/">➞content_description</a></li>
+<li><a href="fileCore__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="fileCore__file_name/">➞file_name</a> - The name of the file.</li>
+<li><a href="fileCore__file_source/">➞file_source</a> - The source of the file. This is typically an organisation, repository, person or dedicated process.</li>
+<li><a href="fileCore__format/">➞format</a> - The format of the file.</li>
+<li><a href="fileCore__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="fileDescriptor__content_type/">➞content_type</a> - An appropriate MIME type for this file.</li>
+<li><a href="fileDescriptor__crc32c/">➞crc32c</a> - The CRC-32C code generated for this file.</li>
+<li><a href="fileDescriptor__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="fileDescriptor__file_id/">➞file_id</a> - UUID that uniquely identifies each data file in its source</li>
+<li><a href="fileDescriptor__file_name/">➞file_name</a> - The object name of the data file relative to the staging area's <code>data/</code> directory</li>
+<li><a href="fileDescriptor__file_version/">➞file_version</a> - The version of the file given in date time format</li>
+<li><a href="fileDescriptor__s3_etag/">➞s3_etag</a> - An AWS S3 ETag of this file</li>
+<li><a href="fileDescriptor__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="fileDescriptor__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="fileDescriptor__sha1/">➞sha1</a> - The SHA-1 hash of the file.</li>
+<li><a href="fileDescriptor__sha256/">➞sha256</a> - The SHA-256 hash of the file.</li>
+<li><a href="fileDescriptor__size/">➞size</a> - The size of the file in bytes.</li>
+<li><a href="fileFormatOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="fileFormatOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="fileFormatOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="fileFormatOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="fileFormatOntology__text/">➞text</a> - The name of the file format.</li>
+<li><a href="funder__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="funder__grant_id/">➞grant_id</a> - The unique grant identifier or reference.</li>
+<li><a href="funder__grant_title/">➞grant_title</a> - The name of the grant funding the project.</li>
+<li><a href="funder__organization/">➞organization</a> - The name of the funding organization.</li>
+<li><a href="funder__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="growthConditions__culture_environment/">➞culture_environment</a> - Cell culture environment in which cells are grown.</li>
+<li><a href="growthConditions__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="growthConditions__drug_treatment/">➞drug_treatment</a> - Description of drugs added to the growth medium.</li>
+<li><a href="growthConditions__feeder_layer_type/">➞feeder_layer_type</a> - Type of feeder layer cells on which biomaterial was grown.</li>
+<li><a href="growthConditions__growth_medium/">➞growth_medium</a> - The solid, liquid, or semi-solid medium used to support growth.</li>
+<li><a href="growthConditions__mycoplasma_testing_method/">➞mycoplasma_testing_method</a> - The method by which the biomaterial was tested for mycoplasma contamination.</li>
+<li><a href="growthConditions__mycoplasma_testing_results/">➞mycoplasma_testing_results</a> - Whether the biomaterial passed or failed the mycoplasma test.</li>
+<li><a href="growthConditions__passage_number/">➞passage_number</a> - The number of passages that the biomaterial has been through.</li>
+<li><a href="growthConditions__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="humanSpecific__body_mass_index/">➞body_mass_index</a> - The body mass index of the donor.</li>
+<li><a href="humanSpecific__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="humanSpecific__ethnicity/">➞ethnicity</a></li>
+<li><a href="humanSpecific__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="imageFile__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="imageFile__file_core/">➞file_core</a> - Core file-level information.</li>
+<li><a href="imageFile__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="imageFile__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="imageFile__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="imagedSpecimen__biomaterial_core/">➞biomaterial_core</a> - Core biomaterial-level information.</li>
+<li><a href="imagedSpecimen__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="imagedSpecimen__internal_anatomical_structures/">➞internal_anatomical_structures</a></li>
+<li><a href="imagedSpecimen__overview_images/">➞overview_images</a></li>
+<li><a href="imagedSpecimen__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="imagedSpecimen__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="imagedSpecimen__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="imagedSpecimen__slice_thickness/">➞slice_thickness</a> - Thickness of the imaged slice in micrometres.</li>
+<li><a href="imagingPreparationProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="imagingPreparationProtocol__expansion_factor/">➞expansion_factor</a> - Factor by which the imaged tissue was expanded in one dimension.</li>
+<li><a href="imagingPreparationProtocol__fiducial_marker/">➞fiducial_marker</a> - Fiducial markers for the alignment of images taken across multiple rounds of imaging.</li>
+<li><a href="imagingPreparationProtocol__final_slicing_method/">➞final_slicing_method</a> - The method by which the final slice was obtained.</li>
+<li><a href="imagingPreparationProtocol__fresh_slicing_method/">➞fresh_slicing_method</a> - The method by which fresh tissue was sliced.</li>
+<li><a href="imagingPreparationProtocol__imaged_slice_thickness/">➞imaged_slice_thickness</a> - Thickness of the imaged slice in micrometres.</li>
+<li><a href="imagingPreparationProtocol__permeabilisation_time/">➞permeabilisation_time</a> - The permeabilisation time in time units that the tissue was exposed to.</li>
+<li><a href="imagingPreparationProtocol__permeabilisation_time_unit/">➞permeabilisation_time_unit</a> - The unit in which permeabilisation time is expressed.</li>
+<li><a href="imagingPreparationProtocol__post_final_slicing_interval/">➞post_final_slicing_interval</a> - Length of time between secondary slicing and hybridization.</li>
+<li><a href="imagingPreparationProtocol__post_final_slicing_interval_unit/">➞post_final_slicing_interval_unit</a> - The unit of time in which the post final slicing interval is expressed.</li>
+<li><a href="imagingPreparationProtocol__post_resection_interval/">➞post_resection_interval</a> - Length of time between surgical resection and fresh slicing of tissue.</li>
+<li><a href="imagingPreparationProtocol__post_resection_interval_unit/">➞post_resection_interval_unit</a> - The unit of time in which the post resection interval is expressed.</li>
+<li><a href="imagingPreparationProtocol__pre_final_slice_preservation_method/">➞pre_final_slice_preservation_method</a> - Tissue preservation method used prior to final slicing.</li>
+<li><a href="imagingPreparationProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="imagingPreparationProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="imagingPreparationProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="imagingPreparationProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="imagingProtocol__channel/">➞channel</a></li>
+<li><a href="imagingProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="imagingProtocol__immersion_medium_refractive_index/">➞immersion_medium_refractive_index</a> - Refractive index of the immersion medium used for imaging.</li>
+<li><a href="imagingProtocol__immersion_medium_type/">➞immersion_medium_type</a> - Immersion medium used for imaging.</li>
+<li><a href="imagingProtocol__magnification/">➞magnification</a> - Magnification of the objective used for imaging.</li>
+<li><a href="imagingProtocol__microscope_setup_description/">➞microscope_setup_description</a> - Description of the microscope setup.</li>
+<li><a href="imagingProtocol__microscopy_technique/">➞microscopy_technique</a> - The type of microscopy.</li>
+<li><a href="imagingProtocol__number_of_tiles/">➞number_of_tiles</a> - Number of XY tiles in the experiment.</li>
+<li><a href="imagingProtocol__number_of_z_steps/">➞number_of_z_steps</a> - Number of steps in a Z stack.</li>
+<li><a href="imagingProtocol__numerical_aperture/">➞numerical_aperture</a> - Numerical aperture of the objective.</li>
+<li><a href="imagingProtocol__overlapping_tiles/">➞overlapping_tiles</a> - Whether tiles were collected with overlap.</li>
+<li><a href="imagingProtocol__pixel_size/">➞pixel_size</a> - Pixel size in nanometers.</li>
+<li><a href="imagingProtocol__probe/">➞probe</a></li>
+<li><a href="imagingProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="imagingProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="imagingProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="imagingProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="imagingProtocol__tile_size_x/">➞tile_size_x</a> - X size of the tile in micrometers.</li>
+<li><a href="imagingProtocol__tile_size_y/">➞tile_size_y</a> - Y size of the tile in micrometers.</li>
+<li><a href="imagingProtocol__z_stack_step_size/">➞z_stack_step_size</a> - Z-stack step size in nanometers.</li>
+<li><a href="input__input_id/">➞input_id</a> - UUID of the input entity.</li>
+<li><a href="input__input_type/">➞input_type</a> - The concrete type of the input entity.</li>
+<li><a href="insdcExperiment__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="insdcExperiment__insdc_experiment_accession/">➞insdc_experiment_accession</a> - An International Nucleotide Sequence Database Collaboration (INSDC) experiment accession.</li>
+<li><a href="insdcExperiment__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="instrumentOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="instrumentOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="instrumentOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="instrumentOntology__schema_version/">➞schema_version</a> - Version number in major.minor.patch format.</li>
+<li><a href="instrumentOntology__text/">➞text</a> - The full name of the instrument used.</li>
+<li><a href="ipscInductionProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="ipscInductionProtocol__ipsc_induction_kit/">➞ipsc_induction_kit</a> - Kit used to induce pluripotent stem cell generation.</li>
+<li><a href="ipscInductionProtocol__method/">➞method</a> - Induction method applied to primary cell culture to induce pluripotent stem cell generation.</li>
+<li><a href="ipscInductionProtocol__percent_pluripotency/">➞percent_pluripotency</a> - Percent of iPSCs that passed the pluripotency test.</li>
+<li><a href="ipscInductionProtocol__pluripotency_test/">➞pluripotency_test</a> - Description of how pluripotency was tested in induced pluripotent stem cells.</li>
+<li><a href="ipscInductionProtocol__pluripotency_vector_removed/">➞pluripotency_vector_removed</a> - Whether a viral vector was removed after induction.</li>
+<li><a href="ipscInductionProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="ipscInductionProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="ipscInductionProtocol__reagents/">➞reagents</a></li>
+<li><a href="ipscInductionProtocol__reprogramming_factors/">➞reprogramming_factors</a> - Reprogramming factors added to primary cell culture to induce pluripotency.</li>
+<li><a href="ipscInductionProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="ipscInductionProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="lengthUnitOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="lengthUnitOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="lengthUnitOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="lengthUnitOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="lengthUnitOntology__text/">➞text</a> - The name of a length unit being used.</li>
+<li><a href="libraryAmplificationOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="libraryAmplificationOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="libraryAmplificationOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="libraryAmplificationOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="libraryAmplificationOntology__text/">➞text</a> - The name of a library amplification approach being used.</li>
+<li><a href="libraryConstructionOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="libraryConstructionOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="libraryConstructionOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="libraryConstructionOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="libraryConstructionOntology__text/">➞text</a> - The name of a library construction approach being used.</li>
+<li><a href="libraryPreparationProtocol__cdna_library_amplification_method/">➞cdna_library_amplification_method</a> - The method used to amplify cDNA library prior to sequencing.</li>
+<li><a href="libraryPreparationProtocol__cell_barcode/">➞cell_barcode</a> - Information about cell identifier barcodes.</li>
+<li><a href="libraryPreparationProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="libraryPreparationProtocol__end_bias/">➞end_bias</a> - The type of tag or end bias the library has.</li>
+<li><a href="libraryPreparationProtocol__input_nucleic_acid_molecule/">➞input_nucleic_acid_molecule</a> - Starting nucleic acid molecule isolated for sequencing.</li>
+<li><a href="libraryPreparationProtocol__library_construction_kit/">➞library_construction_kit</a> - Name of kit used to construct the sequencing library.</li>
+<li><a href="libraryPreparationProtocol__library_construction_method/">➞library_construction_method</a> - The general method for sequencing library construction.</li>
+<li><a href="libraryPreparationProtocol__library_preamplification_method/">➞library_preamplification_method</a> - The method used to amplify RNA prior to adaptor ligation.</li>
+<li><a href="libraryPreparationProtocol__nominal_length/">➞nominal_length</a> - Average (insert) size of the fragments being sequenced.</li>
+<li><a href="libraryPreparationProtocol__nominal_sdev/">➞nominal_sdev</a> - Standard deviation of the (insert) size of the fragments being sequenced.</li>
+<li><a href="libraryPreparationProtocol__nucleic_acid_conversion_kit/">➞nucleic_acid_conversion_kit</a> - Name of kit used to convert RNA to DNA for sequencing.</li>
+<li><a href="libraryPreparationProtocol__nucleic_acid_source/">➞nucleic_acid_source</a> - Source cells or organelles from which nucleic acid molecules were collected.</li>
+<li><a href="libraryPreparationProtocol__primer/">➞primer</a> - Primer used for cDNA synthesis from RNA.</li>
+<li><a href="libraryPreparationProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="libraryPreparationProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="libraryPreparationProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="libraryPreparationProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="libraryPreparationProtocol__spatial_barcode/">➞spatial_barcode</a> - Information about spatial barcodes.</li>
+<li><a href="libraryPreparationProtocol__spike_in_dilution/">➞spike_in_dilution</a> - Dilution of spike-in.</li>
+<li><a href="libraryPreparationProtocol__spike_in_kit/">➞spike_in_kit</a> - Information about a spike-in kit.</li>
+<li><a href="libraryPreparationProtocol__strand/">➞strand</a> - Library strandedness.</li>
+<li><a href="libraryPreparationProtocol__umi_barcode/">➞umi_barcode</a> - Information about unique molecular identifier (UMI) barcodes.</li>
+<li><a href="license__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="license__full_name/">➞full_name</a> - Full name of the license under which this dataset is made available.</li>
+<li><a href="license__identifier/">➞identifier</a> - Identifier of the license under which this dataset is made available.</li>
+<li><a href="license__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="license__url/">➞url</a> - URL of the license under which this data is available.</li>
+<li><a href="links__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="links__links/">➞links</a></li>
+<li><a href="links__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="links__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="massUnitOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="massUnitOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="massUnitOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="massUnitOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="massUnitOntology__text/">➞text</a> - The name of a mass unit being used.</li>
+<li><a href="matrix__data_normalization_methods/">➞data_normalization_methods</a></li>
+<li><a href="matrix__derivation_process/">➞derivation_process</a></li>
+<li><a href="matrix__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="matrix__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="medicalHistory__alcohol_history/">➞alcohol_history</a> - Estimated amount of alcohol consumed per day.</li>
+<li><a href="medicalHistory__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="medicalHistory__medication/">➞medication</a> - Medications the individual was taking at time of biomaterial collection.</li>
+<li><a href="medicalHistory__nutritional_state/">➞nutritional_state</a> - Nutritional state of individual at time of biomaterial collection.</li>
+<li><a href="medicalHistory__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="medicalHistory__smoking_history/">➞smoking_history</a> - Estimated number of cigarettes smoked per day.</li>
+<li><a href="medicalHistory__test_results/">➞test_results</a> - Results from medical tests performed on the individual.</li>
+<li><a href="medicalHistory__treatment/">➞treatment</a> - Treatments the individual has undergone prior to biomaterial collection.</li>
+<li><a href="microscopyOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="microscopyOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="microscopyOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="microscopyOntology__schema_version/">➞schema_version</a> - Version number in major.minor.patch format.</li>
+<li><a href="microscopyOntology__text/">➞text</a> - The name of the type of microscopy used in an imaging experiment.</li>
+<li><a href="mouseSpecific__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="mouseSpecific__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="mouseSpecific__strain/">➞strain</a></li>
+<li><a href="organOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="organOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="organOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="organOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="organOntology__text/">➞text</a> - The text for the term as the user provides it.</li>
+<li><a href="organPartOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="organPartOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="organPartOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="organPartOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="organPartOntology__text/">➞text</a> - The text for the term as the user provides it.</li>
+<li><a href="organoid__age/">➞age</a> - Age of the organoid in Organoid age unit measured from when cell aggregates started differentiating to desired organoid model.</li>
+<li><a href="organoid__age_unit/">➞age_unit</a> - The unit in which Organoid age is expressed.</li>
+<li><a href="organoid__biomaterial_core/">➞biomaterial_core</a> - Core biomaterial-level information.</li>
+<li><a href="organoid__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="organoid__embedded_in_matrigel/">➞embedded_in_matrigel</a> - Whether the organoid is embedded in a matrigel.</li>
+<li><a href="organoid__genus_species/">➞genus_species</a></li>
+<li><a href="organoid__growth_environment/">➞growth_environment</a> - Growth environment in which the organoid is grown.</li>
+<li><a href="organoid__input_aggregate_cell_count/">➞input_aggregate_cell_count</a> - Estimated number of cells per input cell aggregate.</li>
+<li><a href="organoid__model_organ/">➞model_organ</a> - Organ for which this organoid is a model system.</li>
+<li><a href="organoid__model_organ_part/">➞model_organ_part</a> - Organ part for which this organoid is a model system.</li>
+<li><a href="organoid__morphology/">➞morphology</a> - General description of the organoid morphology.</li>
+<li><a href="organoid__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="organoid__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="organoid__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="organoid__size/">➞size</a> - Size of the organoid in Organoid size unit.</li>
+<li><a href="organoid__size_unit/">➞size_unit</a> - The unit in which the Organoid size is expressed.</li>
+<li><a href="organoid__stored_oxygen_levels/">➞stored_oxygen_levels</a> - Percent oxygen level organoid was stored in prior to sequencing.</li>
+<li><a href="output__output_id/">➞output_id</a> - UUID of the output entity.</li>
+<li><a href="output__output_type/">➞output_type</a> - The concrete type of the output entity.</li>
+<li><a href="parameter__checksum/">➞checksum</a> - MD5 checksum of the file.</li>
+<li><a href="parameter__parameter_name/">➞parameter_name</a> - Name of parameter.</li>
+<li><a href="parameter__parameter_value/">➞parameter_value</a> - Path to file for or value of parameter.</li>
+<li><a href="plateBasedSequencing__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="plateBasedSequencing__plate_label/">➞plate_label</a> - A label or name for the plate on which the well is located.</li>
+<li><a href="plateBasedSequencing__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="plateBasedSequencing__well_label/">➞well_label</a> - A label or name for the well in which the cell is located.</li>
+<li><a href="plateBasedSequencing__well_quality/">➞well_quality</a> - Quality of well if imaged before sequencing.</li>
+<li><a href="preservationStorage__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="preservationStorage__preservation_method/">➞preservation_method</a> - The method by which a biomaterial was preserved through the use of chemicals, cold, or other means to prevent or retard biological or physical deterioration.</li>
+<li><a href="preservationStorage__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="preservationStorage__storage_method/">➞storage_method</a> - The method by which a biomaterial was stored after preservation or before another protocol was used.</li>
+<li><a href="preservationStorage__storage_time/">➞storage_time</a> - Length of time the biomaterial was stored for in Storage time units.</li>
+<li><a href="preservationStorage__storage_time_unit/">➞storage_time_unit</a> - The unit in which Storage time is expressed.</li>
+<li><a href="probe__assay_type/">➞assay_type</a> - Type of assay used to detect target.</li>
+<li><a href="probe__channel_label/">➞channel_label</a></li>
+<li><a href="probe__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="probe__fluorophore/">➞fluorophore</a></li>
+<li><a href="probe__probe_label/">➞probe_label</a> - The label of a probe used to detect target in this experiment.</li>
+<li><a href="probe__probe_reagents/">➞probe_reagents</a> - Name of reagents used to construct the probe.</li>
+<li><a href="probe__probe_sequence/">➞probe_sequence</a> - Sequence of a probe used to detect target.</li>
+<li><a href="probe__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="probe__subcellular_structure/">➞subcellular_structure</a> - Target subcellular structure.</li>
+<li><a href="probe__target_codebook_label/">➞target_codebook_label</a> - A label used in the codebook for the target.</li>
+<li><a href="probe__target_label/">➞target_label</a> - An identifier for the target molecule.</li>
+<li><a href="probe__target_name/">➞target_name</a> - The name of the target molecule.</li>
+<li><a href="processCore__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="processCore__location/">➞location</a> - Location where the process took place.</li>
+<li><a href="processCore__operators/">➞operators</a></li>
+<li><a href="processCore__process_description/">➞process_description</a> - A general description of the process.</li>
+<li><a href="processCore__process_id/">➞process_id</a> - A unique ID for the process.</li>
+<li><a href="processCore__process_name/">➞process_name</a> - A short, descriptive name for the process that need not be unique.</li>
+<li><a href="processCore__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="processLink__inputs/">➞inputs</a></li>
+<li><a href="processLink__link_type/">➞link_type</a> - The type of this link.</li>
+<li><a href="processLink__outputs/">➞outputs</a></li>
+<li><a href="processLink__process_id/">➞process_id</a> - UUID of the process described by this link.</li>
+<li><a href="processLink__process_type/">➞process_type</a> - The concrete type of the process described by this link.</li>
+<li><a href="processLink__protocols/">➞protocols</a></li>
+<li><a href="processTypeOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="processTypeOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="processTypeOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="processTypeOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="processTypeOntology__text/">➞text</a> - The name of a process type being used.</li>
+<li><a href="process__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="process__deviation_from_protocol/">➞deviation_from_protocol</a> - A deviation from the protocol provided.</li>
+<li><a href="process__end_time/">➞end_time</a> - Date and time the process ended.</li>
+<li><a href="process__insdc_experiment/">➞insdc_experiment</a> - An International Nucleotide Sequence Database Collaboration (INSDC) experiment accession.</li>
+<li><a href="process__length_of_time/">➞length_of_time</a> - Length of time the process took to execute in Length of time unit.</li>
+<li><a href="process__length_of_time_unit/">➞length_of_time_unit</a> - The unit in which Length of time is expressed.</li>
+<li><a href="process__process_core/">➞process_core</a> - Core process-level information.</li>
+<li><a href="process__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="process__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="process__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="process__start_time/">➞start_time</a> - Date and time the process started.</li>
+<li><a href="process__type/">➞type</a> - The type of process.</li>
+<li><a href="projectCore__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="projectCore__project_description/">➞project_description</a> - A longer description of the project which includes research goals and experimental approach.</li>
+<li><a href="projectCore__project_short_name/">➞project_short_name</a> - A short name for the project.</li>
+<li><a href="projectCore__project_title/">➞project_title</a> - An official title for the project.</li>
+<li><a href="projectCore__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="project__array_express_accessions/">➞array_express_accessions</a></li>
+<li><a href="project__biostudies_accessions/">➞biostudies_accessions</a></li>
+<li><a href="project__contributors/">➞contributors</a></li>
+<li><a href="project__dbgap_accessions/">➞dbgap_accessions</a></li>
+<li><a href="project__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="project__ega_accessions/">➞ega_accessions</a></li>
+<li><a href="project__estimated_cell_count/">➞estimated_cell_count</a> - An estimated number of cells in this project</li>
+<li><a href="project__funders/">➞funders</a></li>
+<li><a href="project__geo_series_accessions/">➞geo_series_accessions</a></li>
+<li><a href="project__insdc_project_accessions/">➞insdc_project_accessions</a></li>
+<li><a href="project__insdc_study_accessions/">➞insdc_study_accessions</a></li>
+<li><a href="project__project_core/">➞project_core</a> - Core project-level information.</li>
+<li><a href="project__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="project__publications/">➞publications</a></li>
+<li><a href="project__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="project__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="project__supplementary_links/">➞supplementary_links</a></li>
+<li><a href="protocolCore__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="protocolCore__document/">➞document</a> - A filename of a PDF document containing the details of the protocol.</li>
+<li><a href="protocolCore__protocol_description/">➞protocol_description</a> - A general description of the protocol.</li>
+<li><a href="protocolCore__protocol_id/">➞protocol_id</a> - A unique ID for the protocol.</li>
+<li><a href="protocolCore__protocol_name/">➞protocol_name</a> - A short name for the protocol.</li>
+<li><a href="protocolCore__protocols_io_doi/">➞protocols_io_doi</a> - The protocols.io digital object identifier (doi) for the protocol.</li>
+<li><a href="protocolCore__publication_doi/">➞publication_doi</a> - The publication digital object identifier (doi) for the protocol.</li>
+<li><a href="protocolCore__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="protocolReference__protocol_id/">➞protocol_id</a> - UUID of the protocol entity.</li>
+<li><a href="protocolReference__protocol_type/">➞protocol_type</a> - The concrete type of protocol entity.</li>
+<li><a href="protocolTypeOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="protocolTypeOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="protocolTypeOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="protocolTypeOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="protocolTypeOntology__text/">➞text</a> - The name of a protocol type used.</li>
+<li><a href="protocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="protocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="protocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="protocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="protocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="protocol__type/">➞type</a> - The type of protocol.</li>
+<li><a href="provenance__accession/">➞accession</a> - A unique accession for this entity, provided by the broker.</li>
+<li><a href="provenance__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="provenance__document_id/">➞document_id</a> - Identifier for document.</li>
+<li><a href="provenance__schema_major_version/">➞schema_major_version</a> - The major version number of the schema.</li>
+<li><a href="provenance__schema_minor_version/">➞schema_minor_version</a> - The minor version number of the schema.</li>
+<li><a href="provenance__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="provenance__submission_date/">➞submission_date</a> - When project was first submitted to database.</li>
+<li><a href="provenance__submitter_id/">➞submitter_id</a> - ID of individual who first submitted project.</li>
+<li><a href="provenance__update_date/">➞update_date</a> - When project was last updated.</li>
+<li><a href="provenance__updater_id/">➞updater_id</a> - ID of individual who last updated project.</li>
+<li><a href="publication__authors/">➞authors</a></li>
+<li><a href="publication__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="publication__doi/">➞doi</a> - The publication digital object identifier (doi) of the publication.</li>
+<li><a href="publication__official_hca_publication/">➞official_hca_publication</a> - Has the publication been accepted as an official HCA publication, according to the process described in https://www.humancellatlas.org/publications/ ?</li>
+<li><a href="publication__pmid/">➞pmid</a> - The PubMed ID of the publication.</li>
+<li><a href="publication__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="publication__title/">➞title</a> - The title of the publication.</li>
+<li><a href="publication__url/">➞url</a> - A URL for the publication.</li>
+<li><a href="purchasedReagents__catalog_number/">➞catalog_number</a> - The catalog number of the kit/reagent.</li>
+<li><a href="purchasedReagents__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="purchasedReagents__expiry_date/">➞expiry_date</a> - The date of expiration for the kit/reagent.</li>
+<li><a href="purchasedReagents__kit_titer/">➞kit_titer</a> - Appropriate titer and volume recommendations found in kit/reagent Certificate of Analysis.</li>
+<li><a href="purchasedReagents__lot_number/">➞lot_number</a> - The batch or lot number of the kit/reagent.</li>
+<li><a href="purchasedReagents__manufacturer/">➞manufacturer</a> - The manufacturer of the kit/reagent.</li>
+<li><a href="purchasedReagents__retail_name/">➞retail_name</a> - The retail name of the kit/reagent.</li>
+<li><a href="purchasedReagents__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="referenceFile__assembly_type/">➞assembly_type</a> - The assembly type of the genome reference file.</li>
+<li><a href="referenceFile__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="referenceFile__file_core/">➞file_core</a> - Core file-level information.</li>
+<li><a href="referenceFile__genus_species/">➞genus_species</a> - The scientific binomial name for the species of this reference.</li>
+<li><a href="referenceFile__ncbi_taxon_id/">➞ncbi_taxon_id</a> - A taxonomy ID (taxonID) from NCBI.</li>
+<li><a href="referenceFile__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="referenceFile__reference_type/">➞reference_type</a> - The type of the reference file.</li>
+<li><a href="referenceFile__reference_version/">➞reference_version</a> - The genome version of the reference file.</li>
+<li><a href="referenceFile__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="referenceFile__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="s10x__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="s10x__drop_uniformity/">➞drop_uniformity</a> - Whether drop uniformity was achieved as a result of visual inspection of emulsion after a 10x run.</li>
+<li><a href="s10x__fastq_method/">➞fastq_method</a> - Method used for the generation of fastq files from bcl files.</li>
+<li><a href="s10x__fastq_method_version/">➞fastq_method_version</a> - Version of the program used for fastq generation.</li>
+<li><a href="s10x__pooled_channels/">➞pooled_channels</a> - The number of channels pooled within a sequencing lane.</li>
+<li><a href="s10x__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="sequenceFile__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="sequenceFile__file_core/">➞file_core</a> - Core file-level information.</li>
+<li><a href="sequenceFile__insdc_run_accessions/">➞insdc_run_accessions</a></li>
+<li><a href="sequenceFile__lane_index/">➞lane_index</a> - The lane that this file was sequenced from.</li>
+<li><a href="sequenceFile__library_prep_id/">➞library_prep_id</a> - A unique ID for the library preparation.</li>
+<li><a href="sequenceFile__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="sequenceFile__read_index/">➞read_index</a> - The sequencing read this file represents.</li>
+<li><a href="sequenceFile__read_length/">➞read_length</a> - The length of a sequenced read in this file, in nucleotides.</li>
+<li><a href="sequenceFile__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="sequenceFile__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="sequencingOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="sequencingOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="sequencingOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="sequencingOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="sequencingOntology__text/">➞text</a> - The name of a sequencing approach being used.</li>
+<li><a href="sequencingProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="sequencingProtocol__instrument_manufacturer_model/">➞instrument_manufacturer_model</a> - The manufacturer and model of the sequencer.</li>
+<li><a href="sequencingProtocol__local_machine_name/">➞local_machine_name</a> - Local name for the particular machine used for sequencing.</li>
+<li><a href="sequencingProtocol__method/">➞method</a> - The general method for sequencing.</li>
+<li><a href="sequencingProtocol__paired_end/">➞paired_end</a> - Whether the sequenced molecule was sequenced from both ends.</li>
+<li><a href="sequencingProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="sequencingProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="sequencingProtocol__s10x/">➞s10x</a> - Fields specific for 10x experiments.</li>
+<li><a href="sequencingProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="sequencingProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="speciesOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="speciesOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="speciesOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="speciesOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="speciesOntology__text/">➞text</a> - The name of the species to which the organism belongs.</li>
+<li><a href="specimenFromOrganism__biomaterial_core/">➞biomaterial_core</a> - Core biomaterial-level information.</li>
+<li><a href="specimenFromOrganism__collection_time/">➞collection_time</a> - When the biomaterial was collected.</li>
+<li><a href="specimenFromOrganism__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="specimenFromOrganism__diseases/">➞diseases</a></li>
+<li><a href="specimenFromOrganism__genus_species/">➞genus_species</a></li>
+<li><a href="specimenFromOrganism__organ/">➞organ</a> - The organ that the biomaterial came from.</li>
+<li><a href="specimenFromOrganism__organ_parts/">➞organ_parts</a></li>
+<li><a href="specimenFromOrganism__preservation_storage/">➞preservation_storage</a> - Information about how a specimen was preserved and/or stored over a period of time.</li>
+<li><a href="specimenFromOrganism__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="specimenFromOrganism__purchased_specimen/">➞purchased_specimen</a> - Information about a purchased specimen.</li>
+<li><a href="specimenFromOrganism__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="specimenFromOrganism__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="specimenFromOrganism__state_of_specimen/">➞state_of_specimen</a> - State of the specimen at the time of collection.</li>
+<li><a href="stateOfSpecimen__autolysis_score/">➞autolysis_score</a> - State of tissue breakdown due to self-digestion.</li>
+<li><a href="stateOfSpecimen__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="stateOfSpecimen__gross_description/">➞gross_description</a> - Color, size, and other aspects of specimen as visible to naked eye.</li>
+<li><a href="stateOfSpecimen__gross_images/">➞gross_images</a></li>
+<li><a href="stateOfSpecimen__ischemic_temperature/">➞ischemic_temperature</a> - Whether specimen experienced warm or cold ischemia.</li>
+<li><a href="stateOfSpecimen__ischemic_time/">➞ischemic_time</a> - Duration of time, in seconds, between when the specimen stopped receiving oxygen and when it was preserved or processed.</li>
+<li><a href="stateOfSpecimen__microscopic_description/">➞microscopic_description</a> - How the specimen looks under the microscope and how it compares with normal cells.</li>
+<li><a href="stateOfSpecimen__microscopic_images/">➞microscopic_images</a></li>
+<li><a href="stateOfSpecimen__postmortem_interval/">➞postmortem_interval</a> - Duration of time between when death was declared and when the specimen was preserved or processed.</li>
+<li><a href="stateOfSpecimen__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="strainOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="strainOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="strainOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="strainOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="strainOntology__text/">➞text</a> - The name of the strain to which the organism belongs.</li>
+<li><a href="supplementaryFileEntity__file_id/">➞file_id</a> - ID for this supplementary file entity</li>
+<li><a href="supplementaryFileEntity__file_type/">➞file_type</a> - concrete type of this supplementary file entity</li>
+<li><a href="supplementaryFileLink__entity/">➞entity</a> - An entity that refers to this supplementary file</li>
+<li><a href="supplementaryFileLink__files/">➞files</a></li>
+<li><a href="supplementaryFileLink__link_type/">➞link_type</a> - The type of this link.</li>
+<li><a href="supplementaryFile__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="supplementaryFile__file_core/">➞file_core</a> - Core file-level information.</li>
+<li><a href="supplementaryFile__file_description/">➞file_description</a> - A short description of the file contents.</li>
+<li><a href="supplementaryFile__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="supplementaryFile__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="supplementaryFile__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="targetPathwayOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="targetPathwayOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="targetPathwayOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="targetPathwayOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="targetPathwayOntology__text/">➞text</a> - The name of the treatment target pathway.</li>
+<li><a href="task__cpus/">➞cpus</a> - Number of CPUs used to run this task.</li>
+<li><a href="task__disk_size/">➞disk_size</a> - Name of the disk volume mounted to the VM for the task.</li>
+<li><a href="task__docker_image/">➞docker_image</a> - Name of docker image where the task is stored and executed.</li>
+<li><a href="task__log_err/">➞log_err</a> - Path where standard error is logged.</li>
+<li><a href="task__log_out/">➞log_out</a> - Path where standard output is logged.</li>
+<li><a href="task__memory/">➞memory</a> - Amount of memory allocated for this task.</li>
+<li><a href="task__start_time/">➞start_time</a> - Date and time when the task started.</li>
+<li><a href="task__stop_time/">➞stop_time</a> - Date and time when the task finished.</li>
+<li><a href="task__task_name/">➞task_name</a> - Name of the task.</li>
+<li><a href="task__zone/">➞zone</a> - Name of the Google Cloud zone where the task was run.</li>
+<li><a href="timeUnitOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="timeUnitOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="timeUnitOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="timeUnitOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="timeUnitOntology__text/">➞text</a> - The name of a time unit being used.</li>
+<li><a href="timecourse__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="timecourse__relevance/">➞relevance</a> - Relevance of the Timecourse value/unit to the experiment.</li>
+<li><a href="timecourse__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="timecourse__unit/">➞unit</a> - The unit in which the Timecourse value is expressed.</li>
+<li><a href="timecourse__value/">➞value</a> - The numerical value in Timecourse unit associated with a time interval used in the experiment.</li>
+<li><a href="treatmentMethodOntology__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="treatmentMethodOntology__ontology/">➞ontology</a> - An ontology term identifier in the form prefix:accession.</li>
+<li><a href="treatmentMethodOntology__ontology_label/">➞ontology_label</a> - The preferred label for the ontology term referred to in the ontology field. This may differ from the user-supplied value in the text field.</li>
+<li><a href="treatmentMethodOntology__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="treatmentMethodOntology__text/">➞text</a> - The name of a treatment method or approach being used.</li>
+<li><a href="treatmentProtocol__describedBy/">➞describedBy</a> - The URL reference to the schema.</li>
+<li><a href="treatmentProtocol__media/">➞media</a> - Culture media used to induce a specific treatment response.</li>
+<li><a href="treatmentProtocol__method/">➞method</a></li>
+<li><a href="treatmentProtocol__protocol_core/">➞protocol_core</a> - Core protocol-level information.</li>
+<li><a href="treatmentProtocol__provenance/">➞provenance</a> - Provenance information provided by the system.</li>
+<li><a href="treatmentProtocol__reagents/">➞reagents</a></li>
+<li><a href="treatmentProtocol__schema_type/">➞schema_type</a> - The type of the metadata schema entity.</li>
+<li><a href="treatmentProtocol__schema_version/">➞schema_version</a> - The version number of the schema in major.minor.patch format.</li>
+<li><a href="treatmentProtocol__target_pathway/">➞target_pathway</a></li>
+</ul>
+<h3 id="enums">Enums</h3>
+<ul>
+<li><a href="AggregateGenerationProtocol_schema_type_options/">AggregateGenerationProtocol_schema_type_options</a></li>
+<li><a href="AnalysisFile_schema_type_options/">AnalysisFile_schema_type_options</a></li>
+<li><a href="AnalysisProcess_analysis_run_type_options/">AnalysisProcess_analysis_run_type_options</a></li>
+<li><a href="AnalysisProcess_schema_type_options/">AnalysisProcess_schema_type_options</a></li>
+<li><a href="AnalysisProtocol_schema_type_options/">AnalysisProtocol_schema_type_options</a></li>
+<li><a href="Barcode_barcode_read_options/">Barcode_barcode_read_options</a></li>
+<li><a href="BiologicalMacromoleculeOntology_ontology_options/">BiologicalMacromoleculeOntology_ontology_options</a></li>
+<li><a href="CellCycleOntology_ontology_options/">CellCycleOntology_ontology_options</a></li>
+<li><a href="CellLine_schema_type_options/">CellLine_schema_type_options</a></li>
+<li><a href="CellLine_type_options/">CellLine_type_options</a></li>
+<li><a href="CellMorphology_cell_viability_result_options/">CellMorphology_cell_viability_result_options</a></li>
+<li><a href="CellSuspension_schema_type_options/">CellSuspension_schema_type_options</a></li>
+<li><a href="CellTypeOntology_ontology_options/">CellTypeOntology_ontology_options</a></li>
+<li><a href="CellularComponentOntology_ontology_options/">CellularComponentOntology_ontology_options</a></li>
+<li><a href="Channel_multiplexed_options/">Channel_multiplexed_options</a></li>
+<li><a href="CollectionProtocol_schema_type_options/">CollectionProtocol_schema_type_options</a></li>
+<li><a href="ContributorRoleOntology_ontology_options/">ContributorRoleOntology_ontology_options</a></li>
+<li><a href="Death_normothermic_regional_perfusion_options/">Death_normothermic_regional_perfusion_options</a></li>
+<li><a href="Death_organ_donation_death_type_options/">Death_organ_donation_death_type_options</a></li>
+<li><a href="DevelopmentStageOntology_ontology_options/">DevelopmentStageOntology_ontology_options</a></li>
+<li><a href="DifferentiationProtocol_schema_type_options/">DifferentiationProtocol_schema_type_options</a></li>
+<li><a href="DiseaseOntology_ontology_options/">DiseaseOntology_ontology_options</a></li>
+<li><a href="DissociationProtocol_schema_type_options/">DissociationProtocol_schema_type_options</a></li>
+<li><a href="DonorOrganism_is_living_options/">DonorOrganism_is_living_options</a></li>
+<li><a href="DonorOrganism_schema_type_options/">DonorOrganism_schema_type_options</a></li>
+<li><a href="DonorOrganism_sex_options/">DonorOrganism_sex_options</a></li>
+<li><a href="EnrichmentOntology_ontology_options/">EnrichmentOntology_ontology_options</a></li>
+<li><a href="EnrichmentProtocol_schema_type_options/">EnrichmentProtocol_schema_type_options</a></li>
+<li><a href="Entity_entity_type_options/">Entity_entity_type_options</a></li>
+<li><a href="EthnicityOntology_ontology_options/">EthnicityOntology_ontology_options</a></li>
+<li><a href="FileContentOntology_ontology_options/">FileContentOntology_ontology_options</a></li>
+<li><a href="FileCore_file_source_options/">FileCore_file_source_options</a></li>
+<li><a href="FileDescriptor_schema_type_options/">FileDescriptor_schema_type_options</a></li>
+<li><a href="FileFormatOntology_ontology_options/">FileFormatOntology_ontology_options</a></li>
+<li><a href="GrowthConditions_feeder_layer_type_options/">GrowthConditions_feeder_layer_type_options</a></li>
+<li><a href="GrowthConditions_mycoplasma_testing_method_options/">GrowthConditions_mycoplasma_testing_method_options</a></li>
+<li><a href="GrowthConditions_mycoplasma_testing_results_options/">GrowthConditions_mycoplasma_testing_results_options</a></li>
+<li><a href="ImageFile_schema_type_options/">ImageFile_schema_type_options</a></li>
+<li><a href="ImagedSpecimen_schema_type_options/">ImagedSpecimen_schema_type_options</a></li>
+<li><a href="ImagingPreparationProtocol_schema_type_options/">ImagingPreparationProtocol_schema_type_options</a></li>
+<li><a href="ImagingProtocol_overlapping_tiles_options/">ImagingProtocol_overlapping_tiles_options</a></li>
+<li><a href="ImagingProtocol_schema_type_options/">ImagingProtocol_schema_type_options</a></li>
+<li><a href="InstrumentOntology_ontology_options/">InstrumentOntology_ontology_options</a></li>
+<li><a href="IpscInductionProtocol_method_options/">IpscInductionProtocol_method_options</a></li>
+<li><a href="IpscInductionProtocol_pluripotency_vector_removed_options/">IpscInductionProtocol_pluripotency_vector_removed_options</a></li>
+<li><a href="IpscInductionProtocol_schema_type_options/">IpscInductionProtocol_schema_type_options</a></li>
+<li><a href="LengthUnitOntology_ontology_options/">LengthUnitOntology_ontology_options</a></li>
+<li><a href="LibraryAmplificationOntology_ontology_options/">LibraryAmplificationOntology_ontology_options</a></li>
+<li><a href="LibraryConstructionOntology_ontology_options/">LibraryConstructionOntology_ontology_options</a></li>
+<li><a href="LibraryPreparationProtocol_end_bias_options/">LibraryPreparationProtocol_end_bias_options</a></li>
+<li><a href="LibraryPreparationProtocol_nucleic_acid_source_options/">LibraryPreparationProtocol_nucleic_acid_source_options</a></li>
+<li><a href="LibraryPreparationProtocol_primer_options/">LibraryPreparationProtocol_primer_options</a></li>
+<li><a href="LibraryPreparationProtocol_schema_type_options/">LibraryPreparationProtocol_schema_type_options</a></li>
+<li><a href="LibraryPreparationProtocol_strand_options/">LibraryPreparationProtocol_strand_options</a></li>
+<li><a href="Links_schema_type_options/">Links_schema_type_options</a></li>
+<li><a href="MassUnitOntology_ontology_options/">MassUnitOntology_ontology_options</a></li>
+<li><a href="MedicalHistory_nutritional_state_options/">MedicalHistory_nutritional_state_options</a></li>
+<li><a href="MicroscopyOntology_ontology_options/">MicroscopyOntology_ontology_options</a></li>
+<li><a href="OrganOntology_ontology_options/">OrganOntology_ontology_options</a></li>
+<li><a href="OrganPartOntology_ontology_options/">OrganPartOntology_ontology_options</a></li>
+<li><a href="Organoid_schema_type_options/">Organoid_schema_type_options</a></li>
+<li><a href="PlateBasedSequencing_well_quality_options/">PlateBasedSequencing_well_quality_options</a></li>
+<li><a href="PreservationStorage_preservation_method_options/">PreservationStorage_preservation_method_options</a></li>
+<li><a href="PreservationStorage_storage_method_options/">PreservationStorage_storage_method_options</a></li>
+<li><a href="ProcessLink_link_type_options/">ProcessLink_link_type_options</a></li>
+<li><a href="ProcessTypeOntology_ontology_options/">ProcessTypeOntology_ontology_options</a></li>
+<li><a href="Process_schema_type_options/">Process_schema_type_options</a></li>
+<li><a href="Project_schema_type_options/">Project_schema_type_options</a></li>
+<li><a href="ProtocolReference_protocol_type_options/">ProtocolReference_protocol_type_options</a></li>
+<li><a href="ProtocolTypeOntology_ontology_options/">ProtocolTypeOntology_ontology_options</a></li>
+<li><a href="Protocol_schema_type_options/">Protocol_schema_type_options</a></li>
+<li><a href="ReferenceFile_assembly_type_options/">ReferenceFile_assembly_type_options</a></li>
+<li><a href="ReferenceFile_reference_type_options/">ReferenceFile_reference_type_options</a></li>
+<li><a href="ReferenceFile_schema_type_options/">ReferenceFile_schema_type_options</a></li>
+<li><a href="SequenceFile_read_index_options/">SequenceFile_read_index_options</a></li>
+<li><a href="SequenceFile_schema_type_options/">SequenceFile_schema_type_options</a></li>
+<li><a href="SequencingOntology_ontology_options/">SequencingOntology_ontology_options</a></li>
+<li><a href="SequencingProtocol_schema_type_options/">SequencingProtocol_schema_type_options</a></li>
+<li><a href="SpeciesOntology_ontology_options/">SpeciesOntology_ontology_options</a></li>
+<li><a href="SpecimenFromOrganism_schema_type_options/">SpecimenFromOrganism_schema_type_options</a></li>
+<li><a href="StateOfSpecimen_autolysis_score_options/">StateOfSpecimen_autolysis_score_options</a></li>
+<li><a href="StateOfSpecimen_ischemic_temperature_options/">StateOfSpecimen_ischemic_temperature_options</a></li>
+<li><a href="StrainOntology_ontology_options/">StrainOntology_ontology_options</a></li>
+<li><a href="SupplementaryFileEntity_file_type_options/">SupplementaryFileEntity_file_type_options</a></li>
+<li><a href="SupplementaryFileLink_link_type_options/">SupplementaryFileLink_link_type_options</a></li>
+<li><a href="SupplementaryFile_schema_type_options/">SupplementaryFile_schema_type_options</a></li>
+<li><a href="TargetPathwayOntology_ontology_options/">TargetPathwayOntology_ontology_options</a></li>
+<li><a href="TimeUnitOntology_ontology_options/">TimeUnitOntology_ontology_options</a></li>
+<li><a href="TreatmentMethodOntology_ontology_options/">TreatmentMethodOntology_ontology_options</a></li>
+<li><a href="TreatmentProtocol_schema_type_options/">TreatmentProtocol_schema_type_options</a></li>
+<li><a href="data_normalization_methods_options/">data_normalization_methods_options</a></li>
+<li><a href="derivation_process_options/">derivation_process_options</a></li>
+</ul>
+<h3 id="subsets">Subsets</h3>
+<h3 id="types">Types</h3>
+<h4 id="built-in">Built in</h4>
+<ul>
+<li><strong>Bool</strong></li>
+<li><strong>Decimal</strong></li>
+<li><strong>ElementIdentifier</strong></li>
+<li><strong>NCName</strong></li>
+<li><strong>NodeIdentifier</strong></li>
+<li><strong>URI</strong></li>
+<li><strong>URIorCURIE</strong></li>
+<li><strong>XSDDate</strong></li>
+<li><strong>XSDDateTime</strong></li>
+<li><strong>XSDTime</strong></li>
+<li><strong>float</strong></li>
+<li><strong>int</strong></li>
+<li><strong>str</strong></li>
+</ul>
+<h4 id="defined">Defined</h4>
+<ul>
+<li><a href="types/Boolean/">Boolean</a>  (<strong>Bool</strong>)  - A binary (true or false) value</li>
+<li><a href="types/Date/">Date</a>  (<strong>XSDDate</strong>)  - a date (year, month and day) in an idealized calendar</li>
+<li><a href="types/DateOrDatetime/">DateOrDatetime</a>  (<strong>str</strong>)  - Either a date or a datetime</li>
+<li><a href="types/Datetime/">Datetime</a>  (<strong>XSDDateTime</strong>)  - The combination of a date and time</li>
+<li><a href="types/Decimal/">Decimal</a>  (<strong>Decimal</strong>)  - A real number with arbitrary precision that conforms to the xsd:decimal specification</li>
+<li><a href="types/Double/">Double</a>  (<strong>float</strong>)  - A real number that conforms to the xsd:double specification</li>
+<li><a href="types/Float/">Float</a>  (<strong>float</strong>)  - A real number that conforms to the xsd:float specification</li>
+<li><a href="types/Integer/">Integer</a>  (<strong>int</strong>)  - An integer</li>
+<li><a href="types/Ncname/">Ncname</a>  (<strong>NCName</strong>)  - Prefix part of CURIE</li>
+<li><a href="types/Nodeidentifier/">Nodeidentifier</a>  (<strong>NodeIdentifier</strong>)  - A URI, CURIE or BNODE that represents a node in a model.</li>
+<li><a href="types/Objectidentifier/">Objectidentifier</a>  (<strong>ElementIdentifier</strong>)  - A URI or CURIE that represents an object in the model.</li>
+<li><a href="types/String/">String</a>  (<strong>str</strong>)  - A character string</li>
+<li><a href="types/Time/">Time</a>  (<strong>XSDTime</strong>)  - A time object represents a (local) time of day, independent of any particular day</li>
+<li><a href="types/Uri/">Uri</a>  (<strong>URI</strong>)  - a complete URI</li>
+<li><a href="types/Uriorcurie/">Uriorcurie</a>  (<strong>URIorCURIE</strong>)  - a URI or a CURIE</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+      
+        
+        <a href="about/" class="md-footer__link md-footer__link--next" aria-label="Next: About" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              About
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>
